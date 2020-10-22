@@ -324,7 +324,7 @@ select{display:inline-block;position:relative;vertical-align:middle;width:auto;h
 .agree_form .check_all .check_bottom {padding:15px 0px 0px; }
 .agree_form .check_all .check_bottom div {position:relative; margin-bottom:9px;}
 .agree_form .check_all .check_bottom div:last-child {margin-bottom:0;}
-.agree_form .check_all .check_bottom div button {position:relative; display:inline-block; vertical-align:middle; width:12px; height:11px; background:url(../img/ico_agree_link.png) no-repeat 0 0; background-size:6px 11px;}
+.agree_form .check_all .check_bottom div button {position:relative; display:inline-block; vertical-align:middle; width:12px; height:11px; background:url(../img/ico_agree_link.png) no-repeat 0 0; background-size:6px 11px; margin-top:-4px;}
 .grid2 li {float:left; position:relative;}
 .grid2 li {margin-left:18px;}
 .grid2 li:first-child {margin-left:0;}

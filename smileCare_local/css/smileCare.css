@@ -241,7 +241,7 @@ button.disabled{background:#bfc7ce !important;color:#fff !important;transition:b
 .agree_form .check_all .check_bottom label {font-size:12px;}
 .agree_form .check_all .check_bottom div {position:relative; margin-bottom:9px;}
 .agree_form .check_all .check_bottom div:last-child {margin-bottom:0;}
-.agree_form .check_all .check_bottom div button {position:relative; top:8px; right:0; width:12px; height:22px; background:url(../img/ico_agree_link.png) no-repeat 0 0; background-size:6px 11px;}
+.agree_form .check_all .check_bottom div button {position:relative; display:inline-block; vertical-align:middle;margin-top:13px; width:12px; height:22px; background:url(../img/ico_agree_link.png) no-repeat 0 0; background-size:6px 11px;}
 .grid2 li {float:left; position:relative;}
 .grid2 li {margin-left:18px;}
 .grid2 li:first-child {margin-left:0;}

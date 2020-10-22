@@ -1,0 +1,18 @@
+.tit3+.section{margin-top:15px}
+.pdl8{padding-left:8px}
+.apply-inner.left{padding-right:24px}
+.apply-inner.right{border-left:1px solid #e5e5e5;padding-left:24px}
+.radio.square label{padding-left:30px;line-height:15px}
+.check_tit_sub{font-size:12px;color:#666;padding-left:30px}
+.agree_form+.agree_form{margin-top:24px}
+.agree_form .tit3{letter-spacing: -0.1em;}
+.grid2 li.btn-radio{position:relative;width:calc(50% - 5px);margin-left:10px !important}
+.grid2 li.btn-radio:first-child {margin-left:0 !important;}
+.grid2:after{content:"";display:block;clear:both}
+.btn-radio label:before {content:'';  position:absolute; top:9px; left:12px; width: 24px; height: 22px; background:url(../img/ico_forms.png) no-repeat; background-size:24px 108px;background-position:0 -22px}
+.btn-radio label{display:block !important;padding:0 12px 0 30px;font-size:14px;color:#999;font-weight:bold;border:1px solid #999;border-radius:5px;height:40px !important;line-height:37px !important;}
+
+.btn-radio.all label{color:#111;border-color:#111}
+.btn-radio input:checked+label{color:#008bec;border-color:#008bec;}
+.btn-radio input:checked+label:before{background-position:0 0}
+.top-txt{font-size:14px;margin-bottom:25px}

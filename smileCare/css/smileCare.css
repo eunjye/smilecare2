@@ -104,7 +104,7 @@ input::placeholder{color:#ccc;font-size:16px;font-weight:400}
 
 .btn-small{display:inline-block;font-size:14px;padding:0 10px;font-weight:400;height:28px;border-radius:6px;border:1px solid #d9d9d9;color:#000;background:#fff;letter-spacing:-0.075em;position:relative}
 .btn-base{display:inline-block;font-size:15px;padding:0 50px;font-weight:700;height:40px;border:0;color:#fff;background:#008bec;letter-spacing:-0.075em;position:relative;transition:background 0.2s ease-in, color 0.2s ease-in}
-.btn-base2{display:inline-block;font-size:13px;padding:0 20px;font-weight:400;height:30px;line-height:30px;border:1px solid #008bec;color:#008bec;background:#fff;letter-spacing:-0.075em;position:relative;transition:background 0.2s ease-in, color 0.2s ease-in}
+.btn-base2{display:inline-block;font-size:13px;padding:0 20px;font-weight:400;height:30px;line-height:27px;border:1px solid #008bec;color:#008bec;background:#fff;letter-spacing:-0.075em;position:relative;transition:background 0.2s ease-in, color 0.2s ease-in}
 a.btn-base{line-height:50px;text-decoration:none;color:#fff}
 
 .btn-round{display:inline-block;font-size:16px;padding:0 20px;font-weight:400;height:40px;border-radius:20px;border:1px solid #ccc;color:#000;background:#fff;letter-spacing:-0.075em;position:relative}
@@ -199,7 +199,7 @@ button.disabled{background:#bfc7ce !important;color:#fff !important;transition:b
 .form_item{position:relative;margin-top:18px}
 .form_item .lb{font-weight:400; color:#666; font-size:13px;}
 .form_item .lb+.guide_box{margin-top:15px;}
-.form_item .i_txt{width:100%;height:30px; padding:0 10px; line-height:30px; border:1px solid #d4d5d8;background-color:#fff;font-size:16px;font-weight:700;vertical-align:middle;-webkit-transition:border 0.3s;transition:border 0.3s;outline:none;}
+.form_item .i_txt{width:100%;height:30px; padding:0 10px 2px; border:1px solid #d4d5d8;background-color:#fff;font-size:16px;font-weight:700;vertical-align:middle;-webkit-transition:border 0.3s;transition:border 0.3s;outline:none;}
 .form_item .i_txt::-ms-clear {display:none;}
 .form_item .i_txt:focus{border-color:#008bec}
 .form_item .i_txt[type="date"]{position:absolute;right:0;top:0;width:55px;height:100%;opacity:0;padding-right:0;}

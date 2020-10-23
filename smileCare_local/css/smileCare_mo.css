@@ -582,3 +582,6 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 .ui-autocomplete .ui-menu-item a { color:inherit; display:block; padding:3px 10px; font-size:13px; letter-spacing:0; cursor:pointer; word-break:break-all; line-height:1.4em; }
 .ui-autocomplete .ui-menu-item a:hover { background:#f9f9f9; text-decoration:none; }
 .ui-autocomplete .ui-menu-item a b { font-weight:700; color:#008bec !important; }
+
+/* 이벤트페이지 */
+.event-section img { width:100%; }

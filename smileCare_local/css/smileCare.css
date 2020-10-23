@@ -200,6 +200,7 @@ button.disabled{background:#bfc7ce !important;color:#fff !important;transition:b
 .form_item .lb{font-weight:400; color:#666; font-size:13px;}
 .form_item .lb+.guide_box{margin-top:15px;}
 .form_item .i_txt{width:100%;height:30px; padding:0 10px; line-height:30px; border:1px solid #d4d5d8;background-color:#fff;font-size:16px;font-weight:700;vertical-align:middle;-webkit-transition:border 0.3s;transition:border 0.3s;outline:none;}
+.form_item .i_txt::-ms-clear {display:none;}
 .form_item .i_txt:focus{border-color:#008bec}
 .form_item .i_txt[type="date"]{position:absolute;right:0;top:0;width:55px;height:100%;opacity:0;padding-right:0;}
 .form_item .i_txt.no_del{padding-right:0;}
@@ -254,6 +255,8 @@ button.disabled{background:#bfc7ce !important;color:#fff !important;transition:b
 .radio input:checked+label:before {content:''; background:url(../img/ico_forms.png) no-repeat; background-size:24px 108px;background-position:0 -44px}
 .radio i:not(.score) {position: absolute; left: 0; top: 0; display: inline-block; width: 26px; height: 26px; border: 1px solid #c2c4c6; background: #fff; box-sizing: border-box; overflow: hidden; border-radius: 50%; vertical-align: top; -webkit-transition: 0.3s; transition: 0.3s; z-index: 1;}
 input[type="checkbox"], input[type="checkbox"] + label{height:auto;line-height:auto;}
+input[type="checkbox"]:focus + label:before,
+input[type="radio"]:focus + label:before {outline:dotted 1px #000;outline-style:auto;}
 .form_item .input.phone_form .dv:last-child{width:121px;padding-left:10px}
 input[type="checkbox"] + .lb-check span{display:inline-block;min-height:19px;line-height:18px}
 input[type="checkbox"] + .lb-check{display:inline-block;padding-left:25px;height:19px;font-size:15px;color:#000;position:relative}
@@ -418,6 +421,8 @@ select{display:inline-block;position:relative;vertical-align:middle;width:auto;h
 .keyword-list:after { top:auto; bottom:0; }
 .keyword-list > li { display:inline-block; vertical-align:middle; }
 .keyword-list input[type="checkbox"] + label { display:inline-block; vertical-align:middle; height:40px; font-size:16px; border:1px solid #c5c5c5; border-radius:20px; line-height:36px; padding:0 19px 0 8px; margin:6px 5px; color:#666; }
+.keyword-list input[type="checkbox"]:focus + label:before {outline:none;}
+.keyword-list input[type="checkbox"]:focus + label {outline:1px dotted #000;outline-style:auto;}
 .keyword-list input[type="checkbox"] + label:before {display:inline-block; width:24px; height:22px; margin-right:8px; background:url('../img/ico_forms.png') 0 -22px/24px auto no-repeat; vertical-align:middle; margin-top:-2px; content:"";}
 .keyword-list input[type="checkbox"]:checked + label { color:#008BEC; border:2px solid #008BEC; line-height:35px; padding:0 18px 0 7px;}
 .keyword-list input[type="checkbox"]:checked + label:before { background-position:0 0; }

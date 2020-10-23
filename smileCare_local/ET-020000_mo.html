@@ -55,63 +55,36 @@
 				<script type="text/javascript" src="./js/ui.common.js"></script>
 				<script type="text/javascript" src="./js/smileCare.js"></script>
         
-				<!-- Start : ET-010400 구독해지 -->
-                <div id="ET-010400_mo" class="ui-modal">
-                    <div class="ui-modal-wrap">
-                      <div class="ui-modal-head">
-                          <h1>스마일케어 구독 해지하기</h1>
-                        <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'ET-010400_mo'})"><span class="hidden">닫기</span></button>
-                      </div>
-                      <div class="ui-modal-cont">
-                        <h2 class="tit3">그 동안 라이나 스마일케어를 구독해주셔서<br class="br"> 감사합니다.</h2>
-                        <div class="section">
-                            <div class="form_item">
-                                <label for="inp_name" class="lb hue-p">이름</label>
-                                <div class="input">
-                                    <span class="dv"><input id="inp_name" class="i_txt" type="text" placeholder="이름을 입력하세요"></span>
-                                </div>
-                            </div>
-                            <div class="form_item">
-                                <label for="phone_number1_1" class="lb hue-p">휴대폰번호</label>
-                                <div class="input phone_form">
-                                    <span class="dv">
-                                        <input id="phone_number1_1" class="i_txt" type="text" placeholder="'-'를 제외한 번호입력">
-                                    </span>
-                                    <span class="dv">
-                                        <a href="#" class="btn btn-base2" role="button">인증번호 발송</a>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="form_item">
-                                <label for="phoneCheck1" class="lb hue-p">인증번호</label>
-                                <div class="input certification">
-                                    <span class="dv">
-                                        <input id="phoneCheck1" class="i_txt" type="tel" maxlength="8">
-                                        <span class="timer">02:49</span>
-                                    </span>
-                                    
-                                </div>
-                            </div>
-                            <div class="btn-wrap">
-                                <button type="button" class="btn-base " onclick="$plugins.uiModalClose({ id:'ET-010400_mo'})"><span>구독 해지하기</span></button>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- // End : ET-010400 구독해지 -->
+        <!-- Start : ET-020000_mo -->
+        <div class="base-body event-wrap">
+          <!-- <div class="event-visual">
+            <img src="./img/smilecare_pc.png" alt="">
+          </div>
+          <div class="anchor-list">
+            <a href="javascript:void(0);">주기적으로 안내받아 치아건강에 도움받기</a>
+            <a href="javascript:void(0);">치아정보 확인하고 지인에게 공유하기</a>
+            <a href="javascript:void(0);">내 정보 업데이트해서 안전하게 계약 유지하기</a>
+					</div> -->
+					
+					<section class="event-section">
+						<img src="./img/@evt.jpg" alt="">
+					</section>
+				</div>
+
+        
+        <!-- // End : ET-020000_mo -->
 				<script type="text/javascript">
 					;(function($, win, doc, undefined) {
 						$(doc).ready(function(){
 							
 							// popup run!!
-							$plugins.uiModalOpen({
-								id:'ET-010400_mo',
-								full:false,
-								callback: function(v){
-									console.log('open :', v );
-								}
-							});
+							// $plugins.uiModalOpen({
+							// 	id:'ET-010100_mo',
+							// 	full:false,
+							// 	callback: function(v){
+							// 		console.log('open :', v );
+							// 	}
+							// });
 
 						});
 					})(jQuery, window, document);

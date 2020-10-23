@@ -18,3 +18,31 @@
 .btn-radio input:checked+label{color:#008bec;border-color:#008bec;}
 .btn-radio input:checked+label:before{background-position:0 0}
 .top-txt{font-size:14px;margin-bottom:25px}
+
+/*팝업*/
+.cont-top {padding-bottom:30px;border-bottom:1px solid #e5e5e5}
+.cont-top .tit1 + p{margin-top:15px}
+.cont-top p{font-size:14px}
+.cont-top p strong{font-weight:700}
+.cont-bottom .tit3{margin-top:30px}
+.cont-bottom p{font-size:14px;color:#666}
+.cont-bottom .tit3 + p{margin-top:15px;word-break: normal}
+
+.share-wrap{margin-top:50px}
+.share-wrap .share-list{display:block;width:580px;margin:0 auto}
+.share-wrap ul li{display:inline-block;position:relative;margin-right:30px}
+.share-wrap ul li:last-child{margin-right:0}
+.share-wrap .share-list .share-item input[type='radio']:focus + label{outline:1px dotted #000;outline-style:auto}
+.share-wrap .share-list .share-item input[type='radio']{position: absolute;width: 1px;height: 1px;margin: -1px;border: 0;overflow: hidden;padding: 0;clip: rect(0,0,0,0);-webkit-appearance: none;opacity: 0;}
+.share-wrap .share-list .share-item label{display:block;width:90px;height:90px;background:url('../img/spr_share.png')no-repeat;background-size:180px 450px;}
+.share-wrap .share-list .share-item label span{display:block;font-size:15px;color:#666;text-align:center;padding-top:100px}
+.share-wrap .share-list .share-item.kakao label{background-position:0 0}
+.share-wrap .share-list .share-item.facebook label{background-position:0 -90px}
+.share-wrap .share-list .share-item.kakaostory label{background-position:0 -180px}
+.share-wrap .share-list .share-item.naver label{background-position:0 -270px}
+.share-wrap .share-list .share-item.url label{background-position:0 -360px}
+.share-wrap .share-list .share-item.kakao input[type='radio']:checked + label{background-position:-90px 0}
+.share-wrap .share-list .share-item.facebook input[type='radio']:checked + label{background-position:-90px -90px}
+.share-wrap .share-list .share-item.kakaostory input[type='radio']:checked + label{background-position:-90px -180px}
+.share-wrap .share-list .share-item.naver input[type='radio']:checked + label{background-position:-90px -270px}
+.share-wrap .share-list .share-item.url input[type='radio']:checked + label{background-position:-90px -360px}

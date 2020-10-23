@@ -4,8 +4,8 @@
 
 	console.log('ui plugins')
 
-	const global = '$plugins';
-	const namespace = 'cignaUI.plugins';
+	var global = '$plugins';
+	var namespace = 'cignaUI.plugins';
 
 	if (!!win[global]) {
 		throw new Error("module already exists! >>" + global);
@@ -107,7 +107,7 @@
 		contType: 'application/x-www-form-urlencoded; charset=euc-kr'
 	}
 	function createUiAjax(v){
-		let opt = $.extend(true, {}, win[global].uiAjax.option, v),
+		var opt = $.extend(true, {}, win[global].uiAjax.option, v),
 			$target = $('#' + opt.id),
 			callback = opt.callback === undefined ? false : opt.callback;
 
@@ -131,7 +131,7 @@
 	}
 
 	function createUiBtnSelect(opt){
-		const $btnwrap = $('#' + opt.id),
+		var $btnwrap = $('#' + opt.id),
 			$btn = $btnwrap.find('button'),
 			current = opt.current !== undefined ? opt.current : 0,
 			callback = opt.callback !== undefined ? opt.callback : false;
@@ -155,7 +155,7 @@
 	}
 
 	function createUiScrollBox(opt) {
-		const callback = opt.callback,
+		var callback = opt.callback,
 			len = $('.ui-scrollbox-item').length;
 
 		//setup
@@ -166,14 +166,14 @@
 
 		//event
 		$(win).off('scroll.win').on('scroll.win', function(){
-			const $win = $(win),
+			var $win = $(win),
 				$body = $('body'),
 				win_h = $win.outerHeight(),
 				scr_t = $win.scrollTop(),
 				add_h = (win_h / 10),
 				item = $('.ui-scrollbox-item');
 
-			let n = 0;
+			var n = 0;
 
 			if (Math.abs(win_h - item.eq(0).offset().top) + add_h < scr_t || $(win).outerHeight() > item.eq(0).offset().top) {
 				item.eq(0).addClass('visible');
@@ -187,7 +187,7 @@
 
 			function itemCheck(){
 				n = n + 1;
-				const items = item.eq(n);
+				var items = item.eq(n);
 
 				if (n >= len) {
 					return false;
@@ -209,7 +209,7 @@
 	}
 
 	function createUiCountSlide(opt) {
-		const $base = $('#' + opt.id);
+		var $base = $('#' + opt.id);
 		var countNum = !!opt.value === true ? opt.value : $base.text(),
 			base_h = $base.outerHeight(),
 			textNum = 0,
@@ -258,7 +258,7 @@
 			}, 150);
 		}
 		function count(r) {
-			const $current_num = $base.children('.n' + r).find('.ui-count-num'),
+			var $current_num = $base.children('.n' + r).find('.ui-count-num'),
 				num_h = Number($current_num.data('height'));
 
 			$current_num.css('top', (num_h - base_h) * -1);
@@ -272,8 +272,8 @@
 		}
 	}
 	function createUiCountStep(opt) {
-		const $base = $('#' + opt.id);
-		let countNum = !!opt.value === true ? opt.value : $base.text(),
+		var $base = $('#' + opt.id);
+		var countNum = !!opt.value === true ? opt.value : $base.text(),
 			count = 0,
 			timer, diff, counter;
 
@@ -310,7 +310,7 @@
 		ps: 'center'
 	}
 	function createUiModalOpen(v) {
-		const opt = $.extend(true, {}, win[global].uiModalOpen.option, v),
+		var opt = $.extend(true, {}, win[global].uiModalOpen.option, v),
 			id = opt.id,
 			src = opt.src,
 			full = opt.full,
@@ -319,7 +319,7 @@
 			callback = opt.callback === undefined ? false : opt.callback,
 			$modal = $('#' + id);
 
-		let timer;
+		var timer;
 
 
 		if (!!src) {
@@ -362,7 +362,7 @@
 		remove:false
 	}
 	function createUiModalClose(v) {
-		const opt = $.extend(true, {}, win[global].uiModalClose.option, v),
+		var opt = $.extend(true, {}, win[global].uiModalClose.option, v),
 			id = opt.id,
 			src = opt.src,
 			full = opt.full,
@@ -371,7 +371,7 @@
 			endfocus = opt.endfocus === undefined ? $modal.data('endfocus') : '#' + opt.endfocus,
 			callback = opt.callback === undefined ? false : opt.callback;
 		
-		let timer;
+		var timer;
 
 		$modal.removeClass('open');
 		clearTimeout(timer);
@@ -387,7 +387,7 @@
 	}
 
 	function createUiGraphBarRe(opt) {
-		const id = opt.id,
+		var id = opt.id,
 			$graph = $('#' + id),
 			$graphwrap = $graph.find('.graph-bar-wrap'),
 			$item = $graphwrap.find('.bar-wrap'),
@@ -406,7 +406,7 @@
 		}
 	}
 	function createUiGraphBar(opt) {
-		const id = opt.id,
+		var id = opt.id,
 			max = opt.max === undefined ? 100 : opt.max,
 			$graph = $('#' + id),
 			$graphwrap = $graph.find('.graph-bar-wrap'),
@@ -438,7 +438,7 @@
 	}
 
 	function createUiGraphHumanRe(opt) {
-		const id = opt.id,
+		var id = opt.id,
 			$graph = $('#' + id),
 			$graphwrap = $graph.find('.graph-human-wrap'),
 			$item = $graphwrap.find('span'),
@@ -456,24 +456,24 @@
 		}
 	}
 	function createUiGraphHuman(opt) {
-		const id = opt.id,
+		var id = opt.id,
 			max = opt.max,
 			$graph = $('#' + id),
 			$graphwrap = $graph.find('.graph-human-wrap'),
 			graphVal = opt.val / max * 100,
 			graph_axis = (opt.vertical === undefined ? false : opt.vertical) ? 'height' : 'width';
 
-		let timer,
+		var timer,
 			i = 0,
 			html_graph = ''; //human sum
 
 		$graph.find('.graph-val').text(opt.val);
-		for (let j = 0; j < max; j++) {
+		for (var j = 0; j < max; j++) {
 			html_graph += '<span><i></i></span>';
 		}
 		$graphwrap.html(html_graph);
 
-		const $item = $graphwrap.find('span'),
+		var $item = $graphwrap.find('span'),
 			$bar = $item.find('i');
 
 		$plugins.uiGraphHumanRe({ 

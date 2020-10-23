@@ -435,3 +435,17 @@ select{display:inline-block;position:relative;vertical-align:middle;width:auto;h
 .ui-autocomplete .ui-menu-item a { color:inherit; display:block; padding:3px 10px; font-size:13px; letter-spacing:0; cursor:pointer; word-break:break-all; line-height:1.4em }
 .ui-autocomplete .ui-menu-item a:hover { background:#f9f9f9; text-decoration:none; }
 .ui-autocomplete .ui-menu-item a b { font-weight:700; color:#008bec !important; }
+
+/* [P]구독&이벤트 신청 */
+.done-wrap { text-align:center; }
+.done-wrap:before { display:block; width:120px; height:120px; margin:0 auto 37px; background:url('../img/bg_done.png') 0 0/auto auto no-repeat; content:""; }
+.done-wrap .tit { font-size:26px; color:#000; font-weight:700; line-height:1.4em; }
+.done-wrap .desc { display:block; font-size:16px; color:#666; margin-top:13px; }
+.evt-box { margin:60px 0 50px; padding-top:38px; border-top:1px solid #e5e5e5; text-align:center; }
+.evt-box .item { display:inline-block; vertical-align:middle; width:320px; text-align:left; }
+.evt-box .thumb { display:table-cell; vertical-align:middle; margin:0 18px; }
+.evt-box .thumb img { vertical-align:middle; width:90px; height:auto; }
+.evt-box .inner { display:table-cell; vertical-align:middle; padding:0 15px; }
+.evt-box .inner .subject { display:block; color:#000; font-size:16px; }
+.evt-box .inner .subject span { display:block; margin-bottom:3px; color:#666; font-size:14px; }
+.evt-box .inner .desc { display:block; margin-top:7px; font-size:16px; color:#000; }

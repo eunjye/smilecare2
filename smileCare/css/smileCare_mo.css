@@ -585,3 +585,18 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 
 /* 이벤트페이지 */
 .event-section img { width:100%; }
+
+/* [P]구독&이벤트 신청 */
+.done-wrap { margin-top:15px; text-align:center; }
+.done-wrap:before { display:block; width:110px; height:110px; margin:0 auto 22px; background:url('../img/bg_done_mo.png') 0 0/110px auto no-repeat; content:""; }
+.done-wrap .tit { font-size:24px; color:#000; font-weight:700; line-height:1.4em; }
+.done-wrap .desc { display:block; font-size:14px; color:#666; margin-top:13px; }
+.evt-box { margin:50px 0 40px; padding-top:30px; border-top:1px solid #e5e5e5; text-align:center; }
+.evt-box .item { display:block; text-align:left; margin-top:25px; }
+.evt-box .item:first-child { margin-top:0; }
+.evt-box .thumb { display:table-cell; vertical-align:top; width:90px; margin:0 18px; }
+.evt-box .thumb img { vertical-align:top; width:100%; height:auto; }
+.evt-box .inner { display:table-cell; vertical-align:top; padding:8px 0 0 15px; }
+.evt-box .inner .subject { display:block; color:#000; font-size:16px; }
+.evt-box .inner .subject span { display:block; margin-bottom:3px; color:#666; font-size:14px; }
+.evt-box .inner .desc { display:block; margin-top:7px; font-size:12px; color:#000; }

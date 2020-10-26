@@ -455,7 +455,7 @@
           <a href="javascript:void(0);" class="btn-underline"
             onclick="
             $plugins.uiModalOpen({
-							id:'ET-020102',
+							id:'ET-020103',
 							full:false,
 							callback: function(v){
 								console.log('open :', v );
@@ -465,16 +465,16 @@
 
 				</div>
 				
-				<!-- Start : ET-020102 -->
-        <section id="ET-020102" class="ui-modal">
+				<!-- Start : ET-020103 -->
+        <section id="ET-020103" class="ui-modal">
           <div class="ui-modal-wrap">
             <div class="ui-modal-head">
               <h1>스마일케어 구독 & 이벤트 신청</h1>
-              <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'ET-020102'})"><span class="hidden">닫기</span></button>
+              <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'ET-020103'})"><span class="hidden">닫기</span></button>
             </div>
             <div class="ui-modal-cont">
-              <div class="done-wrap complete">
-                <h2 class="tit">스마일케어 구독 이벤트에<br>참여해주셔서 감사합니다.</h2>
+              <div class="done-wrap already">
+                <h2 class="tit">이벤트에 이미 참여해주셨습니다.</h2>
                 <span class="desc">라이나생명에서 준비한 다른 이벤트에도 참여해보시겠어요?</span>
               </div>
               <div class="evt-box">
@@ -500,14 +500,14 @@
                 </a>
               </div>
               <div class="btn-wrap">
-								<button type="button" class="btn-base" onclick="$plugins.uiModalClose({ id:'ET-020102'})"><span>스마일케어로 이동</span></button>
+								<button type="button" class="btn-base" onclick="$plugins.uiModalClose({ id:'ET-020103'})"><span>스마일케어로 이동</span></button>
               </div>
             </div>
           </div>
 					<!-- script -->
 					<script type="text/javascript">
             function goScroll(v){
-              $plugins.uiModalClose({ id:'ET-020102', callback:function(){
+              $plugins.uiModalClose({ id:'ET-020103', callback:function(){
                 // go to v section (To-Be)
               }});
             }
@@ -517,7 +517,7 @@
 						})(jQuery, window, document);
 					</script>
 				</section>
-				<!-- // End : ET-020102 -->
+				<!-- // End : ET-020103 -->
 
 				<script type="text/javascript">
 					;(function($, win, doc, undefined) {
@@ -525,7 +525,7 @@
 							
 							// popup run!!
 							$plugins.uiModalOpen({
-								id:'ET-020102',
+								id:'ET-020103',
 								full:false,
 								callback: function(v){
 									console.log('open :', v );

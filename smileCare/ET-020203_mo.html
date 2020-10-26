@@ -55,66 +55,67 @@
 				<script type="text/javascript" src="./js/ui.common.js"></script>
 				<script type="text/javascript" src="./js/smileCare.js"></script>
         
-				<!-- Start : ET-020102_mo -->
-        <section id="ET-020102_mo" class="ui-modal">
-          <div class="ui-modal-wrap">
-            <div class="ui-modal-head">
-              <h1>스마일케어 구독 & 이벤트 신청</h1>
-              <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'ET-020102_mo'})"><span class="hidden">닫기</span></button>
-            </div>
-            <div class="ui-modal-cont">
-              <div class="done-wrap complete">
-                <h2 class="tit">스마일케어 구독 이벤트에<br>참여해주셔서 감사합니다.</h2>
-                <span class="desc">라이나생명에서 준비한 <br class="br">다른 이벤트에도 참여해보시겠어요?</span>
-              </div>
-              <div class="evt-box">
-                <a href="javascript:void(0);" class="item" onclick="goScroll(2);">
-                  <span class="thumb"><img src="./img/thumb_plan2.png" alt=""></span>
-                  <div class="inner">
-                    <strong class="subject">
-                      <span>건강한 계획2</span>
-                      치아정보 공유하기이벤트
-                    </strong>
-                    <span class="desc">2020.11.18 ~ 12.09</span>
+				<!-- Start : ET-020203_mo 공유채널 선택 팝업 -->
+                <div id="ET-020203_mo" class="ui-modal">
+                    <div class="ui-modal-wrap">
+                        <div class="ui-modal-head">
+                            <h1>공유 콘텐츠 상세보기</h1>
+                          <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'ET-020203_mo'})"><span class="hidden">닫기</span></button>
+                        </div>
+                        <div class="ui-modal-cont">
+                            <div class="cont-top">
+                                <h2 class="tit1">공유채널을 선택</h2>
+                                <p><strong>스마일케어 구독과 이벤트 응모가 완료되었습니다.<br/>구독 지인들과 공유할 채널을 선택해주세요.</strong></p>
+                                <div class="share-wrap">
+                                    <ul class="share-list">
+                                        <li>
+                                            <div class="share-item kakao">
+                                                <input id="rdo_1" name="rdoCheck" type="radio">
+                                                <label for="rdo_1"><span>카카오톡</span></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="share-item facebook">
+                                                <input id="rdo_2" name="rdoCheck" type="radio">
+                                                <label for="rdo_2"><span>페이스북</span></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="share-item kakaostory">
+                                                <input id="rdo_3" name="rdoCheck" type="radio">
+                                                <label for="rdo_3"><span>카카오스토리</span></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="share-item naver">
+                                                <input id="rdo_4" name="rdoCheck" type="radio">
+                                                <label for="rdo_4"><span>네이버블로그</span></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="share-item url">
+                                                <input id="rdo_5" name="rdoCheck" type="radio">
+                                                <label for="rdo_5"><span>URL복사</span></label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                  
+                                </div>
+                            </div>
+                            <div class="btn-wrap">
+                                <button type="button" class="btn-base " onclick="$plugins.uiModalClose({ id:'ET-020203_mo'})"><span>선택한 채널로 공유 진행하기</span></button>
+                            </div>
+                        </div>
+                    </div>
                   </div>
-                </a>
-                <a href="javascript:void(0);" class="item" onclick="goScroll(3);">
-                  <span class="thumb"><img src="./img/thumb_plan3.png" alt=""></span>
-                  <div class="inner">
-                    <strong class="subject">
-                      <span>보너스!</span>
-                      App에서 간편비밀번호 등록
-                    </strong>
-                    <span class="desc">2020.11.04 ~ 12.09</span>
-                  </div>
-                </a>
-              </div>
-              <div class="btn-wrap">
-								<button type="button" class="btn-base" onclick="$plugins.uiModalClose({ id:'ET-020102'})"><span>스마일케어로 이동</span></button>
-              </div>
-            </div>
-          </div>
-					<!-- script -->
-					<script type="text/javascript">
-            function goScroll(v){
-              $plugins.uiModalClose({ id:'ET-020102_mo', callback:function(){
-                // go to v section (To-Be)
-              }});
-            }
-						;(function($, win, doc, undefined) {
-							$(doc).ready(function(){
-							});
-						})(jQuery, window, document);
-					</script>
-				</section>
-				<!-- // End : ET-020102_mo -->
+                  <!-- // End : ET-020203_mo 공유채널 선택 팝업 -->
 				<script type="text/javascript">
 					;(function($, win, doc, undefined) {
 						$(doc).ready(function(){
 							
 							// popup run!!
 							$plugins.uiModalOpen({
-								id:'ET-020102_mo',
+								id:'ET-020203_mo',
 								full:false,
 								callback: function(v){
 									console.log('open :', v );

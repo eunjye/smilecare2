@@ -55,49 +55,41 @@
 				<script type="text/javascript" src="./js/ui.common.js"></script>
 				<script type="text/javascript" src="./js/smileCare.js"></script>
         
-				<!-- Start : ET-020102_mo -->
-        <section id="ET-020102_mo" class="ui-modal">
+				<!-- Start : ET-020101_mo -->
+        <section id="ET-020101_mo" class="ui-modal">
           <div class="ui-modal-wrap">
             <div class="ui-modal-head">
               <h1>스마일케어 구독 & 이벤트 신청</h1>
-              <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'ET-020102_mo'})"><span class="hidden">닫기</span></button>
+              <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'ET-020101_mo'})"><span class="hidden">닫기</span></button>
             </div>
             <div class="ui-modal-cont">
               <div class="done-wrap complete">
                 <h2 class="tit">스마일케어 구독 이벤트에<br>참여해주셔서 감사합니다.</h2>
                 <span class="desc">라이나생명에서 준비한 <br class="br">다른 이벤트에도 참여해보시겠어요?</span>
               </div>
-              <div class="evt-box">
-                <a href="javascript:void(0);" class="item" onclick="goScroll(2);">
-                  <span class="thumb"><img src="./img/thumb_plan2.png" alt=""></span>
+              <div class="evt-box large">
+                <div href="javascript:void(0);" class="item" onclick="goScroll(2);">
+                    <div class="inner"><span class="sub-s"><strong class="hue-p">Comming Soon!</strong><br/>건강한 계획 두번째는 무엇인가요?</span></div>
+                  <span class="thumb"><img src="./img/thumb_plan1.png" alt=""></span>
                   <div class="inner">
-                    <strong class="subject">
-                      <span>건강한 계획2</span>
-                      치아정보 공유하기이벤트
-                    </strong>
-                    <span class="desc">2020.11.18 ~ 12.09</span>
+                    <span class="sub-m">
+                      <span class="txt-c-line">11월 18일, 홈트레이닝의 혁명적인</span><br class="br"/>
+                      <span class="hue-p txt-c-line">색다른 경품과 새로운</span><br class="br"/>
+                      <span class="hue-p txt-c-line">모델과 함께 2차 오픈</span>됩니다.
+                    </span>
+                    <span class="sub-s hue-s">라이나생명 고객님만을 위한<br class="br"/> 특별이벤트도 준비해두었으니 많은 참여 부탁드립니다!</span>
                   </div>
-                </a>
-                <a href="javascript:void(0);" class="item" onclick="goScroll(3);">
-                  <span class="thumb"><img src="./img/thumb_plan3.png" alt=""></span>
-                  <div class="inner">
-                    <strong class="subject">
-                      <span>보너스!</span>
-                      App에서 간편비밀번호 등록
-                    </strong>
-                    <span class="desc">2020.11.04 ~ 12.09</span>
-                  </div>
-                </a>
+                </div>
               </div>
               <div class="btn-wrap">
-								<button type="button" class="btn-base" onclick="$plugins.uiModalClose({ id:'ET-020102'})"><span>스마일케어로 이동</span></button>
+                <button type="button" class="btn-base" onclick="$plugins.uiModalClose({ id:'ET-020102'})"><span>스마일케어로 이동</span></button>
               </div>
             </div>
           </div>
 					<!-- script -->
 					<script type="text/javascript">
             function goScroll(v){
-              $plugins.uiModalClose({ id:'ET-020102_mo', callback:function(){
+              $plugins.uiModalClose({ id:'ET-020101_mo', callback:function(){
                 // go to v section (To-Be)
               }});
             }
@@ -107,14 +99,14 @@
 						})(jQuery, window, document);
 					</script>
 				</section>
-				<!-- // End : ET-020102_mo -->
+				<!-- // End : ET-020101_mo -->
 				<script type="text/javascript">
 					;(function($, win, doc, undefined) {
 						$(doc).ready(function(){
 							
 							// popup run!!
 							$plugins.uiModalOpen({
-								id:'ET-020102_mo',
+								id:'ET-020101_mo',
 								full:false,
 								callback: function(v){
 									console.log('open :', v );

@@ -55,16 +55,16 @@
 				<script type="text/javascript" src="./js/ui.common.js"></script>
 				<script type="text/javascript" src="./js/smileCare.js"></script>
         
-				<!-- Start : ET-020102_mo -->
-        <section id="ET-020102_mo" class="ui-modal">
+				<!-- Start : ET-020103_mo -->
+        <section id="ET-020103_mo" class="ui-modal">
           <div class="ui-modal-wrap">
             <div class="ui-modal-head">
               <h1>스마일케어 구독 & 이벤트 신청</h1>
-              <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'ET-020102_mo'})"><span class="hidden">닫기</span></button>
+              <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'ET-020103_mo'})"><span class="hidden">닫기</span></button>
             </div>
             <div class="ui-modal-cont">
-              <div class="done-wrap complete">
-                <h2 class="tit">스마일케어 구독 이벤트에<br>참여해주셔서 감사합니다.</h2>
+              <div class="done-wrap already">
+                <h2 class="tit">이벤트에<br>이미 참여해주셨습니다.</h2>
                 <span class="desc">라이나생명에서 준비한 <br class="br">다른 이벤트에도 참여해보시겠어요?</span>
               </div>
               <div class="evt-box">
@@ -97,7 +97,7 @@
 					<!-- script -->
 					<script type="text/javascript">
             function goScroll(v){
-              $plugins.uiModalClose({ id:'ET-020102_mo', callback:function(){
+              $plugins.uiModalClose({ id:'ET-020103_mo', callback:function(){
                 // go to v section (To-Be)
               }});
             }
@@ -107,14 +107,14 @@
 						})(jQuery, window, document);
 					</script>
 				</section>
-				<!-- // End : ET-020102_mo -->
+				<!-- // End : ET-020103_mo -->
 				<script type="text/javascript">
 					;(function($, win, doc, undefined) {
 						$(doc).ready(function(){
 							
 							// popup run!!
 							$plugins.uiModalOpen({
-								id:'ET-020102_mo',
+								id:'ET-020103_mo',
 								full:false,
 								callback: function(v){
 									console.log('open :', v );

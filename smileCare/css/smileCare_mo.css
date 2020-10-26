@@ -588,7 +588,9 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 
 /* [P]구독&이벤트 신청 */
 .done-wrap { margin-top:15px; text-align:center; }
-.done-wrap:before { display:block; width:110px; height:110px; margin:0 auto 22px; background:url('../img/bg_done_mo.png') 0 0/110px auto no-repeat; content:""; }
+.done-wrap:before { display:block; width:110px; height:110px; margin:0 auto 22px; background:url('../img/spr_bg_done_mo.png') 0 0/110px auto no-repeat; content:"";}
+.done-wrap.complete:before {background-position:0 0}
+.done-wrap.already:before {background-position:0 -110px}
 .done-wrap .tit { font-size:24px; color:#000; font-weight:700; line-height:1.4em; }
 .done-wrap .desc { display:block; font-size:14px; color:#666; margin-top:13px; }
 .evt-box { margin:50px 0 40px; padding-top:30px; border-top:1px solid #e5e5e5; text-align:center; }
@@ -600,3 +602,10 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 .evt-box .inner .subject { display:block; color:#000; font-size:16px; }
 .evt-box .inner .subject span { display:block; margin-bottom:3px; color:#666; font-size:14px; }
 .evt-box .inner .desc { display:block; margin-top:7px; font-size:12px; color:#000; }
+.evt-box.large .item{text-align:center}
+.evt-box.large .thumb,.evt-box.large .inner{display:block}
+.evt-box.large .thumb {display:inline-block;text-align:center;width:130px;margin-top:20px}
+.evt-box.large .inner .sub-s{display:block;font-size:12px;color:#333}
+.evt-box.large .inner .sub-s strong{font-weight:bold}
+.evt-box.large .inner .sub-m{display:block;font-size:22px;padding:10px 0 20px}
+.txt-c-line{border-bottom:1px solid rgba(229,240,252,0.8);box-shadow:inset 0 -10px 0 rgba(229,240,252,0.8)}

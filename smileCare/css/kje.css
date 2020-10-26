@@ -34,15 +34,11 @@
 .share-wrap ul li:last-child{margin-right:0}
 .share-wrap .share-list .share-item input[type='radio']:focus + label{outline:1px dotted #000;outline-style:auto}
 .share-wrap .share-list .share-item input[type='radio']{position: absolute;width: 1px;height: 1px;margin: -1px;border: 0;overflow: hidden;padding: 0;clip: rect(0,0,0,0);-webkit-appearance: none;opacity: 0;}
-.share-wrap .share-list .share-item label{display:block;width:90px;height:90px;background:url('../img/spr_share.png')no-repeat;background-size:180px 450px;}
+.share-wrap .share-list .share-item label{display:block;width:90px;height:90px;background:url('../img/spr_share.png')no-repeat;background-size:90px 540px;}
 .share-wrap .share-list .share-item label span{display:block;font-size:15px;color:#666;text-align:center;padding-top:100px}
 .share-wrap .share-list .share-item.kakao label{background-position:0 0}
 .share-wrap .share-list .share-item.facebook label{background-position:0 -90px}
 .share-wrap .share-list .share-item.kakaostory label{background-position:0 -180px}
 .share-wrap .share-list .share-item.naver label{background-position:0 -270px}
 .share-wrap .share-list .share-item.url label{background-position:0 -360px}
-.share-wrap .share-list .share-item.kakao input[type='radio']:checked + label{background-position:-90px 0}
-.share-wrap .share-list .share-item.facebook input[type='radio']:checked + label{background-position:-90px -90px}
-.share-wrap .share-list .share-item.kakaostory input[type='radio']:checked + label{background-position:-90px -180px}
-.share-wrap .share-list .share-item.naver input[type='radio']:checked + label{background-position:-90px -270px}
-.share-wrap .share-list .share-item.url input[type='radio']:checked + label{background-position:-90px -360px}
+.share-wrap .share-list .share-item input[type='radio']:checked + label span:before{content:"";position:absolute;top:0;left:0;width:90px;height:90px;border-radius:50%;background:rgba(0,0,0,.8) url('../img/spr_share.png') no-repeat 0 -450px/90px 540px}

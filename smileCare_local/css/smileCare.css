@@ -524,20 +524,20 @@ select{display:inline-block;position:relative;vertical-align:middle;width:auto;h
 .event-section.n2 .grid > img { }
 .rdo-list { z-index:2; position:absolute; top:580px; left:50%; transform:translateX(-50%); width:100%; min-width:1100px; }
 .rdo-list > li { position:relative; display:inline-block; vertical-align:top; }
-.rdo-list input[type="checkbox"] + label { display:inline-block; padding:63px 0 0; margin:0 9px; width:230px; height:230px; border-radius:20px; background:#fff; border:3px solid #c2c2c2; overflow:hidden; transition:all ease-in .2s; box-shadow:2px 2px 18px rgba(0,0,0,.2); }
+.rdo-list input[type="checkbox"] + label { display:inline-block; padding:80px 0 0; margin:0 9px; width:230px; height:230px; border-radius:20px; background:#fff; border:3px solid #c2c2c2; overflow:hidden; transition:all ease-in .2s; box-shadow:2px 2px 18px rgba(0,0,0,.2); }
 .rdo-list input[type="checkbox"]:focus + label { outline:1px dotted #000; outline-style:auto;}
 .rdo-list input[type="checkbox"] + label:before{ display:block; margin:0 auto; width:200px; height:60px; background:url('../img/plan2_rdo.png') -200px 0/auto auto no-repeat; content:""; outline:none !important; }
 .rdo-list .item2 input[type="checkbox"] + label:before { background-position-y:-60px; }
 .rdo-list .item3 input[type="checkbox"] + label:before { background-position-y:-120px; }
 .rdo-list .item4 input[type="checkbox"] + label:before { background-position-y:-180px; }
-.rdo-list input[type="checkbox"] + label:after { position:absolute; top:100%; left:0; right:0; margin:10px auto 0; display:block; width:36px; height:36px; background:url('../img/rdo_plan2.png') 0 0/auto auto no-repeat; content:""; }
+.rdo-list input[type="checkbox"] + label:after { position:absolute; top:27px; left:0; right:0; margin:0 auto; display:block; width:36px; height:36px; background:url('../img/rdo_plan2.png') 0 0/auto auto no-repeat; content:""; }
 .rdo-list input[type="checkbox"]:checked + label { background:#FFD200; border-color:#FFD200; }
 .rdo-list input[type="checkbox"]:checked + label:before { background-position-x:0; }
 .rdo-list input[type="checkbox"]:checked + label:after{ background-position-y:-36px; }
 
 .btn-detail { left:50px; bottom:50px; display:inline-block; width:150px; height:40px; vertical-align:middle; background:url('../img/btn_plan2_detail.png') 0 -40px/auto auto no-repeat; content:""; }
 .btn-detail:focus { outline:1px dotted #000; outline-style:auto; }
-.rdo-list .btn-detail { z-index:1; position: absolute; }
+.rdo-list .btn-detail { z-index:1; position: absolute; bottom:30px; }
 .rdo-list input[type="checkbox"]:checked ~ .btn-detail { background-position-y:0; }
 
 .vod-area { position:absolute; top:1635px; left:0; text-align:center; width:100%; }

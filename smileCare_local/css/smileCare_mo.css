@@ -655,10 +655,10 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 .event-section.n1 { background-color:#FBFBFB; }
 .event-section .btn-area { z-index:2; position:absolute; width:100%; left:0; right:0; margin:0 auto; }
 .btn-area a { width:100%; }
-.btn-area.n1 { top:59%; width:72%; } /* 스마일케어 구독 이벤트 참여하기 */
+.btn-area.n1 { top:53%; width:72%; } /* 스마일케어 구독 이벤트 참여하기 */
 .btn-area.n2 { top:98%; width:40% } /* 매거진 상세보기 */
 .btn-area.n2 img { width:50%; }
-.btn-area.n3 { top:81%; width:50%; } /* 스마일케어 더 알아보기 */
+.btn-area.n3 { top:79%; width:50%; } /* 스마일케어 더 알아보기 */
 
 /* pc에서는 hidden */
 .detail-area { line-height:1.4em; margin:4% -4% 0; padding:15px 4% 43px; text-align:left; letter-spacing:-0.025em;font-size:13px; background:#fff; }
@@ -685,12 +685,11 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 /* Plan2 */
 .event-section.n2 { position:relative; background:#018BED; padding:0 4%; }
 .event-section.n2 .grid > img { }
-.rdo-list { z-index:2; position:absolute; top:21%; left:0; width:100%; }
+.rdo-list { z-index:2; position:absolute; top:22%; left:0; width:100%; }
 .rdo-list > li { position:relative; display:inline-block; width:48%; margin:-.5% -1%; vertical-align:top; }
 .rdo-list label { position:relative; display:inline-block; width:100%; padding-top:100%; height:0; }
 .rdo-list label img { position:absolute; top:0; left:0; transition:opacity ease-in .2s; }
 .rdo-list label img.active { opacity:0; }
-.rdo-list input:checked + label img { opacity:0; }
 .rdo-list input:checked + label img.active { opacity:1; }
 .rdo-list input:focus + label { outline:1px dotted #000; outline-style:auto;}
 
@@ -702,7 +701,7 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 .rdo-list input:checked ~ .btn-detail img { opacity:0; }
 .rdo-list input:checked ~ .btn-detail img.active { opacity:1; }
 
-.vod-area { position:absolute; top:84.5%; left:5.5%; right:5.5%; padding-top:50%; height:0; text-align:center; }
+.vod-area { position:absolute; top:83.2%; left:5.5%; right:5.5%; padding-top:50%; height:0; text-align:center; }
 .vod-area iframe { position:absolute; top:0; left:0; width:100%; height:100%; }
 .btn-moreview:after { display:inline-block; vertical-align:middle; width:9px; height:9px; margin:0 0 0 3px; content:""; background:url('../img/arrow_more.png') center center/contain no-repeat; transition:all ease-in .2s; }
 .btn-moreview img { vertical-align:middle; }
@@ -710,7 +709,7 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 .more-wrap { display:none; overflow:hidden; }
 #popYafit { padding-bottom:5%; }
 
-.btn-area.n4 { overflow:hidden; top:44.5%; width:77%; } /* 콘텐츠 공유 이벤트 참여하기 */
+.btn-area.n4 { overflow:hidden; top:46.5%; width:77%; } /* 콘텐츠 공유 이벤트 참여하기 */
 .btn-area.n4 button[disabled] { cursor:default; }
 .btn-area.n4 button:after { position:absolute; top:0; right:0; width:110%; height:100%; background:rgba(255,255,255,.8); content:""; display:block; opacity:0; transition:all ease-in .2s; transform:translateX(-100%); }
 .btn-area.n4 button[disabled]:after { transform:translateX(0); opacity:1; }

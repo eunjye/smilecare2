@@ -34,7 +34,7 @@
 		<hr><!-- // skip_nav -->
 		<div id="header" class="header header_renew">
 				<div class="header_inner">
-						<h1 class="logo"><a href="http://www.lina.co.kr/main/main.htm"><img src="./_root/images/common/h1_logo.gif" alt="라이나생명"></a></h1>
+					<h1 class="logo"><a href="http://www.lina.co.kr/main/main.htm"><img src="./_root/images/common/h1_logo.gif" alt="라이나생명"></a></h1>
 
 						<!-- Top menu [s] -->
 						<div class="top_menu">
@@ -308,8 +308,8 @@
 						<strong class="dep1_tit dep1a_tit"><a href="http://www.lina.co.kr/carelounge/main.htm">케어라운지</a></strong>
 						<ul class="gnb_dep2 gnb_care" style="display: none;">
 						<li class="m1">
-								<a href="http://www.lina.co.kr/carelounge/main.htm" class="gnb_care_tit"><img src="./_root/images/common/img_gnb_care.png" alt="Lounge 케어라운지"></a>
-								<div class="dep2_box dep2_box1">
+							<a href="http://www.lina.co.kr/carelounge/main.htm" class="gnb_care_tit"><img src="./_root/images/common/img_gnb_care.png" alt="Lounge 케어라운지"></a>
+							<div class="dep2_box dep2_box1">
 									<a href="http://www.lina.co.kr/carelounge/contents/endure_info_list.htm" class="dep2_tit">아침의 심호흡</a>
 									<ul class="gnb_dep3">
 										<li><a href="http://www.lina.co.kr/carelounge/contents/endure_info_list.htm">하루를 여는 트렌드</a></li>
@@ -418,8 +418,8 @@
 					</li>
 				</ul>
 				<div class="gnb_search">
-				<form name="frmSearch" method="post" action="./_root/search/search_detail.htm" onsubmit="return frmSearchSubmit()">
-					<label for="paramSearch" class="blind">검색어 입력</label>
+					<form name="frmSearch" method="post" action="/search/search_detail.htm" onsubmit="return frmSearchSubmit()">
+						<label for="paramSearch" class="blind">검색어 입력</label>
 					<input type="text" name="paramSearch" id="paramSearch" class="gnb_search_inp" maxlength="10" placeholder="보장분석">
 					<button>검색</button>
 				</form>
@@ -482,14 +482,8 @@
 											<input type="checkbox" id="check_1" class="chk" name="agree" onChange="javascript:agreeChk();">
 											<label for="check_1">[필수]개인정보 수집&middot;이용 동의</label>
 											<button type="button" onclick="
-												
-												$plugins.uiModalOpen({
-													id:'ET-010200',
-													full:false,
-													callback: function(v){
-														$('#ET-010200 .ctab_area a').eq(0).click();
-														// console.log('open :', v );
-													}
+												openPopup('ET-010200', function(){
+													$('#ET-010200 .ctab_area a').eq(0).click();
 												});
 											"><span class="offscreen">[필수]개인정보 수집&middot;이용 동의</span></button>
 											<p class="check_tit_sub">- 개인식별정보: 7건 (성명, 생년월일,  휴대폰번호 외 4건)</p>
@@ -498,15 +492,9 @@
 											<input type="checkbox" id="check_2" class="chk" name="agree" onChange="javascript:agreeChk();">
 											<label for="check_2">[필수]민감정보 및 개인식별정보 수집&middot;이용 동의</label>
 											<button type="button" onclick="
-												
-											$plugins.uiModalOpen({
-												id:'ET-010200',
-												full:false,
-												callback: function(v){
+												openPopup('ET-010200', function(){
 													$('#ET-010200 .ctab_area a').eq(1).click();
-													// console.log('open :', v );
-												}
-											});
+												});
 											"><span class="offscreen">[필수]민감정보 및 개인식별정보 수집&middot;이용 동의</span></button>
 											<p class="check_tit_sub">- 민감정보: 4건(당사 계약정보 외 3건)</p>
 										</div>
@@ -521,15 +509,9 @@
 											<input type="checkbox" id="check_3" class="chk" name="agree" onChange="javascript:agreeChk();">
 											<label for="check_3">[필수]이벤트 경품 지급을 위한 제3자 제공 동의</label>
 											<button type="button"  onclick="
-												
-											$plugins.uiModalOpen({
-												id:'ET-010200',
-												full:false,
-												callback: function(v){
+												openPopup('ET-010200', function(){
 													$('#ET-010200 .ctab_area a').eq(2).click();
-													// console.log('open :', v );
-												}
-											});
+												});
 											"><span class="offscreen">[필수]이벤트 경품 지급을 위한 제3자 제공 동의</span></button>
 											<p class="check_tit_sub">- 개인식별정보: 2건 (성명,  휴대폰번호)</p>
 										</div>
@@ -544,15 +526,10 @@
 											<input type="checkbox" id="check_4" class="chk" name="agree1" onChange="javascript:agreeChk();">
 											<label for="check_4">[선택]마케팅 활용 이용 동의</label>
 											<button type="button" onclick="
-												
-											$plugins.uiModalOpen({
-												id:'ET-010200_mo',
-												full:false,
-												callback: function(v){
+
+												openPopup('ET-010200', function(){
 													$('#ET-010200 .ctab_area a').eq(3).click();
-													// console.log('open :', v );
-												}
-											});
+												})
 											"><span class="offscreen">[선택]마케팅 활용 이용 동의</span></button>
 											<p class="check_tit_sub">- 개인식별정보: 7건 (성명, 생년월일,  휴대폰번호 외 4건)</p>
 										</div>
@@ -764,236 +741,6 @@
                     }
 			</script>
 		</div>
-		<!-- // End : ET-010100 -->
-		<!-- Start : ET-010200 -->
-		<section id="ET-010200" class="ui-modal">
-			<div class="ui-modal-wrap">
-			  <div class="ui-modal-head">
-				<h1>스마일케어 약관 상세</h1>
-				<button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'ET-010200'})"><span class="hidden">닫기</span></button>
-			  </div>
-			  <div class="ui-modal-cont">
-				<section class="term-box" tabindex="0">
-				  <div class="inside-tab">
-					<ul class="ctab_area n4">
-					  <li class="on"><a href="#hpcon_A01">[필수] 개인정보<br>수집 · 이용 동의</a></li>
-					  <li><a href="#hpcon_A02">[필수] 민감정보 및 개인<br>식별정보 수집 · 이용 동의</a></li>
-					  <li><a href="#hpcon_A03">[필수] 이벤트 경품 지급을<br>위한 제3자 제공 동의</a></li>
-					  <li><a href="#hpcon_A04">[선택] 마케팅 활용<br>이용 동의</a></li>
-					</ul>
-  
-					<div class="ctab_panel">
-					  <div id="hpcon_A01" class="ctab_cont on"><!-- [필수] 개인정보 수집 · 이용 동의 -->
-  
-						<h2 class="term-tit01">[필수] 구독 서비스 제공을 위한 개인정보 수집 · 이용 동의</h2>
-						<p class="term-intro">
-						  <span>당사는 「개인정보보호법」에 따라 케어콘텐츠의 소개 및 홍보 등을 위해 귀하의 개인정보를 수집 · 이용하고자 합니다.</span>
-						</p>
-						<table>
-						  <caption>개인정보 수집·이용 관련 수집·이용 주체, 목적, 내용, 구독 서비스 알림, 보유·이용 기간 정보입니다.</caption>
-						  <colgroup>
-							<col style="width:30%">
-							<col style="width:70%">
-						  </colgroup>
-						  <tbody>
-							<tr>
-							  <th scope="row">수집·이용 주체</th>
-							  <td class="tl">라이나생명보험주식회사</td>
-							</tr>
-							<tr>
-							  <th scope="row">수집·이용 목적</th>
-							  <td class="tl">
-								<ul class="list-dash">
-								  <li>케어콘텐츠의 소개 및 홍보</li>
-								  <li>웹사이트/Application 정보 등에 대한 분석 및 세분화를 통한 이용자의 서비스 이용 선호도 분석, 고객 분석 통계</li>
-								</ul>	
-							  </td>
-							</tr>
-							<tr>
-							  <th scope="row">수집·이용 내용</th>
-							  <td class="tl">
-								<ul class="list-dash">
-								  <li>개인식별정보 (성명, 생년월일, 성별, 휴대폰번호, 이메일, ADID, Cookie )</li>
-								  <li>선호도 관심정보, 콘텐츠 클릭정보, 콘텐츠 분류 정보</li>
-								</ul>
-							  </td>
-							</tr>
-							<tr>
-							  <th scope="row">구독 서비스 알림</th>
-							  <td class="tl">카카오 알림톡, SMS, Email</td>
-							</tr>
-							<tr>
-							  <th scope="row">보유·이용 기간</th>
-							  <td class="tl">
-								동의일로부터 1년 (단, 보유ㆍ이용 기간이 경과한 후에는 민원처리 및 법령상 의무이행만을 위하여 3개월  보관ㆍ이용)
-							  </td>
-							</tr>
-						  </tbody>
-						</table>
-						<p class="bul-note">동의 하시더라도 당사 홈페이지(www.lina.co.kr, 구독서비스해재)를 통해 구독 해지 하실 수 있습니다.</p>
-						<p class="bul-note">단, 웹사이트 또는 Application 정보는 웹사이트를 통하여 접속한 고객에 한하여 수집ㆍ이용 합니다. </p>
-						<p class="terms-sign">(미확인) 신용정보관리보호인필(DGT2006-01-XXXXX-OYN)</p>
-  
-					  </div><!--// 개인정보 수집 이용 동의 -->
-  
-					  <div id="hpcon_A02" class="ctab_cont"><!-- [필수] 민감정보 및 개인식별정보 수집 · 이용 동의 -->
-  
-						<h2 class="term-tit01">[필수] 민감정보 및 개인식별정보 수집 · 이용 동의</h2>
-						<p class="term-intro">
-						  <span>당사는 「개인정보보호법」에 따라 당사의 계약 조회 및 수집 · 이용을 위해 귀하의 개인정보를 수집 · 이용하고자 합니다.</span>
-						</p>
-						<table>
-						  <caption>민감정보 및 개인식별정보 관련 수집·이용 주체, 목적, 내용, 보유·이용 기간 정보입니다.</caption>
-						  <colgroup>
-							<col style="width:30%">
-							<col style="width:70%">
-						  </colgroup>
-						  <tbody>
-							<tr>
-							  <th scope="row">수집·이용 주체</th>
-							  <td class="tl">라이나생명보험주식회사</td>
-							</tr>
-							<tr>
-							  <th scope="row">수집·이용 목적</th>
-							  <td class="tl">
-								개인 맞춤 케어컨텐츠의 소개 및 홍보
-							  </td>
-							</tr>
-							<tr>
-							  <th scope="row">수집·이용 내용</th>
-							  <td class="tl">
-								라이나생명의 보험계약정보, 청구사유, 사고유형, 청구보험금지급일
-							  </td>
-							</tr>
-							<tr>
-							  <th scope="row">보유·이용 기간</th>
-							  <td class="tl">
-								동의일로부터 1년 (단, 보유ㆍ이용 기간이 경과한 후에는 민원처리 및 법령상 의무이행만을 위하여 3개월  보관ㆍ이용)
-							  </td>
-							</tr>
-						  </tbody>
-						</table>
-						<p class="bul-note">단, 라이나생명의 보혐계약이 있는 경우에 계약자에 한하여 수집ㆍ이용 합니다. </p>
-						<p class="terms-sign">(미확인) 신용정보관리보호인필(DGT2006-01-XXXXX-OYN)</p>
-  
-					  </div><!--// [필수] 민감정보 및 개인식별정보 수집 · 이용 동의 -->
-  
-					  <div id="hpcon_A03" class="ctab_cont"><!-- [필수] 이벤트 경품 지급을 위한 제3자 제공 동의 -->
-						
-						<h2 class="term-tit01">[필수] 이벤트 경품 지급을 위한 제3자 제공 동의</h2>
-						<p class="term-intro">
-						  <span>마케팅 등을 위한 개인(신용)정보의 수집, 이용 및 제공 동의 하시겠습니까?</span>
-						</p>
-						<table>
-						  <caption>이벤트 경품 지급을 위한 제3자 제공 동의 관련 수집·이용 주체, 목적, 내용, 보유·이용 기간 정보입니다.</caption>
-						  <colgroup>
-							<col style="width:30%">
-							<col style="width:70%">
-						  </colgroup>
-						  <tbody>
-							<tr>
-							  <th scope="row">수집·이용 주체</th>
-							  <td class="tl">대행사 00000 (미정)</td>
-							</tr>
-							<tr>
-							  <th scope="row">수집·이용 목적</th>
-							  <td class="tl">
-								이벤트 당첨자 시 경품 제공
-							  </td>
-							</tr>
-							<tr>
-							  <th scope="row">수집·이용 내용</th>
-							  <td class="tl">
-								성명, 휴대폰번호
-							  </td>
-							</tr>
-							<tr>
-							  <th scope="row">보유·이용 기간</th>
-							  <td class="tl">
-								이벤트 종료 및 발송 완료 후 90일 이내 폐기
-							  </td>
-							</tr>
-						  </tbody>
-						</table>
-						<p class="bul-note"> 개인정보의 제 3자 제공을 원하지 않을 경우 수집하지 않으며, 미동의하실 경우, 이벤트 참여가 불가능합니다.</p>
-						<p class="terms-sign">(미확인) 신용정보관리보호인필(DGT2006-01-XXXXX-OYN)</p>
-					  </div><!-- // [필수] 이벤트 경품 지급을 위한 제3자 제공 동의 -->
-  
-					  <div id="hpcon_A04" class="ctab_cont"><!-- [선택] 마케팅 활용 이용 동의 -->
-						
-						<h2 class="term-tit01">[선택] 마케팅 활용 이용 동의</h2>
-						<p class="term-intro">
-						  <span>마케팅 등을 위한 개인(신용)정보의 수집, 이용 및 제공 동의 하시겠습니까?</span>
-						</p>
-						<table>
-						  <caption>마케팅 활용 이용 동의 관련 수집·이용 주체, 목적, 내용, 보유·이용 기간 정보입니다.</caption>
-						  <colgroup>
-							<col style="width:30%">
-							<col style="width:70%">
-						  </colgroup>
-						  <tbody>
-							<tr>
-							  <th scope="row">수집·이용 주체</th>
-							  <td class="tl">라이나생명보험주식회사</td>
-							</tr>
-							<tr>
-							  <th scope="row">수집·이용 목적</th>
-							  <td class="tl">
-								이벤트 정보제공 및 프로모션 참여기회 제공
-							  </td>
-							</tr>
-							<tr>
-							  <th scope="row">수집·이용 내용</th>
-							  <td class="tl">
-								성명, 생년월일, 성별, 휴대폰번호. 이메일, ADID, Cookie
-							  </td>
-							</tr>
-							<tr>
-							  <th scope="row">보유·이용 기간</th>
-							  <td class="tl">
-								동의일로부터  1년 (단, 보유ㆍ이용 기간이 경과한 후에는 민원처리 및 법령상 의무이행만을 위하여 3개월  보관ㆍ이용)
-							  </td>
-							</tr>
-						  </tbody>
-						</table>
-						<p class="bul-note">본 동의는 서비스 이용에 필수적이지 않으며 동의를 거부할 수 있습니다.</p>
-						<p class="terms-sign">(미확인) 신용정보관리보호인필(DGT2006-01-XXXXX-OYN)</p>
-					  </div><!-- // [선택] 마케팅 활용 이용 동의 -->
-					</div>
-				  </div>
-				  <div class="btn-wrap">
-					<button type="button" class="btn-base" onclick="$plugins.uiModalClose({ id:'ET-010200'})"><span>확인</span></button>
-				  </div>
-  
-				</section>
-			  </div>
-			</div>
-					  <!-- script -->
-					  <script type="text/javascript">
-						  ;(function($, win, doc, undefined) {
-							  $(doc).ready(function(){
-	  
-								  // inside-tab
-								  $('.ctab_area>li>a').each(function(){
-									  $(this).click(function(e){
-										  e.preventDefault();
-										  if (!$(this).parent('li').hasClass('on')){
-											  var id = $(this).attr('href');
-					  
-											  $(this).parent('li').addClass('on');
-											  $(this).parent('li').siblings().removeClass('on').find('a').attr('title', '선택되지 않은 탭');
-					  
-											  $(this).attr('title','선택된 탭');
-											  $(id).siblings().css('display','none');
-											  $(id).css('display','block');
-										  }
-									  });
-								  });
-							  });
-						  })(jQuery, window, document);
-					  </script>
-		</section>
-		<!-- // End : ET-010200 -->
 
 				<script type="text/javascript">
 					;(function($, win, doc, undefined) {

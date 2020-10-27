@@ -229,3 +229,41 @@ function autoCompleteEmail(wrap, option) {
 				}
 		});
 }
+
+// popup load by ajax
+function openPopup(id, callback){
+	if (!$('#'+id).length) {
+		loadPopup(id);
+	} else {
+		$('#'+id).insertAfter($('.ui-modal').last());
+	}
+	
+	$plugins.uiModalOpen({
+		id:id,
+		full:false,
+		callback: function(v){
+			console.log('open :', v );
+			!!callback && callback();
+		}
+	});
+
+	function loadPopup(id){
+		$.ajax({
+			type: 'GET',
+			url: './'+id+'.html',
+			cache: false,
+			async: false,
+			headers: {
+				"cache-control" : "no-cache", 
+				"pragma" : "no-cache"
+			},
+			error: function(request, status, err) {
+				console.log("error");
+			},
+			success: function(v) {
+				$('.smilecare').append($(v).find('#'+id));
+			}
+		});
+	}
+}
+

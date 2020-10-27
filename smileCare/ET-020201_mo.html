@@ -80,7 +80,13 @@
                                     탄산음료를 마신 후에는 바로 양치를 하는 것이 오히려 안 좋습니다. 탄산이 치아의 무기질을 탈회시키면서 치아 표면을 거칠게 하기 때문인데요. 표면이 거칠어진 상태에서 바로 칫솔질을 하게 되면 치아 표면은 더욱 거칠어져 오히려 착색이 쉬운 상태로 악화시키게 됩니다. 탄산음료를 마시고 최소 1시간이 지난 후에 양치하는 것이 좋습니다.</p>
                             </div>
                             <div class="btn-wrap">
-                                <button type="button" class="btn-base " onclick="$plugins.uiModalClose({ id:'ET-020201_mo'})"><span>선택한 콘텐츠 공유하기</span></button>
+                                <button type="button" class="btn-base " onclick="
+                                    if (true) { // 로그인 시 || 비로그인&&인증키 보유 시
+                                        openPopup('ET-020202_mo');
+                                    } else { // 비로그인&&인증키 미보유 시
+                                        openPopup('ET-010100_mo');
+                                    }
+                                "><span>선택한 콘텐츠 공유하기</span></button>
                             </div>
                         </div>
                     </div>

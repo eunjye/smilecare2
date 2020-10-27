@@ -548,7 +548,22 @@
                 </li>
               </ul>
               <div class="btn-wrap">
-								<button type="button" class="btn-base" onclick="$plugins.uiModalClose({ id:'ET-010300'})"><span>확인</span></button>
+								<button type="button" class="btn-base" onclick="
+									$plugins.uiModalClose({ 
+										id:'ET-010300',
+										callback: function(){
+											if (!true) { // 2차 이벤트 미 진행 시
+												openPopup('ET-020101');
+											} else { // 2차 이벤트 진행 중일 시
+												if (true) { // 이벤트에 참여한 경우
+													openPopup('ET-020103');
+												} else { // 이벤트에 참여하지 않은 경우
+													openPopup('ET-020102');
+												}
+											}
+										}
+									})
+								"><span>확인</span></button>
               </div>
             </div>
           </div>

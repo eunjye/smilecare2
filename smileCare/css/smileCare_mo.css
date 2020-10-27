@@ -157,7 +157,9 @@ input::placeholder{color:#ccc;font-size:19px;font-weight:400}
 .btn-wrap{width:100%;text-align:center;margin:23px 0 0}
 
 .btn-small{display:inline-block;font-size:14px;padding:0 10px;font-weight:400;height:28px;border-radius:6px;border:1px solid #d9d9d9;color:#000;background:#fff;letter-spacing:-0.075em;position:relative}
-.btn-base{display:inline-block;font-size:15px;padding:0 50px;font-weight:700;height:40px;border:0;color:#fff;background:#008bec;letter-spacing:-0.075em;position:relative;transition:background 0.2s ease-in, color 0.2s ease-in}
+.btn-base,
+a.btn-base{display:inline-block;font-size:15px;padding:0 50px;font-weight:700;height:40px;border:0;color:#fff;background:#008bec;letter-spacing:-0.075em;position:relative;transition:background 0.2s ease-in, color 0.2s ease-in}
+a.btn-base { line-height:39px; }
 .btn-base2{display:inline-block;font-size:13px;padding:0 20px;font-weight:400;height:40px;line-height:37px;color:#008bec;background:#fff;border:1px solid #008bec;letter-spacing:-0.075em;position:relative;transition:background 0.2s ease-in, color 0.2s ease-in}
 .btn-round{display:inline-block;font-size:16px;padding:0 20px;font-weight:400;height:40px;border-radius:20px;border:1px solid #ccc;color:#000;background:#fff;letter-spacing:-0.075em;position:relative}
 .btn-toggle{display:inline-block;font-size:14px;padding:5px 20px;font-weight:500;color:#000;border:0;background:transparent;letter-spacing:-0.05em;position:relative}
@@ -633,9 +635,9 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 .anchor-list a.n2 .link { background-position-y:-45px; }
 .anchor-list a.n3 .link { background-position-y:-90px; }
 .anchor-list a .hidden { display:none !important; }
-.anchor-list a.on { background:#004286; }
-.anchor-list a.on .link { background-position-x:-80px; }
-.anchor-list a.on .hidden { display:block !important; }
+.anchor-list.ui-fixed-top a.on { background:#004286; }
+.anchor-list.ui-fixed-top a.on .link { background-position-x:-80px; }
+.anchor-list.ui-fixed-top a.on .hidden { display:block !important; }
 
 .event-wrap .arrow-down { position:absolute; bottom:5%; left:0; right:0; margin:0 auto; display:block; width:60px; height:40px; background:url('../img/arrow_down.png') center center/20px auto no-repeat; animation:aniArrowDown 2s infinite; content:""; }
 @keyframes aniArrowDown {
@@ -708,7 +710,10 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 .more-wrap { display:none; overflow:hidden; }
 #popYafit { padding-bottom:5%; }
 
-.btn-area.n4 { top:44.5%; width:77%; } /* 콘텐츠 공유 이벤트 참여하기 */
+.btn-area.n4 { overflow:hidden; top:44.5%; width:77%; } /* 콘텐츠 공유 이벤트 참여하기 */
+.btn-area.n4 button[disabled] { cursor:default; }
+.btn-area.n4 button:after { position:absolute; top:0; right:0; width:110%; height:100%; background:rgba(255,255,255,.8); content:""; display:block; opacity:0; transition:all ease-in .2s; transform:translateX(-100%); }
+.btn-area.n4 button[disabled]:after { transform:translateX(0); opacity:1; }
 .btn-area.n5 { top:97.5%; width:64% } /* 야핏 더 알아보기 */
 .btn-area.n5 img { width:50%; }
 

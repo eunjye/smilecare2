@@ -470,7 +470,14 @@
           <div class="ui-modal-wrap">
             <div class="ui-modal-head">
               <h1>스마일케어 구독 & 이벤트 신청</h1>
-              <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'ET-020101'})"><span class="hidden">닫기</span></button>
+							<button type="button" class="btn-close" onclick="
+								$plugins.uiModalClose({ 
+									id:'ET-020101',
+									callback: function(){
+										scrollToPanel(1); // go to second section
+									}
+								});
+							"><span class="hidden">닫기</span></button>
             </div>
             <div class="ui-modal-cont">
               <div class="done-wrap complete">
@@ -490,17 +497,14 @@
                 </div>
               </div>
               <div class="btn-wrap">
-                <button type="button" class="btn-base" onclick="$plugins.uiModalClose({ id:'ET-020101'})"><span>스마일케어로 이동</span></button>
+								<a href="./ET-000000.html" target="_blank" title="새창 열림" class="btn-base" onclick="
+									$plugins.uiModalClose({ id:'ET-020101'});
+								"><span>스마일케어로 이동</span></a>
               </div>
             </div>
           </div>
 					<!-- script -->
 					<script type="text/javascript">
-            function goScroll(v){
-              $plugins.uiModalClose({ id:'ET-020101', callback:function(){
-                // go to v section (To-Be)
-              }});
-            }
 						;(function($, win, doc, undefined) {
 							$(doc).ready(function(){
 							});

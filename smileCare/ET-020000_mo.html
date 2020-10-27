@@ -57,6 +57,7 @@
         
         <!-- Start : ET-020000_mo -->
         <div class="base-body event-wrap">
+          <div id="temp"></div>
           <div class="event-visual">
 						<div class="grid">
 							<img src="./img/evt_visual_mo.png" alt="">
@@ -95,7 +96,12 @@
 								<span>이벤트 응모기간 : 2020. 11. 04 ~ 12. 09</span>
 							</div>
 							<div class="btn-area n1">
-								<a href="javascript:void(0);"><img src="./img/btn_plan1_join_mo.png" alt="스마일케어 구독 이벤트 참여하기"></a>
+                <a href="javascript:void(0);" onclick="
+                  if (true) { // 로그인 시 || 비로그인&&인증키 보유 시
+                    openPopup('ET-010300_mo');
+                  } else { // 비로그인&&인증키 미보유 시
+                    openPopup('ET-010100_mo');
+                  }"><img src="./img/btn_plan1_join_mo.png" alt="스마일케어 구독 이벤트 참여하기"></a>
 							</div>
 							<div class="hidden">
 								<p>스마일케어 구독해서 매월 치아건강에 도움되는 알찬 정보와 <strong>3,603명</strong>에게 건강한 행복 안겨드리는 푸짐한 경품이벤트에 참여해보세요.</p>
@@ -145,7 +151,7 @@
 								</ul>
 							</div>
 							<div class="btn-area n3">
-								<a href="javascript:void(0);"><img src="./img/btn_plan1_more.png" alt="스마일케어 더 알아보기"></a>
+								<a href="./ET-000000_mo.html" target="_blank" title="새창 열림"><img src="./img/btn_plan1_more.png" alt="스마일케어 더 알아보기"></a>
 							</div>
 						</div>
             <div class="detail-area">
@@ -192,52 +198,60 @@
 							</div>
 							<ul class="rdo-list">
 								<li class="item1">
-									<input type="radio" class="hidden" id="rdoPlan2_1" name="rdoPlan2">
+									<input type="checkbox" class="hidden" id="rdoPlan2_1" name="rdoPlan2">
 									<label for="rdoPlan2_1">
                     <span class="hidden">황니가 걱정? 치아미백관리 방법</span>
                     <img src="./img/plan2_rdo1_off.png" alt="">
                     <img src="./img/plan2_rdo1_on.png" alt="" class="active">
                   </label>
-									<a href="javascript:void(0);" class="btn-detail">
+									<a href="javascript:void(0);" class="btn-detail" onclick="
+                    openPopup('ET-020201_mo');
+                  ">
                     <span class="hidden">상세보기</span>
                     <img src="./img/btn_plan2_detail_off_mo.png" alt="">
                     <img src="./img/btn_plan2_detail_on_mo.png" alt="" class="active">
                   </a>
 								</li>
 								<li class="item2">
-									<input type="radio" class="hidden" id="rdoPlan2_2" name="rdoPlan2">
+									<input type="checkbox" class="hidden" id="rdoPlan2_2" name="rdoPlan2">
 									<label for="rdoPlan2_2">
                     <span class="hidden">치아보험 가입 전 필독사항!</span>
                     <img src="./img/plan2_rdo2_off.png" alt="">
                     <img src="./img/plan2_rdo2_on.png" alt="" class="active">
                   </label>
-									<a href="javascript:void(0);" class="btn-detail">
+									<a href="javascript:void(0);" class="btn-detail" onclick="
+                    openPopup('ET-020201_mo');
+                  ">
                     <span class="hidden">상세보기</span>
                     <img src="./img/btn_plan2_detail_off_mo.png" alt="">
                     <img src="./img/btn_plan2_detail_on_mo.png" alt="" class="active">
                   </a>
 								</li>
 								<li class="item3">
-									<input type="radio" class="hidden" id="rdoPlan2_3" name="rdoPlan2">
+									<input type="checkbox" class="hidden" id="rdoPlan2_3" name="rdoPlan2">
 									<label for="rdoPlan2_3">
                     <span class="hidden">중장년층을 위한 치아관리 팁</span>
                     <img src="./img/plan2_rdo3_off.png" alt="">
                     <img src="./img/plan2_rdo3_on.png" alt="" class="active">
                   </label>
-									<a href="javascript:void(0);" class="btn-detail">
+									<a href="javascript:void(0);" class="btn-detail" onclick="
+                    openPopup('ET-020201_mo');
+                  ">
                     <span class="hidden">상세보기</span>
                     <img src="./img/btn_plan2_detail_off_mo.png" alt="">
                     <img src="./img/btn_plan2_detail_on_mo.png" alt="" class="active">
                   </a>
 								</li>
 								<li class="item4">
-									<input type="radio" class="hidden" id="rdoPlan2_4" name="rdoPlan2">
+									<input type="checkbox" class="hidden" id="rdoPlan2_4" name="rdoPlan2">
 									<label for="rdoPlan2_4">
                     <span class="hidden">충치 예방에 효과적인 음식들</span>
                     <img src="./img/plan2_rdo4_off.png" alt="">
                     <img src="./img/plan2_rdo4_on.png" alt="" class="active">
                   </label>
-									<a href="javascript:void(0);" class="btn-detail">
+									<a href="javascript:void(0);" class="btn-detail" onclick="
+                    openPopup('ET-020201_mo');
+                  ">
                     <span class="hidden">상세보기</span>
                     <img src="./img/btn_plan2_detail_off_mo.png" alt="">
                     <img src="./img/btn_plan2_detail_on_mo.png" alt="" class="active">
@@ -245,7 +259,13 @@
 								</li>
 							</ul>
 							<div class="btn-area n4">
-								<a href="javascript:void(0);"><img src="./img/btn_plan2_join_mo.png" alt="콘텐츠 공유 이벤트 참여하기"></a>
+								<button type="button" disabled onclick="
+                if (true) { // 로그인 시 || 비로그인&&인증키 보유 시
+                  openPopup('ET-020202_mo');
+                } else { // 비로그인&&인증키 미보유 시
+                  openPopup('ET-010100_mo');
+                }
+              "><img src="./img/btn_plan2_join_mo.png" alt="콘텐츠 공유 이벤트 참여하기"></button>
 							</div>
 
 							<div class="hidden">
@@ -318,7 +338,15 @@
 					<!-- start of plan 3 -->
 					<section class="event-section n3">
 						<div class="hidden">
-							<h2>보너스 이벤트! 03. App에서 간편비밀번호 등록 이용하기</h2>
+							<h2>보너스 이벤트! 03. App에서 간편비밀번호 등록</h2>
+							<p>개인정보는 주기적으로 관리해주어야 안전합니다. 변동된 개인정보가 반영되어 있는지 확인해보세요. <strong>추첨을 통해 5,000명</strong>에게 상품권을 증정해드립니다.</p>
+
+							<span>계약이 있는 고객님들께만</span>
+							<span>시크릿이벤트</span>
+							<span>무려5천명당첨</span>
+
+							<span>이벤트 응모기간 : 2020. 11. 04 ~ 12. 09</span>
+							
 						</div>
 						<div class="img-area img1">
 							<img src="./img/evt_plan3_img1_mo.png" alt="">
@@ -360,6 +388,7 @@
         <!-- // End : ET-020000_mo -->
 
         <script type="text/javascript">
+        
 					function popYafitDetail(ts, target) {
 						var $ts = $(ts)
 							, $target = $('#'+target);
@@ -383,11 +412,21 @@
 					;(function($, win, doc, undefined) {
 						$(doc).ready(function(){
 							
+							$('.rdo-list input').on('change', function(){
+								$('.rdo-list input').not($(this)).prop('checked', false);
+								if (!!$(this).prop('checked')) { 
+									$('.btn-area.n4 button').removeAttr('disabled');
+								} else {
+									$('.btn-area.n4 button').attr('disabled', 'disabled');
+								}
+							})
+							
 							$plugins.uiFloating({
 								id: 'evtAnchors',
 								ps: 'top',
 							})
 
+              
 							scrollMove(); // run
 							// scrollMove fn
 							function scrollMove() {

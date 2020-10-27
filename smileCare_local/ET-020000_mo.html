@@ -494,6 +494,1070 @@
 						});
 					})(jQuery, window, document);
 				</script>
+
+				<!-- Popup For Only Local -->
+				
+				<!-- Start : ET-010100 -->
+				<div id="ET-010100_mo" class="ui-modal">
+					<div class="ui-modal-wrap">
+						<div class="ui-modal-head">
+								<h1>스마일케어 구독 & 이벤트 신청</h1>
+							<button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'ET-010100_mo'})"><span class="hidden">닫기</span></button>
+						</div>
+						<div class="ui-modal-cont">
+								<div class="divide-wrap">
+										<div class="apply-wrap">
+												<div class="apply-inner">
+														<div class="agree_form">
+																<h2 class="tit3">구독 서비스를 위한 수집·이용 동의</h2>
+																<div class="check_all">
+																		<div class="check_bottom">
+																				<div>
+																							<input type="checkbox" id="check_1" class="chk" name="agree" onChange="javascript:agreeChk();">
+																							<label for="check_1">[필수]개인정보 수집&middot;이용 동의</label>
+																							<button type="button" onclick="
+																									openPopup('ET-010200_mo', function(){
+																											$('#ET-010200_mo .ctab_area a').eq(0).click();
+																									})
+																							"><span class="offscreen">[필수]개인정보 수집&middot;이용 동의</span></button>
+																							<p class="check_tit_sub">- 개인식별정보: 7건 (성명, 생년월일,  휴대폰번호 외 4건)</p>
+																				</div>
+																				<div>
+																						<input type="checkbox" id="check_2" class="chk" name="agree" onChange="javascript:agreeChk();">
+																						<label for="check_2">[필수]민감정보 및 개인식별정보 수집&middot;이용 동의</label>
+																						<button type="button" onclick="
+																							openPopup('ET-010200_mo', function(){
+																									$('#ET-010200_mo .ctab_area a').eq(1).click();
+																							});
+																				"><span class="offscreen">[필수]민감정보 및 개인식별정보 수집&middot;이용 동의</span></button>
+																						<p class="check_tit_sub">- 민감정보: 4건(당사 계약정보 외 3건)</p>
+																				</div>
+																		</div>
+																</div>
+														</div>
+														<div class="agree_form">
+																<h2 class="tit3">이벤트 경품 지급을 위한 이용 동의</h2>
+																<div class="check_all">
+																		<div class="check_bottom">
+																				<div>
+																						<input type="checkbox" id="check_3" class="chk" name="agree" onChange="javascript:agreeChk();">
+																						<label for="check_3">[필수]이벤트 경품 지급을 위한 제3자 제공 동의</label>
+																						<button type="button" onclick="
+																							openPopup('ET-010200_mo', function(){
+																									$('#ET-010200_mo .ctab_area a').eq(2).click();
+																							});
+																				"><span class="offscreen">[필수]이벤트 경품 지급을 위한 제3자 제공 동의</span></button>
+																						<p class="check_tit_sub">- 개인식별정보: 2건 (성명,  휴대폰번호)</p>
+																				</div>
+																		</div>
+																</div>
+														</div>
+														<div class="agree_form">
+																<h2 class="tit3">이벤트 참여기회 제공을 위한 마케팅활용 동의</h2>
+																<div class="check_all">
+																		<div class="check_bottom">
+																				<div>
+																							<input type="checkbox" id="check_4" class="chk" name="agree1" onChange="javascript:agreeChk();">
+																							<label for="check_4">[선택]마케팅 활용 이용 동의</label>
+																							<button type="button" onclick="
+																									openPopup('ET-010200_mo', function(){
+																											$('#ET-010200_mo .ctab_area a').eq(3).click();
+																									})
+																							"><span class="offscreen">[선택]마케팅 활용 이용 동의</span></button>
+																							<p class="check_tit_sub">- 개인식별정보: 7건 (성명, 생년월일,  휴대폰번호 외 4건)</p>
+																				</div>
+																		</div>
+																</div>
+														</div>
+														<ul class="btn-wrap grid2">
+																<li class="btn-radio part">
+																	<input type="checkbox" class="hidden" id="agreeRdo1" name="chkAll1" onChange="javascript:chkAll1();">
+																	<label for="agreeRdo1">필수만 동의하기</label>
+																</li>
+																<li class="btn-radio all">
+																	<input type="checkbox" class="hidden" id="agreeRdo2"  name="chkAll" onChange="javascript:chkAll();">
+																	<label for="agreeRdo2">전체 동의 하기</label>
+																</li>
+															</ul>
+												</div>
+												<div class="apply-inner">
+														<h2 class="tit3">구독 서비스를 이용할 정보 입력</h2>
+														<!--form type 2-->
+														<div class="section">
+															<div class="form_item">
+																		<label for="inp_name" class="lb hue-p">이름</label>
+																		<div class="input">
+																				<span class="dv"><input id="inp_name" class="i_txt" type="text" placeholder="이름을 입력하세요"></span>
+																		</div>
+															</div>
+															 
+																<div class="form_item">
+																		<label for="birth_date" class="lb hue-p">생년월일</label>
+																		<div class="input">
+																				<div class="row">
+																						<span class="dv w50"><input type="text" id="birth_date" class="i_txt" placeholder="예) 19780420"></span>
+																						<div class="dv tal pdl8">
+																								<ul class="grid2">
+																										<li>
+																										<span class="radio square">
+																												<input id="rdo1" type="radio" name="rdo">
+																												<label for="rdo1">남자</label>
+																										</span>
+																										</li>
+																										<li>
+																										<span class="radio square">
+																												<input id="rdo2" type="radio" name="rdo">
+																												<label for="rdo2">여자</label>
+																										</span>
+																										</li>
+																								</ul>
+																						</div>
+																				</div>
+																		</div>
+																</div>
+																<div class="form_item">
+																		<label for="phone_number1_1" class="lb hue-p">휴대폰번호</label>
+																		<div class="input phone_form">
+																				<span class="dv">
+																						<input id="phone_number1_1" class="i_txt" type="text" placeholder="'-'를 제외한 번호입력">
+																				</span>
+																				<span class="dv">
+																						<a href="#" class="btn btn-base2" role="button">인증번호 발송</a>
+																				</span>
+																		</div>
+																</div>
+																<div class="form_item">
+																		<label for="phoneCheck1" class="lb hue-p">인증번호</label>
+																		<div class="input certification">
+																				<span class="dv">
+																						<input id="phoneCheck1" class="i_txt" type="tel">
+																						<span class="timer">02:49</span>
+																				</span>
+																				
+																		</div>
+																</div>
+																<div class="btn-wrap">
+																		<button type="button" class="btn-base " onclick="$plugins.uiModalClose({ id:'ET-010100_mo'})"><span>구독 신청하기</span></button>
+																</div>
+														</div>
+														<!--form type 1
+														<div class="form-box">
+																<div class="form-box-item">
+																<label class="lb-base" for="inpNamePA">이름</label>
+																<input type="text" class="inp-base" id="inpNamePA" name="inpNamePA" autocomplete="off">
+																<span class="box"></span>
+																</div>
+																<div class="form-box-item type-reg">
+																<label class="lb-base">주민등록번호</label>
+																<div class="lb-box-wrap">
+																		<input type="tel" class="inp-base" id="inpRRN1" name="inpRRN1" placeholder="901010" maxlength="6" title="주민등록번호 앞자리"> <em class="dash">-</em>
+																		<input type="password" class="inp-base" id="inpRRN2" name="inpRRN2" placeholder="1234567" maxlength="7" title="주민등록번호 뒺자리">
+																</div>
+																<span class="box"></span>
+																</div>
+																<div class="form-box-item">
+																<label class="lb-base" for="inpBirthdayPA">생년월일</label>
+																<input type="text" class="inp-base" id="inpBirthdayPA" name="inpBirthdayPA" value="" maxlength="8" placeholder="예) 19900101" autocomplete="off">
+																<span class="box"></span>
+																</div>
+																<div class="form-box-item">
+																<div class="lb-base">성별</div>
+																<div class="lb-box-wrap">
+																		<input type="radio" id="rGenderPA_m" name="rGenderPA" value="M" class="hidden" autocomplete="off">
+																		<label for="rGenderPA_m" class="lb-box"><span>남자</span></label>
+																		<input type="radio" id="rGenderPA_w" name="rGenderPA" value="F" class="hidden" autocomplete="off">
+																		<label for="rGenderPA_w" class="lb-box"><span>여자</span></label>
+																</div>
+																<span class="box"></span>
+																</div>
+																<div class="form-box-item">
+																<label class="lb-base" for="inpTelPA">연락처</label>
+																<input type="tel" class="inp-base" id="inpTelPA" name="inpTelPA" value="" maxlength="11" placeholder="숫자만 입력" autocomplete="off">
+																<span class="box"></span>
+																</div>
+																<div class="form-box-item">
+																<div class="lb-base">국적</div>
+																<div class="lb-box-wrap">
+																		<input type="radio" id="rResidentPA_n" name="rResidentPA" class="hidden" value="1" checked="checked">
+																		<label for="rResidentPA_n" class="lb-box"><span>내국인</span></label>
+																		<input type="radio" id="rResidentPA_f" name="rResidentPA" class="hidden" value="2">
+																		<label for="rResidentPA_f" class="lb-box"><span>외국인</span></label>
+																</div>
+																<span class="box"></span>
+																</div>
+																<div class="form-box-item type-b">
+																<label class="lb-base" for="inpPhone">휴대폰 번호</label>
+																<div class="lb-box-wrap">
+																		<button type="button" class="btn-select hp-select" data-id="inpBtnSelect1"><span>통신사선택</span></button>
+																		<div class="btn-select-wrap ui-btn-select" id="inpBtnSelect1" style="display: none;">
+																		<button type="button" value="" class="hidden selected"><span>통신사선택</span></button>
+																		<button type="button" value="SKT"><span>SKT</span></button>
+																		<button type="button" value="KTF"><span>KT</span></button>
+																		<button type="button" value="LGT"><span>LG U+</span></button>
+																		<button type="button" value="SKM"><span>SKT 알뜰폰</span></button>
+																		<button type="button" value="KTM"><span>KT 알뜰폰</span></button>
+																		<button type="button" value="LGM"><span>LG U+ 알뜰폰</span></button>
+																		</div>
+																</div>
+																<input type="tel" class="inp-base inp-hp" id="inpPhone" placeholder="'-'없이 입력해주세요" name="inpTelPA">
+																<span class="box"></span>
+																</div>
+																<div class="btn-wrap">
+																		<button type="button" class="btn-base" onclick="$plugins.uiModalClose({ id:'ET-010100_mo'})"><span>구독신청하기</span></button>
+																</div>
+														</div>
+														-->
+												</div>
+											</div>
+								</div>
+						</div>
+					</div>
+						<!-- script -->
+					<script type="text/javascript" src="./js/lib/jquery.autocomplete.min.js"></script> <!-- autocomplete -->
+					<script type="text/javascript">
+					;(function($, win, doc, undefined) {
+							$(doc).ready(function(){
+								/* [To.개발] 이메일 자동완성함수는 인자로 id 선택자를 넘겨주고, 
+								필요 시 도메인 리스트를 옵션으로 줄 수 있습니다.
+								*/
+								autoCompleteEmail('#autoComplete_email'); // email autocomplete
+							});
+					})(jQuery, window, document);
+
+					// 전체 선택
+					function chkAll() {
+							$('.btn-radio.part input').prop('checked',false);
+							var chkObj = $('input[name=agree]');
+							var chkObj1 = $('input[name=agree1]');
+							var chkLen = chkObj.length + chkObj1.length;
+							var allChk = $('input[name=chkAll]');
+
+							if (allChk.prop('checked') === false) {
+							chkObj.prop({'checked': false});
+							chkObj1.prop({'checked': false});
+							} else {
+							chkObj.prop({'checked': true});
+							chkObj1.prop({'checked': true});
+							}
+					}
+					// 필수만 선택
+					function chkAll1() {
+							$('.btn-radio.all input').prop('checked',false);
+							var chkObj = $('input[name=agree]');
+							var chkObj1 = $('input[name=agree1]');
+							var chkLen = chkObj.length + chkObj1.length;
+							var allChk1 = $('input[name=chkAll1]');
+
+							if (allChk1.prop('checked') === false) {
+							chkObj.prop({'checked': false});
+							chkObj1.prop({'checked': false});
+							} else {
+							chkObj.prop({'checked': true});
+							chkObj1.prop({'checked': false});
+							}
+					}
+
+					// 개별 선택
+					function agreeChk(val) {
+							var allChk = $('input[name=chkAll]');
+							var chkObj1 = $('input[name=agree]').length;
+							var chkObj2= $('input[name=agree1]').length;
+							var chkObj = chkObj1 + chkObj2;
+							var chkedLen1 = $('input[name=agree]:checked').length;
+							var chkedLen2 = $('input[name=agree1]:checked').length;
+							var chkedLen = chkedLen1 + chkedLen2;
+
+							if (chkedLen === chkObj) {
+							allChk.prop({'checked': true});
+							} else {
+							allChk.prop({'checked': false});
+							}       
+					}
+					</script>
+				</div>
+			<!-- // End : ET-010100_mo -->
+
+				<!-- Start : ET-010200_mo -->
+				<section id="ET-010200_mo" class="ui-modal">
+          <div class="ui-modal-wrap">
+            <div class="ui-modal-head">
+							<h1>스마일케어 약관 상세</h1>
+							<button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'ET-010200_mo'})"><span class="hidden">닫기</span></button>
+            </div>
+            <div class="ui-modal-cont">
+							<section class="term-box" tabindex="0">
+								<div class="inside-tab">
+									<ul class="ctab_area n2">
+										<li class="on"><a href="#hpcon_A01"><span>[필수] 개인정보 <br class="br">수집 · 이용 동의</span></a></li>
+										<li><a href="#hpcon_A02"><span>[필수] 민감정보 및 개인<br class="br">식별정보 수집 · 이용 동의</span></a></li>
+										<li><a href="#hpcon_A03"><span>[필수] 이벤트 경품 지급을 위한 제3자 제공 동의</span></a></li>
+										<li><a href="#hpcon_A04"><span>[선택] 마케팅 활용 <br class="br">이용 동의</span></a></li>
+									</ul>
+
+									<div class="ctab_panel">
+										<div id="hpcon_A01" class="ctab_cont on"><!-- [필수] 개인정보 수집 · 이용 동의 -->
+
+											<h2 class="term-tit01">[필수] 구독 서비스 제공을 위한 개인정보 수집 · 이용 동의</h2>
+											<p class="term-intro">
+												<span>당사는 「개인정보보호법」에 따라 케어콘텐츠의 소개 및 홍보 등을 위해 귀하의 개인정보를 수집 · 이용하고자 합니다.</span>
+											</p>
+											<table>
+                        <caption>개인정보 수집·이용 관련 수집·이용 주체, 목적, 내용, 구독 서비스 알림, 보유·이용 기간 정보입니다.</caption>
+												<colgroup>
+													<col style="width:35%">
+													<col>
+												</colgroup>
+												<tbody>
+													<tr>
+														<th scope="row">수집·이용 주체</th>
+														<td class="tl">라이나생명보험주식회사</td>
+													</tr>
+													<tr>
+														<th scope="row">수집·이용 목적</th>
+														<td class="tl">
+															<ul class="list-dash">
+																<li>케어콘텐츠의 소개 및 홍보</li>
+																<li>웹사이트/Application 정보 등에 대한 분석 및 세분화를 통한 이용자의 서비스 이용 선호도 분석, 고객 분석 통계</li>
+															</ul>	
+														</td>
+													</tr>
+													<tr>
+														<th scope="row">수집·이용 내용</th>
+														<td class="tl">
+															<ul class="list-dash">
+																<li>개인식별정보 (성명, 생년월일, 성별, 휴대폰번호, 이메일, ADID, Cookie )</li>
+																<li>선호도 관심정보, 콘텐츠 클릭정보, 콘텐츠 분류 정보</li>
+															</ul>
+														</td>
+													</tr>
+													<tr>
+														<th scope="row">구독 서비스 알림</th>
+														<td class="tl">카카오 알림톡, SMS, Email</td>
+													</tr>
+													<tr>
+														<th scope="row">보유·이용 기간</th>
+														<td class="tl">
+															동의일로부터 1년 (단, 보유ㆍ이용 기간이 경과한 후에는 민원처리 및 법령상 의무이행만을 위하여 3개월  보관ㆍ이용)
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<p class="bul-note">동의 하시더라도 당사 홈페이지(www.lina.co.kr, 구독서비스해재)를 통해 구독 해지 하실 수 있습니다.</p>
+											<p class="bul-note">단, 웹사이트 또는 Application 정보는 웹사이트를 통하여 접속한 고객에 한하여 수집ㆍ이용 합니다. </p>
+											<p class="terms-sign">(미확인) 신용정보관리보호인필(DGT2006-01-XXXXX-OYN)</p>
+
+										</div><!--// 개인정보 수집 이용 동의 -->
+
+										<div id="hpcon_A02" class="ctab_cont"><!-- [필수] 민감정보 및 개인식별정보 수집 · 이용 동의 -->
+
+											<h2 class="term-tit01">[필수] 민감정보 및 개인식별정보 수집 · 이용 동의</h2>
+											<p class="term-intro">
+												<span>당사는 「개인정보보호법」에 따라 당사의 계약 조회 및 수집 · 이용을 위해 귀하의 개인정보를 수집 · 이용하고자 합니다.</span>
+											</p>
+											<table>
+                        <caption>민감정보 및 개인식별정보 관련 수집·이용 주체, 목적, 내용, 보유·이용 기간 정보입니다.</caption>
+												<colgroup>
+													<col style="width:35%">
+													<col>
+												</colgroup>
+												<tbody>
+													<tr>
+														<th scope="row">수집·이용 주체</th>
+														<td class="tl">라이나생명보험주식회사</td>
+													</tr>
+													<tr>
+														<th scope="row">수집·이용 목적</th>
+														<td class="tl">
+															개인 맞춤 케어컨텐츠의 소개 및 홍보
+														</td>
+													</tr>
+													<tr>
+														<th scope="row">수집·이용 내용</th>
+														<td class="tl">
+															라이나생명의 보험계약정보, 청구사유, 사고유형, 청구보험금지급일
+														</td>
+													</tr>
+													<tr>
+														<th scope="row">보유·이용 기간</th>
+														<td class="tl">
+															동의일로부터 1년 (단, 보유ㆍ이용 기간이 경과한 후에는 민원처리 및 법령상 의무이행만을 위하여 3개월  보관ㆍ이용)
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<p class="bul-note">단, 라이나생명의 보혐계약이 있는 경우에 계약자에 한하여 수집ㆍ이용 합니다. </p>
+											<p class="terms-sign">(미확인) 신용정보관리보호인필(DGT2006-01-XXXXX-OYN)</p>
+
+										</div><!--// [필수] 민감정보 및 개인식별정보 수집 · 이용 동의 -->
+
+										<div id="hpcon_A03" class="ctab_cont"><!-- [필수] 이벤트 경품 지급을 위한 제3자 제공 동의 -->
+											
+											<h2 class="term-tit01">[필수] 이벤트 경품 지급을 위한 제3자 제공 동의</h2>
+											<p class="term-intro">
+												<span>마케팅 등을 위한 개인(신용)정보의 수집, 이용 및 제공 동의 하시겠습니까?</span>
+											</p>
+											<table>
+                        <caption>이벤트 경품 지급을 위한 제3자 제공 동의 관련 수집·이용 주체, 목적, 내용, 보유·이용 기간 정보입니다.</caption>
+												<colgroup>
+													<col style="width:35%">
+													<col>
+												</colgroup>
+												<tbody>
+													<tr>
+														<th scope="row">수집·이용 주체</th>
+														<td class="tl">대행사 00000 (미정)</td>
+													</tr>
+													<tr>
+														<th scope="row">수집·이용 목적</th>
+														<td class="tl">
+															이벤트 당첨자 시 경품 제공
+														</td>
+													</tr>
+													<tr>
+														<th scope="row">수집·이용 내용</th>
+														<td class="tl">
+															성명, 휴대폰번호
+														</td>
+													</tr>
+													<tr>
+														<th scope="row">보유·이용 기간</th>
+														<td class="tl">
+															이벤트 종료 및 발송 완료 후 90일 이내 폐기
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<p class="bul-note"> 개인정보의 제 3자 제공을 원하지 않을 경우 수집하지 않으며, 미동의하실 경우, 이벤트 참여가 불가능합니다.</p>
+											<p class="terms-sign">(미확인) 신용정보관리보호인필(DGT2006-01-XXXXX-OYN)</p>
+										</div><!-- // [필수] 이벤트 경품 지급을 위한 제3자 제공 동의 -->
+
+										<div id="hpcon_A04" class="ctab_cont"><!-- [선택] 마케팅 활용 이용 동의 -->
+											
+											<h2 class="term-tit01">[선택] 마케팅 활용 이용 동의</h2>
+											<p class="term-intro">
+												<span>마케팅 등을 위한 개인(신용)정보의 수집, 이용 및 제공 동의 하시겠습니까?</span>
+											</p>
+											<table>
+                        <caption>마케팅 활용 이용 동의 관련 수집·이용 주체, 목적, 내용, 보유·이용 기간 정보입니다.</caption>
+												<colgroup>
+													<col style="width:35%">
+													<col>
+												</colgroup>
+												<tbody>
+													<tr>
+														<th scope="row">수집·이용 주체</th>
+														<td class="tl">라이나생명보험주식회사</td>
+													</tr>
+													<tr>
+														<th scope="row">수집·이용 목적</th>
+														<td class="tl">
+															이벤트 정보제공 및 프로모션 참여기회 제공
+														</td>
+													</tr>
+													<tr>
+														<th scope="row">수집·이용 내용</th>
+														<td class="tl">
+															성명, 생년월일, 성별, 휴대폰번호. 이메일, ADID, Cookie
+														</td>
+													</tr>
+													<tr>
+														<th scope="row">보유·이용 기간</th>
+														<td class="tl">
+															동의일로부터  1년 (단, 보유ㆍ이용 기간이 경과한 후에는 민원처리 및 법령상 의무이행만을 위하여 3개월  보관ㆍ이용)
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<p class="bul-note">본 동의는 서비스 이용에 필수적이지 않으며 동의를 거부할 수 있습니다.</p>
+											<p class="terms-sign">(미확인) 신용정보관리보호인필(DGT2006-01-XXXXX-OYN)</p>
+										</div><!-- // [선택] 마케팅 활용 이용 동의 -->
+									</div>
+								</div>
+								<div class="btn-wrap">
+									<button type="button" class="btn-base" onclick="$plugins.uiModalClose({ id:'ET-010200_mo'})"><span>확인</span></button>
+								</div>
+							</section>
+            </div>
+          </div>
+					<!-- script -->
+					<script type="text/javascript">
+						;(function($, win, doc, undefined) {
+							$(doc).ready(function(){
+	
+								// inside-tab
+								$('.ctab_area>li>a').each(function(){
+									$(this).click(function(e){
+										e.preventDefault();
+										if (!$(this).parent('li').hasClass('on')){
+											var id = $(this).attr('href');
+					
+											$(this).parent('li').addClass('on');
+											$(this).parent('li').siblings().removeClass('on').find('a').attr('title', '선택되지 않은 탭');
+					
+											$(this).attr('title','선택된 탭');
+											$(id).siblings().css('display','none');
+											$(id).css('display','block');
+										}
+									});
+								});
+							});
+						})(jQuery, window, document);
+					</script>
+				</section>
+				<!-- // End : ET-010200_mo -->
+				
+
+				<!-- Start : ET-010300_mo -->
+        <section id="ET-010300_mo" class="ui-modal">
+          <div class="ui-modal-wrap">
+            <div class="ui-modal-head">
+              <h1>스마일케어 구독 신청</h1>
+              <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'ET-010300_mo'})"><span class="hidden">닫기</span></button>
+            </div>
+            <div class="ui-modal-cont">
+              <h2 class="tit1">스마일케어를 구독해주셔서 감사합니다.</h2>
+              <p class="tit-sub">관심 키워드를 선택해주세요.
+                <span class="small">*최대 2개 선택 가능</span>
+              </p>
+              <ul class="keyword-list">
+                <li>
+                  <input type="checkbox" class="hidden" id="chkKey1" name="chkKey">
+                  <label for="chkKey1"># 임플란트</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="hidden" id="chkKey2" name="chkKey">
+                  <label for="chkKey2"># 브릿지</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="hidden" id="chkKey3" name="chkKey">
+                  <label for="chkKey3"># 크라운</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="hidden" id="chkKey4" name="chkKey">
+                  <label for="chkKey4"># 치아관리</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="hidden" id="chkKey6" name="chkKey">
+                  <label for="chkKey6"># 발치</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="hidden" id="chkKey5" name="chkKey">
+                  <label for="chkKey5"># 치아교정</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="hidden" id="chkKey7" name="chkKey">
+                  <label for="chkKey7"># 신경치료</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="hidden" id="chkKey8" name="chkKey">
+                  <label for="chkKey8"># 충치치료</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="hidden" id="chkKey9" name="chkKey">
+                  <label for="chkKey9"># 보철치료</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="hidden" id="chkKey10" name="chkKey">
+                  <label for="chkKey10"># 기타1</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="hidden" id="chkKey11" name="chkKey">
+                  <label for="chkKey11"># 기타2</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="hidden" id="chkKey12" name="chkKey">
+                  <label for="chkKey12"># 기타3</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="hidden" id="chkKey13" name="chkKey">
+                  <label for="chkKey13"># 기타4</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="hidden" id="chkKey14" name="chkKey">
+                  <label for="chkKey14"># 기타5</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="hidden" id="chkKey15" name="chkKey">
+                  <label for="chkKey15"># 기타6</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="hidden" id="chkKey16" name="chkKey">
+                  <label for="chkKey16"># 기타7</label>
+                </li>
+                <li>
+                  <input type="checkbox" class="hidden" id="chkKey17" name="chkKey">
+                  <label for="chkKey17"># 기타8</label>
+                </li>
+              </ul>
+              <div class="btn-wrap">
+								<button type="button" class="btn-base" onclick="
+                  $plugins.uiModalClose({ 
+                    id:'ET-010300_mo',
+                    callback: function(){
+                      if (!true) { // 2차 이벤트 미 진행 시
+                        openPopup('ET-020101_mo');
+                      } else { // 2차 이벤트 진행 중일 시
+                        if (!true) { // 이벤트에 참여한 경우
+                          openPopup('ET-020103_mo');
+                        } else { // 이벤트에 참여하지 않은 경우
+                          openPopup('ET-020102_mo');
+                        }
+                      }
+                    }
+                  })
+                "><span>확인</span></button>
+              </div>
+            </div>
+          </div>
+					<!-- script -->
+					<script type="text/javascript">
+						;(function($, win, doc, undefined) {
+							$(doc).ready(function(){
+                var $chks = $('#ET-010300_mo input[type="checkbox"]')
+                  , _num = 0;
+                $chks.on('change', function(){
+                  var $ts = $(this)
+                    , $onChk = $chks.filter(':checked').not($ts)
+                    , _leng = $onChk.length;
+                  if ($ts.prop('checked')) {
+                    $ts.attr('data-n', ++_num);
+                    if (_leng > 1){
+                      var _flag = Math.min(parseInt($onChk.eq(0).attr('data-n')), parseInt($onChk.eq(1).attr('data-n')));
+                      $onChk.filter('[data-n="'+_flag+'"]').prop('checked', false);
+                    }
+                  }
+                })
+							});
+						})(jQuery, window, document);
+					</script>
+				</section>
+				<!-- // End : ET-010300_mo -->
+
+				
+				<!-- Start : ET-020101_mo -->
+        <section id="ET-020101_mo" class="ui-modal">
+          <div class="ui-modal-wrap">
+            <div class="ui-modal-head">
+              <h1>스마일케어 구독 & 이벤트 신청</h1>
+              <button type="button" class="btn-close" onclick="
+                $plugins.uiModalClose({ 
+                  id:'ET-020101_mo',
+                  callback: function(){
+                    scrollToPanel(1); // go to second section
+                  }
+                });
+              "><span class="hidden">닫기</span></button>
+            </div>
+            <div class="ui-modal-cont">
+              <div class="done-wrap complete">
+                <h2 class="tit">스마일케어 구독 이벤트에<br>참여해주셔서 감사합니다.</h2>
+                <span class="desc">라이나생명에서 준비한 <br class="br">다른 이벤트에도 참여해보시겠어요?</span>
+              </div>
+              <div class="evt-box large">
+                <div class="item">
+                  <div class="inner"><span class="sub-s"><strong class="hue-p">Comming Soon!</strong><br/>건강한 계획 두번째는 무엇인가요?</span></div>
+                  <span class="thumb"><img src="./img/thumb_plan1.png" alt=""></span>
+                  <div class="inner">
+                    <span class="sub-m">
+                      <span class="txt-c-line">11월 18일, 홈트레이닝의 혁명적인</span><br class="br"/>
+                      <span class="hue-p txt-c-line">색다른 경품과 새로운</span><br class="br"/>
+                      <span class="hue-p txt-c-line">모델과 함께 2차 오픈</span>됩니다.
+                    </span>
+                    <span class="sub-s hue-s">라이나생명 고객님만을 위한<br class="br"/> 특별이벤트도 준비해두었으니 많은 참여 부탁드립니다!</span>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-wrap">
+								<a href="./ET-000000_mo.html" target="_blank" title="새창 열림" class="btn-base" onclick="
+									$plugins.uiModalClose({ id:'ET-020101_mo'});
+								"><span>스마일케어로 이동</span></a>
+              </div>
+            </div>
+          </div>
+					<!-- script -->
+					<script type="text/javascript">
+						;(function($, win, doc, undefined) {
+							$(doc).ready(function(){
+							});
+						})(jQuery, window, document);
+					</script>
+				</section>
+				<!-- // End : ET-020101_mo -->
+				 
+				<!-- Start : ET-020102_mo -->
+        <section id="ET-020102_mo" class="ui-modal">
+          <div class="ui-modal-wrap">
+            <div class="ui-modal-head">
+              <h1>스마일케어 구독 & 이벤트 신청</h1>
+              <button type="button" class="btn-close" onclick="
+                $plugins.uiModalClose({ 
+                  id:'ET-020102_mo',
+                  callback: function(){
+                    scrollToPanel(1); // go to second section
+                  }
+                });
+              "><span class="hidden">닫기</span></button>
+            </div>
+            <div class="ui-modal-cont">
+              <div class="done-wrap complete">
+                <h2 class="tit">스마일케어 구독 이벤트에<br>참여해주셔서 감사합니다.</h2>
+                <span class="desc">라이나생명에서 준비한 <br class="br">다른 이벤트에도 참여해보시겠어요?</span>
+              </div>
+              <div class="evt-box">
+                <a href="javascript:void(0);" class="item" onclick="
+                  $plugins.uiModalClose({ 
+                    id:'ET-020102_mo',
+                    callback: function(){
+                      scrollToPanel(1); // go to second section
+                    }
+                  });
+                ">
+                  <span class="thumb"><img src="./img/thumb_plan2.png" alt=""></span>
+                  <div class="inner">
+                    <strong class="subject">
+                      <span>건강한 계획2</span>
+                      치아정보 공유하기이벤트
+                    </strong>
+                    <span class="desc">2020.11.18 ~ 12.09</span>
+                  </div>
+                </a>
+                <a href="javascript:void(0);" class="item" onclick="
+                  $plugins.uiModalClose({ 
+                    id:'ET-020102_mo',
+                    callback: function(){
+                      scrollToPanel(2); // go to third section
+                    }
+                  });
+                ">
+                  <span class="thumb"><img src="./img/thumb_plan3.png" alt=""></span>
+                  <div class="inner">
+                    <strong class="subject">
+                      <span>보너스!</span>
+                      App에서 간편비밀번호 등록
+                    </strong>
+                    <span class="desc">2020.11.04 ~ 12.09</span>
+                  </div>
+                </a>
+              </div>
+              <div class="btn-wrap">
+								<a href="./ET-000000_mo.html" target="_blank" title="새창 열림" class="btn-base" onclick="
+									$plugins.uiModalClose({ id:'ET-020102_mo'});
+								"><span>스마일케어로 이동</span></a>
+              </div>
+            </div>
+          </div>
+					<!-- script -->
+					<script type="text/javascript">
+						;(function($, win, doc, undefined) {
+							$(doc).ready(function(){
+							});
+						})(jQuery, window, document);
+					</script>
+				</section>
+				<!-- // End : ET-020102_mo -->
+
+				
+				<!-- Start : ET-020103_mo -->
+        <section id="ET-020103_mo" class="ui-modal">
+          <div class="ui-modal-wrap">
+            <div class="ui-modal-head">
+              <h1>스마일케어 구독 & 이벤트 신청</h1>
+              <button type="button" class="btn-close" onclick="
+                $plugins.uiModalClose({ 
+                  id:'ET-020103_mo',
+                  callback: function(){
+                    scrollToPanel(1); // go to second section
+                  }
+                });
+							"><span class="hidden">닫기</span></button>
+            </div>
+            <div class="ui-modal-cont">
+              <div class="done-wrap already">
+                <h2 class="tit">이벤트에<br>이미 참여해주셨습니다.</h2>
+                <span class="desc">라이나생명에서 준비한 <br class="br">다른 이벤트에도 참여해보시겠어요?</span>
+              </div>
+              <div class="evt-box">
+                <a href="javascript:void(0);" class="item" onclick="
+                  $plugins.uiModalClose({ 
+                    id:'ET-020103_mo',
+                    callback: function(){
+                      scrollToPanel(1); // go to second section
+                    }
+                  });
+									">
+                  <span class="thumb"><img src="./img/thumb_plan2.png" alt=""></span>
+                  <div class="inner">
+                    <strong class="subject">
+                      <span>건강한 계획2</span>
+                      치아정보 공유하기이벤트
+                    </strong>
+                    <span class="desc">2020.11.18 ~ 12.09</span>
+                  </div>
+                </a>
+                <a href="javascript:void(0);" class="item" onclick="
+                  $plugins.uiModalClose({ 
+                    id:'ET-020103_mo',
+                    callback: function(){
+                      scrollToPanel(2); // go to third section
+                    }
+                  });
+								">
+                  <span class="thumb"><img src="./img/thumb_plan3.png" alt=""></span>
+                  <div class="inner">
+                    <strong class="subject">
+                      <span>보너스!</span>
+                      App에서 간편비밀번호 등록
+                    </strong>
+                    <span class="desc">2020.11.04 ~ 12.09</span>
+                  </div>
+                </a>
+              </div>
+              <div class="btn-wrap">
+								<a href="./ET-000000_mo.html" target="_blank" title="새창 열림" class="btn-base" onclick="
+									$plugins.uiModalClose({ id:'ET-020103_mo'});
+								"><span>스마일케어로 이동</span></a>
+              </div>
+            </div>
+          </div>
+					<!-- script -->
+					<script type="text/javascript">
+						;(function($, win, doc, undefined) {
+							$(doc).ready(function(){
+							});
+						})(jQuery, window, document);
+					</script>
+				</section>
+				<!-- // End : ET-020103_mo -->
+
+				<!-- Start : ET-020201_mo 공유 콘텐츠 상세 내용 팝업 -->
+				<div id="ET-020201_mo" class="ui-modal">
+					<div class="ui-modal-wrap">
+							<div class="ui-modal-head">
+									<h1>공유 콘텐츠 상세보기</h1>
+								<button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'ET-020201_mo'})"><span class="hidden">닫기</span></button>
+							</div>
+							<div class="ui-modal-cont">
+									<div class="cont-top">
+											<h2 class="tit1">황니가 걱정? <br class="br"/>치아 미백관리 방법</h2>
+											<p>일반 사람들에게 황니는 아주 큰 콤플렉스입니다. <br/>
+													활짝 웃지 못하며 미소에 자신감을 잃게 만들기 때문인데요.  <br/>
+													오늘은 닦아도 닦아도 누런 치아,  <br/>
+													<strong class="hue-p">황니의 원인은 무엇인지, 어떻게 예방할 수 있을지</strong>에 대해서 알아보겠습니다
+											</p>
+									</div>
+									<div class="cont-bottom">
+											<h3 class="tit3">1. 후천적으로 변색된 치아</h3>
+											<p>우리가 먹는 음식은 대부분 치아의 색을 변하게 할 수 있지만, 
+													특히나 경계해야 할 식품들이 있습니다. 아침마다 즐겨 마시는  커피, 퇴근하고 마시는 와인이황니의 후천적인 원인이 될 수 있습니다. 색소가 진한 음식을 섭취하면 하얀 법랑질에 색소가 침투하여 변색이 일어나게 됩니다. 콜라와 사이다 같은 산도가 높은 음식도 치아 표면을 거칠게 하여 착색이 더 쉽게 일어나는 원인이 됩니다. 담배도 빼놓을 수 없습니다. 담배의 니코틴 성분이 치아의 미세한 구멍으로 파고들어서 치아를 변색시킵니다. 황니가 고민인 흡연자라면 금연부터 시작하는 것이 좋겠죠?</p>
+											<h3 class="tit3">2. 무조건 식후 바로 양치? NO!</h3>
+											<p>대개는 식사한 뒤에 바로 양치를 하는 것이 좋습니다. 치약에는 마모제가 함유되어 있어서 양치만으로도 치아 변색을 어느 정도 예방할 수 있습니다. 양치할 때는 칫솔과 치실을 사용하여 치아 사이사이를 꼼꼼하게 양치를 해야 합니다. 
+													탄산음료를 마신 후에는 바로 양치를 하는 것이 오히려 안 좋습니다. 탄산이 치아의 무기질을 탈회시키면서 치아 표면을 거칠게 하기 때문인데요. 표면이 거칠어진 상태에서 바로 칫솔질을 하게 되면 치아 표면은 더욱 거칠어져 오히려 착색이 쉬운 상태로 악화시키게 됩니다. 탄산음료를 마시고 최소 1시간이 지난 후에 양치하는 것이 좋습니다.</p>
+									</div>
+									<div class="btn-wrap">
+											<button type="button" class="btn-base " onclick="
+													if (true) { // 로그인 시 || 비로그인&&인증키 보유 시
+															openPopup('ET-020202_mo');
+													} else { // 비로그인&&인증키 미보유 시
+															openPopup('ET-010100_mo');
+													}
+											"><span>선택한 콘텐츠 공유하기</span></button>
+									</div>
+							</div>
+					</div>
+				</div>
+				<!-- // End : ET-020201_mo 공유 콘텐츠 상세 내용 팝업 -->
+
+				<!-- Start : ET-020202_mo 공유채널 선택 팝업 -->
+				<div id="ET-020202_mo" class="ui-modal">
+					<div class="ui-modal-wrap">
+							<div class="ui-modal-head">
+									<h1>공유 콘텐츠 상세보기</h1>
+								<button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'ET-020202_mo'})"><span class="hidden">닫기</span></button>
+							</div>
+							<div class="ui-modal-cont">
+									<div class="cont-top">
+											<h2 class="tit1">공유채널을 선택</h2>
+											<p><strong>구독 지인들과 공유할 채널을 선택해주세요.</strong></p>
+											<div class="share-wrap">
+													<ul class="share-list">
+															<li>
+																	<div class="share-item kakao">
+																			<input id="rdo_1" name="rdoCheck" type="radio">
+																			<label for="rdo_1"><span>카카오톡</span></label>
+																	</div>
+															</li>
+															<li>
+																	<div class="share-item facebook">
+																			<input id="rdo_2" name="rdoCheck" type="radio">
+																			<label for="rdo_2"><span>페이스북</span></label>
+																	</div>
+															</li>
+															<li>
+																	<div class="share-item kakaostory">
+																			<input id="rdo_3" name="rdoCheck" type="radio">
+																			<label for="rdo_3"><span>카카오스토리</span></label>
+																	</div>
+															</li>
+															<li>
+																	<div class="share-item naver">
+																			<input id="rdo_4" name="rdoCheck" type="radio">
+																			<label for="rdo_4"><span>네이버블로그</span></label>
+																	</div>
+															</li>
+															<li>
+																	<div class="share-item url">
+																			<input id="rdo_5" name="rdoCheck" type="radio">
+																			<label for="rdo_5"><span>URL복사</span></label>
+																	</div>
+															</li>
+													</ul>
+												
+											</div>
+									</div>
+									<div class="btn-wrap">
+											<button type="button" class="btn-base " onclick="
+													if (!!$('.share-item #rdo_5').prop('checked')) {
+															alert('url이 복사되었습니다.');
+													}
+													$plugins.uiModalClose({ 
+															id:'ET-020202_mo',
+															callback: function(){
+																	openPopup('ET-020204_mo');
+															}
+													})
+											"><span>선택한 채널로 공유 진행하기</span></button>
+									</div>
+							</div>
+					</div>
+				</div>
+				<!-- // End : ET-020202_mo 공유채널 선택 팝업 -->
+
+				<!-- Start : ET-020203_mo 공유채널 선택 팝업 -->
+				<div id="ET-020203_mo" class="ui-modal">
+					<div class="ui-modal-wrap">
+							<div class="ui-modal-head">
+									<h1>공유 콘텐츠 상세보기</h1>
+								<button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'ET-020203_mo'})"><span class="hidden">닫기</span></button>
+							</div>
+							<div class="ui-modal-cont">
+									<div class="cont-top">
+											<h2 class="tit1">공유채널을 선택</h2>
+											<p><strong>스마일케어 구독과 이벤트 응모가 완료되었습니다.<br/>구독 지인들과 공유할 채널을 선택해주세요.</strong></p>
+											<div class="share-wrap">
+													<ul class="share-list">
+															<li>
+																	<div class="share-item kakao">
+																			<input id="rdo_1" name="rdoCheck" type="radio">
+																			<label for="rdo_1"><span>카카오톡</span></label>
+																	</div>
+															</li>
+															<li>
+																	<div class="share-item facebook">
+																			<input id="rdo_2" name="rdoCheck" type="radio">
+																			<label for="rdo_2"><span>페이스북</span></label>
+																	</div>
+															</li>
+															<li>
+																	<div class="share-item kakaostory">
+																			<input id="rdo_3" name="rdoCheck" type="radio">
+																			<label for="rdo_3"><span>카카오스토리</span></label>
+																	</div>
+															</li>
+															<li>
+																	<div class="share-item naver">
+																			<input id="rdo_4" name="rdoCheck" type="radio">
+																			<label for="rdo_4"><span>네이버블로그</span></label>
+																	</div>
+															</li>
+															<li>
+																	<div class="share-item url">
+																			<input id="rdo_5" name="rdoCheck" type="radio">
+																			<label for="rdo_5"><span>URL복사</span></label>
+																	</div>
+															</li>
+													</ul>
+												
+											</div>
+									</div>
+									<div class="btn-wrap">
+											<button type="button" class="btn-base " onclick="$plugins.uiModalClose({ id:'ET-020203_mo'})"><span>선택한 채널로 공유 진행하기</span></button>
+									</div>
+							</div>
+					</div>
+				</div>
+				<!-- // End : ET-020203_mo 공유채널 선택 팝업 -->
+
+				<!-- Start : ET-020204_mo -->
+        <section id="ET-020204_mo" class="ui-modal">
+          <div class="ui-modal-wrap">
+            <div class="ui-modal-head">
+              <h1>스마일케어 구독 & 이벤트 신청</h1>
+              <button type="button" class="btn-close" onclick="
+                $plugins.uiModalClose({ 
+                  id:'ET-020204_mo',
+                  callback: function(){
+                    if (!!$('#ET-020201_mo').length) { // 공유 콘텐츠 상세보기 팝업 열려있을 시 닫음
+                      $plugins.uiModalClose({
+                        id: 'ET-020201_mo'
+                      })
+                    };
+                    scrollToPanel(2); // go to third section
+                  }
+                })
+              "><span class="hidden">닫기</span></button>
+            </div>
+            <div class="ui-modal-cont">
+              <div class="done-wrap complete">
+                <h2 class="tit">스마일케어 구독 이벤트에<br>참여해주셔서 감사합니다.</h2>
+                <span class="desc">라이나생명에서 준비한 <br class="br">다른 이벤트에도 참여해보시겠어요?</span>
+              </div>
+              <div class="evt-box">
+                <a href="javascript:void(0);" class="item" onclick="
+                  $plugins.uiModalClose({
+                    id: 'ET-020204_mo',
+                    callback: function(){
+                      if (!!$('#ET-020201_mo').length) { // 공유 콘텐츠 상세보기 팝업 열려있을 시 닫음
+                        $plugins.uiModalClose({
+                          id: 'ET-020201_mo'
+                        })
+                      };
+                      scrollToPanel(2); // go to third section
+                    }
+                  })
+                ">
+                  <span class="thumb"><img src="./img/thumb_plan3.png" alt=""></span>
+                  <div class="inner">
+                    <strong class="subject">
+                      <span>보너스!</span>
+                      App에서 간편비밀번호 등록
+                    </strong>
+                    <span class="desc">2020.11.04 ~ 12.09</span>
+                  </div>
+                </a>
+              </div>
+              <div class="btn-wrap">
+                <button type="button" class="btn-base" onclick="
+                  $plugins.uiModalClose({ 
+                    id:'ET-020204_mo',
+                    callback: function(){
+                      openPopup('ET-020202_mo');
+                    }
+                  })
+                "><span>스마일케어 콘텐츠 공유 계속하기</span></button>
+              </div>
+            </div>
+          </div>
+					<!-- script -->
+					<script type="text/javascript">
+						;(function($, win, doc, undefined) {
+							$(doc).ready(function(){
+							});
+						})(jQuery, window, document);
+					</script>
+				</section>
+				<!-- // End : ET-020204_mo -->
+
+				
       </div> <!-- // .contents -->
 			<!-- // contents end 
 			=============================================-->

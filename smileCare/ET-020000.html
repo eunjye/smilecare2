@@ -583,7 +583,29 @@
 					<!-- // end of plan 1 -->
 
 					<!-- start of plan 2 -->
-					<section class="event-section n2">
+					<section class="event-section comingsoon n2"> <!-- 커밍순일 시, comingsoon 클래스 추가 -->
+						<div class="grid comingsoon">
+							<img src="./img/evt_plan2_comingsoon.png" alt="">
+							<div class="hidden">
+								<h2>Coming Soon! 건강한 계획 #2는 무엇일까요?</h2>
+								<span>새로운모델은 누구?</span>
+								<span>혁명적인 경품</span>
+								<span>건강한 계획2</span>
+
+								<span>이벤트 시작일 : 2020. 11. 18 ~ 12. 09</span>
+
+								<strong>11월 18일, Coming Soon!</strong>
+								<p>홈트레이닝의 혁명적인 색다른 경품과 새로운 모델과 함께 2차 오픈됩니다.</p>
+								<p>라이나생명 고객님만을 위한 특별 이벤트도 진행중이오니 많은 참여 부탁드립니다.</p>
+							</div>
+							<div class="img-area dday">
+								<span class="count">
+									<img src="./img/counter_plan2.png" alt="">
+									<span class="hidden">이벤트 참여 D-day</span>
+									<span class="num" data-dday="0">0</span> <!-- d-day 자동계산 기능 : dDayCount() -->
+								</span>
+							</div>
+						</div>
 						<div class="grid">
 							<img src="./img/evt_plan2_img1.png" alt="">
 							<div class="hidden">
@@ -786,6 +808,18 @@
 
 					;(function($, win, doc, undefined) {
 						$(doc).ready(function(){
+							// D-day counter
+							dDayCount();
+							function dDayCount() {
+								var dday = new Date(2020, 10, 18).getTime()
+									, today = new Date().getTime()
+									, $num = $('.dday .num')
+									, distance = dday - today;
+
+								var _date = Math.ceil(distance / (1000 * 60 * 60 * 24));
+								$num.attr('data-dday', _date).text(_date);
+							}
+
 
 							$('.rdo-list input').on('change', function(){
 								$('.rdo-list input').not($(this)).prop('checked', false);

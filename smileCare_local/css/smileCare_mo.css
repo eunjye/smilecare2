@@ -162,9 +162,6 @@ a.btn-base{display:inline-block;font-size:15px;padding:0 50px;font-weight:700;he
 a.btn-base { line-height:39px; }
 .btn-base2{display:inline-block;font-size:13px;padding:0 20px;font-weight:400;height:40px;line-height:37px;color:#008bec;background:#fff;border:1px solid #008bec;letter-spacing:-0.075em;position:relative;transition:background 0.2s ease-in, color 0.2s ease-in}
 .btn-round{display:inline-block;font-size:16px;padding:0 20px;font-weight:400;height:40px;border-radius:20px;border:1px solid #ccc;color:#000;background:#fff;letter-spacing:-0.075em;position:relative}
-.btn-toggle{display:inline-block;font-size:14px;padding:5px 20px;font-weight:500;color:#000;border:0;background:transparent;letter-spacing:-0.05em;position:relative}
-.btn-toggle:after{content:"";position:absolute;top:10px;right:2px;display:block;width:10px;height:10px;background:url(../img/icon.png) no-repeat -25px 0 / 400px}
-.btn-toggle.on:after{background-position:-25px -10px}
 .btn-tooltip{vertical-align:middle;display:inline-block;width:20px;height:20px;background:transparent url(../img/icon.png) no-repeat -35px 0 / 400px;border:0}
 .btn-close{display:block;width:30px;height:30px;background:transparent url(../img/btn_close.png) no-repeat 0 0 / 30px}
 .btn-close:before,
@@ -722,6 +719,123 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 .event-section.n3 .img-area.img2 { background:#F5F5F5; }
 
 .btn-area.n6 { top:560px; }
+
+
+/* 스마일케어 서브메인 페이지
+===================================== */
+/* kje_mo.css */
+.tit3+.smile-section{margin-top:15px}
+.smile-section{width:100%;}
+.smile-section.bg{background:#e2f2fc}
+.smile-inner{margin:0 auto;padding:43px 0}
+.smile-tit-wrap{text-align:center;margin-bottom:28px}
+.smile-txt{font-size:16px;margin-bottom:5px;}
+.smile-tit1{font-size:24px;font-weight:bold;color:#008bec}
+.smile-sub { font-size:14px; font-weight:700; color:#999; margin-top:7px; }
+.smile-square-wrap { overflow-x:auto; }
+.smile-square-wrap ul { white-space:nowrap; margin:0 15px; padding:0 1px;}
+.smile-square-wrap ul li{position:relative;display:inline-block;border:2px solid #e2e2e2;width:200px;height:185px;box-sizing: border-box;text-align:center;border-radius:15px;margin-right:20px;padding:30px 35px}
+.smile-square-wrap ul li span:before{content:"";margin:0 auto 17px;width:36px;height:31px;background:url('../img/ico_double_mo.png') center center/36px auto no-repeat;display:block;}
+.smile-square-wrap ul li span{font-size:15px;color:#666;font-weight:bold}
+.smile-square-wrap ul:after{content:"";display:block;clear:both}
+
+/* 평생 무료로 시작하세요 */
+.recomm-info {}
+.recomm-info .info-box { margin-top:45px; padding:0 15px; text-align:center; }
+.recomm-info .info-box:first-child { margin-top:0; }
+.recomm-info .img { display:block; width:100%; box-sizing:border-box; margin:0 auto; padding-top:67%; height:0; background-position:center center; background-size:cover; }
+.recomm-info .desc { display:block; font-size:14px; color:#666; margin-top:28px; }
+.recomm-info .desc strong { display:block; font-size:17px; font-weight:700; color:#111; margin-top:13px; }
+
+
+/* 푸짐한 경품 */
+.product-list { margin-bottom:60px; text-align:center; }
+.product-list > div { position:relative; display:block; width:158px; margin:50px auto 0; }
+.product-list > div:first-child { margin-top:0; }
+.product-list dt { position:absolute; top:100%; left:0; width:100%; margin-top:2px; text-align:center; font-size:13px; }
+.product-list dd { position:relative; }
+.product-list dd .num { position:absolute; top:10px; right:10px; border-radius:50%; background:#888; color:#fff; font-size:14px; font-weight:700; text-align:center; line-height:42px; width:43px; height:43px; display:block; }
+
+/*구독해지_btn*/
+.smile-section.product .btn-cancel { margin-top:15px; }
+.btn-cancel,
+.btn-cancel:link,
+.btn-cancel:visited{position:relative;display:inline-block;text-align:right;padding:0 0 0 25px;color:#666;font-size:12px;}
+.btn-cancel:hover{text-decoration: none;cursor: pointer; color:#008bec; }
+.btn-cancel:before{content:"";position:absolute;top:0;left:0;display:block;width:18px;height:18px;background:url('../img/ico_cancel_mo.png') center center/18px auto no-repeat}
+.btn-cancel span{border-bottom:1px solid #666; color:inherit; }
+.btn-cancel span:hover { border-color:#008bec; }
+
+/* button : 구독하기 */
+.btn-point { position:relative;display:inline-block;vertical-align:middle;height:50px;line-height:48px;color:#fff;font-size:15px;font-weight:700;text-align:center;border-radius:5px;background:#000;padding:0 30px; transition:all linear .15s; letter-spacing:0; }
+.btn-point .sub-tag { position:absolute; left:50%; bottom:100%; display:inline-block; margin-bottom:-7px; height:24px; line-height:24px; color:#fff; border-radius:12px; background:#008BEC; text-align:center; padding:0 15px; box-shadow:5px 5px 11px rgba(0,0,0,.75); font-size:11px; font-weight:700; letter-spacing:0; transform:translateX(-50%); white-space:nowrap; transition:all linear .15s; border:1px solid transparent; }
+.ico-arrow{display:inline-block;vertical-align:middle;width:9px;height:14px;background:url('../img/ico_btn_arrow_mo.png') 0 0/contain no-repeat;margin:-4px 0 0 25px;}
+
+.base-body.smilecare-wrap { width:100%; }
+.txt-underline { }
+
+/* intro */
+.smile-section.intro {text-align:center;}
+.smile-section.intro .btn-wrap { margin-top:30px; }
+.intro .smile-inner { padding:30px 0; }
+.intro .smile-logo{ }
+.intro .txt-underline { margin-top:5px; }
+.intro .txt-underline span { font-size:13PX; color:#666; border-bottom:1px solid #666; letter-spacing:-0.025em; }
+
+/* visual */
+.smile-visual { min-height:300px; padding:120px 0 40px; background-position:center center; background-size:cover; background-repeat:no-repeat; text-align:center; color:#fff; background-color:#6e7475; }
+.smile-visual .subject { font-size:24px; font-weight:700; color:#fff; margin-bottom:40px; }
+.smile-visual .desc { font-size:13px; margin-top:3px; opacity:.7; }
+
+/* 스마일케어 맛보기 */
+.smile-detail { }
+.smile-detail .smile-inner { position:relative; height:380px; padding:25px 15px 75px 15px; overflow:hidden; }
+.smile-detail .smile-inner:before { z-index:1; position:absolute; bottom:0; left:0; display:block; width:100%; height:525px; background:linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 70%); transition:transform ease-in .2s; content:""; }
+.smile-detail .smile-inner.on { height:auto; }
+.smile-detail .smile-inner.on:before { transform:translateY(100%); }
+.smile-detail .btn-toggle { z-index:2; position:absolute; bottom:45px; left:50%; transform:translateX(-50%); }
+.smile-info { margin-top:25px; }
+.smile-info:first-of-type { margin-top:0; }
+.smile-info .subject { margin-bottom:20px; min-height:52px; padding:24px 0 0 35px; font-size:17px; font-weight:700; background:url('../img/ico_quotes_mo.png') top 2px left/52px auto no-repeat; }
+
+.btn-toggle { display:inline-block; min-width:64px; height:64px; border:4px solid #111; text-align:center; font-size:13px; font-weight:700; }
+.btn-toggle:focus { outline:1px dotted #000; }
+
+.smile-info .info-list1 { border-top:1px solid #DBDDE3; border-bottom:1px solid #DBDDE3; padding:20px 0; }
+.smile-info .info-list1 > div { margin-top:17px; }
+.smile-info .info-list1 > div:first-child { margin-top:0; }
+.smile-info .info-list1 dt { position:relative; padding-left:35px; font-size:14px; font-weight:700; }
+.smile-info .info-list1 dt strong { font:inherit; color:#008bec; }
+.smile-info .info-list1 dd { position:relative; padding-left:35px; font-size:13px; color:#666; margin-top:5px; letter-spacing:-0.025em; }
+.smile-info .info-list1 .num { display:block; position:absolute; top:2px; left:0; font-size:22px; font-weight:700; color:#dbdde3; letter-spacing:0; line-height:1em; }
+
+.smile-info .info-list2 {}
+.smile-info .info-list2 > div { margin-top:28px; }
+.smile-info .info-list2 > div:first-child { margin-top:0; }
+.smile-info .info-list2 dt { background:#F3F5F8; border:1px solid #dbdde3; border-radius:2px; padding:9px 12px 9px; font-size:14px; font-weight:700; }
+.smile-info .info-list2 dd { margin-top:18px; font-size:13px; color:#666; line-height:1.6em; letter-spacing:-0.025em; word-break:keep-all; }
+.smile-info .info-list2 .num { color:#008bec; }
+
+.info-add { padding-top:18px; margin-top:20px; border-top:1px solid #DBDDE3; color:#999; font-size:12px; }
+.info-add > div { }
+.info-add dt,
+.info-add dd { display:inline; }
+
+/* 나의 치아 나이는 */
+.smile-section.agecheck { text-align:center;}
+.agecheck .smile-inner { position:relative; padding:30px 100px 30px 15px; }
+.agecheck .smile-inner:after { position:absolute; top:calc(50% - 37px); left:50%; margin-left:85px;  display:block; height:75px; width:75px; background:url('../img/bg_agecheck_mo.png') center center/contain no-repeat; content:""; }
+.agecheck h4 { font-size:24px; font-weight:700; color:#111; line-height:1.2em; }
+.agecheck .btn-link { margin-top:15px; }
+.btn-link,
+a.btn-link { display:inline-block; height:30px; line-height:27px;  vertical-align:middle; background:#fff; border:1px solid #666; border-radius:20px; padding:0 17px; font-size:12px; font-weight:700; text-decoration:none; color:#111; }
+.btn-link:after { display:inline-block; vertical-align:middle; width:7px; height:7px; border-right:1px solid #111; border-top:1px solid #111; transform:rotate(45deg); margin:-2px 0 0 7px; content:""; }
+
+@media all and (max-width:330px) {
+  .agecheck .smile-inner { padding:30px 85px 30px 7px; }
+	.agecheck .smile-inner:after { margin-left:75px; }
+}
+
 
 /* animations */
 @keyframes aniMoveBtn {

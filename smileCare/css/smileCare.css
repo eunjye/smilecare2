@@ -480,6 +480,7 @@ select{display:inline-block;position:relative;vertical-align:middle;width:auto;h
 	.event-section .grid { width:1100px; overflow:hidden; }
 	.event-section.n1 .grid > img,
 	.event-section.n1 .more-wrap > img { margin-left:-13%; }
+	.event-section.comingsoon .comingsoon img { margin-left:-130px; }
 }
 
 /* 비주얼 */
@@ -525,6 +526,32 @@ select{display:inline-block;position:relative;vertical-align:middle;width:auto;h
 .bul-notice:before { display:inline-block; width:28px; height:28px; background:url('../img/bul_notice.png') 0 0/auto auto no-repeat; margin:-2px 10px 0; vertical-align:middle; content:""; }
 
 /* Plan2 */
+/* coming soon */
+.event-section.comingsoon { padding:0 !important; background:url('../img/evt_plan2_comingsoon_bg.png') 0 0/auto auto repeat-x #018BED !important; }
+.event-section.comingsoon:before { display:none !important; }
+.event-section.comingsoon > div:not(.comingsoon){ display:none !important; }
+.event-section.comingsoon > div.comingsoon { display:block !important; }
+.event-section.comingsoon .comingsoon { overflow:visible; }
+.img-area.dday { bottom:100px; }
+.dday .count { position:relative; display:inline-block; }
+.dday .num { position:absolute; top:50%; right:35px; transform:translateY(-50%); display:block; width:40px; height:40px; overflow:hidden; background:url('../img/counter_num.png') 0 0/auto auto no-repeat; color:transparent; }
+.dday .num[data-dday="14"] { background-position-y:-520px; }
+.dday .num[data-dday="13"] { background-position-y:-480px; }
+.dday .num[data-dday="12"] { background-position-y:-440px; }
+.dday .num[data-dday="11"] { background-position-y:-400px; }
+.dday .num[data-dday="10"] { background-position-y:-360px; }
+.dday .num[data-dday="9"] { background-position-y:-320px; }
+.dday .num[data-dday="8"] { background-position-y:-280px; }
+.dday .num[data-dday="7"] { background-position-y:-240px; }
+.dday .num[data-dday="6"] { background-position-y:-200px; }
+.dday .num[data-dday="5"] { background-position-y:-160px; }
+.dday .num[data-dday="4"] { background-position-y:-120px; }
+.dday .num[data-dday="3"] { background-position-y:-80px; }
+.dday .num[data-dday="2"] { background-position-y:-40px; }
+.dday .num[data-dday="1"] { background-position-y:0px; }
+
+/* event open */
+.event-section .comingsoon { display:none !important; }
 .event-section.n2 { position:relative; background:none; border:20px; border-style:solid; border-color:#018BED; padding-top:22px; }
 .event-section.n2:before { position:absolute; top:0; left:0; width:100%; height:760px; display:block; background:#018BED; content:""; }
 .event-section.n2 .img-area.img1 { background:#F5F5F5; padding-bottom:65px; margin-top:30px; }
@@ -588,7 +615,7 @@ select{display:inline-block;position:relative;vertical-align:middle;width:auto;h
 /* 스마일케어 맛보기 */
 .smile-detail { }
 .smile-detail .smile-inner { position:relative; height:525px; padding:60px 120px 90px 120px; overflow:hidden; }
-.smile-detail .smile-inner:before { z-index:1; position:absolute; bottom:0; left:0; display:block; width:100%; height:525px; background:linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0)); transition:transform ease-in .2s; content:""; }
+.smile-detail .smile-inner:before { z-index:1; position:absolute; bottom:0; left:0; display:block; width:100%; height:525px; background:linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 70%); transition:transform ease-in .2s; content:""; }
 .smile-detail .smile-inner.on { height:auto; }
 .smile-detail .smile-inner.on:before { transform:translateY(100%); }
 .smile-detail .btn-toggle { z-index:2; position:absolute; bottom:90px; left:50%; transform:translateX(-50%); }
@@ -614,10 +641,13 @@ select{display:inline-block;position:relative;vertical-align:middle;width:auto;h
 .smile-info .info-list2 dd { margin-top:25px; font-size:15px; color:#666; line-height:1.6em; letter-spacing:-0.025em; word-break:keep-all; }
 .smile-info .info-list2 .num { color:#008bec; }
 
+.smile-info .info-add { }
+.smile-info .info-add > div { }
+
 /* 나의 치아 나이는 */
 .smile-section.agecheck { text-align:center;}
 .agecheck .smile-inner { padding-right:180px; background:url('../img/bg_agecheck.png') right 280px center/auto auto no-repeat; }
-.agecheck h3 { font-size:40px; font-weight:700; color:#111; }
+.agecheck h4 { font-size:40px; font-weight:700; color:#111; }
 .agecheck .btn-link { margin-top:15px; }
 .btn-link,
 a.btn-link { display:inline-block; height:40px; line-height:36px;  vertical-align:middle; background:#fff; border:1px solid #666; border-radius:20px; padding:0 25px; font-size:16px; font-weight:700; text-decoration:none; color:#111; }

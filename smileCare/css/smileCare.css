@@ -101,6 +101,7 @@ input::placeholder{color:#ccc;font-size:16px;font-weight:400}
 .ico-hand:after{content:"";display:block;position:absolute;top:12px;left:0;width:40px;height:40px;background:url(../img/icon.png) no-repeat -225px 0 / 400px}
 
 .btn-wrap{width:100%;text-align:center;margin:30px 0 0}
+.btn-wrap:after { display:block; clear:both; content:""; }
 
 .btn-small{display:inline-block;font-size:14px;padding:0 10px;font-weight:400;height:28px;border-radius:6px;border:1px solid #d9d9d9;color:#000;background:#fff;letter-spacing:-0.075em;position:relative}
 .btn-base{display:inline-block;font-size:15px;padding:0 50px;font-weight:700;height:40px;border:0;color:#fff;background:#008bec;letter-spacing:-0.075em;position:relative;transition:background 0.2s ease-in, color 0.2s ease-in}
@@ -108,9 +109,6 @@ input::placeholder{color:#ccc;font-size:16px;font-weight:400}
 a.btn-base{line-height:39px;text-decoration:none;color:#fff}
 
 .btn-round{display:inline-block;font-size:16px;padding:0 20px;font-weight:400;height:40px;border-radius:20px;border:1px solid #ccc;color:#000;background:#fff;letter-spacing:-0.075em;position:relative}
-.btn-toggle{display:inline-block;font-size:14px;padding:5px 20px;font-weight:500;color:#000;border:0;background:transparent;letter-spacing:-0.05em;position:relative}
-.btn-toggle:after{content:"";position:absolute;top:10px;right:2px;display:block;width:10px;height:10px;background:url(../img/icon.png) no-repeat -25px 0 / 400px}
-.btn-toggle.on:after{background-position:-25px -10px}
 .btn-tooltip{vertical-align:middle;display:inline-block;width:20px;height:20px;background:transparent url(../img/icon.png) no-repeat -35px 0 / 400px;border:0}
 .btn-close{position:relative;display:block;width:35px;height:35px;background:transparent}
 .btn-close:before,
@@ -120,9 +118,17 @@ a.btn-base{line-height:39px;text-decoration:none;color:#fff}
 .btn-resel:after{content:"";display:block;width:15px;height:15px;background:url(../img/icon.png) no-repeat -70px -25px / 400px;position:absolute;right:5px;top:7px}
 button.disabled{background:#bfc7ce !important;color:#fff !important;transition:background 0.2s ease-in, color 0.2s ease-in}
 .btn-underline{display:inline-block;font-size:14px;padding:0 10px;font-weight:400;height:28px;color:#888;letter-spacing:-0.075em;text-decoration:underline;position:relative}
-.btn-point { position:relative;display:inline-block;vertical-align:middle;height:70px;line-height:68px;color:#fff;font-size:22px;text-align:center;border-radius:5px;background:#000;padding:0 35px;}
-.btn-point .sub-tag { position:absolute; left:50%; bottom:100%; display:inline-block; margin-bottom:-15px; height:30px; line-height:28px; color:#fff; border-radius:15px; background:#008BEC; text-align:center; padding:0 28px; box-shadow:5px 5px 11px rgba(0,0,0,.75); font-size:13px; font-weight:700; transform:translateX(-50%); white-space:nowrap; }
-
+.btn-point { position:relative;display:inline-block;vertical-align:middle;height:70px;line-height:68px;color:#fff;font-size:22px;text-align:center;border-radius:5px;background:#000;padding:0 35px; transition:all linear .15s; }
+.btn-point .sub-tag { position:absolute; left:50%; bottom:100%; display:inline-block; margin-bottom:-15px; height:30px; line-height:28px; color:#fff; border-radius:15px; background:#008BEC; text-align:center; padding:0 28px; box-shadow:5px 5px 11px rgba(0,0,0,.75); font-size:13px; font-weight:700; transform:translateX(-50%); white-space:nowrap; transition:all linear .15s; border:1px solid transparent; }
+.btn-point:hover { background:#008BEC; }
+.btn-point:hover .sub-tag { background:#fff; border-color:#008bec; color:#008bec; box-shadow:5px 5px 8px rgba(0,0,0,.2); animation:aniWiggle linear .07s; animation-iteration-count:3; }
+@keyframes aniWiggle {
+	0% { margin-left:0; }
+	25% { margin-left:-3px; }
+	50% { margin-left:0; }
+	75% { margin-left:3px; }
+	100% { margin-left:0; }
+}
 
 /* table */
 .tbl-base{width:100%;position:relative;border-top:1px solid #000;border-bottom:1px solid #000;overflow:hidden}
@@ -562,6 +568,61 @@ select{display:inline-block;position:relative;vertical-align:middle;width:auto;h
 .event-section.n3 .img-area.img2 { background:#F5F5F5; }
 
 .btn-area.n6 { top:560px; }
+
+/* 스마일케어 서브메인 페이지
+===================================== */
+.base-body.smilecare-wrap { width:100%; }
+.txt-underline { }
+
+/* intro */
+.smile-section.intro {text-align:center;}
+.intro .smile-inner { padding:60px 0; }
+.intro .smile-logo{ display:inline-block; vertical-align:middle; }
+.intro .txt-underline { display:inline-block; vertical-align:middle; font-size:24PX; color:#666; line-height:1.3em; border-bottom:1px solid #666; letter-spacing:-0.025em; margin-left:25px; }
+
+/* visual */
+.smile-visual { height:600px; padding:235px 0 90px; background-position:center center; background-size:auto auto; background-repeat:no-repeat; text-align:center; color:#fff; background-color:#6e7475; }
+.smile-visual .subject { font-size:48px; font-weight:700; color:#fff; margin-bottom:70px; }
+.smile-visual .desc { font-size:19px; margin-top:5px; opacity:.7; }
+
+/* 스마일케어 맛보기 */
+.smile-detail { }
+.smile-detail .smile-inner { position:relative; height:525px; padding:60px 120px 90px 120px; overflow:hidden; }
+.smile-detail .smile-inner:before { z-index:1; position:absolute; bottom:0; left:0; display:block; width:100%; height:525px; background:linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0)); transition:transform ease-in .2s; content:""; }
+.smile-detail .smile-inner.on { height:auto; }
+.smile-detail .smile-inner.on:before { transform:translateY(100%); }
+.smile-detail .btn-toggle { z-index:2; position:absolute; bottom:90px; left:50%; transform:translateX(-50%); }
+.smile-info { margin-top:60px; }
+.smile-info:first-of-type { margin-top:0; }
+.smile-info .subject { margin-bottom:35px; min-height:70px; padding:35px 0 0 55px; font-size:28px; font-weight:700; background:url('../img/ico_quotes.png') bottom 2px left/auto auto no-repeat; }
+
+.btn-toggle { display:inline-block; min-width:75px; height:75px; line-height:67px; border:4px solid #111; text-align:center; font-size:16px; font-weight:700; }
+.btn-toggle:focus { outline:1px dotted #000; }
+
+.smile-info .info-list1 { border-top:1px solid #DBDDE3; border-bottom:1px solid #DBDDE3; padding:34px 0; }
+.smile-info .info-list1 > div { margin-top:20px; }
+.smile-info .info-list1 > div:first-child { margin-top:0; }
+.smile-info .info-list1 dt { position:relative; padding-left:55px; font-size:17px; font-weight:700; }
+.smile-info .info-list1 dt strong { font:inherit; color:#008bec; }
+.smile-info .info-list1 dd { position:relative; padding-left:55px; font-size:15px; color:#666; margin-top:5px; }
+.smile-info .info-list1 .num { display:block; position:absolute; top:2px; left:0; font-size:28px; font-weight:700; color:#dbdde3; letter-spacing:0; line-height:1em; }
+
+.smile-info .info-list2 {}
+.smile-info .info-list2 > div { margin-top:35px; }
+.smile-info .info-list2 > div:first-child { margin-top:0; }
+.smile-info .info-list2 dt { background:#F3F5F8; border:1px solid #dbdde3; border-radius:2px; padding:15px 20px 17px; font-size:17px; font-weight:700; }
+.smile-info .info-list2 dd { margin-top:25px; font-size:15px; color:#666; line-height:1.6em; letter-spacing:-0.025em; word-break:keep-all; }
+.smile-info .info-list2 .num { color:#008bec; }
+
+/* 나의 치아 나이는 */
+.smile-section.agecheck { text-align:center;}
+.agecheck .smile-inner { padding-right:180px; background:url('../img/bg_agecheck.png') right 280px center/auto auto no-repeat; }
+.agecheck h3 { font-size:40px; font-weight:700; color:#111; }
+.agecheck .btn-link { margin-top:15px; }
+.btn-link,
+a.btn-link { display:inline-block; height:40px; line-height:36px;  vertical-align:middle; background:#fff; border:1px solid #666; border-radius:20px; padding:0 25px; font-size:16px; font-weight:700; text-decoration:none; color:#111; }
+.btn-link:after { display:inline-block; vertical-align:middle; width:7px; height:7px; border-right:2px solid #111; border-top:2px solid #111; transform:rotate(45deg); margin:-2px -5px 0 5px; content:""; }
+
 
 /* animations */
 @keyframes aniMoveBtn {

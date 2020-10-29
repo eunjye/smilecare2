@@ -829,19 +829,44 @@
 									$('.btn-area.n4 button').attr('disabled', 'disabled');
 								}
 							})
-							
-							$plugins.uiFloating({
-								id: 'evtAnchors',
-								ps: 'top',
-							})
-
 
 							scrollMove(); // run
 							// scrollMove fn
 							function scrollMove() {
 								var $anchorWrap = $('#evtAnchors')
 									, $anchor = $('#evtAnchors a')
-									, $panel = $('.event-section');
+									, $panel = $('.event-section')
+									
+									, anchorY = $anchorWrap.offset().top
+									, _anchorH = $anchor.outerHeight()
+									, anchorH;
+
+								// set index on init
+								setOnIdx();
+								function setOnIdx() {
+									var docY = $('html').prop('scrollTop')
+										, _idx = 0;
+
+									$anchorWrap.css('height', $anchor.outerHeight());
+									$anchorWrap.addClass('ui-fixed-top');
+									anchorH = $anchor.outerHeight();
+									if (docY > $anchorWrap.offset().top) {
+
+										while(_idx < $anchor.length-1) {
+											if (docY > $anchor.eq(_idx).offset().top - anchorH) {
+												if (docY < $anchor.eq(_idx+1).offset().top) {
+													break;
+												} else {
+													_idx++;
+												}
+												break;
+											}
+										}
+										$anchor.eq(_idx).addClass('on');
+									} else {
+										$anchorWrap.removeClass('ui-fixed-top');
+									}
+								}
 
 								// on click evt
 								$anchor.on('click', function(){
@@ -851,8 +876,14 @@
 									setActiveBtn(idx);
 									$anchorWrap.addClass('moving');
 
+									$(doc).off('scroll.moveCheck').on('scroll.moveCheck', function(){
+										if ($('html').prop('scrollTop') > $panel.eq(0).offset().top - anchorH) {
+											$anchorWrap.addClass('ui-fixed-top');
+										} else { return false; }
+									});
+
 									$('html, body').animate({
-										scrollTop:$panel.eq(idx).offset().top - $anchor.outerHeight()
+										scrollTop:$panel.eq(idx).offset().top - anchorH
 									}, 500, function(){
 										setTimeout(function(){
 											$anchorWrap.removeClass('moving');
@@ -861,32 +892,34 @@
 								})
 
 								// on scroll evt (To-Be : setTimeout 걸어서 fixed toggle 지연)
-								$('html').on('scroll', function(){
-									var offY = $('html').prop('scrollTop')
+								$(doc).on('scroll', function(){
+									var docY = $('html').prop('scrollTop')
 										, idx = $anchor.index($('#evtAnchors .on'))
 										, $onPanel = $panel.eq(idx)
-										, onPanelY = $onPanel.offset().top - $anchorWrap.outerHeight()
+										, onPanelY = $onPanel.offset().top - anchorH
 										, onPanelH = $onPanel.outerHeight();
 
-										if ($anchorWrap.hasClass('moving')) {
-											return false; 
-										}
-										if (offY < 780) {
-											setActiveBtn(0);
+										if (docY < anchorY) { // anchor 위에 있을 시
+											$anchorWrap.removeClass('ui-fixed-top');
 											return false;
-										}
-										if (offY < onPanelY || offY > onPanelY+onPanelH){
-											if (offY < onPanelY){ // prev panel
-												idx--;
-											} else {
-												idx++;
+										} else { // anchor 아래로 스크롤 시
+											$anchorWrap.addClass('ui-fixed-top');
+											if ($anchorWrap.hasClass('moving')) { // 클릭으로 moving중이면 return
+												return false; 
 											}
-											setActiveBtn(idx);
+											if ((idx !== 0 && docY < onPanelY) || docY > onPanelY+onPanelH){
+												if (docY < onPanelY){ // prev panel
+													idx--;
+												} else {
+													idx++;
+												}
+												setActiveBtn(idx);
+											}
 										}
 								})
 								// set anchor btn
 								function setActiveBtn(idx) {
-									$('#evtAnchors a').removeClass('on').eq(idx).addClass('on');
+									$anchor.removeClass('on').eq(idx).addClass('on');
 								}
 							}
 						});

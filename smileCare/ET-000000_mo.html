@@ -60,14 +60,17 @@
           
 					<!-- 인트로 -->
 					<div class="smile-section intro bg">
-						<div class="smile-inner">
-							<h2 class="smile-logo"><img src="./img/logo_smilecare_mo.png" width="221" alt=""><span class="hidden">Smile Care</span></h2>
-							<p class="txt-underline"><span>고객님의 스마일을 만들어드립니다.</span></p>
-							<div class="btn-wrap">
-								<button type="button" class="btn-point" onclick="openPopup('ET-010100_mo');">
-									<span class="sub-tag">지금 이벤트 중! 평생 무료</span>
-									<span>스마일케어 구독하기<i class="ico-arrow"></i></span>
-								</button>
+						<div class="floating-inner">
+							<div class="smile-inner">
+								<h2 class="smile-logo"><img src="./img/logo_smilecare_mo.png" width="221" alt=""><span class="hidden">Smile Care</span></h2>
+								<p class="txt-underline"><span>고객님의 스마일을 만들어드립니다.</span></p>
+								<div class="btn-wrap">
+									<span class="sub-txt">지금 이벤트 중! 평생 무료</span>
+									<button type="button" class="btn-point" onclick="openPopup('ET-010100_mo');">
+										<span class="sub-tag">지금 이벤트 중! 평생 무료</span>
+										<span>스마일케어 구독하기<i class="ico-arrow"></i></span>
+									</button>
+								</div>
 							</div>
 						</div>
 					</div> 
@@ -303,12 +306,15 @@
 									});
 									$ts.fadeOut(250);
 									$('html, body').animate({
-										scrollTop: $wrap.offset().top+20
+										scrollTop: $wrap.offset().top-$('.floating-inner').outerHeight()
 									},250)
 								}
 								$ts.toggleClass('on');
 							}
 							;(function($, win, doc, undefined) {
+							$(doc).ready(function(){
+								fixedBanner('.smile-section.intro');
+							});
 							})(jQuery, window, document);
 					</script>
 				</div>

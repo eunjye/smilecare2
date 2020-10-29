@@ -267,3 +267,46 @@ function openPopup(id, callback){
 	}
 }
 
+function fixedBanner(el) {
+	var $ts = $(el)
+		, $inner = $ts.find('.floating-inner')
+		, tsH
+		, tsY = $ts.offset().top
+		, innerH
+		, docY
+		, _flag = false;
+
+	!$ts.hasClass('floating') && $ts.addClass('floating');
+	innerH = $inner.outerHeight();
+	$inner.css('top', -innerH);
+	$ts.removeClass('floating');
+	tsH = $ts.outerHeight();
+	$ts.css('height', tsH);
+	
+	if ($('html').prop('scrollTop') > tsY + tsH) {
+		$ts.addClass('floating');
+		$inner.css({top:0, opacity:1});
+	}
+
+	$(document)
+	.off('scroll.fixedBanner')
+	.on('scroll.fixedBanner', function(){
+		docY = $('html').prop('scrollTop');
+		if (docY > tsY + tsH) {
+			if (!_flag && !$ts.hasClass('floating')) {
+				$ts.addClass('floating');
+				_flag = true;
+				$inner.css('opacity', 0).animate({
+					top: 0,
+					opacity: 1
+				}, 250, function(){
+					_flag = false;
+				})
+			}
+		} else {
+			$ts.removeClass('floating');
+			$inner.css({top: '-'+innerH+'px'});
+		}
+	});
+	
+}

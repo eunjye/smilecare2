@@ -767,7 +767,7 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 .btn-cancel span:hover { border-color:#008bec; }
 
 /* button : 구독하기 */
-.btn-point { position:relative;display:inline-block;vertical-align:middle;height:50px;line-height:48px;color:#fff;font-size:15px;font-weight:700;text-align:center;border-radius:5px;background:#000;padding:0 30px; transition:all linear .15s; letter-spacing:0; }
+.btn-point { position:relative;display:inline-block;vertical-align:middle;height:50px;line-height:48px;color:#fff;font-size:15px;font-weight:700;text-align:center;border-radius:5px;background:#000;padding:0 30px; transition:background linear .15s; letter-spacing:0; }
 .btn-point .sub-tag { position:absolute; left:50%; bottom:100%; display:inline-block; margin-bottom:-7px; height:24px; line-height:24px; color:#fff; border-radius:12px; background:#008BEC; text-align:center; padding:0 15px; box-shadow:5px 5px 11px rgba(0,0,0,.75); font-size:11px; font-weight:700; letter-spacing:0; transform:translateX(-50%); white-space:nowrap; transition:all linear .15s; border:1px solid transparent; }
 .ico-arrow{display:inline-block;vertical-align:middle;width:9px;height:14px;background:url('../img/ico_btn_arrow_mo.png') 0 0/contain no-repeat;margin:-4px 0 0 25px;}
 
@@ -781,6 +781,21 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 .intro .smile-logo{ }
 .intro .txt-underline { margin-top:5px; }
 .intro .txt-underline span { font-size:13PX; color:#666; border-bottom:1px solid #666; letter-spacing:-0.025em; }
+.intro .sub-txt{ display:none; }
+
+/* floating */
+.smile-section.floating { }
+.smile-section.floating .floating-inner { z-index:10; position:fixed; left:0; width:100%;background:rgba(226,242,252,.9); }
+.smile-section.floating .smile-inner { width:100%; padding:10px 15px; text-align:left; }
+.smile-section.floating .txt-underline { font-size:14px; margin:-8px 0 0 12px; }
+.smile-section.floating .btn-wrap { margin:0; text-align:left;H }
+.smile-section.floating .btn-wrap:after { display:block; clear:both; content:""; }
+.smile-section.floating .btn-point { float:right; height:35px; line-height:33px; font-size:13px; font-weight:400; padding:0 15px 2px; }
+.smile-section.floating .btn-point .ico-arrow { transform:scale(.8); vertical-align:middle; margin:-2px 0 0 12px; }
+.smile-section.floating .sub-txt { display:inline-block; margin-top:7px; font-size:14px; font-weight:700; color:#008bec; }
+.smile-section.floating .smile-logo,
+.smile-section.floating .sub-tag,
+.smile-section.floating .txt-underline { display:none; }
 
 /* visual */
 .smile-visual { min-height:300px; padding:120px 0 40px; background-position:center center; background-size:cover; background-repeat:no-repeat; text-align:center; color:#fff; background-color:#6e7475; }

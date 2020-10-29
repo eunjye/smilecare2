@@ -67,15 +67,17 @@
 						<div class="grid ui-floating-wrap">
 							<a href="javascript:void(0);" class="n1">
 								<span class="hidden">선택됨</span>
-								<span class="link">주기적으로 안내받아 치아건강에 도움받기</span>
+								<span class="link">치아건강에 도움받기</span>
 							</a>
-							<a href="javascript:void(0);" class="n2">
+							<a href="javascript:void(0);" class="n2 comingsoon"> <!-- coming soon일 시 comingsoon 클래스 추가 -->
 								<span class="hidden">선택됨</span>
-								<span class="link">치아정보 확인하고 지인에게 공유하기</span>
+								<span class="link">지인에게 공유하기</span>
+
+								<span class="link comingsoon">Coming Soon!</span>
 							</a>
 							<a href="javascript:void(0);" class="n3">
 								<span class="hidden">선택됨</span>
-								<span class="link">App에서 간편비밀번호 등록 이용하기</span>
+								<span class="link">간편비밀번호 등록하기</span>
 							</a>
 						</div>
 					</div>
@@ -119,26 +121,28 @@
 										<strong>500명</strong>
 									</li>
 								</ul>
-								<h3>건강한 2라운드 삶을 원하시나요?</h3>
-								<p>건강한 삶을 위한 진지한 지식을 담은 <strong>헬스라이프북 &lt;전성기> 3,000명</strong> 증정!</p>
-								전성기매거진 12월호 <strong>3천명</strong>
-								<p>만성 소화불량을 달고 살았는데 &lt;전성기> 덕에 원인을 찾았네요. 10월 한 달간 &lt;전성기>에서 알려준 방법으로 건강을 되찾고 있습니다. -김ㅇㅇ-</p>
-								<p>건강의 중요성을 입에 달고 살지만 어디서부터 시작해야 할지 몰라 막연했는데 &lt;전성기>가 매달 다른 주제로 건강을 챙겨주니 든든합니다! -조ㅇㅇ-</p>
-								<p>코로나19로 계속되는 피로감, 우울감, 불안감을 해소할 수 없어서 지쳐가던 중 마음 근육 키우기 기사는 딱 좋은 힌트이자 단비였습니다. 당장 실천해보려고 합니다. -김ㅇㅇ-</p>
 							</div>
 							<div class="btn-area n2">
-								<a href="javascript:void(0);" class="btn-moreview" onclick="popYafitDetail(this, 'popLifeBook')"><img src="./img/btn_plan1_detail_mo.png" alt="상세보기"></a>
+								<a href="javascript:void(0);" onclick="popBookDetail(this, 'popLifeBook')"><img src="./img/btn_evt_more_mo.png" alt="상세보기"></a>
 							</div>
-            </div>
-            <div class="more-wrap" id="popLifeBook">
-              <img src="./img/evt_lifebook_more_mo.png" alt="">
-              <dl class="hidden">
-                <dt>전성기매거진 안내</dt>
-                <dd>면역력, 소화력, 수면력 등 우리 일상에서 꼭 필요한 ‘건강력’을 시리즈로 발행합니다. 의사들의 건강법부터 쉽게 따라 할 수 있는 운동법까지 보다 전문적인 건강정보를 담았습니다. </dd>
-                <dd>치매전문의, 회계사, 경제 칼럼니스트 등 각 분야 전문가들이 나서 우리의 고민거리를 시원하게 풀어드립니다. </dd>
-                <dd>한달살기에 대한 진지한 경험론부터 다가올 건강불평등 시대를 위한 준비 등 삶을 보다 건강하게 살기 위한 삶의 진지한 질문을 던집니다. </dd>
-              </dl>
-            </div>
+							<!-- Start : popup -->
+							<div class="more-wrap" id="popLifeBook">
+								<div class="inner">
+									<img src="./img/evt_plan2_pop_mo.png" alt="">
+									<div class="hidden">
+										<h3>건강한 2라운드 삶을 원하시나요?</h3>
+										<p>건강한 삶을 위한 진지한 지식을 담은 <strong>헬스라이프북 &lt;전성기> 3,000명</strong> 증정!</p>
+										<ul>
+											<li>면역력, 소화력, 수면력 등 우리 일상에서 꼭 필요한 ‘건강력’을 시리즈로 발행합니다. 의사들의 건강법부터 쉽게 따라 할 수 있는 운동법까지 보다 전문적인 건강정보를 담았습니다. </li>
+											<li>치매전문의, 회계사, 경제 칼럼니스트 등 각 분야 전문가들이 나서 우리의 고민거리를 시원하게 풀어드립니다. </li>
+											<li>한달살기에 대한 진지한 경험론부터 다가올 건강불평등 시대를 위한 준비 등 삶을 보다 건강하게 살기 위한 삶의 진지한 질문을 던집니다. </li>
+										</ul>
+									</div>
+									<button type="button" class="btn-x"><img src="./img/btn_pop_x_mo.png" alt="닫기"></button>
+								</div>
+							</div>
+							<!-- // End : popup -->
+						</div>
 						<div class="grid">
 							<img src="./img/evt_plan1_img2_mo.png" alt="">
 							<div class="hidden">
@@ -185,7 +189,22 @@
 					<!-- // end of plan 1 -->
 
 					<!-- start of plan 2 -->
-					<section class="event-section n2">
+					<section class="event-section n2 comingsoon"> <!-- 커밍순일 시, comingsoon 클래스 추가 -->
+						<div class="grid comingsoon">
+							<img src="./img/evt_plan2_comingsoon_mo.png" alt="">
+							<div class="hidden">
+								<h2>Coming Soon! 건강한 계획 #2는 무엇일까요?</h2>
+								<span>새로운모델은 누구?</span>
+								<span>혁명적인 경품</span>
+								<span>건강한 계획2</span>
+
+								<span>이벤트 시작일 : 2020. 11. 18</span>
+
+								<strong>11월 18일, Coming Soon!</strong>
+								<p>홈트레이닝의 혁명적인 색다른 경품과 새로운 모델과 함께 2차 오픈됩니다.</p>
+								<p>라이나생명 고객님만을 위한 특별 이벤트도 진행중이오니 많은 참여 부탁드립니다.</p>
+							</div>
+						</div>
 						<div class="grid">
 							<img src="./img/evt_plan2_img1_mo.png" alt="">
 							<div class="hidden">
@@ -396,6 +415,16 @@
 						$ts.hasClass('on') ? $target.removeClass('on').slideUp(200) : $target.addClass('on').slideDown(200);
 						$ts.toggleClass('on');
 					}
+					function popBookDetail(ts, target) {
+						var $ts = $(ts)
+							, $target = $('#'+target);
+						$target.addClass('on');
+					}
+
+					$('.btn-x').on('click', function(){
+						$('#popLifeBook').removeClass('on');
+					})
+
           function scrollToPanel(v){
             var idx = v;
             var $anchorWrap = $('#evtAnchors')
@@ -420,19 +449,44 @@
 									$('.btn-area.n4 button').attr('disabled', 'disabled');
 								}
 							})
-							
-							$plugins.uiFloating({
-								id: 'evtAnchors',
-								ps: 'top',
-							})
-
               
 							scrollMove(); // run
 							// scrollMove fn
 							function scrollMove() {
 								var $anchorWrap = $('#evtAnchors')
 									, $anchor = $('#evtAnchors a')
-									, $panel = $('.event-section');
+									, $panel = $('.event-section')
+									
+									, anchorY = $anchorWrap.offset().top
+									, _anchorH = $anchor.outerHeight()
+									, anchorH;
+
+								// set index on init
+								setOnIdx();
+								function setOnIdx() {
+									var docY = $('html').prop('scrollTop')
+										, _idx = 0;
+
+									$anchorWrap.css('height', $anchor.outerHeight());
+									$anchorWrap.addClass('ui-fixed-top');
+									anchorH = $anchor.outerHeight();
+									if (docY > $anchorWrap.offset().top) {
+
+										while(_idx < $anchor.length-1) {
+											if (docY > $anchor.eq(_idx).offset().top - anchorH) {
+												if (docY < $anchor.eq(_idx+1).offset().top) {
+													break;
+												} else {
+													_idx++;
+												}
+												break;
+											}
+										}
+										$anchor.eq(_idx).addClass('on');
+									} else {
+										$anchorWrap.removeClass('ui-fixed-top');
+									}
+								}
 
 								// on click evt
 								$anchor.on('click', function(){
@@ -442,8 +496,14 @@
 									setActiveBtn(idx);
 									$anchorWrap.addClass('moving');
 
+									$(doc).off('scroll.moveCheck').on('scroll.moveCheck', function(){
+										if ($('html').prop('scrollTop') > $panel.eq(0).offset().top - anchorH) {
+											$anchorWrap.addClass('ui-fixed-top');
+										} else { return false; }
+									});
+
 									$('html, body').animate({
-										scrollTop:$panel.eq(idx).offset().top - $anchor.outerHeight()
+										scrollTop:$panel.eq(idx).offset().top - anchorH
 									}, 500, function(){
 										setTimeout(function(){
 											$anchorWrap.removeClass('moving');
@@ -452,45 +512,37 @@
 								})
 
 								// on scroll evt (To-Be : setTimeout 걸어서 fixed toggle 지연)
-								$('html').on('scroll', function(){
-									var offY = $('html').prop('scrollTop')
+								$(doc).on('scroll', function(){
+									var docY = $('html').prop('scrollTop')
 										, idx = $anchor.index($('#evtAnchors .on'))
 										, $onPanel = $panel.eq(idx)
-										, onPanelY = $onPanel.offset().top - $anchorWrap.outerHeight()
+										, onPanelY = $onPanel.offset().top - anchorH
 										, onPanelH = $onPanel.outerHeight();
 
-										if ($anchorWrap.hasClass('moving')) {
-											return false; 
-										}
-										if (offY < 780) {
-											setActiveBtn(0);
+										if (docY < anchorY) { // anchor 위에 있을 시
+											$anchorWrap.removeClass('ui-fixed-top');
 											return false;
-										}
-										if (offY < onPanelY || offY > onPanelY+onPanelH){
-											if (offY < onPanelY){ // prev panel
-												idx--;
-											} else {
-												idx++;
+										} else { // anchor 아래로 스크롤 시
+											$anchorWrap.addClass('ui-fixed-top');
+											if ($anchorWrap.hasClass('moving')) { // 클릭으로 moving중이면 return
+												return false; 
 											}
-											setActiveBtn(idx);
+											if ((idx !== 0 && docY < onPanelY) || docY > onPanelY+onPanelH){
+												if (docY < onPanelY){ // prev panel
+													idx--;
+												} else {
+													idx++;
+												}
+												setActiveBtn(idx);
+											}
 										}
 								})
 								// set anchor btn
 								function setActiveBtn(idx) {
-									$('#evtAnchors a').removeClass('on').eq(idx).addClass('on');
+									$anchor.removeClass('on').eq(idx).addClass('on');
 								}
 							}
-            
-              
-							// popup run!!
-							// $plugins.uiModalOpen({
-							// 	id:'ET-010100_mo',
-							// 	full:false,
-							// 	callback: function(v){
-							// 		console.log('open :', v );
-							// 	}
-							// });
-
+						
 						});
 					})(jQuery, window, document);
 				</script>
@@ -1557,8 +1609,7 @@
 				</section>
 				<!-- // End : ET-020204_mo -->
 
-				
-      </div> <!-- // .contents -->
+				      </div> <!-- // .contents -->
 			<!-- // contents end 
 			=============================================-->
     </section>

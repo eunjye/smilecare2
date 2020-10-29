@@ -465,10 +465,12 @@
 								<img src="./img/evt_anchor1.png" alt="계획1:주기적으로 안내받아 치아건강에 도움받기">
 								<span class="link">주기적으로 안내받아 치아건강에 도움받기</span>
 							</a>
-							<a href="javascript:void(0);" class="n2">
+							<a href="javascript:void(0);" class="n2 comingsoon"> <!-- Coming Soon! 일 시, comingsoon 클래스 추가 -->
 								<span class="hidden">선택됨</span>
 								<img src="./img/evt_anchor2.png" alt="계획2:치아정보 확인하고 지인에게 공유하기">
 								<span class="link">치아정보 확인하고 지인에게 공유하기</span>
+
+								<span class="link comingsoon">Coming Soon!</span>
 							</a>
 							<a href="javascript:void(0);" class="n3">
 								<span class="hidden">선택됨</span>
@@ -517,24 +519,23 @@
 										<strong>500명</strong>
 									</li>
 								</ul>
-								<h3>건강한 2라운드 삶을 원하시나요?</h3>
-								<p>건강한 삶을 위한 진지한 지식을 담은 <strong>헬스라이프북 &lt;전성기> 3,000명</strong> 증정!</p>
-								전성기매거진 12월호 <strong>3천명</strong>
-								<p>만성 소화불량을 달고 살았는데 &lt;전성기> 덕에 원인을 찾았네요. 10월 한 달간 &lt;전성기>에서 알려준 방법으로 건강을 되찾고 있습니다. -김ㅇㅇ-</p>
-								<p>건강의 중요성을 입에 달고 살지만 어디서부터 시작해야 할지 몰라 막연했는데 &lt;전성기>가 매달 다른 주제로 건강을 챙겨주니 든든합니다! -조ㅇㅇ-</p>
-								<p>코로나19로 계속되는 피로감, 우울감, 불안감을 해소할 수 없어서 지쳐가던 중 마음 근육 키우기 기사는 딱 좋은 힌트이자 단비였습니다. 당장 실천해보려고 합니다. -김ㅇㅇ-</p>
 							</div>
 							<div class="btn-area n2">
-								<a href="javascript:void(0);" class="btn-moreview" onclick="popYafitDetail(this, 'popLifeBook')"><img src="./img/btn_plan1_detail.png" alt="상세보기"></a>
+								<a href="javascript:void(0);" class="" onclick="popBookDetail(this, 'popLifeBook')"><img src="./img/btn_evt_more.png" alt="상세보기"></a>
 							</div>
 							<div class="more-wrap" id="popLifeBook">
-								<img src="./img/evt_lifebook_more.png" alt="">
-								<dl class="hidden">
-									<dt>전성기매거진 안내</dt>
-									<dd>면역력, 소화력, 수면력 등 우리 일상에서 꼭 필요한 ‘건강력’을 시리즈로 발행합니다. 의사들의 건강법부터 쉽게 따라 할 수 있는 운동법까지 보다 전문적인 건강정보를 담았습니다. </dd>
-									<dd>치매전문의, 회계사, 경제 칼럼니스트 등 각 분야 전문가들이 나서 우리의 고민거리를 시원하게 풀어드립니다. </dd>
-									<dd>한달살기에 대한 진지한 경험론부터 다가올 건강불평등 시대를 위한 준비 등 삶을 보다 건강하게 살기 위한 삶의 진지한 질문을 던집니다. </dd>
-								</dl>
+								<img src="./img/evt_plan2_pop.png" alt="">
+								<div class="hidden">
+									<h3>건강한 2라운드 삶을 원하시나요?</h3>
+									<p>건강한 삶을 위한 진지한 지식을 담은 <strong>헬스라이프북 &lt;전성기> 3,000aud</strong> 증정!</p>
+									<dl>
+										<dt>전성기매거진 안내</dt>
+										<dd>면역력, 소화력, 수면력 등 우리 일상에서 꼭 필요한 ‘건강력’을 시리즈로 발행합니다. 의사들의 건강법부터 쉽게 따라 할 수 있는 운동법까지 보다 전문적인 건강정보를 담았습니다. </dd>
+										<dd>치매전문의, 회계사, 경제 칼럼니스트 등 각 분야 전문가들이 나서 우리의 고민거리를 시원하게 풀어드립니다. </dd>
+										<dd>한달살기에 대한 진지한 경험론부터 다가올 건강불평등 시대를 위한 준비 등 삶을 보다 건강하게 살기 위한 삶의 진지한 질문을 던집니다. </dd>
+									</dl>
+								</div>
+								<button type="button" class="btn-x"><img src="./img/btn_pop_x.png" alt="닫기"></button>
 							</div>
 						</div>
 						<div class="grid">
@@ -583,7 +584,7 @@
 					<!-- // end of plan 1 -->
 
 					<!-- start of plan 2 -->
-					<section class="event-section comingsoon n2"> <!-- 커밍순일 시, comingsoon 클래스 추가 -->
+					<section class="event-section n2 comingsoon"> <!-- 커밍순일 시, comingsoon 클래스 추가 -->
 						<div class="grid comingsoon">
 							<img src="./img/evt_plan2_comingsoon.png" alt="">
 							<div class="hidden">
@@ -592,18 +593,11 @@
 								<span>혁명적인 경품</span>
 								<span>건강한 계획2</span>
 
-								<span>이벤트 시작일 : 2020. 11. 18 ~ 12. 09</span>
+								<span>이벤트 시작일 : 2020. 11. 18</span>
 
 								<strong>11월 18일, Coming Soon!</strong>
 								<p>홈트레이닝의 혁명적인 색다른 경품과 새로운 모델과 함께 2차 오픈됩니다.</p>
 								<p>라이나생명 고객님만을 위한 특별 이벤트도 진행중이오니 많은 참여 부탁드립니다.</p>
-							</div>
-							<div class="img-area dday">
-								<span class="count">
-									<img src="./img/counter_plan2.png" alt="">
-									<span class="hidden">이벤트 참여 D-day</span>
-									<span class="num" data-dday="0">0</span> <!-- d-day 자동계산 기능 : dDayCount() -->
-								</span>
 							</div>
 						</div>
 						<div class="grid">
@@ -655,9 +649,13 @@
 									}
 								"><img src="./img/btn_plan2_join.png" alt="선택한 콘텐츠 공유하고 이벤트 참여하기"></button>
 							</div>
+						</div>
+
+						<div class="img-area product">
+							<img src="./img/evt_plan2_product.png" alt="">
+						</div>
 
 							<div class="hidden">
-								<h3>치아정보 공유하고 경품이벤트에 응모하자</h3>
 								<ul>
 									<li>바디프렌드 안마의자 <strong>3명</strong></li>
 									<li>야나두 피트니스 YAFIT 사이클 <strong>20명</strong></li>
@@ -691,36 +689,36 @@
 									</dl>
 								</article>
 							</div>
+							<div class="img-area img1">
+								<img src="./img/evt_plan2_img2.png" alt="">
+							</div>
+							<div class="detail-area">
+								<dl class="data-info">
+									<div>
+										<dt>응모기간</dt>
+										<dd>2020.11.18 ~ 12.09</dd>
+									</div>
+									<div>
+										<dt>응모 방법</dt>
+										<dd>이벤트 기간 내 스마일케어 콘텐츠 정보 공유 시 응모</dd>
+									</div>
+									<div>
+										<dt>당첨자 선정</dt>
+										<dd>이벤트 참여 대상자 중 추첨을 통해 당첨자 선정</dd>
+									</div>
+									<div>
+										<dt>당첨자 발표</dt>
+										<dd>2020.12.16 / 라이나생명 케어라운지 이벤트 게시판</dd>
+									</div>
+								</dl>
+								<strong class="bul-notice">꼭 확인하세요</strong>
+								<ul class="bul-txt">
+									<li>본 이벤트는 라이나생명에서 주최하는 행사이며, 실제 상품은 상기 이미지와 다를 수 있습니다.</li>
+									<li>본 행사 내용은 당사 사정에 따라 예고 없이 변경 또는 중단될 수 있습니다.</li>
+									<li>행사관련 문의 : 고객센터 1588-0058</li>
+								</ul>
+							</div>
 						</div>
-						<div class="img-area img1">
-							<img src="./img/evt_plan2_img2.png" alt="">
-						</div>
-            <div class="detail-area">
-              <dl class="data-info">
-                <div>
-                  <dt>응모기간</dt>
-                  <dd>2020.11.18 ~ 12.09</dd>
-                </div>
-                <div>
-                  <dt>응모 방법</dt>
-                  <dd>이벤트 기간 내 스마일케어 콘텐츠 정보 공유 시 응모</dd>
-                </div>
-                <div>
-                  <dt>당첨자 선정</dt>
-                  <dd>이벤트 참여 대상자 중 추첨을 통해 당첨자 선정</dd>
-                </div>
-                <div>
-                  <dt>당첨자 발표</dt>
-                  <dd>2020.12.16 / 라이나생명 케어라운지 이벤트 게시판</dd>
-                </div>
-              </dl>
-              <strong class="bul-notice">꼭 확인하세요</strong>
-              <ul class="bul-txt">
-                <li>본 이벤트는 라이나생명에서 주최하는 행사이며, 실제 상품은 상기 이미지와 다를 수 있습니다.</li>
-                <li>본 행사 내용은 당사 사정에 따라 예고 없이 변경 또는 중단될 수 있습니다.</li>
-                <li>행사관련 문의 : 고객센터 1588-0058</li>
-              </ul>
-            </div>
 					</section>
 					<!-- // end of plan 2 -->
 
@@ -746,9 +744,6 @@
 						</div>
 						<div class="img-area img2">
 							<img src="./img/evt_plan3_img2.png" alt="">
-						</div>
-						<div class="img-area">
-							<img src="./img/evt_plan3_img3.png" alt="">
 						</div>
             <div class="detail-area">
               <dl class="data-info">
@@ -796,6 +791,16 @@
 						$ts.toggleClass('on');
 					}
 
+					function popBookDetail(ts, target) {
+						var $ts = $(ts)
+							, $target = $('#'+target);
+						$target.addClass('on');
+					}
+
+					$('.btn-x').on('click', function(){
+						$('#popLifeBook').removeClass('on');
+					})
+
 					function scrollToPanel(v){
 						$('html, body').animate({
 							scrollTop:$('.event-section').eq(v).offset().top - $('#evtAnchors').outerHeight()
@@ -808,19 +813,7 @@
 
 					;(function($, win, doc, undefined) {
 						$(doc).ready(function(){
-							// D-day counter
-							dDayCount();
-							function dDayCount() {
-								var dday = new Date(2020, 10, 18).getTime()
-									, today = new Date().getTime()
-									, $num = $('.dday .num')
-									, distance = dday - today;
-
-								var _date = Math.ceil(distance / (1000 * 60 * 60 * 24));
-								$num.attr('data-dday', _date).text(_date);
-							}
-
-
+							
 							$('.rdo-list input').on('change', function(){
 								$('.rdo-list input').not($(this)).prop('checked', false);
 								if (!!$(this).prop('checked')) { 
@@ -829,7 +822,6 @@
 									$('.btn-area.n4 button').attr('disabled', 'disabled');
 								}
 							})
-
 							scrollMove(); // run
 							// scrollMove fn
 							function scrollMove() {

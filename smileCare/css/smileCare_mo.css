@@ -444,6 +444,7 @@ select{display:inline-block;position:relative;vertical-align:middle;width:auto;h
 p.list-dash{}
 .list-dash>li:before,
 p.list-dash:before {content:"-";margin-right:3px}
+.ctab_cont .list-num>li>i{margin-right:5px}
 .bul-note {font-size:12px;margin-top:7px;}
 .bul-note:before {display:inline;margin-right:3px;content:"※"}
 .terms-point{color:#000;font-size:120%;font-weight:500}
@@ -537,20 +538,22 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 .ctab_area li.on a{position:relative;background-color:#2D333E;color:#fff;font-weight:bold;border-color:#147bfd}
 .ctab_area.n3 li:nth-child(3n-2) a{border-left:1px solid #d0d0d0}
 .ctab_area.n2 li:nth-child(2n-1) a{border-left:1px solid #d0d0d0}
-.ctab_cont{display:none;font-size:13px;line-height:1.5;color:#666;}
-.ctab_cont.on{display:block}
+.ctab_cont{display:block;font-size:13px;line-height:1.5;color:#666;}
 .ctab_cont .term-intro span{display:block;margin:14px 0 6px}
 .ctab_cont .term-intro:first-child span{margin:7px 0 6px}
 .ctab_cont .term-tit01{color:#111;font-weight:700;font-size:16px}
-.ctab_cont .term-tit02{display:block;font-weight:normal;margin:15px 0 5px}
+.ctab_cont .term-tit02{display:block;margin:15px 0 5px}
 .ctab_cont .term-tit02 + p{margin-top:5px}
+.ctab_cont .term-tit02 + ol,.ctab_cont .term-tit02 + ul{margin-top:13px}
 .ctab_cont .term-txt{margin:10px 0}
 .ctab_cont ol li{margin-top:5px;line-height:1.5}
 .ctab_cont ol li p{margin-top:5px}
 .ctab_cont table + p{margin-top:5px}
+.ctab_cont ol li ul li,.ctab_cont ol li ol li,.ctab_cont ul li ul li,.ctab_cont ul li ol li{margin-left:10px;font-size:12px}
 .ctab_cont table{margin:12px 0;}
 .ctab_cont table tbody th{background:#F6F6F6;border-top:1px solid #e5e5e5;border-left:1px solid #e5e5e5;border-right:1px solid #e5e5e5;padding:12px 11px;text-align:center;color:#111;font-weight:700}
 .ctab_cont table tbody td{padding:12px 11px;border-top:1px solid #e5e5e5;border-right:1px solid #e5e5e5;text-align:left;color:#111}
+.ctab_cont table tbody tr:last-child{border-bottom:1px solid #e5e5e5}
 
 /* smilecare
 ----------------------------------------------- */

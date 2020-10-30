@@ -317,8 +317,8 @@ var slidePage = {
 			, $panelWrap = $wrap.find('.apply-items')
 			, $panel = $wrap.find('.apply-inner');
 
-		$panelWrap.css({width: 720*$panel.length}); // 720: apply-inner의 width
-		$panel.css({width: 720, height: 350}); // 350: apply-inner의 height
+		$panelWrap.css({width: 460*$panel.length}); // 720: apply-inner의 width
+		$panel.css({width: 460, height: 350}); // 350: apply-inner의 height
 	},
 	goSlidePage: function(v, callback) {
 		var $wrap = $('.apply-wrap')

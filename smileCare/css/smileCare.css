@@ -104,6 +104,7 @@ input::placeholder{color:#ccc;font-size:16px;font-weight:400}
 .btn-wrap{width:100%;text-align:center;margin:30px 0 0}
 .btn-wrap:after { display:block; clear:both; content:""; }
 .ui-modal-cont .btn-wrap { margin-top:48px; }
+.ui-modal-cont .btn-wrap.ss { margin-top:20px; }
 .ui-modal-cont .btn-wrap .btn-base { margin:0 5px; }
 
 .btn-small{display:inline-block;font-size:14px;padding:0 10px;font-weight:400;height:28px;border-radius:6px;border:1px solid #d9d9d9;color:#000;background:#fff;letter-spacing:-0.075em;position:relative}
@@ -248,16 +249,26 @@ button.disabled{background:#bfc7ce !important;color:#fff !important;transition:b
 
 .agree_form .check_all .check_bottom input {width:24px; height:22px;}
 .agree_form .check_all .check_bottom label {padding-left:30px;}
-.agree_form .check_all .check_bottom label:before {content:''; position:absolute; top:0; left:0; width: 24px; height: 22px; margin-top:-3px; background:url(../img/ico_forms.png) no-repeat; background-size:24px 108px;background-position:0 -66px}
-.agree_form .check_all .check_bottom input:checked+label:before {content:'';  background:url(../img/ico_forms.png) no-repeat; background-size:24px 108px;background-position:0 -44px}
+.agree_form .check_all .check_bottom label:before {content:''; position:absolute; top:0; left:0; width: 24px; height: 22px; margin-top:-3px; background:url(../img/ico_forms.png) no-repeat; background-size:24px 108px;background-position:0 -22px}
+.agree_form .check_all .check_bottom input:checked+label:before {content:'';  background:url(../img/ico_forms.png) no-repeat; background-size:24px 108px;background-position:0 0}
 .agree_form label span {font-weight:700;}
 .agree_form .check_all .check_top label {font-size:14px;}
 .agree_form .check_all .check_top div {position:relative;}
-.agree_form .check_all .check_bottom {padding:15px 0px 0px; }
-.agree_form .check_all .check_bottom label {font-size:12px;}
+.agree_form .check_all .check_bottom {padding:0px; }
+.agree_form .check_all .check_bottom label ,.arrow-txt{font-size:13px;color:#111;font-weight:bold}
+.arrow-wrap{margin-top:10px}
+.arrow-txt{display:inline-block;margin-right:10px}
+.arrow-txt-sub{color:#666}
 .agree_form .check_all .check_bottom div {position:relative; margin-bottom:9px;}
 .agree_form .check_all .check_bottom div:last-child {margin-bottom:0;}
-.agree_form .check_all .check_bottom div button {position:relative; display:inline-block; vertical-align:middle;margin-top:13px; width:12px; height:22px; background:url(../img/ico_agree_link.png) no-repeat 0 0; background-size:6px 11px;}
+.agree_form .check_all .check_bottom div button,
+.rdo_form .arrow-wrap button {position:relative; display:inline-block; vertical-align:middle;margin-top:14px; width:12px; height:22px; background:url(../img/ico_agree_link.png) no-repeat 0 0; background-size:6px 11px;}
+.rdo_form .arrow-wrap button{margin-top:0;height:11px}
+.rdo_form .rdo_item{margin-bottom:15px}
+.rdo_form .rdo_item:last-child{margin-bottom:0;}
+.input_item .grid{display:inline-block;vertical-align:middle;margin-top:3px}
+.input_item .grid li{float:left;margin-right:50px}
+.input_item .grid:after{content:'';display:block;clear:both;}
 .grid2 li {float:left; position:relative;}
 .grid2 li {margin-left:18px;}
 .grid2 li:first-child {margin-left:0;}
@@ -293,6 +304,7 @@ select{display:inline-block;position:relative;vertical-align:middle;width:auto;h
 .form-box .btn-select-wrap{display:none;padding-right:25px;margin:5px 0;max-height:200px;overflow-y:auto}
 .form-box .btn-select-wrap button{height:30px;margin-bottom:5px;text-align:right;font-size:16px}
 
+.apply-sub-txt{font-size:13px;margin:15px 0;color:#008bec}
 
 /* plugins: modal */
 .ui-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;overflow-y:auto;overflow-x:hidden;z-index:1000}
@@ -316,6 +328,8 @@ select{display:inline-block;position:relative;vertical-align:middle;width:auto;h
 .ui-modal.open.type-normal.ps-bottom .ui-modal-wrap{bottom:10px;opacity:1}
 
 .ui-modal.type-small .ui-modal-wrap {width:365px;}
+.ui-modal.type-ss .ui-modal-wrap {width:460px;}
+.ui-modal.type-ss .ui-modal-cont {margin-top:30px}
 
 .ui-modal-cont.type-bg{background:linear-gradient(#fff 75px, #eff4f9 75px, #eff4f9);background-attachment:local}
 .ui-modal-cont.type-img{padding:0}

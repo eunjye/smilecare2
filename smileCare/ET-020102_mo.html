@@ -74,46 +74,18 @@
                 <h2 class="tit">스마일케어 구독 이벤트에<br>참여해주셔서 감사합니다.</h2>
                 <span class="desc">라이나생명에서 준비한 <br class="br">다른 이벤트에도 참여해보시겠어요?</span>
               </div>
-              <div class="evt-box">
-                <a href="javascript:void(0);" class="item" onclick="
-                  $plugins.uiModalClose({ 
-                    id:'ET-020102_mo',
-                    callback: function(){
-                      scrollToPanel(1); // go to second section
-                    }
-                  });
-                ">
-                  <span class="thumb"><img src="./img/thumb_plan2.png" alt=""></span>
-                  <div class="inner">
-                    <strong class="subject">
-                      <span>건강한 계획2</span>
-                      치아정보 공유하기이벤트
-                    </strong>
-                    <span class="desc">2020.11.18 ~ 12.09</span>
-                  </div>
-                </a>
-                <a href="javascript:void(0);" class="item" onclick="
-                  $plugins.uiModalClose({ 
-                    id:'ET-020102_mo',
-                    callback: function(){
-                      scrollToPanel(2); // go to third section
-                    }
-                  });
-                ">
-                  <span class="thumb"><img src="./img/thumb_plan3.png" alt=""></span>
-                  <div class="inner">
-                    <strong class="subject">
-                      <span>보너스!</span>
-                      App에서 간편비밀번호 등록
-                    </strong>
-                    <span class="desc">2020.11.04 ~ 12.09</span>
-                  </div>
-                </a>
-              </div>
-              <div class="btn-wrap">
-								<a href="./ET-000000_mo.html" target="_blank" title="새창 열림" class="btn-base" onclick="
-									$plugins.uiModalClose({ id:'ET-020102_mo'});
+              <div class="btn-wrap col2">
+								<a href="./ET-000000_mo.html" target="_blank" title="새창 열림" class="btn-base secondary" onclick="
+									$plugins.uiModalClose({ id:'ET-000000_mo'});
 								"><span>스마일케어로 이동</span></a>
+								<a href="./ET-000000_mo.html" target="_blank" title="새창 열림" class="btn-base" onclick="
+									$plugins.uiModalClose({ 
+										id:'ET-020102_mo',
+										callback: function(){
+											scrollToPanel(1); // go to second section
+										}
+									});
+								"><span>다른 이벤트 보기</span></a>
               </div>
             </div>
           </div>

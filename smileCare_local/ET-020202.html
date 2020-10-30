@@ -235,7 +235,7 @@
 									<li><a href="http://www.lina.co.kr/wss/prmAccount_list.htm">보험료납입정보 변경</a></li>
 									<li><a href="http://www.lina.co.kr/wss/reAccount_list.htm">입출금 계좌 등록/변경</a></li>
 									<li><a href="http://www.lina.co.kr/wss/marketingInfo_form.htm">마케팅활용 동의 정보 변경</a></li>
-									<!--<li><a href="./_root/wss/renewal_view.htm">갱신안내 및 변경</a></li>-->
+									<!--<li><a href="/wss/renewal_view.htm">갱신안내 및 변경</a></li>-->
 									<li><a href="http://www.lina.co.kr/wss/interestaccount_list.htm">대출이자 납입정보 등록/변경</a></li>
 									<li><a href="http://www.lina.co.kr/wss/reduction_list.htm">감액/특약해약 신청</a></li>
 									<li><a href="http://www.lina.co.kr/wss/fund_notification_list.htm">펀드수익률 변동 알림서비스</a></li>
@@ -427,7 +427,7 @@
 			<div class="gnb_left" style="display: none; height: 285px;">
 					<!--
 					<div class="box box01">
-						<a href="./_root/solution/solution.htm"><em class="lb new">NEW</em><span>1:1<br> <em>보장분석</em></span></a>
+						<a href="/solution/solution.htm"><em class="lb new">NEW</em><span>1:1<br> <em>보장분석</em></span></a>
 					</div>
 						-->
 					<div class="box box02">
@@ -463,56 +463,56 @@
 							}
 						});
           ">레이어팝업 열기</a>
+        </div>
 
-				</div>
-				<!-- Start : ET-020202 공유채널 선택 팝업 -->
-				<div id="ET-020202" class="ui-modal">
-					<div class="ui-modal-wrap">
-						<div class="ui-modal-head">
-						<h1>치아정보 공유하기 이벤트 신청</h1>
-							<button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'ET-020202'})"><span class="hidden">닫기</span></button>
-						</div>
-						<div class="ui-modal-cont">
-								<div class="cont-top">
-										<h2 class="tit1">공유채널을 선택</h2>
-										<p><strong>구독 지인들과 공유할 채널을 선택해주세요.</strong></p>
-										<div class="share-wrap">
-												<ul class="share-list">
-														<li>
-																<div class="share-item kakao">
-																		<input id="rdo_1" name="rdoCheck" type="radio">
-																		<label for="rdo_1"><span>카카오톡</span></label>
-																</div>
-														</li>
-														<li>
-																<div class="share-item facebook">
-																		<input id="rdo_2" name="rdoCheck" type="radio">
-																		<label for="rdo_2"><span>페이스북</span></label>
-																</div>
-														</li>
-														<li>
-																<div class="share-item kakaostory">
-																		<input id="rdo_3" name="rdoCheck" type="radio">
-																		<label for="rdo_3"><span>카카오스토리</span></label>
-																</div>
-														</li>
-														<li>
-																<div class="share-item naver">
-																		<input id="rdo_4" name="rdoCheck" type="radio">
-																		<label for="rdo_4"><span>네이버블로그</span></label>
-																</div>
-														</li>
-														<li>
-																<div class="share-item url">
-																		<input id="rdo_5" name="rdoCheck" type="radio">
-																		<label for="rdo_5"><span>URL복사</span></label>
-																</div>
-														</li>
-												</ul>
-											
-										</div>
-								</div>
-								<div class="btn-wrap">
+        <!-- Start : ET-020202 공유채널 선택 팝업 -->
+        <div id="ET-020202" class="ui-modal">
+          <div class="ui-modal-wrap">
+            <div class="ui-modal-head">
+							<h1>치아정보 공유하기 이벤트 신청</h1>
+              <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'ET-020202'})"><span class="hidden">닫기</span></button>
+            </div>
+            <div class="ui-modal-cont">
+                <div class="cont-top bdb-n">
+                    <h2 class="tit1">공유채널을 선택</h2>
+                    <p><strong>구독 지인들과 공유할 채널을 선택해주세요.</strong></p>
+                    <div class="share-wrap">
+                        <ul class="share-list">
+                            <li>
+                                <div class="share-item kakao">
+                                    <input id="rdo_1" name="rdoCheck" type="radio">
+                                    <label for="rdo_1"><span>카카오톡</span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="share-item facebook">
+                                    <input id="rdo_2" name="rdoCheck" type="radio">
+                                    <label for="rdo_2"><span>페이스북</span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="share-item kakaostory">
+                                    <input id="rdo_3" name="rdoCheck" type="radio">
+                                    <label for="rdo_3"><span>카카오스토리</span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="share-item naver">
+                                    <input id="rdo_4" name="rdoCheck" type="radio">
+                                    <label for="rdo_4"><span>네이버블로그</span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="share-item url">
+                                    <input id="rdo_5" name="rdoCheck" type="radio">
+                                    <label for="rdo_5"><span>URL복사</span></label>
+                                </div>
+                            </li>
+                        </ul>
+                      
+                    </div>
+                </div>
+                <div class="btn-wrap">
 										<button type="button" class="btn-base " onclick="
 											if (!!$('.share-item #rdo_5').prop('checked')) {
 												alert('url이 복사되었습니다.');
@@ -524,30 +524,30 @@
 												}
 											})
 										"><span>선택한 채널로 공유 진행하기</span></button>
-								</div>
-						</div>
-					</div>
+                </div>
+            </div>
+          </div>
 				</div>
 				<!-- // End : ET-020202 공유채널 선택 팝업 -->
 		
 
-				<script type="text/javascript">
-					;(function($, win, doc, undefined) {
-						$(doc).ready(function(){
-							
-							// popup run!!
-							$plugins.uiModalOpen({
-								id:'ET-020202',
-								full:false,
-								callback: function(v){
-									console.log('open :', v );
-								}
-							});
-
-
+			<script type="text/javascript">
+				;(function($, win, doc, undefined) {
+					$(doc).ready(function(){
+						
+						// popup run!!
+						$plugins.uiModalOpen({
+							id:'ET-020202',
+							full:false,
+							callback: function(v){
+								console.log('open :', v );
+							}
 						});
-					})(jQuery, window, document);
-				</script>
+
+
+					});
+				})(jQuery, window, document);
+			</script>
 			</div> <!-- // #content-->
 			<!-- // content end 
 			=============================================-->

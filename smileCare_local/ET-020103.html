@@ -235,7 +235,7 @@
 									<li><a href="http://www.lina.co.kr/wss/prmAccount_list.htm">보험료납입정보 변경</a></li>
 									<li><a href="http://www.lina.co.kr/wss/reAccount_list.htm">입출금 계좌 등록/변경</a></li>
 									<li><a href="http://www.lina.co.kr/wss/marketingInfo_form.htm">마케팅활용 동의 정보 변경</a></li>
-									<!--<li><a href="./_root/wss/renewal_view.htm">갱신안내 및 변경</a></li>-->
+									<!--<li><a href="/wss/renewal_view.htm">갱신안내 및 변경</a></li>-->
 									<li><a href="http://www.lina.co.kr/wss/interestaccount_list.htm">대출이자 납입정보 등록/변경</a></li>
 									<li><a href="http://www.lina.co.kr/wss/reduction_list.htm">감액/특약해약 신청</a></li>
 									<li><a href="http://www.lina.co.kr/wss/fund_notification_list.htm">펀드수익률 변동 알림서비스</a></li>
@@ -427,7 +427,7 @@
 			<div class="gnb_left" style="display: none; height: 285px;">
 					<!--
 					<div class="box box01">
-						<a href="./_root/solution/solution.htm"><em class="lb new">NEW</em><span>1:1<br> <em>보장분석</em></span></a>
+						<a href="/solution/solution.htm"><em class="lb new">NEW</em><span>1:1<br> <em>보장분석</em></span></a>
 					</div>
 						-->
 					<div class="box box02">
@@ -484,46 +484,18 @@
                 <h2 class="tit">이벤트에 이미 참여해주셨습니다.</h2>
                 <span class="desc">라이나생명에서 준비한 다른 이벤트에도 참여해보시겠어요?</span>
               </div>
-              <div class="evt-box">
-								<a href="javascript:void(0);" class="item" onclick="
-								$plugins.uiModalClose({ 
-										id:'ET-020103',
+              <div class="btn-wrap">
+								<a href="./ET-000000.html" target="_blank" title="새창 열림" class="btn-base secondary" onclick="
+									$plugins.uiModalClose({ id:'ET-020103'});
+								"><span>스마일케어로 이동</span></a>
+								<a href="./ET-000000.html" target="_blank" title="새창 열림" class="btn-base" onclick="
+									$plugins.uiModalClose({ 
+										id:'ET-020102',
 										callback: function(){
 											scrollToPanel(1); // go to second section
 										}
 									});
-									">
-                  <span class="thumb"><img src="./img/thumb_plan2.png" alt=""></span>
-                  <div class="inner">
-                    <strong class="subject">
-                      <span>건강한 계획2</span>
-                      치아정보 공유하기이벤트
-                    </strong>
-                    <span class="desc">2020.11.18 ~ 12.09</span>
-                  </div>
-                </a>
-                <a href="javascript:void(0);" class="item" onclick="
-								$plugins.uiModalClose({ 
-									id:'ET-020103',
-									callback: function(){
-										scrollToPanel(2); // go to third section
-									}
-								});
-								">
-                  <span class="thumb"><img src="./img/thumb_plan3.png" alt=""></span>
-                  <div class="inner">
-                    <strong class="subject">
-                      <span>보너스!</span>
-                      App에서 간편비밀번호 등록
-                    </strong>
-                    <span class="desc">2020.11.04 ~ 12.09</span>
-                  </div>
-                </a>
-              </div>
-              <div class="btn-wrap">
-								<a href="./ET-000000.html" target="_blank" title="새창 열림" class="btn-base" onclick="
-									$plugins.uiModalClose({ id:'ET-020103'});
-								"><span>스마일케어로 이동</span></a>
+								"><span>다른 이벤트 보기</span></a>
               </div>
             </div>
           </div>

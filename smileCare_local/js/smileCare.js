@@ -310,3 +310,31 @@ function fixedBanner(el) {
 	});
 	
 }
+
+var slidePage = {
+	init: function(id) {
+		var $wrap = $('#'+id)
+			, $panelWrap = $wrap.find('.apply-items')
+			, $panel = $wrap.find('.apply-inner');
+
+		$panelWrap.css({width: 720*$panel.length}); // 720: apply-inner의 width
+		$panel.css({width: 720, height: 350}); // 350: apply-inner의 height
+	},
+	goSlidePage: function(v, callback) {
+		var $wrap = $('.apply-wrap')
+			, $panel = $wrap.find('.apply-inner')
+			, $panelWrap = $wrap.find('.apply-items')
+			, $onPanel = $('.apply-inner.on')
+			
+			, num = v;
+			
+		$panel.eq(num-1).addClass('on');
+		$panelWrap.animate({
+			marginLeft: -$panel.outerWidth()*(num-1)
+		}, 400, function(){
+			$onPanel.removeClass('on');
+			$panelWrap.css('padding-left', $panel.outerWidth()*(num-1));
+			!!callback && callback();
+		});
+	}
+}

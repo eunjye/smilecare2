@@ -235,7 +235,7 @@
 									<li><a href="http://www.lina.co.kr/wss/prmAccount_list.htm">보험료납입정보 변경</a></li>
 									<li><a href="http://www.lina.co.kr/wss/reAccount_list.htm">입출금 계좌 등록/변경</a></li>
 									<li><a href="http://www.lina.co.kr/wss/marketingInfo_form.htm">마케팅활용 동의 정보 변경</a></li>
-									<!--<li><a href="./_root/wss/renewal_view.htm">갱신안내 및 변경</a></li>-->
+									<!--<li><a href="/wss/renewal_view.htm">갱신안내 및 변경</a></li>-->
 									<li><a href="http://www.lina.co.kr/wss/interestaccount_list.htm">대출이자 납입정보 등록/변경</a></li>
 									<li><a href="http://www.lina.co.kr/wss/reduction_list.htm">감액/특약해약 신청</a></li>
 									<li><a href="http://www.lina.co.kr/wss/fund_notification_list.htm">펀드수익률 변동 알림서비스</a></li>
@@ -308,7 +308,7 @@
 						<strong class="dep1_tit dep1a_tit"><a href="http://www.lina.co.kr/carelounge/main.htm">케어라운지</a></strong>
 						<ul class="gnb_dep2 gnb_care" style="display: none;">
 						<li class="m1">
-								<a href="http://www.lina.co.kr/carelounge/main.htm" class="gnb_care_tit"><img src="./_root/images/common/img_gnb_care.png" alt="Lounge 케어라운지"></a>
+								<a href="http://www.lina.co.kr/carelounge/main.htm" class="gnb_care_tit"><img src="/images/common/img_gnb_care.png" alt="Lounge 케어라운지"></a>
 								<div class="dep2_box dep2_box1">
 									<a href="http://www.lina.co.kr/carelounge/contents/endure_info_list.htm" class="dep2_tit">아침의 심호흡</a>
 									<ul class="gnb_dep3">
@@ -427,7 +427,7 @@
 			<div class="gnb_left" style="display: none; height: 285px;">
 					<!--
 					<div class="box box01">
-						<a href="./_root/solution/solution.htm"><em class="lb new">NEW</em><span>1:1<br> <em>보장분석</em></span></a>
+						<a href="/solution/solution.htm"><em class="lb new">NEW</em><span>1:1<br> <em>보장분석</em></span></a>
 					</div>
 						-->
 					<div class="box box02">
@@ -489,8 +489,16 @@
                 <h2 class="tit">치아정보 공유하기 이벤트에<br>참여해주셔서 감사합니다.</h2>
                 <span class="desc">라이나생명에서 준비한 다른 이벤트에도 참여해보시겠어요?</span>
               </div>
-              <div class="evt-box">
-								<a href="javascript:void(0);" class="item" onclick="
+              <div class="btn-wrap">
+								<button type="button" class="btn-base secondary" onclick="
+									$plugins.uiModalClose({ 
+										id:'ET-020204',
+										callback: function(){
+											openPopup('ET-020202');
+										}
+									})
+								"><span>스마일케어 콘텐츠 <br>계속 공유하기</span></button>
+								<button type="button" class="btn-base" onclick="
 									$plugins.uiModalClose({
 										id: 'ET-020204',
 										callback: function(){
@@ -502,26 +510,7 @@
 											scrollToPanel(2); // go to third section
 										}
 									})
-								">
-                  <span class="thumb"><img src="./img/thumb_plan3.png" alt=""></span>
-                  <div class="inner">
-                    <strong class="subject">
-                      <span>보너스!</span>
-                      App에서 간편비밀번호 등록
-                    </strong>
-                    <span class="desc">2020.11.04 ~ 12.09</span>
-                  </div>
-                </a>
-              </div>
-              <div class="btn-wrap">
-								<button type="button" class="btn-base" onclick="
-									$plugins.uiModalClose({ 
-										id:'ET-020204',
-										callback: function(){
-											openPopup('ET-020202');
-										}
-									})
-								"><span>스마일케어 콘텐츠 공유 계속하기</span></button>
+								"><span>보너스 이벤트 <br>보기</span></button>
               </div>
             </div>
           </div>

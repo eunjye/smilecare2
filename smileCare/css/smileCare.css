@@ -389,12 +389,11 @@ select{display:inline-block;position:relative;vertical-align:middle;width:auto;h
 .ctab_area li.on a{position:relative;background-color:#2D333E;color:#fff;border-color:#147bfd}
 .ctab_area.n2 li:nth-child(2n-1) a{border-left:1px solid #e5e5e5}
 .ctab_area.n4 li:nth-child(4n-3) a{border-left:1px solid #e5e5e5}
-.ctab_cont{display:none;height:auto;font-size:14px;line-height:1.5;text-align:left;border:0;padding:0;color:#666}
-.ctab_cont.on{display:block}
+.ctab_cont{display:block;height:auto;font-size:14px;line-height:1.5;text-align:left;border:0;padding:0;color:#666}
 .ctab_cont .term-intro span{display:block;margin:13px 0 10px}
 .ctab_cont .term-intro:first-child span{margin:7px 0 6px}
-.ctab_cont .term-tit01{margin-top:27px;color:#111;font-weight:700;font-size:18px;font-family:'Noto Sans', 'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif}
-.ctab_cont .term-tit02{display:block;font-weight:normal;margin:15px 0 5px}
+.ctab_cont .term-tit01{color:#111;font-weight:700;font-size:18px;font-family:'Noto Sans', 'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif}
+.ctab_cont .term-tit02{display:block;margin:15px 0 5px}
 .ctab_cont .term-tit02 + p{margin-top:5px}
 .ctab_cont .term-txt{margin:10px 0}
 .ctab_cont ol li{margin-top:5px;line-height:1.5}

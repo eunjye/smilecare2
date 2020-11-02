@@ -875,8 +875,8 @@ a.btn-link { display:inline-block; height:30px; line-height:27px;  vertical-alig
 
 /* step */
 .step-list { margin:0 30px; text-align:center; border-bottom:1px solid #cbcccd; padding:20px 0; }
-.step-list > li{display:inline-block;text-align:center;font-size:18px;color:#c0c0c0;font-weight:700;vertical-align:middle;}
-.step-list > li:before { display:inline-block; vertical-align:middle; width:35px; height:2px; margin:0 10px; background:#c0c0c0; content:""; }
+.step-list > li{display:inline-block;text-align:center;font-size:14px;color:#c0c0c0;font-weight:700;vertical-align:middle;}
+.step-list > li:before { display:inline-block; vertical-align:middle; width:28px; height:2px; margin:0 5px; background:#c0c0c0; content:""; }
 .step-list > li:first-child:before { display:none; }
 .step-list > li.active{color:#008bec;}
 .step-list > li.done{color:#111;}

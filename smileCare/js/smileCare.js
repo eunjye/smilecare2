@@ -312,13 +312,20 @@ function fixedBanner(el) {
 }
 
 var slidePage = {
-	init: function(id) {
+	init: function(id, isMobile) {
 		var $wrap = $('#'+id)
 			, $panelWrap = $wrap.find('.apply-items')
-			, $panel = $wrap.find('.apply-inner');
+			, $panel = $wrap.find('.apply-inner')
+			
+			, _w, _h;
 
-		$panelWrap.css({width: 720*$panel.length}); // 720: apply-inner의 width
-		$panel.css({width: 720, height: 350}); // 350: apply-inner의 height
+		if (!isMobile) {
+			_w = 720; _h = 350;
+		} else {
+			_w = $('.divide-wrap').outerWidth; _h = $(window).outerHeight() - 120;
+		}
+		$panelWrap.css({width: _w*$panel.length}); // _w: apply-inner의 width
+		$panel.css({width: _w, height: _h}); // _h: apply-inner의 height
 	},
 	goSlidePage: function(v, callback) {
 		var $wrap = $('.apply-wrap')
@@ -349,7 +356,7 @@ function initTermsSlider() {
 	// slider in terms popup
 	var $btnAgree = $('#btnAgree')
 		, $btnDisagree = $('#btnDisagree')
-		, $modalHeader = $('#ET-010201 .ui-modal-head h1');
+		, $modalHeader = $('[id*="ET-010201"] .ui-modal-head h1');
 
 	if (!sldTerms) {
 		// init slide
@@ -365,7 +372,7 @@ function initTermsSlider() {
 			},
 			onAfterSlide: function (newIdx, leng, $el){
 				// after slide change
-				$('#ET-010201 .disagree, #ET-010201 .agree').removeClass('active'); // 하단 '동의/미동의' 버튼 초기화
+				$('[id*="ET-010201"] .disagree, [id*="ET-010201"] .agree').removeClass('active'); // 하단 '동의/미동의' 버튼 초기화
 
 				$('.inner-terms').removeClass('current');
 				$el.addClass('current');
@@ -382,7 +389,7 @@ function initTermsSlider() {
 				}
 			},
 		});
-		$('#ET-010201 .slider-btn').on('click', function(){
+		$('[id*="ET-010201"] .slider-btn').on('click', function(){
 			var isNext = $(this).hasClass('btn-next') ? true : false;
 
 			if (isNext){
@@ -454,24 +461,38 @@ function agreeCheck(ts, v) {
 	]
 
 	function finishSlider() {
-		$plugins.uiModalClose({
-			id:'ET-010201', 
-			callback:function(){setTimeout(function(){
-				slidePage.goSlidePage(2, function(){
-					$('#ET-010101 .btn-base.n1').hide();
-					$('#ET-010101 .btn-base.n2').show();
-					$('#ET-010101 .step-list li').removeClass('active').eq(1).addClass('active');
-					$('#ET-010101 .step-list li').eq(0).addClass('done');
-				})
-			}, 250)}
-		});
-	}
-	if (!!arrTermsMsg[stepIdx]){
-		if (isTrue){
-			arrTermsMsg[stepIdx].agree();
-		} else {
-			arrTermsMsg[stepIdx].disagree();
+		if (!!$('#ET-010201').length) { // pc
+			$plugins.uiModalClose({
+				id:'ET-010201', 
+				callback:function(){setTimeout(function(){
+					slidePage.goSlidePage(2, function(){
+						$('#ET-010101 .btn-base.n1').hide();
+						$('#ET-010101 .btn-base.n2').show();
+						$('#ET-010101 .step-list li').removeClass('active').eq(1).addClass('active');
+						$('#ET-010101 .step-list li').eq(0).addClass('done');
+					})
+				}, 250)}
+			});
+		} else if (!!$('#ET-010201_mo').length){ // mobile
+			$plugins.uiModalClose({
+				id:'ET-010201_mo', 
+				callback:function(){setTimeout(function(){
+					slidePage.goSlidePage(2, function(){
+						$('#ET-010101_mo .btn-base.n1').hide();
+						$('#ET-010101_mo .btn-base.n2').show();
+						$('#ET-010101_mo .step-list li').removeClass('active').eq(1).addClass('active');
+						$('#ET-010101_mo .step-list li').eq(0).addClass('done');
+					})
+				}, 250)}
+			});
 		}
+		if (!!arrTermsMsg[stepIdx]){
+			if (isTrue){
+				arrTermsMsg[stepIdx].agree();
+			} else {
+				arrTermsMsg[stepIdx].disagree();
+			}
+		}
+		$ts.addClass('active').siblings().removeClass('active');
 	}
-	$ts.addClass('active').siblings().removeClass('active');
 }

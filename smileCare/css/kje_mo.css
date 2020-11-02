@@ -45,10 +45,6 @@
 .share-wrap .share-list .share-item.url label{background-position:0 -320px}
 .share-wrap .share-list .share-item input[type='radio']:checked + label span:before{content:"";position:absolute;top:0;left:0;width:80px;height:80px;border-radius:50%;background:rgba(0,0,0,.8) url('../img/spr_share_mo.png') no-repeat 0 -400px/80px 480px}
 
-@media screen and (max-width:320px){
-    .btn-radio label{font-size:13px}
-}
-
 .tit3 span:before{content:"";display:inline-block;width:4px;height:4px;background:#111;vertical-align:middle;margin-right:8px}
 /*약관 상세 미동의/동의 버튼*/
 .btn-wrap.col2 .btn-base{width:calc(50% - 11px);}
@@ -78,3 +74,9 @@
 .step-list .active .step-num{border-color:#008bec; color:#008bec;}
 .step-list .done .step-num{background:url('../img/step_done.png') center center/auto auto no-repeat #008bec; color:transparent; font-size:xx-small; border-color:transparent; }
 .step-list+.tit3{margin-top:25px}
+
+@media screen and (max-width:320px){
+    .btn-radio label{font-size:13px}
+    .step-list > li{font-size:12px!important}
+    .step-list > li:before{width:20px!important}
+}

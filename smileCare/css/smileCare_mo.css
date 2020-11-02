@@ -545,7 +545,7 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 .ctab_cont{display:block;font-size:13px;line-height:1.5;color:#666; overflow:auto;}
 .ctab_cont .term-intro:first-child span{margin:7px 0 6px}
 .ctab_cont .term-tit01{color:#111;font-weight:700;font-size:16px}
-.ctab_cont .term-tit02{display:block;margin:15px 0 5px}
+.ctab_cont .term-tit02{display:block;margin:15px 0 5px;font-size:14px}
 .ctab_cont .term-tit02 + p{margin-top:5px}
 .ctab_cont .term-txt{margin:10px 0}
 .ctab_cont ol li{margin-top:5px;line-height:1.5}
@@ -556,6 +556,7 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 .ctab_cont table tbody th{background:#F6F6F6;border-top:1px solid #e5e5e5;border-left:1px solid #e5e5e5;border-right:1px solid #e5e5e5;padding:12px 11px;text-align:center;color:#111;font-weight:700}
 .ctab_cont table tbody td{padding:12px 11px;border-top:1px solid #e5e5e5;border-right:1px solid #e5e5e5;text-align:left;color:#111}
 .ctab_cont table tbody tr:last-child{border-bottom:1px solid #e5e5e5}
+.ctab_cont .txt-large{font-size:15px}
 
 /* smilecare
 ----------------------------------------------- */

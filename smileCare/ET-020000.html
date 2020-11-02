@@ -803,7 +803,7 @@
 
 					function scrollToPanel(v){
 						$('html, body').animate({
-							scrollTop:$('.event-section').eq(v).offset().top - $('#evtAnchors').outerHeight()
+							scrollTop:$('.event-section').eq(v).offset().top - 120
 						}, 500, function(){
 							setTimeout(function(){
 								$('#evtAnchors').removeClass('moving');

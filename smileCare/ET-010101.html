@@ -467,22 +467,22 @@
         <div id="ET-010101" class="ui-modal">
           <div class="ui-modal-wrap">
             <div class="ui-modal-head">
-							<h1>스마일케어 구독 & 이벤트 신청</h1>
+							<h1>케어 구독 서비스 신청</h1>
               <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'ET-010101'})"><span class="hidden">닫기</span></button>
             </div>
-            <div class="ui-modal-cont">
+            <div class="ui-modal-cont pdt-n">
 							<div class="divide-wrap">
 								<div class="apply-wrap" id="slideWrap1">
-									<div class="item-btn">
-										<ul class="grid2">
-											<li class="active">1.약관동의</li>
-											<li>2.정보입력</li>
-											<!-- <li>3.완료</li> -->
-										</ul>
-									</div>
+									<ul class="step-list">
+										<li class="active"><span class="step-num">1</span><strong>약관동의</strong></li>
+										<li><span class="step-num">2</span><strong>정보입력</strong></li>
+										<li><span class="step-num">3</span><strong>완료</strong></li>
+									</ul>
 									<div class="apply-items">
 										<!-- Step1 : 약관 동의 -->
-										<div class="apply-inner on n1">
+										<section class="apply-inner on n1" data-title="케어 구독 서비스 신청">
+											<h2 class="hidden">1.약관동의</h2>
+											<p class="apply-sub-txt">※ 가입이벤트 기간 중 스마일케어 구독신청 시 가입이벤트에 자동 응모됩니다. </p>
 											<div class="agree_form">
 												<div class="check_all">
 													<div class="check_bottom">
@@ -558,12 +558,13 @@
 													</div>
 												</div>
 											</div>
-										</div>
+										</section>
 										<!-- // End of Step1 -->
 
 										<!-- Step2 : 정보 입력 -->
-										<div class="apply-inner n2">
-											<h2 class="tit3">구독 서비스를 이용할 정보 입력</h2>
+										<section class="apply-inner n2" data-title="케어 구독 서비스 신청">
+											<h2 class="hidden">2.정보입력</h2>
+											<h3 class="tit3">구독 서비스를 이용할 정보 입력</h3>
 											<!--form type 2-->
 											<div class="section">
 												<div class="form_item">
@@ -618,14 +619,118 @@
 													</div>
 												</div>
 											</div>
-										</div>
+										</section>
 										<!-- // End of Step2 -->
+										<!-- Start of Step3 -->
+										<section class="apply-inner n3" data-title="스마일케어 구독 & 이벤트 신청">
+											<h2 class="hidden">3.완료</h2>
+											<h3 class="tit2">스마일케어를 구독해주셔서 감사합니다.</h3>
+											<p class="tit-sub">관심 키워드를 선택해주세요.
+												<span class="small">*최대 2개 선택 가능</span>
+											</p>
+											<ul class="keyword-list">
+												<li>
+													<input type="checkbox" class="hidden" id="chkKey1" name="chkKey">
+													<label for="chkKey1"># 임플란트</label>
+												</li>
+												<li>
+													<input type="checkbox" class="hidden" id="chkKey2" name="chkKey">
+													<label for="chkKey2"># 브릿지</label>
+												</li>
+												<li>
+													<input type="checkbox" class="hidden" id="chkKey3" name="chkKey">
+													<label for="chkKey3"># 크라운</label>
+												</li>
+												<li>
+													<input type="checkbox" class="hidden" id="chkKey4" name="chkKey">
+													<label for="chkKey4"># 치아관리</label>
+												</li>
+												<li>
+													<input type="checkbox" class="hidden" id="chkKey6" name="chkKey">
+													<label for="chkKey6"># 발치</label>
+												</li>
+												<li>
+													<input type="checkbox" class="hidden" id="chkKey5" name="chkKey">
+													<label for="chkKey5"># 치아교정</label>
+												</li>
+												<li>
+													<input type="checkbox" class="hidden" id="chkKey7" name="chkKey">
+													<label for="chkKey7"># 신경치료</label>
+												</li>
+												<li>
+													<input type="checkbox" class="hidden" id="chkKey8" name="chkKey">
+													<label for="chkKey8"># 충치치료</label>
+												</li>
+												<li>
+													<input type="checkbox" class="hidden" id="chkKey9" name="chkKey">
+													<label for="chkKey9"># 보철치료</label>
+												</li>
+												<li>
+													<input type="checkbox" class="hidden" id="chkKey10" name="chkKey">
+													<label for="chkKey10"># 기타1</label>
+												</li>
+												<li>
+													<input type="checkbox" class="hidden" id="chkKey11" name="chkKey">
+													<label for="chkKey11"># 기타2</label>
+												</li>
+												<li>
+													<input type="checkbox" class="hidden" id="chkKey12" name="chkKey">
+													<label for="chkKey12"># 기타3</label>
+												</li>
+												<li>
+													<input type="checkbox" class="hidden" id="chkKey13" name="chkKey">
+													<label for="chkKey13"># 기타4</label>
+												</li>
+												<li>
+													<input type="checkbox" class="hidden" id="chkKey14" name="chkKey">
+													<label for="chkKey14"># 기타5</label>
+												</li>
+												<li>
+													<input type="checkbox" class="hidden" id="chkKey15" name="chkKey">
+													<label for="chkKey15"># 기타6</label>
+												</li>
+												<li>
+													<input type="checkbox" class="hidden" id="chkKey16" name="chkKey">
+													<label for="chkKey16"># 기타7</label>
+												</li>
+												<li>
+													<input type="checkbox" class="hidden" id="chkKey17" name="chkKey">
+													<label for="chkKey17"># 기타8</label>
+												</li>
+											</ul>
+										</section>
+										<!-- // End of Step3 -->
 									</div>
 								</div>
-								<div class="btn-wrap type-agree">
+								<div class="btn-wrap mgt-s">
 									<button type="button" class="btn-base n1 agree" onclick="openPopup('ET-010201', initTermsSlider)"><span>전체 동의하기</span></button>
 									
-									<button type="button" class="btn-base n2" onclick="" style="display:none;"><span>전체 동의하기</span></button>
+									<!-- Button : step2 -->
+									<button type="button" class="btn-base n2 agree" onclick="
+									slidePage.goSlidePage(3, function(){
+											$('#ET-010101 .btn-base.n2').hide();
+											$('#ET-010101 .btn-base.n3').show();
+											$('#ET-010101 .step-list li').removeClass('active').eq(2).addClass('active');
+											$('#ET-010101 .step-list li').eq(1).addClass('done');
+									});
+									" style="display:none;"><span>구독 신청하기</span></button>
+
+									<!-- Button : step3 -->
+									<button type="button" class="btn-base n3 agree" onclick="
+										$plugins.uiModalClose({ 
+											id:'ET-010101',
+											callback: function(){
+												if (!true) { // 2차 이벤트 미 진행 시
+													openPopup('ET-020101');
+												} else { // 2차 이벤트 진행 중일 시
+													if (true) { // 이벤트에 참여한 경우
+														openPopup('ET-020103');
+													} else { // 이벤트에 참여하지 않은 경우
+														openPopup('ET-020102');
+													}
+												}
+											}
+										})" style="display:none;"><span>확인</span></button> 
 								</div>
 							</div>
 						</div>
@@ -638,8 +743,25 @@
 								slidePage.init('slideWrap1');
 
 								$('.apply-inner.n1').on('click', 'input[type="checkbox"], .rdo_form button, .agree_form button', function(){
+									event.preventDefault();
 									openPopup('ET-010201', initTermsSlider)
 								} );
+
+								// 구독 checkbox
+                var $chks = $('.apply-inner.n3 input[type="checkbox"]')
+                  , _num = 0;
+                $chks.on('change', function(){
+                  var $ts = $(this)
+                    , $onChk = $chks.filter(':checked').not($ts)
+                    , _leng = $onChk.length;
+                  if ($ts.prop('checked')) {
+                    $ts.attr('data-n', ++_num);
+                    if (_leng > 1){
+                      var _flag = Math.min(parseInt($onChk.eq(0).attr('data-n')), parseInt($onChk.eq(1).attr('data-n')));
+                      $onChk.filter('[data-n="'+_flag+'"]').prop('checked', false);
+                    }
+                  }
+                })
 
 								/* [To.개발] 이메일 자동완성함수는 인자로 id 선택자를 넘겨주고, 
 								필요 시 도메인 리스트를 옵션으로 줄 수 있습니다.

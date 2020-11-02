@@ -327,6 +327,11 @@ var slidePage = {
 			, $onPanel = $('.apply-inner.on')
 			
 			, num = v;
+
+		if (!!$panel.eq(num-1).attr('data-title') && !!$wrap.closest('.ui-modal').length) {
+			var $modalHeader = $wrap.closest('.ui-modal').find('.ui-modal-head h1');
+			$modalHeader.text($panel.eq(num-1).attr('data-title'));
+		}
 			
 		$panel.eq(num-1).addClass('on');
 		$panelWrap.animate({
@@ -355,6 +360,9 @@ function initTermsSlider() {
 			hideControlOnEnd: true,
 			controls: false,
 			onAfterSlide: function (newIdx, leng, $el){
+				// after slide change
+				$('#ET-010201 .type-agree .btn-base').removeClass('active'); // 하단 '동의/미동의' 버튼 초기화
+
 				$('.inner-terms').remove('current');
 				$el.addClass('current');
 				$modalHeader.text($el.attr('data-title'));
@@ -427,28 +435,32 @@ function agreeCheck(ts, v) {
 			},
 			disagree: function(){
 				alert('가입이벤트는 별도의 이벤트 참여신청 없이도 해당 동의에 체크하신 후 자동으로 이벤트에 응모됩니다. 본 동의는 서비스 이용에 필수는 아니고 거부하실 수 있으며, 동의를 거부하실 경우에는 가입 이벤트에 당첨되더라도 경품발송이 제한됩니다.');
+				sldTerms.goToNextSlide();
 			}
 		},
 		// 다섯번째 약관
 		{
-			agree: function() {
-				$plugins.uiModalClose({
-					id:'ET-010201', 
-					callback:setTimeout(function(){
-						slidePage.goSlidePage(2, function(){
-							$('#ET-010101 .btn-base.n1').hide();
-							$('#ET-010101 .btn-base.n2').show();
-							$('.item-btn li').removeClass('active').eq(1).addClass('active');
-						})
-					}, 500)
-				});
-				
-			},
+			agree: finishSlider,
 			disagree: function(){
 				alert('본 동의 서비스 이용에 필수적이지 않으며 동의를 거부할 수 있습니다. 만약 동의 했더라도 원치 않는 정보를 수신한 경우 이를 수신거부 할 수 있습니다.');
-			}
+				finishSlider();
+			},
 		}
 	]
+
+	function finishSlider() {
+		$plugins.uiModalClose({
+			id:'ET-010201', 
+			callback:function(){setTimeout(function(){
+				slidePage.goSlidePage(2, function(){
+					$('#ET-010101 .btn-base.n1').hide();
+					$('#ET-010101 .btn-base.n2').show();
+					$('#ET-010101 .step-list li').removeClass('active').eq(1).addClass('active');
+					$('#ET-010101 .step-list li').eq(0).addClass('done');
+				})
+			}, 250)}
+		});
+	}
 	if (!!arrTermsMsg[stepIdx]){
 		if (isTrue){
 			arrTermsMsg[stepIdx].agree();
@@ -456,4 +468,5 @@ function agreeCheck(ts, v) {
 			arrTermsMsg[stepIdx].disagree();
 		}
 	}
+	$ts.addClass('active').siblings().removeClass('active');
 }

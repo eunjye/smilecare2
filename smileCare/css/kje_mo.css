@@ -6,12 +6,11 @@
 .pdl8{padding-left:8px}
 .apply-inner.left{padding-right:24px}
 .apply-inner.right{border-left:1px solid #e5e5e5;padding-left:24px}
+.apply-items .tit3{margin-top:15px}
+.apply-sub-txt{color:#008bec}
 .radio.square label{padding-left:30px;line-height:15px}
-.check_tit_sub{font-size:12px;color:#666;padding-left:30px;margin-top:3px}
-.agree_form:last-child{margin-bottom:0}
-.agree_form{margin-bottom:24px}
+.check_tit_sub{font-size:13px;color:#111;padding-left:30px;margin-top:3px}
 .agree_form .tit3{letter-spacing: -0.1em;}
-.apply-items .tit3+.agree_form{margin-top:10px}
 .grid2 li.btn-radio{position:relative;width:calc(50% - 5px);margin-left:10px !important}
 .grid2 li.btn-radio:first-child {margin-left:0 !important;}
 .grid2:after{content:"";display:block;clear:both}
@@ -49,3 +48,33 @@
 @media screen and (max-width:320px){
     .btn-radio label{font-size:13px}
 }
+
+.tit3 span:before{content:"";display:inline-block;width:4px;height:4px;background:#111;vertical-align:middle;margin-right:8px}
+/*약관 상세 미동의/동의 버튼*/
+.btn-wrap.col2 .btn-base{width:calc(50% - 11px);}
+.btn-base.agree span:before,
+.btn-base.disagree span:before{content:"";display:inline-block;vertical-align:middle;margin:-2px 5px 0 0;width: 24px; height: 22px; background:url(../img/ico_forms.png) no-repeat; background-size:24px 109px;background-position:0 -22px}
+.btn-base.agree{height:40px;box-sizing:border-box;width:100%;font-size:14px;line-height:14px;color:#999;border:1px solid #999;background:#fff;padding:10px;color:#111;border-color:#111}
+.btn-base.disagree{height:40px;box-sizing:border-box;width:calc(50% - 11px);font-size:14px;line-height:14px;color:#999;border:1px solid #999;background:#fff;padding:10px;color:#111;border-color:#111}
+.btn-base.agree:focus,
+.btn-base.disagree:focus{outline:1px dotted #000;} 
+.btn-base.agree:active span:before,
+.btn-base.agree.active span:before{background-position:0 0}
+.btn-base.agree:active,
+.btn-base.agree.active{border:1px solid #008bec;color:#008bec}
+.btn-base.disagree:active span:before,
+.btn-base.disagree.active span:before{background-position:0 -87px}
+.btn-base.disagree:active,
+.btn-base.disagree.active{border:1px solid #ff6000;color:#ff6000}
+
+.step-list { margin:0 30px; text-align:center; border-bottom:1px solid #cbcccd; padding:20px 0; }
+.step-list > li{display:inline-block;text-align:center;font-size:18px;color:#c0c0c0;font-weight:700;vertical-align:middle;}
+.step-list > li:before { display:inline-block; vertical-align:middle; width:35px; height:2px; margin:0 10px; background:#c0c0c0; content:""; }
+.step-list > li:first-child:before { display:none; }
+.step-list > li.active{color:#008bec;}
+.step-list > li.done{color:#111;}
+.step-list strong { vertical-align:middle; line-height:1em; }
+.step-list .step-num { display:inline-block; width:36px; height:36px; margin:0 10px 0 0; border-radius:50%; border:3px solid #c0c0c0; line-height:29px; vertical-align:middle; text-align:center;}
+.step-list .active .step-num{border-color:#008bec; color:#008bec;}
+.step-list .done .step-num{background:url('../img/step_done.png') center center/auto auto no-repeat #008bec; color:transparent; font-size:xx-small; border-color:transparent; }
+.step-list+.tit3{margin-top:25px}

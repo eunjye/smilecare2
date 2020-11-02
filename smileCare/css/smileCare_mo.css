@@ -780,7 +780,7 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 .smile-section.product .btn-cancel { margin-top:15px; }
 .btn-cancel,
 .btn-cancel:link,
-.btn-cancel:visited{position:relative;display:inline-block;text-align:right;padding:0 0 0 25px;color:#666;font-size:12px;}
+.btn-cancel:visited{position:relative;display:inline-block;text-align:right;padding:0 0 0 25px;color:#111;font-size:12px;}
 .btn-cancel:hover{text-decoration: none;cursor: pointer; color:#008bec; }
 .btn-cancel:before{content:"";position:absolute;top:0;left:0;display:block;width:18px;height:18px;background:url('../img/ico_cancel_mo.png') center center/18px auto no-repeat}
 .btn-cancel span{border-bottom:1px solid #666; color:inherit; }

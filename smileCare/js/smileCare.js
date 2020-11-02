@@ -352,21 +352,33 @@ function initTermsSlider() {
 			slideWidth: 600,
 			speed: 200,
 			infiniteLoop: false,
-			nextText: '<span class="hidden">다음 약관 보기</span>',
-			prevText: '<span class="hidden">이전 약관 보기</span>',
 			hideControlOnEnd: true,
+			controls: false,
 			onAfterSlide: function (newIdx, leng, $el){
 				$('.inner-terms').remove('current');
 				$el.addClass('current');
 				$modalHeader.text($el.attr('data-title'));
 				$btnAgree.attr('data-step', newIdx+1);
 				$btnDisagree.attr('data-step', newIdx+1);
+				if (newIdx === 0) {
+					$('.slider-btn.btn-prev').prop('disabled', true);
+				} else if (newIdx === leng - 1){
+					$('.slider-btn.btn-next').prop('disabled', true);
+				} else {
+					$('.slider-btn').prop('disabled', false);
+				}
 			},
-			onNextSlide: function (newIdx, leng, $el){
-				agreeCheck(newIdx+1, false);
-				
-			}
 		});
+		$('#ET-010201 .slider-btn').on('click', function(){
+			var isNext = $(this).hasClass('btn-next') ? true : false;
+
+			if (isNext){
+				agreeCheck(sldTerms.getCurrentSlide()+1, false);
+				// sldTerms.goToNextSlide();
+			} else {
+				sldTerms.goToPreviousSlide();
+			}
+		})
 	} else {
 		sldTerms.goToSlide(0);
 		$modalHeader.text($('.inner-terms').eq(0).attr('data-title'))
@@ -420,7 +432,17 @@ function agreeCheck(ts, v) {
 		// 다섯번째 약관
 		{
 			agree: function() {
-				sldTerms.goToNextSlide();
+				$plugins.uiModalClose({
+					id:'ET-010201', 
+					callback:setTimeout(function(){
+						slidePage.goSlidePage(2, function(){
+							$('#ET-010101 .btn-base.n1').hide();
+							$('#ET-010101 .btn-base.n2').show();
+							$('.item-btn li').removeClass('active').eq(1).addClass('active');
+						})
+					}, 500)
+				});
+				
 			},
 			disagree: function(){
 				alert('본 동의 서비스 이용에 필수적이지 않으며 동의를 거부할 수 있습니다. 만약 동의 했더라도 원치 않는 정보를 수신한 경우 이를 수신거부 할 수 있습니다.');

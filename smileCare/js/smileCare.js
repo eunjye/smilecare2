@@ -359,12 +359,17 @@ function initTermsSlider() {
 			infiniteLoop: false,
 			hideControlOnEnd: true,
 			controls: false,
+			onBeforeSlide: function(newIdx, leng, $el) {
+				$(sldTerms).css('height', $el.outerHeight());
+				$('.ctab_cont').prop('scrollTop',0);
+			},
 			onAfterSlide: function (newIdx, leng, $el){
 				// after slide change
-				$('#ET-010201 .type-agree .btn-base').removeClass('active'); // 하단 '동의/미동의' 버튼 초기화
+				$('#ET-010201 .disagree, #ET-010201 .agree').removeClass('active'); // 하단 '동의/미동의' 버튼 초기화
 
-				$('.inner-terms').remove('current');
+				$('.inner-terms').removeClass('current');
 				$el.addClass('current');
+
 				$modalHeader.text($el.attr('data-title'));
 				$btnAgree.attr('data-step', newIdx+1);
 				$btnDisagree.attr('data-step', newIdx+1);

@@ -124,7 +124,7 @@ a.btn-base{text-decoration:none;color:#fff;vertical-align:middle;}
 .btn-resel:after{content:"";display:block;width:15px;height:15px;background:url(../img/icon.png) no-repeat -70px -25px / 400px;position:absolute;right:5px;top:7px}
 button.disabled{background:#bfc7ce !important;color:#fff !important;transition:background 0.2s ease-in, color 0.2s ease-in}
 .btn-underline{display:inline-block;font-size:14px;padding:0 10px;font-weight:400;height:28px;color:#888;letter-spacing:-0.075em;text-decoration:underline;position:relative}
-.btn-point { position:relative;display:inline-block;vertical-align:middle;height:70px;line-height:68px;color:#fff;font-size:22px;text-align:center;border-radius:5px;background:#000;padding:0 35px; transition:background linear .15s; overflow:visible; }
+.btn-point { position:relative;display:inline-block;vertical-align:middle;height:70px;line-height:68px;color:#fff;font-size:22px;text-align:center;border-radius:5px;background:#000;padding:0 37px; transition:background linear .15s; overflow:visible; }
 .btn-point.small { height:48px; line-height:46px; font-size:16px; padding:0 20px 2px; }
 .btn-point.small .ico-arrow { transform:scale(.8); vertical-align:middle; margin:-14px 0 0 15px; }
 .btn-point .sub-tag { position:absolute; left:50%; bottom:100%; display:inline-block; margin-bottom:-15px; height:30px; line-height:28px; color:#fff; border-radius:15px; background:#008BEC; text-align:center; padding:0 28px; box-shadow:5px 5px 11px rgba(0,0,0,.75); font-size:13px; font-weight:700; transform:translateX(-50%); white-space:nowrap; transition:all linear .15s; border:1px solid transparent; }

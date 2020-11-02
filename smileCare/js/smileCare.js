@@ -317,8 +317,8 @@ var slidePage = {
 			, $panelWrap = $wrap.find('.apply-items')
 			, $panel = $wrap.find('.apply-inner');
 
-		$panelWrap.css({width: 460*$panel.length}); // 720: apply-inner의 width
-		$panel.css({width: 460, height: 350}); // 350: apply-inner의 height
+		$panelWrap.css({width: 720*$panel.length}); // 720: apply-inner의 width
+		$panel.css({width: 720, height: 350}); // 350: apply-inner의 height
 	},
 	goSlidePage: function(v, callback) {
 		var $wrap = $('.apply-wrap')
@@ -336,5 +336,102 @@ var slidePage = {
 			$panelWrap.css('padding-left', $panel.outerWidth()*(num-1));
 			!!callback && callback();
 		});
+	}
+}
+
+var sldTerms;
+function initTermsSlider() {
+	// slider in terms popup
+	var $btnAgree = $('#btnAgree')
+		, $btnDisagree = $('#btnDisagree')
+		, $modalHeader = $('#ET-010201 .ui-modal-head h1');
+
+	if (!sldTerms) {
+		// init slide
+		sldTerms = $('#sldTerms .slider').bxSlider({
+			slideWidth: 600,
+			speed: 200,
+			infiniteLoop: false,
+			nextText: '<span class="hidden">다음 약관 보기</span>',
+			prevText: '<span class="hidden">이전 약관 보기</span>',
+			hideControlOnEnd: true,
+			onAfterSlide: function (newIdx, leng, $el){
+				$('.inner-terms').remove('current');
+				$el.addClass('current');
+				$modalHeader.text($el.attr('data-title'));
+				$btnAgree.attr('data-step', newIdx+1);
+				$btnDisagree.attr('data-step', newIdx+1);
+			},
+			onNextSlide: function (newIdx, leng, $el){
+				agreeCheck(newIdx+1, false);
+				
+			}
+		});
+	} else {
+		sldTerms.goToSlide(0);
+		$modalHeader.text($('.inner-terms').eq(0).attr('data-title'))
+	}
+}
+
+// validation check in terms slider
+var arrTermsMsg;
+function agreeCheck(ts, v) {
+	var $ts = typeof(ts) === 'number' ? ts : $(ts)
+		, isTrue = v
+		, stepIdx = typeof(ts) === 'number' ? ts-1 : parseInt($ts.attr('data-step'))-1;
+
+	var arrTermsMsg = [
+		// 첫번째 약관
+		{
+			agree: function() {
+				sldTerms.goToNextSlide();
+			},
+			disagree: function(){
+				alert('케어 구독서비스 신청을 위해 서비스 이용 약관에 동의해주세요.');
+			}
+		},
+		// 두번째 약관
+		{
+			agree: function() {
+				sldTerms.goToNextSlide();
+			},
+			disagree: function(){
+				alert('동의는 거부하실 수 있고, 동의를 거부하실 경우 서비스 가입이 제한됩니다.');
+			}
+		},
+		// 세번째 약관
+		{
+			agree: function() {
+				sldTerms.goToNextSlide();
+			},
+			disagree: function(){
+				alert('동의는 거부하실 수 있고, 동의를 거부하실 경우 서비스 가입이 제한됩니다.');
+			}
+		},
+		// 네번째 약관
+		{
+			agree: function() {
+				sldTerms.goToNextSlide();
+			},
+			disagree: function(){
+				alert('가입이벤트는 별도의 이벤트 참여신청 없이도 해당 동의에 체크하신 후 자동으로 이벤트에 응모됩니다. 본 동의는 서비스 이용에 필수는 아니고 거부하실 수 있으며, 동의를 거부하실 경우에는 가입 이벤트에 당첨되더라도 경품발송이 제한됩니다.');
+			}
+		},
+		// 다섯번째 약관
+		{
+			agree: function() {
+				sldTerms.goToNextSlide();
+			},
+			disagree: function(){
+				alert('본 동의 서비스 이용에 필수적이지 않으며 동의를 거부할 수 있습니다. 만약 동의 했더라도 원치 않는 정보를 수신한 경우 이를 수신거부 할 수 있습니다.');
+			}
+		}
+	]
+	if (!!arrTermsMsg[stepIdx]){
+		if (isTrue){
+			arrTermsMsg[stepIdx].agree();
+		} else {
+			arrTermsMsg[stepIdx].disagree();
+		}
 	}
 }

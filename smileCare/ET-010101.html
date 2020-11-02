@@ -464,7 +464,7 @@
         </div>
 
         <!-- Start : ET-010101 -->
-        <div id="ET-010101" class="ui-modal type-ss">
+        <div id="ET-010101" class="ui-modal">
           <div class="ui-modal-wrap">
             <div class="ui-modal-head">
 							<h1>스마일케어 구독 & 이벤트 신청</h1>
@@ -473,15 +473,15 @@
             <div class="ui-modal-cont">
 							<div class="divide-wrap">
 								<div class="apply-wrap" id="slideWrap1">
+									<div class="item-btn">
+										<ul class="grid2">
+											<li class="active">1.약관동의</li>
+											<li>2.본인인증</li>
+										</ul>
+									</div>
 									<div class="apply-items">
 										<!-- Step1 : 약관 동의 -->
-										<div class="apply-inner on left">
-											<div class="item-btn">
-												<ul class="grid2">
-													<li class="active">1.약관동의</li>
-													<li>2.본인인증</li>
-												</ul>
-											</div>
+										<div class="apply-inner on n1">
 											<p class="apply-sub-txt">※ 가입이벤트 기간 중 스마일케어 구독신청 시 가입이벤트에 자동 응모됩니다. </p>
 											<div class="agree_form">
 												<h2 class="tit3">[필수]스마일케어 구독 서비스 이용 약관 동의</h2>
@@ -490,9 +490,7 @@
 														<div>
 															<input type="checkbox" id="check_1" class="chk" name="agree" onChange="javascript:agreeChk();">
 															<label for="check_1">스마일케어 구독 서비스 이용 약관 동의</label>
-															<button type="button" onclick="
-																openPopup('ET-010200-1');
-															"><span class="offscreen">[필수]개인정보 수집&middot;이용 동의</span></button>
+															<button type="button" onclick=""><span class="offscreen">[필수]개인정보 수집&middot;이용 동의</span></button>
 														</div>
 													</div>
 												</div>
@@ -504,9 +502,7 @@
 														<div>
 															<input type="checkbox" id="check_2" class="chk" name="agree" onChange="javascript:agreeChk();">
 															<label for="check_2">개인정보 수집&middot;이용 동의</label>
-															<button type="button" onclick="
-																openPopup('ET-010200-2');
-															"><span class="offscreen">개인정보 수집&middot;이용 동의</span></button>
+															<button type="button" onclick=""><span class="offscreen">개인정보 수집&middot;이용 동의</span></button>
 															<p class="check_tit_sub">- 개인식별정보 : 5건 (성명, 생년월일, 휴대폰번호 외 2건)</p>
 														</div>
 													</div>
@@ -517,11 +513,9 @@
 												<div class="check_all">
 													<div class="check_bottom">
 														<div>
-															<input type="checkbox" id="check_2" class="chk" name="agree" onChange="javascript:agreeChk();">
-															<label for="check_2">민감정보 수집&middot;이용 동의</label>
-															<button type="button" onclick="
-																openPopup('ET-010200-3');
-															"><span class="offscreen">개인정보 수집&middot;이용 동의</span></button>
+															<input type="checkbox" id="check_3" class="chk" name="agree" onChange="javascript:agreeChk();">
+															<label for="check_3">민감정보 수집&middot;이용 동의</label>
+															<button type="button" onclick=""><span class="offscreen">개인정보 수집&middot;이용 동의</span></button>
 															<p class="check_tit_sub">- 민감정보: 4건(당사 계약정보 외 3건)</p>
 														</div>
 													</div>
@@ -531,9 +525,7 @@
 												<h2 class="tit3">[선택]가입 이벤트 당첨 시 경품 지급을 위한 개인정보 수집·이용 동의</h2>
 												<div class="arrow-wrap">
 													<span class="arrow-txt">이벤트 경품 지급을 위한 제3자 제공 동의</span>
-													<button type="button"  onclick="
-																	openPopup('ET-010200-4');
-																"><span class="offscreen">이벤트 경품 지급을 위한 제3자 제공 동의</span></button>
+													<button type="button"  onclick=""><span class="offscreen">이벤트 경품 지급을 위한 제3자 제공 동의</span></button>
 													<p class="arrow-txt-sub">- 개인식별정보: 3건 (성명, 휴대폰번호, 주소)</p>
 												</div>
 												<div class="input_item">
@@ -554,9 +546,7 @@
 												<div class="rdo_item">
 													<div class="arrow-wrap">
 														<span class="arrow-txt">마케팅 목적의 개인정보 수집&middot;이용 동의</span>
-														<button type="button"  onclick="
-																		openPopup('ET-010200-5');
-																	"><span class="offscreen">마케팅 목적의 개인정보 수집&middot;이용 동의</span></button>
+														<button type="button"  onclick=""><span class="offscreen">마케팅 목적의 개인정보 수집&middot;이용 동의</span></button>
 														<p class="arrow-txt-sub">- 개인식별정보: 5건 (성명, 생년월일, 휴대폰번호 외2건)</p>
 													</div>
 													<div class="input_item">
@@ -575,9 +565,7 @@
 												<div class="rdo_item">
 													<div class="arrow-wrap">
 														<span class="arrow-txt">광고성 정보수신 동의</span>
-														<button type="button"  onclick="
-																		openPopup('ET-010200-6');
-																	"><span class="offscreen">광고성 정보수신 동의</span></button>
+														<button type="button"  onclick=""><span class="offscreen">광고성 정보수신 동의</span></button>
 														<p class="arrow-txt-sub">- 개인식별정보: 2건 (휴대폰번호, 이메일)</p>
 													</div>
 													<div class="input_item">
@@ -605,13 +593,7 @@
 										<!-- // End of Step1 -->
 
 										<!-- Step2 : 정보 입력 -->
-										<div class="apply-inner right">
-											<div class="item-btn">
-												<ul class="grid2">
-													<li>1.약관동의</li>
-													<li class="active">2.본인인증</li>
-												</ul>
-											</div>
+										<div class="apply-inner n2">
 											<h2 class="tit3">구독 서비스를 이용할 정보 입력</h2>
 											<!--form type 2-->
 											<div class="section">
@@ -675,6 +657,7 @@
 									<button type="button" class="btn-base n1" onclick="slidePage.goSlidePage(2, function(){
 										$('.btn-base.n1').hide();
 										$('.btn-base.n2').show();
+										$('.item-btn li').removeClass('active').eq(1).addClass('active');
 									});"><span>본인인증 하기</span></button>
 									
 									<button type="button" class="btn-base n2" style="display:none;" onclick="$plugins.uiModalClose({ id:'ET-010101'})"><span>구독 신청하기</span></button>
@@ -689,11 +672,14 @@
 							$(doc).ready(function(){
 								slidePage.init('slideWrap1');
 
+								$('.apply-inner.n1').on('click', 'input[type="checkbox"], .rdo_form button, .agree_form button', function(){
+									openPopup('ET-010201', initTermsSlider)
+								} );
 
 								/* [To.개발] 이메일 자동완성함수는 인자로 id 선택자를 넘겨주고, 
 								필요 시 도메인 리스트를 옵션으로 줄 수 있습니다.
 								*/
-								autoCompleteEmail('#autoComplete_email'); // email autocomplete
+								// autoCompleteEmail('#autoComplete_email'); // email autocomplete
 							});
 						})(jQuery, window, document);
 

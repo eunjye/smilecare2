@@ -77,7 +77,7 @@
 .ico-arrow{display:inline-block;position:relative;top:5px;left:5px;width:26px;height:26px;background:url('../img/ico_btn_arrow.png')no-repeat;margin-left:30px;}
 /*구독해지_btn*/
 .smile-section.product .btn-cancel { float:right; margin-top:5px; }
-.btn-cancel{position:relative;display:inline-block;text-align:right;padding:2px 0 0 38px;color:#666;font-size:14px;}
+.btn-cancel{position:relative;display:inline-block;text-align:right;padding:2px 0 0 38px;color:#111;font-size:14px;}
 .btn-cancel:hover{text-decoration: none;cursor: pointer; color:#008bec; }
 .btn-cancel:before{content:"";position:absolute;top:0;left:0;display:block;width:26px;height:26px;background:url('../img/ico_btn_close.png')no-repeat}
 .btn-cancel span{border-bottom:1px solid #666;}

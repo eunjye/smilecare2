@@ -18,8 +18,8 @@ em,address{font-style:normal}
 table{border-collapse:collapse;border-spacing:0px;empty-cells:show;table-layout:fixed}
 caption{visibility:hidden;width:0;height:0;margin:0;padding:0;font-size:0;line-height:0}
 *{box-sizing:border-box}
-b, strong{font-weight:500}
-i, em{font-weight:400;font-style:normal}
+b, strong{font-weight:inherit}
+i, em{font-weight:inherit;font-style:normal}
 button{border:0;background-color:transparent}
 /* basic
 ------------------------------------------ */
@@ -66,6 +66,7 @@ input::placeholder{color:#ccc;font-size:16px;font-weight:400}
 .mgb-m {margin-bottom:30px !important}
 .mgb-l {margin-bottom:50px !important}
 .pd-n{padding:0 !important}
+.pdt-n{padding-top:0 !important}
 .pdt-s {padding-top:10px !important}
 .pdt-m {padding-top:30px !important}
 .pdt-l {padding-top:50px !important}
@@ -104,7 +105,7 @@ input::placeholder{color:#ccc;font-size:16px;font-weight:400}
 .btn-wrap{width:100%;text-align:center;margin:30px 0 0}
 .btn-wrap:after { display:block; clear:both; content:""; }
 .ui-modal-cont .btn-wrap { margin-top:48px; }
-.ui-modal-cont .btn-wrap.ss { margin-top:20px; }
+.ui-modal-cont .btn-wrap.mgt-s { margin-top:27px !important; }
 .ui-modal-cont .btn-wrap .btn-base { margin:0 5px; }
 
 .btn-small{display:inline-block;font-size:14px;padding:0 10px;font-weight:400;height:28px;border-radius:6px;border:1px solid #d9d9d9;color:#000;background:#fff;letter-spacing:-0.075em;position:relative}
@@ -210,9 +211,10 @@ button.disabled{background:#bfc7ce !important;color:#fff !important;transition:b
 /*form type 2 */
 .divide-wrap{width:100%}
 .divide-wrap .apply-wrap { overflow:hidden; margin:0 -30px; }
-.divide-wrap .apply-wrap .apply-inner{float:left; display:none; padding:0 30px; overflow-y:auto; }
+.divide-wrap .apply-wrap .apply-inner{float:left; display:none; padding:15px 30px 0; overflow-y:auto; }
 .divide-wrap .apply-wrap .apply-inner.on { display:block; }
 .divide-wrap .apply-wrap .apply-inner:after{content:'';display:block;clear:both}
+.divide-wrap .apply-wrap .apply-inner .section { width:400px; margin:0 auto; }
 .form_item{position:relative;margin-top:18px}
 .form_item .lb{font-weight:400; color:#666; font-size:13px;}
 .form_item .lb+.guide_box{margin-top:15px;}
@@ -249,20 +251,20 @@ button.disabled{background:#bfc7ce !important;color:#fff !important;transition:b
 
 .agree_form .check_all .check_bottom input {width:24px; height:22px;}
 .agree_form .check_all .check_bottom label {padding-left:30px;}
-.agree_form .check_all .check_bottom label:before {content:''; position:absolute; top:0; left:0; width: 24px; height: 22px; margin-top:-3px; background:url(../img/ico_forms.png) no-repeat; background-size:24px 108px;background-position:0 -22px}
+.agree_form .check_all .check_bottom label:before {content:''; position:absolute; top:0; left:0; width: 24px; height: 22px; margin-top:-3px; background:url(../img/ico_forms.png) no-repeat; background-size:24px 109px;background-position:0 -22px}
 .agree_form .check_all .check_bottom input:checked+label:before {content:'';  background:url(../img/ico_forms.png) no-repeat; background-size:24px 108px;background-position:0 0}
 .agree_form label span {font-weight:700;}
 .agree_form .check_all .check_top label {font-size:14px;}
 .agree_form .check_all .check_top div {position:relative;}
 .agree_form .check_all .check_bottom {padding:0px; }
-.agree_form .check_all .check_bottom label ,.arrow-txt{font-size:13px;color:#111;font-weight:bold}
+.agree_form .check_all .check_bottom label ,.arrow-txt{font-size:15px;color:#111;font-weight:bold}
 .arrow-wrap{margin-top:10px}
 .arrow-txt{display:inline-block;margin-right:10px}
 .arrow-txt-sub{color:#666}
 .agree_form .check_all .check_bottom div {position:relative; margin-bottom:9px;}
 .agree_form .check_all .check_bottom div:last-child {margin-bottom:0;}
 .agree_form .check_all .check_bottom div button,
-.rdo_form .arrow-wrap button {position:relative; display:inline-block; vertical-align:middle;margin-top:14px; width:12px; height:22px; background:url(../img/ico_agree_link.png) no-repeat 0 0; background-size:6px 11px;}
+.rdo_form .arrow-wrap button {position:relative; display:inline-block; vertical-align:middle;margin-top:10px; width:12px; height:20px; background:url(../img/ico_agree_link.png) no-repeat 0 0; background-size:12px 14px;}
 .rdo_form .arrow-wrap button{margin-top:0;height:11px}
 .rdo_form .rdo_item{margin-bottom:15px}
 .rdo_form .rdo_item:last-child{margin-bottom:0;}
@@ -277,8 +279,8 @@ button.disabled{background:#bfc7ce !important;color:#fff !important;transition:b
 .radio .dv.tal {width:40%;}
 .radio input {position: absolute; left: 0; top: 0; width: 26px; height: 26px; opacity: 0; margin: 0; z-index: 2; clip: auto;}
 .radio label {display:block; position:relative; margin-bottom:0; padding-top:3px; padding-left:37px; font-size:13px; color:#111315; font-weight:400; cursor:pointer; text-align:left; vertical-align:middle}
-.radio label:before {content:'';  position:absolute; top:0; left:0; width: 24px; height: 22px; background:url(../img/ico_forms.png) no-repeat; background-size:24px 108px;background-position:0 -66px}
-.radio input:checked+label:before {content:''; background:url(../img/ico_forms.png) no-repeat; background-size:24px 108px;background-position:0 -44px}
+.radio label:before {content:'';  position:absolute; top:0; left:0; width: 24px; height: 22px; background:url(../img/ico_forms.png) no-repeat; background-size:24px auto;background-position:0 -66px}
+.radio input:checked+label:before {content:''; background:url(../img/ico_forms.png) no-repeat; background-size:24px 109px;background-position:0 -44px}
 .radio i:not(.score) {position: absolute; left: 0; top: 0; display: inline-block; width: 26px; height: 26px; border: 1px solid #c2c4c6; background: #fff; box-sizing: border-box; overflow: hidden; border-radius: 50%; vertical-align: top; -webkit-transition: 0.3s; transition: 0.3s; z-index: 1;}
 input[type="checkbox"], input[type="checkbox"] + label{height:auto;line-height:auto;}
 input[type="checkbox"]:focus + label:before,
@@ -304,7 +306,8 @@ select{display:inline-block;position:relative;vertical-align:middle;width:auto;h
 .form-box .btn-select-wrap{display:none;padding-right:25px;margin:5px 0;max-height:200px;overflow-y:auto}
 .form-box .btn-select-wrap button{height:30px;margin-bottom:5px;text-align:right;font-size:16px}
 
-.apply-sub-txt{font-size:13px;margin:15px 0;color:#008bec}
+.apply-sub-txt{font-size:13px;margin:0 0 15px;color:#008bec}
+.apply-sub-txt strong { font-weight:700; }
 
 /* plugins: modal */
 .ui-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;overflow-y:auto;overflow-x:hidden;z-index:1000}
@@ -440,15 +443,13 @@ select{display:inline-block;position:relative;vertical-align:middle;width:auto;h
 
 /* title */
 .tit1 { font-size:32px; font-weight:bold; color:#008bec; }
-.tit2 { font-size:30px; font-weight:bold; color:#008bec; }
+.tit2 { font-size:28px; font-weight:400; color:#008bec; }
 .tit3 { font-size:16px; font-weight:bold; color:#111}
 .tit-sub { margin-top:10px; font-size:16px; font-weight:700; color:#111; }
 .tit-sub .small { margin-left:10px; font-size:14px; font-weight:400; color:#666; }
 
 /* [P]관심 키워드 선택 */
-.keyword-list { position:relative; padding:13px 0; margin:18px -5px; }
-.keyword-list:before,
-.keyword-list:after { display:block; position:absolute; top:0; left:5px; right:5px; height:1px; background:#e5e5e5; content:""; }
+.keyword-list { position:relative; margin:20px -5px 0; }
 .keyword-list:after { top:auto; bottom:0; }
 .keyword-list > li { display:inline-block; vertical-align:middle; }
 .keyword-list input[type="checkbox"] + label { display:inline-block; vertical-align:middle; height:40px; font-size:16px; border:1px solid #c5c5c5; border-radius:20px; line-height:36px; padding:0 19px 0 8px; margin:6px 5px; color:#666; }
@@ -713,6 +714,23 @@ select{display:inline-block;position:relative;vertical-align:middle;width:auto;h
 .btn-link,
 a.btn-link { display:inline-block; height:40px; line-height:36px;  vertical-align:middle; background:#fff; border:1px solid #666; border-radius:20px; padding:0 25px; font-size:16px; font-weight:700; text-decoration:none; color:#111; }
 .btn-link:after { display:inline-block; vertical-align:middle; width:7px; height:7px; border-right:2px solid #111; border-top:2px solid #111; transform:rotate(45deg); margin:-2px -5px 0 5px; content:""; }
+
+/* slider : terms */
+.slider-terms { height:400px; }
+.slider-terms { position:relative; }
+.slider-terms .slider {overflow:hidden;}
+.slider-terms .inner { height:100%; }
+.inner-terms { overflow-y:auto; }
+.slider-btn { z-index:1; position:absolute; display:block;; top:50%; width:50px; height:50px; border-radius:50%; background:#111111; border:1px solid transparent; transform:translateY(-50%); box-shadow:0 4px 8px rgba(0,0,0,0.25); transition:all ease-in .2s; }
+.slider-btn:after { display:block; top:calc(50% - 7px); left:calc(50% - 7px); margin-left:-3px; position:absolute; width:15px; height:15px; border-top:3px solid #f1f1f1; border-right:3px solid #f1f1f1; transform:rotate(45deg); box-sizing:border-box; transition:all ease-in .2s; content:""; }
+.slider-btn:disabled { background:#f1f1f1; border-color:#ccc; cursor:default; }
+.slider-btn:disabled:after { border-color:#111; }
+.slider-btn.btn-prev { left:calc(50% - 385px); }
+.slider-btn.btn-prev:after { transform:rotate(-135deg); margin-left:3px; }
+.slider-btn.btn-next { right:calc(50% - 385px) }
+.ui-modal .slider-btn { opacity:0; }
+.ui-modal.ready .slider-btn { opacity:1; }
+
 
 
 /* animations */

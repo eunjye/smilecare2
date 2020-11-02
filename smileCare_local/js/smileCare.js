@@ -312,13 +312,20 @@ function fixedBanner(el) {
 }
 
 var slidePage = {
-	init: function(id) {
+	init: function(id, isMobile) {
 		var $wrap = $('#'+id)
 			, $panelWrap = $wrap.find('.apply-items')
-			, $panel = $wrap.find('.apply-inner');
+			, $panel = $wrap.find('.apply-inner')
+			
+			, _w, _h;
 
-		$panelWrap.css({width: 460*$panel.length}); // 720: apply-inner의 width
-		$panel.css({width: 460, height: 350}); // 350: apply-inner의 height
+		if (!isMobile) {
+			_w = 720; _h = 350;
+		} else {
+			_w = $(window).outerWidth() - 50; _h = 350;
+		}
+		$panelWrap.css({width: _w*$panel.length}); // _w: apply-inner의 width
+		$panel.css({width: _w, height: _h}); // _h: apply-inner의 height
 	},
 	goSlidePage: function(v, callback) {
 		var $wrap = $('.apply-wrap')
@@ -327,6 +334,11 @@ var slidePage = {
 			, $onPanel = $('.apply-inner.on')
 			
 			, num = v;
+
+		if (!!$panel.eq(num-1).attr('data-title') && !!$wrap.closest('.ui-modal').length) {
+			var $modalHeader = $wrap.closest('.ui-modal').find('.ui-modal-head h1');
+			$modalHeader.text($panel.eq(num-1).attr('data-title'));
+		}
 			
 		$panel.eq(num-1).addClass('on');
 		$panelWrap.animate({
@@ -337,4 +349,161 @@ var slidePage = {
 			!!callback && callback();
 		});
 	}
+}
+
+var sldTerms
+	, isModalLoaded;
+function initTermsSlider() {
+	// slider in terms popup
+	var $btnAgree = $('#btnAgree')
+		, $btnDisagree = $('#btnDisagree')
+		, $modalHeader = $('[id*="ET-010201"] .ui-modal-head h1');
+
+	if (!sldTerms) {
+		// init slide
+		sldTerms = $('#sldTerms .slider').bxSlider({
+			slideWidth: 600,
+			speed: 200,
+			infiniteLoop: false,
+			hideControlOnEnd: true,
+			controls: false,
+			onBeforeSlide: function(newIdx, leng, $el) {
+				$(sldTerms).css('height', $el.outerHeight());
+				$('.ctab_cont').prop('scrollTop',0);
+			},
+			onAfterSlide: function (newIdx, leng, $el){
+				// after slide change
+				$('[id*="ET-010201"] .disagree, [id*="ET-010201"] .agree').removeClass('active'); // 하단 '동의/미동의' 버튼 초기화
+
+				$('.inner-terms').removeClass('current');
+				$el.addClass('current');
+				
+
+				$modalHeader.text($el.attr('data-title'));
+				$btnAgree.attr('data-step', newIdx+1);
+				$btnDisagree.attr('data-step', newIdx+1);
+				if (newIdx === 0) {
+					$('.slider-btn.btn-prev').prop('disabled', true);
+				} else if (newIdx === leng - 1){
+					$('.slider-btn.btn-next').prop('disabled', true);
+				} else {
+					$('.slider-btn').prop('disabled', false);
+				}
+			},
+		});
+		$('[id*="ET-010201"] .slider-btn').on('click', function(){
+			var isNext = $(this).hasClass('btn-next') ? true : false;
+
+			if (isNext){
+				agreeCheck(sldTerms.getCurrentSlide()+1, false);
+				// sldTerms.goToNextSlide();
+			} else {
+				sldTerms.goToPreviousSlide();
+			}
+		})
+	} else {
+		isModalLoaded = setInterval(function(){
+			if (!!$plugins.uiModalLoaded) {
+				setTimeout(function(){
+					sldTerms.goToSlide(0);
+					sldTerms.reloadShow();
+				}, 200);
+				$modalHeader.text($('.inner-terms').eq(0).attr('data-title'));
+				clearInterval(isModalLoaded)
+				return;
+			}
+		}, 100);
+	}
+}
+
+// validation check in terms slider
+var arrTermsMsg;
+function agreeCheck(ts, v) {
+	var $ts = typeof(ts) === 'number' ? ts : $(ts)
+		, isTrue = v
+		, stepIdx = typeof(ts) === 'number' ? ts-1 : parseInt($ts.attr('data-step'))-1;
+
+	var arrTermsMsg = [
+		// 첫번째 약관
+		{
+			agree: function() {
+				sldTerms.goToNextSlide();
+			},
+			disagree: function(){
+				alert('케어 구독서비스 신청을 위해 서비스 이용 약관에 동의해주세요.');
+			}
+		},
+		// 두번째 약관
+		{
+			agree: function() {
+				sldTerms.goToNextSlide();
+			},
+			disagree: function(){
+				alert('동의는 거부하실 수 있고, 동의를 거부하실 경우 서비스 가입이 제한됩니다.');
+			}
+		},
+		// 세번째 약관
+		{
+			agree: function() {
+				sldTerms.goToNextSlide();
+			},
+			disagree: function(){
+				alert('동의는 거부하실 수 있고, 동의를 거부하실 경우 서비스 가입이 제한됩니다.');
+			}
+		},
+		// 네번째 약관
+		{
+			agree: function() {
+				sldTerms.goToNextSlide();
+			},
+			disagree: function(){
+				alert('가입이벤트는 별도의 이벤트 참여신청 없이도 해당 동의에 체크하신 후 자동으로 이벤트에 응모됩니다. 본 동의는 서비스 이용에 필수는 아니고 거부하실 수 있으며, 동의를 거부하실 경우에는 가입 이벤트에 당첨되더라도 경품발송이 제한됩니다.');
+				sldTerms.goToNextSlide();
+			}
+		},
+		// 다섯번째 약관
+		{
+			agree: finishSlider,
+			disagree: function(){
+				alert('본 동의 서비스 이용에 필수적이지 않으며 동의를 거부할 수 있습니다. 만약 동의 했더라도 원치 않는 정보를 수신한 경우 이를 수신거부 할 수 있습니다.');
+				finishSlider();
+			},
+		}
+	]
+
+	function finishSlider() {
+		if (!$('#ET-010201_mo').length) { // in PC
+			$plugins.uiModalClose({
+				id:'ET-010201', 
+				callback:function(){setTimeout(function(){
+					slidePage.goSlidePage(2, function(){
+						$('#ET-010101 .btn-base.n1').hide();
+						$('#ET-010101 .btn-base.n2').show();
+						$('#ET-010101 .step-list li').removeClass('active').eq(1).addClass('active');
+						$('#ET-010101 .step-list li').eq(0).addClass('done');
+					})
+				}, 250)}
+			});
+		} else { // in Mobile
+			$plugins.uiModalClose({
+				id:'ET-010201_mo', 
+				callback:function(){setTimeout(function(){
+					slidePage.goSlidePage(2, function(){
+						$('#ET-010101_mo .btn-base.n1').hide();
+						$('#ET-010101_mo .btn-base.n2').show();
+						$('#ET-010101_mo .step-list li').removeClass('active').eq(1).addClass('active');
+						$('#ET-010101_mo .step-list li').eq(0).addClass('done');
+					})
+				}, 250)}
+			});
+		}
+	}
+	if (!!arrTermsMsg[stepIdx]){
+		if (isTrue){
+			arrTermsMsg[stepIdx].agree();
+		} else {
+			arrTermsMsg[stepIdx].disagree();
+		}
+	}
+	typeof(ts) !== 'number' && $ts.addClass('active').siblings().removeClass('active');
 }

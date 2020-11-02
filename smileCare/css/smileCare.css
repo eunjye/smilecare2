@@ -214,6 +214,7 @@ button.disabled{background:#bfc7ce !important;color:#fff !important;transition:b
 .divide-wrap .apply-wrap .apply-inner{float:left; display:none; padding:15px 30px 0; overflow-y:auto; }
 .divide-wrap .apply-wrap .apply-inner.on { display:block; }
 .divide-wrap .apply-wrap .apply-inner:after{content:'';display:block;clear:both}
+.divide-wrap .apply-wrap .apply-inner .section { width:400px; margin:0 auto; }
 .form_item{position:relative;margin-top:18px}
 .form_item .lb{font-weight:400; color:#666; font-size:13px;}
 .form_item .lb+.guide_box{margin-top:15px;}
@@ -305,7 +306,8 @@ select{display:inline-block;position:relative;vertical-align:middle;width:auto;h
 .form-box .btn-select-wrap{display:none;padding-right:25px;margin:5px 0;max-height:200px;overflow-y:auto}
 .form-box .btn-select-wrap button{height:30px;margin-bottom:5px;text-align:right;font-size:16px}
 
-.apply-sub-txt{font-size:13px;margin:15px 0;color:#008bec}
+.apply-sub-txt{font-size:13px;margin:0 0 15px;color:#008bec}
+.apply-sub-txt strong { font-weight:700; }
 
 /* plugins: modal */
 .ui-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;overflow-y:auto;overflow-x:hidden;z-index:1000}

@@ -542,10 +542,10 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 .ctab_area li.on a{position:relative;background-color:#2D333E;color:#fff;font-weight:bold;border-color:#147bfd}
 .ctab_area.n3 li:nth-child(3n-2) a{border-left:1px solid #d0d0d0}
 .ctab_area.n2 li:nth-child(2n-1) a{border-left:1px solid #d0d0d0}
-.ctab_cont{display:block;font-size:13px;line-height:1.5;color:#666; overflow:auto;}
+.ctab_cont{display:block;font-size:13px;line-height:1.5;color:#666; overflow:auto;height:350px;}
 .ctab_cont .term-intro:first-child span{margin:7px 0 6px}
-.ctab_cont .term-tit01{color:#111;font-weight:700;font-size:16px}
-.ctab_cont .term-tit02{display:block;margin:15px 0 5px;font-size:14px}
+.ctab_cont .term-tit01{color:#111;font-weight:700;font-size:16px;margin-bottom:10px;}
+.ctab_cont .term-tit02{display:block;margin:15px 0 5px}
 .ctab_cont .term-tit02 + p{margin-top:5px}
 .ctab_cont .term-txt{margin:10px 0}
 .ctab_cont ol li{margin-top:5px;line-height:1.5}
@@ -883,7 +883,7 @@ a.btn-link { display:inline-block; height:30px; line-height:27px;  vertical-alig
 .step-list strong { vertical-align:middle; line-height:1em; }
 .step-list .step-num { display:inline-block; width:30px; height:30px; margin:0 5px 0 0; border-radius:50%; border:3px solid #c0c0c0; line-height:24px; vertical-align:middle; text-align:center;}
 .step-list .active .step-num{border-color:#008bec; color:#008bec;}
-.step-list .done .step-num{background:url('../img/step_done_mo.png') center center/auto auto no-repeat #008bec; color:transparent; font-size:xx-small; border-color:transparent; }
+.step-list .done .step-num{background:url('../img/step_done_mo.png') center center/30px auto no-repeat #008bec; color:transparent; font-size:xx-small; border-color:transparent; }
 .step-list+.tit3{margin-top:25px}
 
 /* slider : terms */
@@ -905,7 +905,8 @@ a.btn-link { display:inline-block; height:30px; line-height:27px;  vertical-alig
 
 @media all and (max-width:330px) {
   .agecheck .smile-inner { padding:30px 85px 30px 7px; }
-	.agecheck .smile-inner:after { margin-left:75px; }
+  .agecheck .smile-inner:after { margin-left:75px; }
+  .ctab_cont{height:320px;}
 }
 
 

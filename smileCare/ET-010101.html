@@ -482,7 +482,7 @@
 										<!-- Step1 : 약관 동의 -->
 										<section class="apply-inner on n1" data-title="케어 구독 서비스 신청">
 											<h2 class="hidden">1.약관동의</h2>
-											<p class="apply-sub-txt">※ 가입이벤트 기간 중 스마일케어 구독신청 시 가입이벤트에 자동 응모됩니다. </p>
+											<p class="apply-sub-txt">※ 가입이벤트 기간 중 스마일케어 구독신청 시 <strong>안마기 등 경품이벤트에 자동 응모</strong>됩니다. </p>
 											<div class="agree_form">
 												<div class="check_all">
 													<div class="check_bottom">
@@ -564,9 +564,9 @@
 										<!-- Step2 : 정보 입력 -->
 										<section class="apply-inner n2" data-title="케어 구독 서비스 신청">
 											<h2 class="hidden">2.정보입력</h2>
-											<h3 class="tit3">구독 서비스를 이용할 정보 입력</h3>
 											<!--form type 2-->
 											<div class="section">
+												<p class="apply-sub-txt">※ 가입이벤트 기간 중 스마일케어 구독신청 시 <strong>안마기 등 경품이벤트에 자동 응모</strong>됩니다. </p>
 												<div class="form_item">
 													<label for="inp_name" class="lb hue-p">이름</label>
 													<div class="input">
@@ -706,7 +706,7 @@
 									<button type="button" class="btn-base n1 agree" onclick="openPopup('ET-010201', initTermsSlider)"><span>전체 동의하기</span></button>
 									
 									<!-- Button : step2 -->
-									<button type="button" class="btn-base n2 agree" onclick="
+									<button type="button" class="btn-base n2" onclick="
 									slidePage.goSlidePage(3, function(){
 											$('#ET-010101 .btn-base.n2').hide();
 											$('#ET-010101 .btn-base.n3').show();
@@ -716,7 +716,7 @@
 									" style="display:none;"><span>구독 신청하기</span></button>
 
 									<!-- Button : step3 -->
-									<button type="button" class="btn-base n3 agree" onclick="
+									<button type="button" class="btn-base n3" onclick="
 										$plugins.uiModalClose({ 
 											id:'ET-010101',
 											callback: function(){

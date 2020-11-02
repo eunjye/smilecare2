@@ -1,14 +1,15 @@
 @charset "utf-8";
 /* Mobile */
 .tit-wrap+.section{margin-top:24px}
-.divide-wrap .apply-wrap .apply-inner:first-child{border-bottom:1px solid #e5e5e5;padding-bottom:25px;margin-bottom:25px}
 .tit3+.section{margin-top:15px}
 .pdl8{padding-left:8px}
 .apply-inner.left{padding-right:24px}
 .apply-inner.right{border-left:1px solid #e5e5e5;padding-left:24px}
+.apply-items .tit3{margin-top:15px}
+.apply-sub-txt{color:#008bec}
+.apply-sub-txt strong{font-weight:700;}
 .radio.square label{padding-left:30px;line-height:15px}
-.check_tit_sub{font-size:12px;color:#666;padding-left:30px;margin-top:3px}
-.agree_form+.agree_form{margin-top:24px}
+.check_tit_sub{font-size:13px;color:#111;padding-left:30px;margin-top:3px}
 .agree_form .tit3{letter-spacing: -0.1em;}
 .grid2 li.btn-radio{position:relative;width:calc(50% - 5px);margin-left:10px !important}
 .grid2 li.btn-radio:first-child {margin-left:0 !important;}
@@ -44,6 +45,26 @@
 .share-wrap .share-list .share-item.url label{background-position:0 -320px}
 .share-wrap .share-list .share-item input[type='radio']:checked + label span:before{content:"";position:absolute;top:0;left:0;width:80px;height:80px;border-radius:50%;background:rgba(0,0,0,.8) url('../img/spr_share_mo.png') no-repeat 0 -400px/80px 480px}
 
+.tit3 span:before{content:"";display:inline-block;width:4px;height:4px;background:#111;vertical-align:middle;margin-right:8px}
+/*약관 상세 미동의/동의 버튼*/
+.btn-wrap.col2 .btn-base{width:calc(50% - 11px);}
+.btn-base.agree span:before,
+.btn-base.disagree span:before{content:"";display:inline-block;vertical-align:middle;margin:-2px 5px 0 0;width: 24px; height: 22px; background:url(../img/ico_forms.png) no-repeat; background-size:24px 109px;background-position:0 -22px}
+.btn-base.agree{height:40px;box-sizing:border-box;width:100%;font-size:14px;line-height:14px;color:#999;border:1px solid #999;background:#fff;padding:10px;color:#111;border-color:#111}
+.btn-base.disagree{height:40px;box-sizing:border-box;width:calc(50% - 11px);font-size:14px;line-height:14px;color:#999;border:1px solid #999;background:#fff;padding:10px;color:#111;border-color:#111}
+.btn-base.agree:focus,
+.btn-base.disagree:focus{outline:1px dotted #000;} 
+.btn-base.agree:active span:before,
+.btn-base.agree.active span:before{background-position:0 0}
+.btn-base.agree:active,
+.btn-base.agree.active{border:1px solid #008bec;color:#008bec}
+.btn-base.disagree:active span:before,
+.btn-base.disagree.active span:before{background-position:0 -87px}
+.btn-base.disagree:active,
+.btn-base.disagree.active{border:1px solid #ff6000;color:#ff6000}
+
 @media screen and (max-width:320px){
     .btn-radio label{font-size:13px}
+    .step-list > li{font-size:12px!important}
+    .step-list > li:before{width:20px!important}
 }

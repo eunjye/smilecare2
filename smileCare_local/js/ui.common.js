@@ -76,6 +76,8 @@
 		uiModalOpen: function(opt) {
 			return createUiModalOpen(opt);
 		},
+		uiModalLoaded: true
+		,
 		uiModalClose: function(opt) {
 			return createUiModalClose(opt);
 		},
@@ -321,6 +323,8 @@
 
 		var timer;
 
+		win[global].uiModalLoaded = false;
+
 
 		if (!!src) {
 			$plugins.uiAjax({
@@ -354,6 +358,7 @@
 			}
  
 			$modal.find('.btn-close').focus();
+			win[global].uiModalLoaded = true;
 		},150);
 		
 

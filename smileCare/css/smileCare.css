@@ -249,7 +249,7 @@ button.disabled{background:#bfc7ce !important;color:#fff !important;transition:b
 
 .agree_form .check_all .check_bottom input {width:24px; height:22px;}
 .agree_form .check_all .check_bottom label {padding-left:30px;}
-.agree_form .check_all .check_bottom label:before {content:''; position:absolute; top:0; left:0; width: 24px; height: 22px; margin-top:-3px; background:url(../img/ico_forms.png) no-repeat; background-size:24px 108px;background-position:0 -22px}
+.agree_form .check_all .check_bottom label:before {content:''; position:absolute; top:0; left:0; width: 24px; height: 22px; margin-top:-3px; background:url(../img/ico_forms.png) no-repeat; background-size:24px 109px;background-position:0 -22px}
 .agree_form .check_all .check_bottom input:checked+label:before {content:'';  background:url(../img/ico_forms.png) no-repeat; background-size:24px 108px;background-position:0 0}
 .agree_form label span {font-weight:700;}
 .agree_form .check_all .check_top label {font-size:14px;}
@@ -277,8 +277,8 @@ button.disabled{background:#bfc7ce !important;color:#fff !important;transition:b
 .radio .dv.tal {width:40%;}
 .radio input {position: absolute; left: 0; top: 0; width: 26px; height: 26px; opacity: 0; margin: 0; z-index: 2; clip: auto;}
 .radio label {display:block; position:relative; margin-bottom:0; padding-top:3px; padding-left:37px; font-size:13px; color:#111315; font-weight:400; cursor:pointer; text-align:left; vertical-align:middle}
-.radio label:before {content:'';  position:absolute; top:0; left:0; width: 24px; height: 22px; background:url(../img/ico_forms.png) no-repeat; background-size:24px 108px;background-position:0 -66px}
-.radio input:checked+label:before {content:''; background:url(../img/ico_forms.png) no-repeat; background-size:24px 108px;background-position:0 -44px}
+.radio label:before {content:'';  position:absolute; top:0; left:0; width: 24px; height: 22px; background:url(../img/ico_forms.png) no-repeat; background-size:24px 109px;background-position:0 -66px}
+.radio input:checked+label:before {content:''; background:url(../img/ico_forms.png) no-repeat; background-size:24px 109px;background-position:0 -44px}
 .radio i:not(.score) {position: absolute; left: 0; top: 0; display: inline-block; width: 26px; height: 26px; border: 1px solid #c2c4c6; background: #fff; box-sizing: border-box; overflow: hidden; border-radius: 50%; vertical-align: top; -webkit-transition: 0.3s; transition: 0.3s; z-index: 1;}
 input[type="checkbox"], input[type="checkbox"] + label{height:auto;line-height:auto;}
 input[type="checkbox"]:focus + label:before,

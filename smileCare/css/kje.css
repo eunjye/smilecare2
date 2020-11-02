@@ -7,7 +7,7 @@
 .grid2 li.btn-radio{position:relative;width:calc(50% - 5px);margin-left:10px !important}
 .grid2 li.btn-radio:first-child {margin-left:0 !important;}
 .grid2:after{content:"";display:block;clear:both}
-.btn-radio label:before {content:'';  position:absolute; top:9px; left:125px; width: 24px; height: 22px; background:url(../img/ico_forms.png) no-repeat; background-size:24px 108px;background-position:0 -22px}
+.btn-radio label:before {content:'';  position:absolute; top:9px; left:125px; width: 24px; height: 22px; background:url(../img/ico_forms.png) no-repeat; background-size:24px 109px;background-position:0 -22px}
 .btn-radio label{display:block !important;padding:0 12px 0 30px;font-size:14px;color:#999;font-weight:bold;border:1px solid #999;border-radius:5px;height:40px !important;line-height:37px !important;}
 .btn-radio input[type="checkbox"]:focus + label:before {outline:none;}
 .btn-radio input[type="checkbox"]:focus + label{outline:1px dotted #000;outline-style:auto;}
@@ -81,7 +81,15 @@
 .btn-cancel span{border-bottom:1px solid #666;}
 .btn-cancel span:hover { border-color:#008bec; }
 
-.item-btn ul.grid2{display:block;height:50px;border-bottom:1px solid #e5e5e5}
-.item-btn .grid2 li{display:inline-block;width:50%;margin-left:0;text-align:center;font-size:18px;height:50px;line-height:50px;color:#b9bbbe}
-.item-btn .grid2 li.active{font-weight:bold;color:#008bec;border-bottom:4px solid #008bec}
-.item-btn+.tit3{margin-top:25px}
+.state-wrap ul.grid3{display:block;height:50px;border-bottom:1px solid #e5e5e5}
+.state-wrap .grid3 li{display:inline-block;box-sizing:border-box;width:calc(33.33% - 2px);margin-left:0;text-align:center;font-size:18px;height:50px;line-height:50px;color:#b9bbbe}
+.state-wrap .grid3 li.active{font-weight:bold;color:#008bec;border-bottom:4px solid #008bec}
+.state-wrap+.tit3{margin-top:25px}
+/*약관 상세 미동의/동의 버튼*/
+.type-agree .btn-base{height:40px;box-sizing:border-box;width:calc(50% - 11px);font-size:14px;line-height:14px;color:#999;border:1px solid #999;background:#fff;padding:10px }
+.type-agree .btn-base span:before{content:"";display:inline-block;vertical-align:middle;margin-right:5px;width: 24px; height: 22px; background:url(../img/ico_forms.png) no-repeat; background-size:24px 109px;background-position:0 -22px}
+.type-agree .btn-base.agree{color:#111;border-color:#111}
+.type-agree .btn-base.agree:active span:before{background-position:0 -44px}
+.type-agree .btn-base.agree:active{border:1px solid #008bec;color:#008bec}
+.type-agree .btn-base.disagree:active span:before{background-position:0 -87px}
+.type-agree .btn-base.disagree:active{border:1px solid #ff6000;color:#ff6000}

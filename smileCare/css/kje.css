@@ -83,7 +83,6 @@
 .btn-cancel span{border-bottom:1px solid #666;}
 .btn-cancel span:hover { border-color:#008bec; }
 
-.state-wrap+.tit3{margin-top:25px}
 .tit3 span:before{content:"";display:inline-block;width:4px;height:4px;background:#111;vertical-align:middle;margin-right:8px}
 /*약관 상세 미동의/동의 버튼*/
 .btn-wrap.col2 .btn-base{width:calc(50% - 11px);}

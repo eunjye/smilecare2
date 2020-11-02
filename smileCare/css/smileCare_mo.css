@@ -315,12 +315,12 @@ select{display:inline-block;position:relative;vertical-align:middle;width:auto;h
 .section>.form_item:first-child{margin-top:0;}
 .form_item .input.phone_form .dv:last-child {width:120px; padding-left:10px; }
 .form_item .dv .timer {position:absolute; top:50%; right:13px; color:#008bec; font-size:13px; transform:translateY(-50%)}
-.agree_form input {position: absolute; left: 0; top: 8px; width: 26px; height: 26px; opacity: 0; margin: 0; z-index: 2; clip: auto;}
+.agree_form input {position: absolute; left: 0; top: 0; width: 26px; height: 26px; opacity: 0; margin: 0; z-index: 2; clip: auto;}
 .agree_form label {display:block; position:relative; margin-bottom:0; padding-left:37px;padding-right:8px; font-size:13px; color:#111315; font-weight:400; cursor:pointer; vertical-align:middle;}
 
 .agree_form .check_all .check_bottom input {width:24px; height:22px;}
 .agree_form .check_all .check_bottom label {padding-left:30px;font-size:15px;line-height:1.6;color:#111;font-weight:700}
-.agree_form .check_all .check_bottom label:before {content:''; position:absolute; top:0; left:0; width: 24px; height: 24px; margin-top:-3px; background:url(../img/ico_forms_mo.png) no-repeat; background-size:24px auto;background-position:0 -24px}
+.agree_form .check_all .check_bottom label:before {content:''; position:absolute; top:3px; left:0; width: 24px; height: 24px; margin-top:-3px; background:url(../img/ico_forms_mo.png) no-repeat; background-size:24px auto;background-position:0 -24px}
 .agree_form .check_all .check_bottom input:checked+label:before {background-position:0 0}
 .agree_form label span {font-weight:700;}
 .agree_form .check_all .check_top label {font-size:14px;}
@@ -543,12 +543,10 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 .ctab_area.n3 li:nth-child(3n-2) a{border-left:1px solid #d0d0d0}
 .ctab_area.n2 li:nth-child(2n-1) a{border-left:1px solid #d0d0d0}
 .ctab_cont{display:block;font-size:13px;line-height:1.5;color:#666;}
-.ctab_cont .term-intro span{display:block;margin:14px 0 6px}
 .ctab_cont .term-intro:first-child span{margin:7px 0 6px}
 .ctab_cont .term-tit01{color:#111;font-weight:700;font-size:16px}
 .ctab_cont .term-tit02{display:block;margin:15px 0 5px}
 .ctab_cont .term-tit02 + p{margin-top:5px}
-.ctab_cont .term-tit02 + ol,.ctab_cont .term-tit02 + ul{margin-top:13px}
 .ctab_cont .term-txt{margin:10px 0}
 .ctab_cont ol li{margin-top:5px;line-height:1.5}
 .ctab_cont ol li p{margin-top:5px}

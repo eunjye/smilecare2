@@ -650,51 +650,27 @@
 
 						// 전체 선택
 						function chkAll() {
-														$('.btn-radio.part input').prop('checked',false);
+														$('.btn-wrap.type-agree button').prop('active',false);
 														var chkObj = $('input[name=agree]');
-														var chkObj1 = $('input[name=agree1]');
-														var chkLen = chkObj.length + chkObj1.length;
+														var chkLen = chkObj.length;
 														var allChk = $('input[name=chkAll]');
 
-														if (allChk.prop('checked') === false) {
+														if (allChk.prop('active') === false) {
 														chkObj.prop({'checked': false});
-														chkObj1.prop({'checked': false});
 														} else {
 														chkObj.prop({'checked': true});
-														chkObj1.prop({'checked': true});
 														}
 												}
-												// 필수만 선택
-												function chkAll1() {
-														$('.btn-radio.all input').prop('checked',false);
-														var chkObj = $('input[name=agree]');
-														var chkObj1 = $('input[name=agree1]');
-														var chkLen = chkObj.length + chkObj1.length;
-														var allChk1 = $('input[name=chkAll1]');
-
-														if (allChk1.prop('checked') === false) {
-														chkObj.prop({'checked': false});
-														chkObj1.prop({'checked': false});
-														} else {
-														chkObj.prop({'checked': true});
-														chkObj1.prop({'checked': false});
-														}
-												}
-
 												// 개별 선택
 												function agreeChk(val) {
 														var allChk = $('input[name=chkAll]');
-														var chkObj1 = $('input[name=agree]').length;
-														var chkObj2= $('input[name=agree1]').length;
-														var chkObj = chkObj1 + chkObj2;
-														var chkedLen1 = $('input[name=agree]:checked').length;
-														var chkedLen2 = $('input[name=agree1]:checked').length;
-														var chkedLen = chkedLen1 + chkedLen2;
+														var chkObj = $('input[name=agree]').length;
+														var chkedLen = $('input[name=agree]:checked').length;
 
 														if (chkedLen === chkObj) {
-														allChk.prop({'checked': true});
+														allChk.prop({'active': true});
 														} else {
-														allChk.prop({'checked': false});
+														allChk.prop({'active': false});
 														}       
 												}
 					</script>

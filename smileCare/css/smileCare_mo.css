@@ -556,6 +556,7 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 .ctab_cont table tbody th{background:#F6F6F6;border-top:1px solid #e5e5e5;border-left:1px solid #e5e5e5;border-right:1px solid #e5e5e5;padding:12px 11px;text-align:center;color:#111;font-weight:700}
 .ctab_cont table tbody td{padding:12px 11px;border-top:1px solid #e5e5e5;border-right:1px solid #e5e5e5;text-align:left;color:#111}
 .ctab_cont table tbody tr:last-child{border-bottom:1px solid #e5e5e5}
+.ctab_cont .txt-large{font-size:15px}
 
 /* smilecare
 ----------------------------------------------- */

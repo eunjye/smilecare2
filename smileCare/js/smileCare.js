@@ -322,7 +322,7 @@ var slidePage = {
 		if (!isMobile) {
 			_w = 720; _h = 350;
 		} else {
-			_w = $('.divide-wrap').outerWidth; _h = $(window).outerHeight() - 120;
+			_w = $(window).outerWidth() - 50; _h = 350;
 		}
 		$panelWrap.css({width: _w*$panel.length}); // _w: apply-inner의 width
 		$panel.css({width: _w, height: _h}); // _h: apply-inner의 height
@@ -351,7 +351,8 @@ var slidePage = {
 	}
 }
 
-var sldTerms;
+var sldTerms
+	, isModalLoaded;
 function initTermsSlider() {
 	// slider in terms popup
 	var $btnAgree = $('#btnAgree')
@@ -376,6 +377,7 @@ function initTermsSlider() {
 
 				$('.inner-terms').removeClass('current');
 				$el.addClass('current');
+				
 
 				$modalHeader.text($el.attr('data-title'));
 				$btnAgree.attr('data-step', newIdx+1);
@@ -400,8 +402,17 @@ function initTermsSlider() {
 			}
 		})
 	} else {
-		sldTerms.goToSlide(0);
-		$modalHeader.text($('.inner-terms').eq(0).attr('data-title'))
+		isModalLoaded = setInterval(function(){
+			if (!!$plugins.uiModalLoaded) {
+				setTimeout(function(){
+					sldTerms.goToSlide(0);
+					sldTerms.reloadShow();
+				}, 200);
+				$modalHeader.text($('.inner-terms').eq(0).attr('data-title'));
+				clearInterval(isModalLoaded)
+				return;
+			}
+		}, 100);
 	}
 }
 
@@ -461,7 +472,7 @@ function agreeCheck(ts, v) {
 	]
 
 	function finishSlider() {
-		if (!!$('#ET-010201').length) { // pc
+		if (!$('#ET-010201_mo').length) { // in PC
 			$plugins.uiModalClose({
 				id:'ET-010201', 
 				callback:function(){setTimeout(function(){
@@ -473,7 +484,7 @@ function agreeCheck(ts, v) {
 					})
 				}, 250)}
 			});
-		} else if (!!$('#ET-010201_mo').length){ // mobile
+		} else { // in Mobile
 			$plugins.uiModalClose({
 				id:'ET-010201_mo', 
 				callback:function(){setTimeout(function(){
@@ -486,13 +497,13 @@ function agreeCheck(ts, v) {
 				}, 250)}
 			});
 		}
-		if (!!arrTermsMsg[stepIdx]){
-			if (isTrue){
-				arrTermsMsg[stepIdx].agree();
-			} else {
-				arrTermsMsg[stepIdx].disagree();
-			}
-		}
-		$ts.addClass('active').siblings().removeClass('active');
 	}
+	if (!!arrTermsMsg[stepIdx]){
+		if (isTrue){
+			arrTermsMsg[stepIdx].agree();
+		} else {
+			arrTermsMsg[stepIdx].disagree();
+		}
+	}
+	typeof(ts) !== 'number' && $ts.addClass('active').siblings().removeClass('active');
 }

@@ -306,16 +306,16 @@
                         <!-- // End of Step3 -->
                       </div>
                     </div>
-                    <div class="btn-wrap mgt-s">
-                      <button type="button" class="btn-base n1 agree" onclick="openPopup('ET-010201', initTermsSlider)"><span>전체 동의하기</span></button>
+                    <div class="btn-wrap">
+                      <button type="button" class="btn-base n1 agree" onclick="openPopup('ET-010201_mo', initTermsSlider)"><span>전체 동의하기</span></button>
                       
                       <!-- Button : step2 -->
                       <button type="button" class="btn-base n2 agree" onclick="
                       slidePage.goSlidePage(3, function(){
-                          $('#ET-010101 .btn-base.n2').hide();
-                          $('#ET-010101 .btn-base.n3').show();
-                          $('#ET-010101 .step-list li').removeClass('active').eq(2).addClass('active');
-                          $('#ET-010101 .step-list li').eq(1).addClass('done');
+                          $('#ET-010101_mo .btn-base.n2').hide();
+                          $('#ET-010101_mo .btn-base.n3').show();
+                          $('#ET-010101_mo .step-list li').removeClass('active').eq(2).addClass('active');
+                          $('#ET-010101_mo .step-list li').eq(1).addClass('done');
                       });
                       " style="display:none;"><span>구독 신청하기</span></button>
     
@@ -344,7 +344,7 @@
               <script type="text/javascript">
               ;(function($, win, doc, undefined) {
                   $(doc).ready(function(){
-                    slidePage.init('slideWrap1');
+                    slidePage.init('slideWrap1', true);
 
                     $('.apply-inner.n1').on('click', 'input[type="checkbox"], .rdo_form button, .agree_form button', function(){
                       event.preventDefault();

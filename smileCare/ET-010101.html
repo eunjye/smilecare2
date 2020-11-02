@@ -483,106 +483,80 @@
 									<div class="apply-items">
 										<!-- Step1 : 약관 동의 -->
 										<div class="apply-inner on n1">
-											<p class="apply-sub-txt">※ 가입이벤트 기간 중 스마일케어 구독신청 시 가입이벤트에 자동 응모됩니다. </p>
 											<div class="agree_form">
-												<h2 class="tit3">[필수]스마일케어 구독 서비스 이용 약관 동의</h2>
 												<div class="check_all">
 													<div class="check_bottom">
 														<div>
 															<input type="checkbox" id="check_1" class="chk" name="agree" onChange="javascript:agreeChk();">
-															<label for="check_1">스마일케어 구독 서비스 이용 약관 동의</label>
-															<button type="button" onclick=""><span class="offscreen">[필수]개인정보 수집&middot;이용 동의</span></button>
+															<label for="check_1">[필수] 케어 구독 서비스 이용 약관 동의</label>
+															<button type="button" onclick=""><span class="offscreen">[필수] 케어 구독 서비스 이용 약관 동의</span></button>
 														</div>
 													</div>
 												</div>
 											</div>
 											<div class="agree_form">
-												<h2 class="tit3">[필수]구독서비스 가입을 위한 개인정보 수집&middot;이용 동의</h2>
 												<div class="check_all">
 													<div class="check_bottom">
 														<div>
 															<input type="checkbox" id="check_2" class="chk" name="agree" onChange="javascript:agreeChk();">
-															<label for="check_2">개인정보 수집&middot;이용 동의</label>
-															<button type="button" onclick=""><span class="offscreen">개인정보 수집&middot;이용 동의</span></button>
+															<label for="check_2">[필수] 구독서비스 가입을 위한 개인정보 수집&middot;이용 동의</label>
+															<button type="button" onclick=""><span class="offscreen">[필수] 구독서비스 가입을 위한 개인정보 수집&middot;이용 동의</span></button>
+															<p class="check_tit_sub">개인정보 수집&middot;이용 동의</p>
 															<p class="check_tit_sub">- 개인식별정보 : 5건 (성명, 생년월일, 휴대폰번호 외 2건)</p>
 														</div>
 													</div>
 												</div>
 											</div>
 											<div class="agree_form">
-												<h2 class="tit3">[필수]구독서비스 가입을 위한 개인정보 수집&middot;이용 동의</h2>
 												<div class="check_all">
 													<div class="check_bottom">
 														<div>
 															<input type="checkbox" id="check_3" class="chk" name="agree" onChange="javascript:agreeChk();">
-															<label for="check_3">민감정보 수집&middot;이용 동의</label>
-															<button type="button" onclick=""><span class="offscreen">개인정보 수집&middot;이용 동의</span></button>
+															<label for="check_3">[필수] 구독서비스 가입을 위한 민감정보 수집·이용 동의</label>
+															<button type="button" onclick=""><span class="offscreen">[필수] 구독서비스 가입을 위한 민감정보 수집·이용 동의</span></button>
+															<p class="check_tit_sub">민감정보 수집&middot;이용 동의</p>
 															<p class="check_tit_sub">- 민감정보: 4건(당사 계약정보 외 3건)</p>
 														</div>
 													</div>
 												</div>
 											</div>
-											<div class="rdo_form">
-												<h2 class="tit3">[선택]가입 이벤트 당첨 시 경품 지급을 위한 개인정보 수집·이용 동의</h2>
-												<div class="arrow-wrap">
-													<span class="arrow-txt">이벤트 경품 지급을 위한 제3자 제공 동의</span>
-													<button type="button"  onclick=""><span class="offscreen">이벤트 경품 지급을 위한 제3자 제공 동의</span></button>
-													<p class="arrow-txt-sub">- 개인식별정보: 3건 (성명, 휴대폰번호, 주소)</p>
-												</div>
-												<div class="input_item">
-													<ul class="grid">
-														<li>
-															<input id="rdo1" name="chkRdo" type="radio" >
-															<label for="rdo1">미동의</label>
-														</li>
-														<li>
-															<input id="rdo2" name="chkRdo" type="radio" >
-															<label for="rdo2">동의</label>
-														</li>
-													</ul>
+											<div class="agree_form">
+												<div class="check_all">
+													<div class="check_bottom">
+														<div>
+															<input type="checkbox" id="check_4" class="chk" name="agree" onChange="javascript:agreeChk();">
+															<label for="check_4">[선택] 가입 이벤트 당첨 시 경품 지급을 위한 개인정보 수집 · 이용 동의</label>
+															<button type="button" onclick=""><span class="offscreen">[선택] 가입 이벤트 당첨 시 경품 지급을 위한 개인정보 수집 · 이용 동의</span></button>
+															<p class="check_tit_sub">이벤트 경품 지급을 위한 제3자 제공 동의 </p>
+															<p class="check_tit_sub">- 개인식별정보 : 3건 (성명, 휴대폰번호, 주소)</p>
+														</div>
+													</div>
 												</div>
 											</div>
-											<div class="rdo_form">
-												<h2 class="tit3">[선택]추가 이벤트 참여를 위한 마케팅 활용 동의 및 광고수신 동의</h2>
-												<div class="rdo_item">
-													<div class="arrow-wrap">
-														<span class="arrow-txt">마케팅 목적의 개인정보 수집&middot;이용 동의</span>
-														<button type="button"  onclick=""><span class="offscreen">마케팅 목적의 개인정보 수집&middot;이용 동의</span></button>
-														<p class="arrow-txt-sub">- 개인식별정보: 5건 (성명, 생년월일, 휴대폰번호 외2건)</p>
-													</div>
-													<div class="input_item">
-														<ul class="grid">
-															<li>
-																<input id="rdo3" name="chkRdo1" type="radio" >
-																<label for="rdo3">미동의</label>
-															</li>
-															<li>
-																<input id="rdo4" name="chkRdo1" type="radio" >
-																<label for="rdo4">동의</label>
-															</li>
-														</ul>
+											<div class="tit3"><span>추가 이벤트 참여를 위한 마케팅 활용 동의 및 광고수신 동의</span></div>
+											<div class="agree_form">
+												<div class="check_all">
+													<div class="check_bottom">
+														<div>
+															<input type="checkbox" id="check_5" class="chk" name="agree" onChange="javascript:agreeChk();">
+															<label for="check_5">[선택] 마케팅 목적의 개인정보 수집·이용 동의 </label>
+															<button type="button" onclick=""><span class="offscreen">[선택] 마케팅 목적의 개인정보 수집·이용 동의 </span></button>
+															<p class="check_tit_sub">- 개인식별정보: 5건 (성명, 생년월일,  휴대폰번호 외 2건)</p>
+														</div>
 													</div>
 												</div>
-												<div class="rdo_item">
-													<div class="arrow-wrap">
-														<span class="arrow-txt">광고성 정보수신 동의</span>
-														<button type="button"  onclick=""><span class="offscreen">광고성 정보수신 동의</span></button>
-														<p class="arrow-txt-sub">- 개인식별정보: 2건 (휴대폰번호, 이메일)</p>
-													</div>
-													<div class="input_item">
-														<ul class="grid">
-															<li>
-																<input id="rdo5" name="chkRdo2" type="radio" >
-																<label for="rdo5">미동의</label>
-															</li>
-															<li>
-																<input id="rdo6" name="chkRdo2" type="radio" >
-																<label for="rdo6">동의</label>
-															</li>
-														</ul>
+											</div>
+											<div class="agree_form">
+												<div class="check_all">
+													<div class="check_bottom">
+														<div>
+															<input type="checkbox" id="check_6" class="chk" name="agree" onChange="javascript:agreeChk();">
+															<label for="check_6">[선택] 광고성 정보수신 동의  </label>
+															<button type="button" onclick=""><span class="offscreen">[선택] 광고성 정보수신 동의</span></button>
+															<p class="check_tit_sub">- 개인수신정보: 2건 (휴대폰번호, 이메일)</p>
+														</div>
 													</div>
 												</div>
-												
 											</div>
 										</div>
 										<!-- // End of Step1 -->
@@ -648,8 +622,8 @@
 										<!-- // End of Step2 -->
 									</div>
 								</div>
-								<div class="btn-wrap">
-									<button type="button" class="btn-base n1" onclick="openPopup('ET-010201', initTermsSlider)"><span>전체 동의하기</span></button>
+								<div class="btn-wrap type-agree">
+									<button type="button" class="btn-base n1 agree" onclick="openPopup('ET-010201', initTermsSlider)"><span>전체 동의하기</span></button>
 									
 									<button type="button" class="btn-base n2" onclick="" style="display:none;"><span>전체 동의하기</span></button>
 								</div>

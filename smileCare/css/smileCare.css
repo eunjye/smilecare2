@@ -255,14 +255,14 @@ button.disabled{background:#bfc7ce !important;color:#fff !important;transition:b
 .agree_form .check_all .check_top label {font-size:14px;}
 .agree_form .check_all .check_top div {position:relative;}
 .agree_form .check_all .check_bottom {padding:0px; }
-.agree_form .check_all .check_bottom label ,.arrow-txt{font-size:13px;color:#111;font-weight:bold}
+.agree_form .check_all .check_bottom label ,.arrow-txt{font-size:15px;color:#111;font-weight:bold}
 .arrow-wrap{margin-top:10px}
 .arrow-txt{display:inline-block;margin-right:10px}
 .arrow-txt-sub{color:#666}
 .agree_form .check_all .check_bottom div {position:relative; margin-bottom:9px;}
 .agree_form .check_all .check_bottom div:last-child {margin-bottom:0;}
 .agree_form .check_all .check_bottom div button,
-.rdo_form .arrow-wrap button {position:relative; display:inline-block; vertical-align:middle;margin-top:14px; width:12px; height:22px; background:url(../img/ico_agree_link.png) no-repeat 0 0; background-size:6px 11px;}
+.rdo_form .arrow-wrap button {position:relative; display:inline-block; vertical-align:middle;margin-top:10px; width:12px; height:20px; background:url(../img/ico_agree_link.png) no-repeat 0 0; background-size:12px 14px;}
 .rdo_form .arrow-wrap button{margin-top:0;height:11px}
 .rdo_form .rdo_item{margin-bottom:15px}
 .rdo_form .rdo_item:last-child{margin-bottom:0;}

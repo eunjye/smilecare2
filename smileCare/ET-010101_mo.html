@@ -310,7 +310,7 @@
                       <button type="button" class="btn-base n1 agree" onclick="openPopup('ET-010201_mo', initTermsSlider)"><span>전체 동의하기</span></button>
                       
                       <!-- Button : step2 -->
-                      <button type="button" class="btn-base n2 agree" onclick="
+                      <button type="button" class="btn-base n2" onclick="
                       slidePage.goSlidePage(3, function(){
                           $('#ET-010101_mo .btn-base.n2').hide();
                           $('#ET-010101_mo .btn-base.n3').show();
@@ -320,17 +320,17 @@
                       " style="display:none;"><span>구독 신청하기</span></button>
     
                       <!-- Button : step3 -->
-                      <button type="button" class="btn-base n3 agree" onclick="
+                      <button type="button" class="btn-base n3" onclick="
                         $plugins.uiModalClose({ 
-                          id:'ET-010101',
+                          id:'ET-010101_mo',
                           callback: function(){
                             if (!true) { // 2차 이벤트 미 진행 시
-                              openPopup('ET-020101');
+                              openPopup('ET-020101_mo');
                             } else { // 2차 이벤트 진행 중일 시
                               if (true) { // 이벤트에 참여한 경우
-                                openPopup('ET-020103');
+                                openPopup('ET-020103_mo');
                               } else { // 이벤트에 참여하지 않은 경우
-                                openPopup('ET-020102');
+                                openPopup('ET-020102_mo');
                               }
                             }
                           }

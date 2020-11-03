@@ -1,5 +1,6 @@
 .tit3+.smile-section{margin-top:15px}
 .pdl8{padding-left:8px}
+.radio.square { display:inline-block; vertical-align:middle; margin-top: -6px;}
 .radio.square label{padding-left:30px;line-height:15px}
 .check_tit_sub{font-size:13px;color:#111;padding-left:30px}
 .agree_form:last-child{margin-bottom:0}
@@ -85,6 +86,7 @@
 
 .tit3 span:before{content:"";display:inline-block;width:4px;height:4px;background:#111;vertical-align:middle;margin-right:8px}
 /*약관 상세 미동의/동의 버튼*/
+.btn-wrap.col2 { white-space:nowrap; }
 .btn-wrap.col2 .btn-base{width:calc(50% - 11px);}
 .btn-base.agree span:before,
 .btn-base.disagree span:before{content:"";display:inline-block;vertical-align:middle;margin:-2px 5px 0 0;width: 24px; height: 22px; background:url(../img/ico_forms.png) no-repeat; background-size:24px 109px;background-position:0 -22px}

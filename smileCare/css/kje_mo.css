@@ -8,6 +8,7 @@
 .apply-items .tit3{margin-top:15px}
 .apply-sub-txt{color:#008bec}
 .apply-sub-txt strong{font-weight:700;}
+.radio.square { display:inline-block; vertical-align:middle; margin-top: -3px;}
 .radio.square label{padding-left:30px;line-height:15px}
 .check_tit_sub{font-size:13px;color:#111;padding-left:30px;margin-top:3px}
 .agree_form .tit3{letter-spacing: -0.1em;}

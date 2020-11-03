@@ -668,13 +668,71 @@ select{display:inline-block;position:relative;vertical-align:middle;width:auto;h
 .smile-visual .subject { font-size:48px; font-weight:700; color:#fff; margin-bottom:70px; }
 .smile-visual .desc { font-size:19px; margin-top:5px; opacity:.7; }
 
-/* 스마일케어 맛보기 */
+/* 스마일케어 맛보기
 .smile-detail { }
 .smile-detail .smile-inner { position:relative; height:525px; padding:60px 120px 90px 120px; overflow:hidden; }
 .smile-detail .smile-inner:before { z-index:1; position:absolute; bottom:0; left:0; display:block; width:100%; height:525px; background:linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 70%); transition:transform ease-in .2s; content:""; }
 .smile-detail .smile-inner.on { height:auto; }
 .smile-detail .smile-inner.on:before { transform:translateY(100%); }
 .smile-detail .btn-toggle { z-index:2; position:absolute; bottom:90px; left:50%; transform:translateX(-50%); }
+*/
+
+/* 스마일케어 맛보기 */
+.smile-book { background:#008BEC; }
+.smile-book .smile-inner:after { display:block; clear:both; content:""; }
+.intro-box .tit-intro { font-size:28px; font-weight:300; color:#fff; line-height:1.5em; }
+.intro-box .tit-intro span { display:block; margin-bottom:15px; }
+.intro-box .desc-intro { margin-top:40px; font-size:13px; font-weight:400; color:#fff; border-left:3px solid #fff; padding-left:10px; }
+.intro-box .desc-intro span { display:inline-block; vertical-align:middle; margin-top:-3px; opacity:.6; }
+.smile-book .intro-box { float:left; }
+.smile-book .book-list { float:right; }
+.book-list { text-align:right; }
+.book-cover { z-index:0; position:relative; display:inline-block; width:376px; height:490px; margin:0 12px; color:#fff; padding:23px 25px; overflow:hidden; text-align:left; }
+.book-cover .book-bg { z-index:-1; position:absolute; top:0; left:0; display:block; width:100%; height:100%; background-position:center center; background-size:cover; transition:all ease-in-out .5s; }
+.book-cover .book-bg:before { position:absolute; top:0; left:0; display:block; width:100%; height:100%; background:#000; opacity:.5; content:""; }
+.book-cover .book-tag { display:block; margin-bottom:12px; font-size:13px; font-weight:400; }
+.book-cover .book-tag strong { font-weight:700; }
+.book-cover .book-tag strong:before { display:inline-block; margin:-2px 5px 0; vertical-align:middle; width:1px; height:12px; background:#fff; opacity:.2; content:""; }
+.book-list .book-cover:hover .book-bg { transform:scale(1.08); }
+.book-cover .book-name { display:block; font-size:28px; font-weight:700; line-height:1.5em; color:inherit; }
+.book-cover .book-desc { position:absolute; bottom:25px; left:25px;  min-height:45px; letter-spacing:-0.025em; }
+.book-desc.primary { background:url('../img/ico_good.png') bottom left/auto auto no-repeat; padding:0 0 3px 60px; }
+.book-cover .book-desc span { opacity:.5; font-size:13px; letter-spacing:inherit; }
+.book-cover .book-desc strong { display:block; font-size:15px; margin-top:5px; letter-spacing:inherit; }
+.book-cover .btn-plus { position:absolute; top:25px; right:25px; }
+.btn-plus { position:relative; display:inline-block; vertical-align:middle; width:52px; height:52px; border-radius:50%; border:1px solid #fff; background:rgba(70,66,63,.5); transition:all ease-in-out .5s; }
+.btn-plus:before,
+.btn-plus:after { display:block; position:absolute; top:calc(50%  - 2px); left:calc(50% - 11px); width:22px; height:4px; background:#fff; transition:all ease-in-out .5s; content:""; }
+.btn-plus:after { transform:rotate(90deg); }
+.btn-plus:hover { border-color:transparent; background:#fff; }
+.btn-plus:hover:after { background:#008BEC; transform:rotate(270deg); }
+.btn-plus:hover:before { background:#008BEC; transform:rotate(180deg); }
+
+/* layer book */
+.ico-pen { font-size:22px; }
+.ico-pen:before { display:inline-block; vertical-align:middle; width:26px; height:26px; background:url('../img/ico_pen.png') left bottom/auto auto no-repeat; margin:-2px 15px 0 -3px; content:""; }
+.book-open { overflow:hidden !important; }
+.layer-wrap { display:none; position:fixed; z-index:120; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.7); opacity:0; }
+.layer-book { position:absolute; top:50%; left:0; right:0; transform:translateY(-50%); background:#E7F4FC; width:100%; height:650px; }
+.layer-book .layer-inner { position:absolute; left:50%; margin-left:-550px; top:35px; overflow-x:auto; }
+@media screen and (max-width:1100px) {
+	.layer-book .layer-inner { width:100%; left:0; margin-left:0; }
+}
+.book-wrap { min-width:1100px; }
+.book-wrap .inner { width:100% !important; }
+.book-wrap .rolling { width:100% !important; padding-bottom:15px; }
+.book-wrap .book-cover { margin:0 18px 0 0; }
+.book-cont { margin:0 1px; height:490px; width:376px; background:#fff; padding:25px 22px; line-height:1.75em; font-size:15px; color:#111; letter-spacing:-0.075em; box-shadow:0 8px 14px rgba(0,0,0,0.1); }
+.book-cont span { display:block; margin-top:10px; letter-spacing:inherit; }
+.book-cont span:first-child { margin-top:0; }
+.book-inner { color:inherit; font:inherit; }
+
+.layer-inner::-webkit-scrollbar {width:8px; height:8px;}
+.layer-inner::-webkit-scrollbar-track {background-color:transparent;}
+.layer-inner::-webkit-scrollbar-thumb {border-radius:8px;background-color:rgba(0,0,0,.2);border:none}
+.layer-inner::-webkit-scrollbar-button {width:0;height:0}
+
+
 .smile-info { margin-top:60px; }
 .smile-info:first-of-type { margin-top:0; }
 .smile-info .subject { margin-bottom:35px; min-height:70px; padding:35px 0 0 55px; font-size:28px; font-weight:700; background:url('../img/ico_quotes.png') bottom 2px left/auto auto no-repeat; }
@@ -730,7 +788,6 @@ a.btn-link { display:inline-block; height:40px; line-height:36px;  vertical-alig
 .slider-btn.btn-next { right:calc(50% - 385px) }
 .ui-modal .slider-btn { opacity:0; }
 .ui-modal.ready .slider-btn { opacity:1; }
-
 
 
 /* animations */

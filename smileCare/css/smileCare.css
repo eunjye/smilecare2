@@ -13,7 +13,7 @@ body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,inpu
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section{display:block}
 img,fieldset,input[type="text"]{border:0}
 ul,ol{list-style:none}
-li{list-style-image: url(data:0);}
+/* li{list-style-image: url(data:0);} */
 img,input,select{vertical-align:middle}
 em,address{font-style:normal}
 table{border-collapse:collapse;border-spacing:0px;empty-cells:show;table-layout:fixed}

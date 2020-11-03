@@ -506,6 +506,7 @@
 						</div>
 					</div>
 
+					<!-- Start : book1 -->
 					<div class="layer-wrap" id="book1">
 						<div class="layer-book">
 							<div class="layer-inner">
@@ -540,19 +541,58 @@
 										</p>
 									</div>
 								</article>
-								<button type="button" class="btn-layer-x" onclick="layerBook.close('book1');"><span>닫기</span></button>
 							</div>
+							<div class="slider-btns">
+								<button type="button" class="slider-btn2 btn-prev"><span class="hidden">이전 페이지</span></button>
+								<button type="button" class="slider-btn2 btn-next"><span class="hidden">다음 페이지</span></button>
+							</div>
+							<button type="button" class="btn-layer-x" onclick="layerBook.close('book1');"><span>닫기</span></button>
 						</div>
 					</div>
+					<!-- // End : book1 -->
 
-
+					<!-- Start : book2 -->
 					<div class="layer-wrap" id="book2">
 						<div class="layer-book">
-							<div class="book-wrap">
+							<div class="layer-inner">
+								<span class="ico-pen">스마일케어 맛보기 제공 중…</span>
+								<article class="book-wrap">
+									<div class="slider">
+										<div class="book-cover">
+											<span class="book-bg" style="background-image:url('./img/img_more02.png');" aria-hidden="true">&nbsp;</span>
+											<h4 class="book-name">치과 치료 후, <br>수면 습관까지 <br>관리하면 <br>구강이 <br>건강해집니다</h4>
+											<p class="book-desc">
+												<span>이런분께 추천드려요!</span>
+												<strong>
+													- 잘 때 입 벌리고 자는 사람<br>
+													- 코로 숨을 잘 못 쉬는 사람
+												</strong>
+											</p>
+										</div>
+										<p class="book-cont">
+											<span>구강에 생기는 대부분의 문제는 사실 수면과 깊은 연관이 있습니다. 특히 입안의 크기를 보면 대략적으로 수면에 문제가 있다는 걸 알 수 있는데, 입안이 좁거나 구강 구조가 좋지 않다면 혀가 아래로 내려와 아랫니에 닿아 있습니다(정상적인 혀는 입을 다물고 있을 때 앞 윗니 뒤에 위치). </span>
+											<span>혀가 아래에 있으면 입안의 균형을 이루는 뺨이나 턱의 근육이 긴장하면서 기도를 좁게 만듭니다. 기도가 좁으면 호흡할 때 몸에 들어가는 산소가 부족해지죠. 기도가 좁은 사람은 잠을 잘 때 산소가 제대로 들어오지 않기 때문에 산소를 더 들이마시기 위해 입을 벌리고 잡니다. </span>
+										</p>
+										<p class="book-cont">
+											<span>무엇보다 코로 숨을 쉬어야만 몸 속 염증이 가라앉기 때문에 입을 벌리지 않도록 하는 게 중요합니다. 염증은 암을 일으키는 원인이기도 하니 몸속 염증관리가 중요하죠. </span>
+											<span>만약 입을 벌리고 자는 습관이 있다면 잘 때 입테이프를 붙이고 잠드는 것을 권합니다. 수면용 입테이프는 약국이나 인터넷에서 구입할 수 있는데, 수면 중 무의식적으로 입을 벌리는 것을 막아줍니다.</span>
+										</p>
+										<p class="book-cont">
+											<span>[출처]</span>
+											<span class="txt-s">&lt;전성기>매거진 2020-9월호 </span>
+											<strong class="book-sign">메타디치과 <br>김상환 원장 인터뷰 中</strong>
+										</p>
+									</div>
+								</article>
 							</div>
-							<button type="button"><span>닫기</span></button>
+							<div class="slider-btns">
+								<button type="button" class="slider-btn2 btn-prev"><span class="hidden">이전 페이지</span></button>
+								<button type="button" class="slider-btn2 btn-next"><span class="hidden">다음 페이지</span></button>
+							</div>
+							<button type="button" class="btn-layer-x" onclick="layerBook.close('book2');"><span>닫기</span></button>
 						</div>
 					</div>
+					<!-- // End : book2 -->
 
 					<!-- 나의 치아 나이는 몇 살? -->
 					<div class="smile-section agecheck bg">
@@ -676,10 +716,12 @@
 						var $ts = $(ts)
 							, $target = $('#'+target);
 						$target.addClass('on');
-					}
-					$('.btn-x').on('click', function(){
-						$('#popLifeBook').removeClass('on');
-					})
+						}
+						$('.btn-x').on('click', function(){
+							$('#popLifeBook').removeClass('on');
+						})
+
+						
 						// 스마일케어 맛보기
 						var _docY
 							, sldBook
@@ -701,31 +743,43 @@
 										infiniteLoop: false,
 										hideControlOnEnd: true,
 										minSlides:3,
+										controls: false,
 										onBeforeSlide: function(newIdx, leng, $el) {
-											if (newIdx === leng - 3) {
-												$('.next').hide();
-											console.log(newIdx, leng);
-											} else {
-												$('.next').show();
+											$wrap.addClass("moving");
+
+											// button setting
+											$wrap.find('.slider-btn2').prop('disabled', false);
+											if (newIdx < 1){
+												$wrap.find('.btn-prev').prop('disabled', true);
 											}
+											if (newIdx >= leng - 3){
+												$wrap.find('.btn-next').prop('disabled', true);
+											} 
 										},
 										onAfterSlide: function (newIdx, leng, $el){
-											if (newIdx === leng - 3) {
-												$('.next').hide();
-											} else {
-												$('.next').show();
-											}
+											$wrap.removeClass("moving");
+											
 										},
 									});
 									chkSldLoaded = setInterval(function(){
 										if (!!sldBook) {
 											clearInterval(chkSldLoaded);
 											sldBook.goToSlide(0);
+											$wrap.find('.slider-btn2').off('click.sldPrevNext').on('click.sldPrevNext', function(){
+												var $ts = $(this)
+													, isNext = $ts.hasClass('btn-next') ? true : false;
+
+												if ($wrap.hasClass('moving')) return;
+
+												if (isNext){
+													sldBook.goToNextSlide();
+												} else {
+													sldBook.goToPreviousSlide();
+												}
+											})
 										}
 									}, 200)
-								} else {
-									
-								}
+								} 
 								
 								
 								$wrap.animate({
@@ -736,6 +790,7 @@
 								})
 							},
 							close: function(id) {
+
 								var $wrap = $('#'+id);
 
 								$wrap.animate({
@@ -744,9 +799,17 @@
 									$wrap.hide();
 									$('html, body').removeClass('book-open');
 									$('html').scrollTop(_docY);
+									sldBook.destroyShow();
+									sldBook = null;
 								})
 							}
 						}
+						$('.layer-wrap').on('click', function(e){
+							var $ts = $(this);
+							if (e.target !== e.currentTarget) return; // 자식 event 전파 방지
+							e.preventDefault();
+							layerBook.close($ts.attr('id'));
+						})
 
 						var defaultH
 							, showH;

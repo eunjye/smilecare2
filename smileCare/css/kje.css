@@ -112,7 +112,9 @@
 .step-list .active .step-num{border-color:#008bec; color:#008bec;}
 .step-list .done .step-num{background:url('../img/step_done.png') center center/auto auto no-repeat #008bec; color:transparent; font-size:xx-small; border-color:transparent; }
 .step-list+.tit3{margin-top:25px}
-
+/*스마일케어 서브메인 - 상품 */
+.product-img{position:relative;text-align:center}
+.product-img .btn-area.n2{position: absolute;top:170px;left:273px}
 /*스마일케어 서브메인 - 구독해지*/
 .smile-section.cancel{background:#e8e8e8}
 .smile-section.cancel .smile-inner{padding:30px 0 30px 0}

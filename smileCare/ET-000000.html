@@ -724,8 +724,8 @@
 							$('#popLifeBook').removeClass('on');
 						})
 
-						
-						// 스마일케어 맛보기
+						/* 스마일케어 맛보기
+						============================ */
 						var _docY
 							, sldBook
 							, chkSldLoaded = true;
@@ -814,42 +814,7 @@
 							layerBook.close($ts.attr('id'));
 						})
 
-						var defaultH
-							, showH;
-						function moreShowInfo(v) {
-							var $ts = $(v)
-								, $wrap = $ts.closest('.smile-inner');
-
-							if ($ts.hasClass('on')) {
-								if (!defaultH) {
-									$wrap.removeClass('on');
-									defaultH = $wrap.outerHeight();
-									$wrap.addClass('on');
-								}
-								$wrap.animate({
-									height: defaultH,
-								}, 500, function(){
-									$wrap.removeClass('on');
-								});
-								$ts.fadeIn(250);
-							} else {
-								if (!showH) { // 기본값이 설정되어 있지 않을 시
-									$wrap.addClass('on');
-									showH = $wrap.outerHeight();
-									$wrap.removeClass('on');
-								}
-								$wrap.animate({
-									height: showH,
-								}, 500, function(){
-									$wrap.addClass('on');
-								});
-								$ts.fadeOut(250);
-								$('html, body').animate({
-									scrollTop: $wrap.offset().top-$('.floating-inner').outerHeight()
-								},250)
-							}
-							$ts.toggleClass('on');
-						}
+						
 						;(function($, win, doc, undefined) {
 							$(doc).ready(function(){
 								fixedBanner('.smile-section.intro');

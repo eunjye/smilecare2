@@ -716,7 +716,7 @@ body.book-open { padding-right:17px !important; }
 .layer-wrap { display:none; position:fixed; z-index:120; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.7); opacity:0; }
 .layer-book { position:absolute; top:50%; left:0; right:0; transform:translateY(-50%); background:#E7F4FC; width:100%; height:650px; }
 .layer-book .layer-inner { position:absolute; left:50%; margin-left:-550px; top:35px; overflow-x:auto; }
-.btn-layer-x { position:absolute; bottom:20px; left:50%; margin-left:550px; display:inline-block; padding:0 37px 0 0;  font-size:13px; color:#999; line-height:27px; transform:translateX(-100%); }
+.btn-layer-x { position:absolute; bottom:20px; left:50%; margin-left:550px; display:inline-block; padding:0 37px 0 0;  font-size:13px; color:#999; line-height:27px; transform:translateX(-100%); white-space:nowrap; }
 .btn-layer-x:before,
 .btn-layer-x:after { position:absolute; top:calc(50% - 0px); right:-3px; display:block; width:35px; height:2px; background:#383b3c; content:""; }
 .btn-layer-x:before { transform:rotate(45deg); }
@@ -748,7 +748,7 @@ body.book-open { padding-right:17px !important; }
 
 .book-wrap { min-width:1100px; margin-top:30px; }
 .book-wrap .inner { width:100% !important; }
-.book-wrap .rolling { width:100% !important; padding-bottom:30px; }
+.book-wrap .rolling { width:100% !important; padding-bottom:50px; }
 .book-wrap .book-cover { margin:0 18px 0 0; }
 .book-cont { margin:0 1px; height:490px; width:376px !important; background:#fff; padding:25px 22px; line-height:28px; font-size:15px; color:#111; letter-spacing:-0.04em; box-shadow:0 8px 14px rgba(0,0,0,0.1); }
 .book-cont span { display:block; margin-top:10px; letter-spacing:inherit; }
@@ -757,7 +757,7 @@ body.book-open { padding-right:17px !important; }
 .book-cont .book-sign { color:#666; font-size:17px; font-weight:700; }
 .book-inner { color:inherit; font:inherit; }
 
-.layer-inner::-webkit-scrollbar {width:8px; height:8px;}
+.layer-inner::-webkit-scrollbar {width:8px; height:12px;}
 .layer-inner::-webkit-scrollbar-track {background-color:transparent;}
 .layer-inner::-webkit-scrollbar-thumb {border-radius:8px;background-color:rgba(0,0,0,.2);border:none}
 .layer-inner::-webkit-scrollbar-button {width:0;height:0}

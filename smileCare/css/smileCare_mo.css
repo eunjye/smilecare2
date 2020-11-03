@@ -823,12 +823,82 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 .smile-visual .desc { font-size:13px; margin-top:3px; opacity:.7; }
 
 /* 스마일케어 맛보기 */
-.smile-detail { }
-.smile-detail .smile-inner { position:relative; height:380px; padding:25px 15px 75px 15px; overflow:hidden; }
-.smile-detail .smile-inner:before { z-index:1; position:absolute; bottom:0; left:0; display:block; width:100%; height:525px; background:linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 70%); transition:transform ease-in .2s; content:""; }
-.smile-detail .smile-inner.on { height:auto; }
-.smile-detail .smile-inner.on:before { transform:translateY(100%); }
-.smile-detail .btn-toggle { z-index:2; position:absolute; bottom:45px; left:50%; transform:translateX(-50%); }
+
+/* 스마일케어 맛보기 */
+.smile-book { background:#008BEC; }
+.smile-book .smile-inner { padding:35px 15px 30px; }
+.intro-box .tit-intro { font-size:22px; font-weight:300; color:#fff; line-height:1.5em; }
+.intro-box .tit-intro span { display:block; margin-bottom:18px; }
+.intro-box .desc-intro { font-size:13px; font-weight:400; color:#fff; border-left:3px solid #fff; padding-left:10px; }
+.intro-box .desc-intro span { display:inline-block; vertical-align:middle; margin-top:-3px; opacity:.6; }
+.book-list { white-space:nowrap; margin:25px -15px 0; padding:0 7px 10px; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.book-cover { z-index:0; position:relative; display:inline-block; width:244px !important; height:340px; margin:0 7px; color:#fff; padding:13px 15px; overflow:hidden; text-align:left; box-shadow:0 5px 10px rgba(0,0,0,0.1);}
+.book-cover .book-bg { z-index:-1; position:absolute; top:0; left:0; display:block; width:100%; height:100%; background-position:center center; background-size:cover; transition:transform ease-in-out .5s; }
+.book-cover .book-bg:before { position:absolute; top:0; left:0; display:block; width:101%; height:100%; background:#000; opacity:.5; content:""; }
+.book-cover .book-tag { display:block; margin-bottom:12px; font-size:12px; font-weight:400; }
+.book-cover .book-tag strong { font-weight:700; }
+.book-cover .book-tag strong:before { display:inline-block; margin:-2px 5px 0; vertical-align:middle; width:1px; height:12px; background:#fff; opacity:.2; content:""; }
+/* .book-list .book-cover:hover .book-bg { transform:scale(1.08); } */
+.book-cover .book-name { display:block; margin-top:5px; font-size:22px; font-weight:700; line-height:1.5em; color:inherit; }
+.book-cover .book-desc { position:absolute; bottom:18px; left:15px; min-height:36px; letter-spacing:-0.025em; }
+.book-cover .book-desc span { opacity:.5; font-size:13px; font-weight:400; letter-spacing:inherit; }
+.book-cover .book-desc strong { display:block; font-size:14px; font-weight:700; margin-top:7px; letter-spacing:inherit; }
+.book-cover .book-desc.primary { background:url('../img/ico_good_mo.png') bottom 2px left/32px auto no-repeat; padding:0 0 0 43px; }
+.book-cover .book-desc.primary span { font-size:12px; }
+.book-cover .book-desc.primary strong { font-size:13px; margin-top:4px; }
+.book-cover .btn-plus { position:absolute; top:15px; right:15px; }
+.btn-plus { position:relative; display:inline-block; vertical-align:middle; width:40px; height:40px; border-radius:50%; border:1px solid #fff; background:rgba(70,66,63,.5); transition:all ease-in-out .5s; }
+.btn-plus:before,
+.btn-plus:after { display:block; position:absolute; top:calc(50%  - 2px); left:calc(50% - 8px); width:17px; height:3px; background:#fff; transition:all ease-in-out .5s; content:""; }
+.btn-plus:after { transform:rotate(90deg); }
+.btn-plus:focus { border-color:transparent; background:#fff; }
+.btn-plus:focus:after { background:#008BEC; transform:rotate(270deg); }
+.btn-plus:focus:before { background:#008BEC; transform:rotate(180deg); }
+
+/* layer book */
+.layer-tit { display:block; margin:0 15px; font-size:15px; font-weight:700; }
+.book-open { overflow:hidden !important; color:#111; }
+.layer-wrap { display:none; position:fixed; z-index:120; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.7); opacity:0; }
+.layer-book { position:absolute; top:50%; left:0; right:0; transform:translateY(-50%); background:#E7F4FC; width:100%; height:480px; }
+.layer-book .layer-inner { position:absolute; left:0; top:25px; overflow-x:auto; }
+.btn-layer-x { position:absolute; bottom:20px; right:15px; display:inline-block; padding:0 30px 0 0;  font-size:13px; color:#999; line-height:27px; transition:all ease-in .2s; }
+.btn-layer-x:before,
+.btn-layer-x:after { position:absolute; top:calc(50% - 0px); right:-3px; display:block; width:30px; height:2px; background:#383b3c; content:""; }
+.btn-layer-x:before { transform:rotate(45deg); }
+.btn-layer-x:after { transform:rotate(-45deg); }
+
+.slider-btns { position:absolute; top:30px; right:0; white-space:nowrap; }
+.slider-btn2 { position:relative; display:inline-block; width:32px; height:20px; margin:0 14px; background:url('../img/btn_arrow_mo.png') 0 0/32px auto no-repeat; }
+.slider-btn2.btn-next:hover { animation:aniNextArrow ease-in 1.2s infinite; }
+.slider-btn2.btn-prev:hover { animation:aniPrevArrow ease-in 1.2s infinite; }
+.slider-btn2.btn-prev { transform:rotate(180deg); }
+.slider-btn2:disabled { background-position-y:-20px; cursor:default; animation:none !important; }
+
+@keyframes aniNextArrow {
+	0% { transform:translateX(0); }
+	50% { transform:translateX(5px); }
+	100% { transform:translateX(0); }
+}
+@keyframes aniPrevArrow {
+	0% { transform:rotate(180deg) translateX(0); }
+	50% { transform:rotate(180deg) translateX(5px); }
+	100% { transform:rotate(180deg) translateX(0); }
+}
+
+.book-wrap { width:100%; margin-top:25px; }
+.book-wrap .inner { width:100% !important; }
+.book-wrap .rolling { width:100% !important; padding-bottom:30px; padding:0 0 20px 15px; }
+.first-slide .rolling { padding-left:0; }
+.book-wrap .book-cover { width:254px !important; margin:0 10px 0 15px; }
+.book-cont { margin:0 1px; height:340px; width:254px !important; background:#fff; padding:18px 20px; line-height:20px; font-size:13px; color:#111; letter-spacing:-0.04em; box-shadow:0 8px 14px rgba(0,0,0,0.1); }
+.book-cont:first-of-type { margin-left:10px; }
+.book-cont span { display:block; margin-top:5px; letter-spacing:inherit; }
+.book-cont span:first-child { margin-top:0; }
+.book-cont .txt-s { margin-top:0; font-size:12px; color:#666; }
+.book-cont .book-sign { margin-top:2px; font-size:15px; font-weight:700; }
+.book-inner { color:inherit; font:inherit; }
+
+
 .smile-info { margin-top:25px; }
 .smile-info:first-of-type { margin-top:0; }
 .smile-info .subject { margin-bottom:20px; min-height:52px; padding:24px 0 0 35px; font-size:17px; font-weight:700; background:url('../img/ico_quotes_mo.png') top 2px left/52px auto no-repeat; }

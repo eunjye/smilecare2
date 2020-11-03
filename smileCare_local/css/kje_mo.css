@@ -63,6 +63,17 @@
 .btn-base.disagree:active,
 .btn-base.disagree.active{border:1px solid #ff6000;color:#ff6000}
 
+/*스마일케어 서브메인 - 상품 */
+.product-img{position:relative;text-align:center;padding-bottom:10px}
+.product-img img{width:100%;}
+.product-img .product{width:90%;}
+.product-img .btn-area.n2{position: absolute;top:105px;left:250px}
+/*스마일케어 서브메인 - 구독해지*/
+.smile-section.cancel{background:#e8e8e8}
+.smile-section.cancel .smile-inner{padding:30px}
+.smile-section.cancel .smile-inner .cancel-txt{color:#666;text-align:center}
+.smile-section.cancel .smile-inner .cancel-txt+.btn-wrap{margin-top:20px}
+
 @media screen and (max-width:320px){
     .btn-radio label{font-size:13px}
     .step-list > li{font-size:12px!important}

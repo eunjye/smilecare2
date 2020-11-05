@@ -329,10 +329,13 @@ var slidePage = {
 
 		if (isMobile) {
 			$(window).on('resize', function(){
-				if ($(window).outerHeight() < 580)
+				if ($(window).outerHeight() < 580) {
 					$panel.css('height', $(window).outerHeight() - 230);
 					console.log($(window).outerHeight() - 230);
-			})
+				} else {
+					$panel.css('height', _h);
+				}
+			}) 
 		}
 	},
 	goSlidePage: function(v, callback) {

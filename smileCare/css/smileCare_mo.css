@@ -618,7 +618,7 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 ===================================*/
 .base-body.event-wrap { width:100%; line-height:0; text-align:center; }
 .base-body.event-wrap img { width:100%; height:auto; }
-.event-wrap .grid { display:inline-block; letter-spacing:-1em; }
+.event-wrap .grid { display:inline-block; /*letter-spacing:-1em;*/ }
 .event-wrap .grid.more { width:100%; background:#fff; padding-bottom:6%;}
 .event-wrap a { display:inline-block; vertical-align:middle; }
 .event-wrap .bg1 { background:#fbfbfb; }

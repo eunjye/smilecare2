@@ -322,10 +322,18 @@ var slidePage = {
 		if (!isMobile) {
 			_w = 720; _h = 350;
 		} else {
-			_w = $(window).outerWidth() - 50; _h = 350;
+			_w = $(window).outerWidth() - 50;
+			_h = $(window).outerHeight() - 230;
 		}
 		$panelWrap.css({width: _w*$panel.length}); // _w: apply-inner의 width
 		$panel.css({width: _w, height: _h}); // _h: apply-inner의 height
+
+		if (isMobile) {
+			$(window).on('resize', function(){
+				_h = $(window).outerHeight() - 230;
+				$panel.css({width: _w, height: _h});
+			})
+		}
 	},
 	goSlidePage: function(v, callback) {
 		var $wrap = $('.apply-wrap')

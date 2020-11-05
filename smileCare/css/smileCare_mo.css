@@ -631,7 +631,7 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 .anchor-list .grid { background:#018BED; }
 .anchor-list.ui-fixed-top .grid { border-bottom:1px solid #fff; }
 .anchor-list .grid { }
-.anchor-list a { width:33.3333%; padding:18px 0 11px; border-left:1px solid #fff; transition:background ease-in .2s; }
+.anchor-list a { width:calc(100% / 3); padding:18px 0 11px; border-left:1px solid #fff; transition:background ease-in .2s; }
 .anchor-list a:after { display:inline-block; width:1px; height:100%; vertical-align:middle; content:""; }
 .anchor-list a:first-child { border-left:0; }
 .anchor-list .link { display:inline-block; width:96px; height:45px; background:url('../img/evt_anchor_mo.png') 0 0/192px auto no-repeat; color:transparent; font-size:xx-small; }

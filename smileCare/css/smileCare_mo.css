@@ -618,7 +618,7 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 ===================================*/
 .base-body.event-wrap { width:100%; line-height:0; text-align:center; }
 .base-body.event-wrap img { width:100%; height:auto; }
-.event-wrap .grid { display:inline-block; /*letter-spacing:-1em;*/ }
+.event-wrap .grid { display:inline-block; }
 .event-wrap .grid.more { width:100%; background:#fff; padding-bottom:6%;}
 .event-wrap a { display:inline-block; vertical-align:middle; }
 .event-wrap .bg1 { background:#fbfbfb; }
@@ -628,10 +628,11 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 .event-visual .grid { position:relative; display:inline-block; }
 .btn-evt-join { position:absolute; top:345px; left:40px; animation:aniMoveBtn ease-in-out infinite 2s; }
 .anchor-list { white-space:nowrap; background:#018BED; }
+.anchor-list:after { display:block; clear:both; content:""; }
 .anchor-list .grid { background:#018BED; }
 .anchor-list.ui-fixed-top .grid { border-bottom:1px solid #fff; }
 .anchor-list .grid { }
-.anchor-list a { width:calc(100% / 3); padding:18px 0 11px; border-left:1px solid #fff; transition:background ease-in .2s; }
+.anchor-list a { float:left; display:block; width:calc(100% / 3); padding:18px 0 11px; border-left:1px solid #fff; transition:background ease-in .2s; }
 .anchor-list a:after { display:inline-block; width:1px; height:100%; vertical-align:middle; content:""; }
 .anchor-list a:first-child { border-left:0; }
 .anchor-list .link { display:inline-block; width:96px; height:45px; background:url('../img/evt_anchor_mo.png') 0 0/192px auto no-repeat; color:transparent; font-size:xx-small; }

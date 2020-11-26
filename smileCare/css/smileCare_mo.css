@@ -987,3 +987,19 @@ a.btn-link { display:inline-block; height:30px; line-height:27px;  vertical-alig
 	50% { transform:translateX(0); }
 	100% { transform:translateX(7px); }
 }
+
+/* 11.26 - odh */
+.box-btn {text-align: center;}
+button.layer_btn {margin: 50px; padding: 10px 25px; border: 1px solid #000; color: red;}
+.category-modal {display: none;	position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 1; overflow: auto; background-color: #000; opacity: 100%;}
+.category-modal .modal-content {background-color: blue;}
+.category-modal .modal-content .modal-head {position: relative; padding: 16px 20px; border-bottom: 1px solid #59595a; padding-left: 0; padding-right: 0;}
+.category-modal .modal-content span {display: block; text-align: center; color: #fff; font-size: 17px;}
+.category-modal .modal-content .modal-head .close-btn {position: absolute; top: 16px; right: 20px;}
+.category-modal .modal-content .modal-head .close-pop-ico i {position: absolute; top: -1px; right: 10px; display: block; width: 2px; height: 30px; background-color: #fff; text-indent: -9999px;}
+.category-modal .modal-content .modal-head .close-pop-ico i:nth-child(1) {transform: rotate(45deg);}
+.category-modal .modal-content .modal-head .close-pop-ico i:nth-child(2) {transform: rotate(-45deg);}
+.modal-cont ul.care-cont {padding: 40px 0; font-size: 20px; font-weight: 600; text-align: center; border-bottom: 1px solid #59595a;}
+.modal-cont ul.care-cont li {margin-top: 25px;}
+.modal-cont ul.care-cont li a {color: #fff;}
+.modal-cont ul.care-cont li:first-child {margin-top: 0;}

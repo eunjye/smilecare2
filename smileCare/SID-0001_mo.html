@@ -62,8 +62,10 @@
                     $('#cate-modal').fadeOut(300);
                 };
                 
-                $('.more-txt').click(function() {
-                    $('#care-hide').toggleClass('care-show');
+                $(document).on('ready', function() {
+                    $('.more-txt').click(function() {
+                        $('#care-hide').toggleClass('care-show');
+                    });
                 });
 
             </script>
@@ -158,11 +160,11 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="mini-close">
-                                <button type="button" class="colse-mini-btn">
+                            <!-- <div class="mini-close">
+                                <button type="button" class="close-mini-btn">
                                     <span>닫기</span>
                                 </button>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

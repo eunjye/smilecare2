@@ -29,8 +29,9 @@ button.layer_btn {margin: 50px; padding: 10px 25px; border: 1px solid #000; colo
 .modal-cont .care .more .more-txt {cursor: pointer; position: relative; padding-right: 32px; font-size: 13px; color: #636363;}
 .modal-cont .care .more .more-txt:after {content: ""; position: absolute; top: 5px; left: 160px; width: 24px; height: 14px; background: url('../img/ico_more.png') 0 0 no-repeat; background-size: 50%;}
 .modal-cont .care .more #care-hide {margin-top: 25px; display: none;}
-.care-show {display: none;}
+.care-show {display: block;}
 
-.mini-close {text-align: right;}
-.close-mini-btn {margin-top: 20px; background-color: #fff; padding: 5px 10px; border: 1px sold #000; font-size: 13px; color: #000;}
+/* .mini-close {text-align: right;}
 
+.close-mini-btn {margin-top: 20px; background-color: #fff; padding: 0 12px; border: 1px solid #000; border-radius: 15px;}
+.close-mini-btn span {display: block; color: #000; font-size: 13px;} */

@@ -645,7 +645,7 @@ input[type="radio"]:checked + .lb-check{background-color:#008bec;color:#fff;}
 .anchor-list.ui-fixed-top a.on .link { background-position-x:-96px; }
 .anchor-list.ui-fixed-top a.on .hidden { display:block !important; }
 
-.event-wrap .arrow-down { position:absolute; bottom:5%; left:0; right:0; margin:0 auto; display:block; width:60px; height:40px; background:url('../img/arrow_down.png') center center/20px auto no-repeat; animation:aniArrowDown 2s infinite; content:""; }
+.event-wrap .arrow-down { position:absolute; bottom:5%; left:0; right:0; margin:0 auto; display:block; width:60px; height:40px; background:url('../img/.png') center center/20px auto no-repeat; animation:aniArrowDown 2s infinite; content:""; }
 @keyframes aniArrowDown {
   0% { margin-bottom:-10px; }
   50% { margin-bottom:0px; }

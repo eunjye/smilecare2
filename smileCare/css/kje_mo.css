@@ -82,16 +82,16 @@
 }
 
 /*스마일케어 목록*/
-.smilecare-category .list-head{background:#008bec;padding:0 15px}
-.smilecare-category .list-head .top a{display:table;height:115px;margin:0 auto;font-size:26px;color:#fff;font-weight:700}
-.smilecare-category .list-head .top a span{display:table-cell;vertical-align: middle}
-.smilecare-category .list-head .top a span img{display:block;width:19px;height:10px;margin:15px auto 0}
-.smilecare-category .list-head .bottom{height:35px;font-size:12px;color:#fff}
-.smilecare-category .list-head .bottom strong{font-weight:700}
-.smilecare-category .list-head .bottom .form-item{float:right}
-.smilecare-category .list-head .bottom:after{content:"";display:block;clear:both}
-.smilecare-category select.type-ico{background:#008bec url(../img/ico_arrow_down_c.png) no-repeat right/17px;height:auto;padding: 0 24px 0 0;font-size:12px;font-weight:700;color:#fff;border:0;}
-.smilecare-category .list-cont{padding:0 15px}
+.smilecare-list .list-head{background:#008bec;padding:0 15px}
+.smilecare-list .list-head .top a{display:table;height:115px;margin:0 auto;font-size:26px;color:#fff;font-weight:700}
+.smilecare-list .list-head .top a span{display:table-cell;vertical-align: middle}
+.smilecare-list .list-head .top a span img{display:block;width:19px;height:10px;margin:15px auto 0}
+.smilecare-list .list-head .bottom{height:35px;font-size:12px;color:#fff}
+.smilecare-list .list-head .bottom strong{font-weight:700}
+.smilecare-list .list-head .bottom .form-item{float:right}
+.smilecare-list .list-head .bottom:after{content:"";display:block;clear:both}
+.smilecare-list select.type-ico{background:#008bec url(../img/ico_arrow_down_c.png) no-repeat right/17px;height:auto;padding: 0 24px 0 0;font-size:12px;font-weight:700;color:#fff;border:0;}
+.smilecare-list .list-cont{padding:0 15px}
 .list-cont .type-img li{display:table;width:100%;border-bottom:1px solid #e3e4e5;padding:20px 0}
 .list-cont .type-img li .li-img{display:table-cell;width:120px;padding-right:20px;vertical-align:middle}
 .list-cont .type-img li .li-img img{display:block;width:120px;height:120px}
@@ -102,3 +102,4 @@
 .list-cont .type-img .li-txt .title{display:block;font-size:16px;font-weight:700;color:#222;padding:5px 15px 10px 0}
 .list-cont .type-img .new .li-txt .title:after{content:"N";display:inline-block;width:16px;height:16px;background:#ff4646;color:#fff;border-radius:50%;font-size:9px;font-weight:400;text-align:center;vertical-align:middle;margin-left:5px}
 .list-cont .type-img .li-txt .primary{background:url('../img/ico_good02_mo.png')bottom 2px left /15px auto no-repeat;padding-left:25px;font-size:12px;color:#222}
+.list-cont .type-img .li-txt .tag i{display:inline-block;width:16px;height:16px;text-align:center;vertical-align:middle;background:#008bec;border-radius:2px;color:#fff;font-size:11px;font-weight:700;margin:0 6px 2px 0}

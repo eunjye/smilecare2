@@ -80,7 +80,7 @@
                 // $('h2').toggleClass('changed');
 
             </script>
-            <!-- Start : SID-0001_mo -->
+            <!-- Start : SID-0002_mo -->
             <div class="box-btn">
                 <button type="button" class="layer_btn" onclick="pop()">팝업</button>
             </div>
@@ -92,7 +92,7 @@
                 <!-- Modal content -->
                 <div class="modal-content">
                     <div class="modal-head">
-                        <span>카테고리</span>
+                        <span>검색</span>
                         <button type="button" class="close-btn" onClick="close_pop();">
                             <span class="close-pop-ico">
                                  <i>닫기1</i>
@@ -101,87 +101,114 @@
                         </button>
                     </div>
                     <div class="modal-cont">
-                        <ul class="care-cont">
-                            <li>
-                                <a href="#">
-                                    단단치아케어
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    튼튼 구강케어
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    탄탄 잇몸케어
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    반짝 심미케어
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    쑥쑥아이케어
-                                </a>
-                            </li>
-                        </ul>
-                        
-                        <div class="care">
-                            <strong class="care-txt">취향저격 케어 패키지</strong>
-                            <ul class="care-package">
-                                <li>
-                                    <a href="#" class="txt-type">
-                                        01 . 긴 연휴 동안 놓치기 쉬운 치아건강 관리 콘텐츠
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="txt-type">
-                                        02 . 입안이 쓰리고 아플 때, 입안 이상증상, 질환은 입안이 쓰리고 아플 때, 입안 이상증상, 질환은 입안이 쓰리고 아플 때, 입안 이상증상, 질환은
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="txt-type">
-                                        03 . 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단
-                                    </a>
-                                </li>
-                            </ul>
+                        <div class="search-box">
 
-                            <div class="more">
-                                <a href="#" class="more-txt changeds">
-                                    더보기
-                                </a>
-                                <ul id="care-hide" class="care-show">
+                            <!-- 1. 검색 -->
+                            <!-- <div class="search-inp">
+                                <label for="sch-input" class="hidden">아이디</label>
+                                <input type="text" id="sch-input" name="" value="" placeholder="검색어를 입력해주세요.">
+                            </div>
+                            <button type="button" class="reset-btn">취소</button> -->
+
+                            <!-- 2. 검색_상세 -->
+                            <div class="search-inp wd-full">
+                                <label for="sch-input" class="hidden">아이디</label>
+                                <input type="text" id="sch-input" name="" value="" placeholder="검색어를 입력해주세요.">
+                            </div>
+
+                            <div class="search-cont">
+                                <!-- <h2>최근 검색어</h2> -->
+                                <h2>최근 인기 TOPIC</h2>
+
+                                <!-- 1. 검색 -->
+                                <!-- <ul class="cont-list">
                                     <li>
-                                        <a href="#" class="txt-type">
-                                            04 . 긴 연휴 동안 놓치기 쉬운 치아건강 관리 콘텐츠
+                                        <a href="#">
+                                            인공치아매식술
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="txt-type">
-                                            05 . 입안이 쓰리고 아플 때, 입안 이상증상, 질환은 입안이 쓰리고 아플 때, 입안 이상증상, 질환은 입안이 쓰리고 아플 때, 입안 이상증상, 질환은
+                                        <a href="#">
+                                            치경부마모증
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="txt-type">
-                                            06 . 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단
+                                        <a href="#">
+                                            임플란트
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            신경치료
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            치석제거
+                                        </a>
+                                    </li>
+                                </ul> -->
+
+                                <!-- 2. 검색_상세 -->
+                                <ul class="topic-list">
+                                    <li>
+                                        <a href="#">
+                                            인공치아매식술
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            치경부마모증
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            임플란트
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            신경치료
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            치석제거
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
 
+                        <div class="detail-box">
+
+                            <strong>자주 찾는 키워드</strong>
+
+                            <!-- <p>최근 검색내역이 없네요.</p>
+                            <p>요즘 인기있는 검색어를 추천해드려요.</p> -->
+
+                            <ul class="keyword-box">
+                                <li><a href="#">충치치료</a></li>
+                                <li><a href="#">크라운</a></li>
+                                <li><a href="#">임플란트</a></li>
+                                <li><a href="#">구강문제</a></li>
+                                <li><a href="#">치아미백</a></li>
+                                <li><a href="#">어린이치아</a></li>
+                                <li><a href="#">치아관리</a></li>
+                                <li><a href="#">레진</a></li>
+                            </ul>
+                        </div>
+
                         <div class="sub-close">
                             <button type="button" class="close-btn" onClick="close_pop();">
                                 <span>닫기</span>
                                 <span class="close-pop-ico">
-                                     <i>닫기1</i>
-                                     <i>닫기1</i>
+                                        <i>닫기1</i>
+                                        <i>닫기1</i>
                                 </span>
                             </button>
                         </div>
+                        
                     </div>
                 </div>
             </div>

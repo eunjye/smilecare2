@@ -334,29 +334,30 @@
 
 						;(function($, win, doc, undefined) {
 						$(doc).ready(function(){
-							sldPackage.on('slideChange', function(){
+							sldPackage.on('slideChangeTransitionStart', function(){
 								var $slds = $(sldPackage.slides)
 									, $onSld = $slds.eq(sldPackage.activeIndex)
 									, $thumb = $onSld.find('.package-thumbs span')
 									, thumbLeng = $thumb.length
 									
-									, j = 1;
-									var i = thumbLeng - 1;
+									, j = 1
+									, i = thumbLeng - 1; // eq index
+
 
 									$thumb.removeAttr('class');
-
-									while (i > 0) {
+									while (j <= thumbLeng) {
 										(function(i, j){
 											setTimeout(function(){
-												$thumb.eq(i).addClass('d' + j);
-												$thumb.eq(i-1).addClass('d' + (j+1));
-												// while(j > 0){
-												// 	(function(_i, _j){
-												// 		$thumb.eq(__i)
-												// 		console.log(j);
-												// 	})(i, j);
-												// 	j--;
-												// }
+												var _i = 1;
+												$thumb.removeAttr('class');
+												while (j > 0) {
+													(function(i, j, _i){
+														$thumb.eq(i).addClass('d' + _i);
+													})(i, j, _i);
+													j--;
+													i++;
+													_i++;
+												}
 											}, 200*j);
 										})(i, j);
 										j++;

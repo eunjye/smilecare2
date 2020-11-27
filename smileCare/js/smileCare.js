@@ -231,7 +231,7 @@ function autoCompleteEmail(wrap, option) {
 }
 
 // popup load by ajax
-function openPopup(id, callback){
+function openPopup(id, callback, closeback){
 	if (!$('#'+id).length) {
 		loadPopup(id);
 	} else {

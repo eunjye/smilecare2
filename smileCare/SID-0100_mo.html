@@ -65,8 +65,7 @@
 								<li><a href="#" class="link">단단 치아케어</a></li>
 								<li><a href="#" class="link">탄탄 잇몸케어</a></li>
 								<li><a href="#" class="link">튼튼 구강케어</a></li>
-								<li><a href="#" class="link">전체</a></li>
-								<li><a href="#" class="btn-more"><span class="hidden">카테고리 더보기</span></a></li>
+								<li><a href="#" class="link">전체<span class="btn-more"><span class="hidden"> 카테고리 더보기</span></a></li>
 							</ul>
 							
 							<div class="slide-main swiper-container">
@@ -152,6 +151,20 @@
 											<strong>입안 이상증상,<br>질환은 아닐까?</strong>
 										</div>
 										<div class="package-thumbs">
+											<span style="background-image:url('./img/@temp/@package_thumb3.jpg');">&nbsp;</span>
+											<strong>1<i class="hidden">개 콘텐츠</i></strong> 
+										</div>
+										<div class="package-desc">
+											<span>이런분께 추천드려요!</span>
+											<strong>입안에 이상을 느끼는 사람</strong>
+										</div>
+									</a>
+									<a href="#" class="swiper-slide">
+										<div class="package-subject">
+											<span>입안이 쓰리고 아플 때,</span>
+											<strong>입안 이상증상,<br>질환은 아닐까?</strong>
+										</div>
+										<div class="package-thumbs">
 											<span style="background-image:url('./img/@temp/@package_thumb6.jpg');">&nbsp;</span>
 											<span style="background-image:url('./img/@temp/@package_thumb2.jpg');">&nbsp;</span>
 											<span style="background-image:url('./img/@temp/@package_thumb3.jpg');">&nbsp;</span>
@@ -224,7 +237,7 @@
 					<div class="smile-main main-subscribe">
 						<div class="smile-inner">
 							<p>부담 없이 무료로 받아보세요.<strong>고객님의 스마일을 만들어드립니다.</strong></p>
-							<button type="button" class="btn-round"><span>구독하기<i class="ico-arrowo-dark">&nbsp;</i></span></button>
+							<button type="button" class="btn-round" onclick="openPopup('ET-010101_mo');"><span>구독하기<i class="ico-arrowo-dark">&nbsp;</i></span></button>
 						</div>
 					</div>
 
@@ -258,6 +271,28 @@
 							</ul>
 						</div>
 					</div>
+
+
+					<!-- [LayerPopup] 무료로 시작하세요 -->
+					<section class="ui-modal type-guide" id="popFreeStart">
+						<div class="ui-modal-wrap">
+							<div class="ui-modal-cont">
+								<div class="with-visual">
+									<img src="./img/bg_start_mo.png" alt="" width="52">
+									<div class="inner">
+										<h2 class="guide-tit">부담 없이, 무료로 시작하세요.</h2>
+										<p class="guide-desc">치과 전문의가 감수한 정보를 알기 쉽게!<br>고객님의 관심을 기반으로 맞춤 정보를 드려요.</p>
+									</div>
+								</div>
+								<div class="btn-wrap tac">
+									<button type="button" class="btn-round" 
+										onclick="openPopup('ET-010101_mo');
+									"><span>스마일케어 구독하기<i class="ico-arrowo-dark">&nbsp;</i></span></button>
+								</div>
+							</div>
+							<button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'popFreeStart'})"><span class="hidden">닫기</span></button>
+						</div>
+					</section>
 
 
           <script type="text/javascript" src="/js/common/lib/swiper-4.4.1/swiper.min.js"></script> <!-- swiper -->
@@ -307,6 +342,26 @@
 
 						;(function($, win, doc, undefined) {
 						$(doc).ready(function(){
+							
+							// [To.개발] 쿠키 또는 수집 데이터에 구독 로그 정보가 없을 경우 실행
+							$plugins.uiModalOpen({
+								id:'popFreeStart',
+								full:false,
+								ps: 'bottom',
+								callback: function(v){
+									$(doc).on('scroll', function(){
+										if (!!$('.ui-modal.open').not('#popFreeStart').length) {
+											return false;
+										}
+										$plugins.uiModalClose({
+											id: 'popFreeStart'
+										})
+									})
+								}
+							});
+
+
+							// slide : package list
 							sldPackage.on('init', function(){
 								var $slds = $(sldPackage.slides)
 									, $thumbs = $slds.find('.package-thumbs')

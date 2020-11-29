@@ -669,15 +669,6 @@ select{display:inline-block;position:relative;vertical-align:middle;width:auto;h
 .smile-visual .subject { font-size:48px; font-weight:700; color:#fff; margin-bottom:70px; }
 .smile-visual .desc { font-size:19px; margin-top:5px; opacity:.7; }
 
-/* 스마일케어 맛보기
-.smile-detail { }
-.smile-detail .smile-inner { position:relative; height:525px; padding:60px 120px 90px 120px; overflow:hidden; }
-.smile-detail .smile-inner:before { z-index:1; position:absolute; bottom:0; left:0; display:block; width:100%; height:525px; background:linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 70%); transition:transform ease-in .2s; content:""; }
-.smile-detail .smile-inner.on { height:auto; }
-.smile-detail .smile-inner.on:before { transform:translateY(100%); }
-.smile-detail .btn-toggle { z-index:2; position:absolute; bottom:90px; left:50%; transform:translateX(-50%); }
-*/
-
 /* 스마일케어 맛보기 */
 .smile-book { background:#008BEC; }
 .smile-book .smile-inner:after { display:block; clear:both; content:""; }

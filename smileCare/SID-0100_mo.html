@@ -34,18 +34,19 @@
 <body>
   <div id="wrap">
     <header id="header">
-        <a href="javascript:goBackUrl();" class="btn_back">뒤로가기</a>
-        <div class="tit sub">
-            <h1><img src="./img/logo_smilecare_mo.png" width="115" alt="Smile Care"></h1>
-        </div>
-                <!-- 상품 메뉴 -->
-        <div id="prd_menu" class="prd_menu">
-            <div class="inner">
-                <div id="prdMenuList" class="prd_menu_wrap"></div>
-                <a href="#none" class="btn_closed_menu">닫기</a>
-            </div>
-        </div><!-- // 상품 메뉴 -->
-        <a href="#none" id="gnb" class="btn_gnb_open new">전체메뉴 열기</a>
+			<a href="javascript:goBackUrl();" class="btn_back">뒤로가기</a>
+			<div class="tit sub short">
+				<h1><img src="./img/logo_smilecare_mo.png" width="115" alt="Smile Care"></h1>
+			</div>
+							<!-- 상품 메뉴 -->
+			<div id="prd_menu" class="prd_menu">
+					<div class="inner">
+							<div id="prdMenuList" class="prd_menu_wrap"></div>
+							<a href="#none" class="btn_closed_menu">닫기</a>
+					</div>
+			</div><!-- // 상품 메뉴 -->
+			<a href="javascript:void(0)" id="gnb" class="btn_gnb_search">검색하기</a>
+			<a href="#none" id="gnb" class="btn_gnb_open new">전체메뉴 열기</a>
     </header>
     <section id="container">
 			<!-- contents start 
@@ -65,8 +66,7 @@
 								<li><a href="#" class="link">단단 치아케어</a></li>
 								<li><a href="#" class="link">탄탄 잇몸케어</a></li>
 								<li><a href="#" class="link">튼튼 구강케어</a></li>
-								<li><a href="#" class="link">전체</a></li>
-								<li><a href="#" class="btn-more"><span class="hidden">카테고리 더보기</span></a></li>
+								<li><a href="#" class="link">전체<span class="btn-more"><span class="hidden"> 카테고리 더보기</span></a></li>
 							</ul>
 							
 							<div class="slide-main swiper-container">
@@ -103,19 +103,76 @@
 					<!-- // E : 메인 -->
 					
 					<!-- S : 케어콘텐츠 Top 3 -->
-					<div class="smile-main main-top3">
+					<div class="smile-main">
 						<div class="smile-inner">
 							<h2 class="main-tit">지금 핫한<br>케어콘텐츠 Top 3</h2>
-							<div class="list-upper">
-								<ul class="dropdown">
-									<li><button type="button" class="dd-btn">카테고리 전체</button></li>
-									<li><button type="button" class="dd-btn">카테고리1</button></li>
-									<li><button type="button" class="dd-btn">카테고리2</button></li>
-								</ul>
-								<div class="desc">2020.11.17기준</div>
-							</div>
 
-							<!-- list ... -->
+							<div class="list-upper">
+								<div class="utils">
+									<span class="list-combo">
+											<label for="selectCategory" class="hidden">정렬선택</label>
+											<select id="selectCategory">
+												<option value="">카테고리 전체</option>
+												<option value="">인기순</option>
+												<option value="">최신순</option>
+											</select>
+											<i class="ico-combo">&nbsp;</i>
+									</span>
+								</div>
+								<div class="additional">
+									<span class="date">2020.11.17 기준</span>
+								</div>
+							</div>
+								
+							<div class="list-cont">
+								<ul class="type-img">
+									<li>
+										<a href="#">
+											<div class="li-img">
+													<div class="img-item">
+															<img src="img/@temp/img_category01.png" alt="">
+													</div>
+											</div>
+											<div class="li-txt">
+												<div class="tag">치수괴사</div>
+												<span class="title">닦을수록 치아 망가져? '치경 부마모증' 원인과 악화요인</span>
+												<span class="views">515,239명이 봤어요</span>
+												<p class="desc primary">이를 강하게 닦는 사람</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="li-img">
+													<div class="img-item">
+															<img src="img/@temp/img_category02.png" alt="">
+													</div>
+											</div>
+											<div class="li-txt">
+												<div class="tag">구취</div>
+												<span class="title">닦을수록 치아 망가져? '치경 부마모증' 원인과 악화요인</span>
+												<span class="views">515,239명이 봤어요</span>
+												<p class="desc primary">이를 강하게 닦는 사람</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="li-img">
+													<div class="img-item">
+															<img src="img/@temp/img_category03.png" alt="">
+													</div>
+											</div>
+											<div class="li-txt">
+												<div class="tag">치은염</div>
+												<span class="title">임플란트, 정기적 전문의 관리 받아야 성공률 높아져</span>
+												<span class="views">515,239명이 봤어요</span>
+												<p class="desc primary">잇몸 질병을 예방하고 싶은 사람</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 					<!-- // E : 케어콘텐츠 Top 3 -->
@@ -144,6 +201,20 @@
 										<div class="package-desc">
 											<span>이런분께 추천드려요!</span>
 											<strong>최근 잇몸이 약해진 사람</strong>
+										</div>
+									</a>
+									<a href="#" class="swiper-slide">
+										<div class="package-subject">
+											<span>입안이 쓰리고 아플 때,</span>
+											<strong>입안 이상증상,<br>질환은 아닐까?</strong>
+										</div>
+										<div class="package-thumbs">
+											<span style="background-image:url('./img/@temp/@package_thumb3.jpg');">&nbsp;</span>
+											<strong>1<i class="hidden">개 콘텐츠</i></strong> 
+										</div>
+										<div class="package-desc">
+											<span>이런분께 추천드려요!</span>
+											<strong>입안에 이상을 느끼는 사람</strong>
 										</div>
 									</a>
 									<a href="#" class="swiper-slide">
@@ -205,12 +276,10 @@
 					<!-- // E : 케어 패키지 -->
 
 					<!-- 고민되는 것들이 있으셨죠? -->
-					<div class="smile-main"> 
+					<div class="smile-main bg"> 
 						<div class="smile-inner">
-							<div class="smile-tit-wrap">
-								<p class="smile-txt">치아, 고민되는 것들이 있으셨죠?</p>
-								<h3 class="smile-tit1">고객님의 고민을 <br>스마일케어로 해결하세요.</h3>
-							</div>
+							<p class="main-tit-sub">치아, 고민되는 것들이 있으셨죠?</p>
+							<h3 class="main-tit">고객님의 고민을 <br>스마일케어로 해결하세요.</h3>
 							<div class="smile-square-wrap">
 								<ul>
 									<li><span>이빨이 많이<br> 흔들리는데 뽑지않고<br> 치료할 수 있나요?</span></li>
@@ -222,67 +291,47 @@
 						</div>
 					</div>
 
-					<!-- 스마일케어를 시작하세요 -->
-					<div class="smile-main recommend bg"> 
+					<!-- 구독하기 -->
+					<div class="smile-main main-subscribe">
 						<div class="smile-inner">
-							<div class="smile-tit-wrap">
-								<h3 class="smile-tit1">지금부터 부담 없이 평생 무료로 <br>스마일케어를 시작하세요.</h3>
-							</div>
-							<div class="recomm-info">
-								<div class="info-box">
-									<span class="img" style="background-image:url('../smileCare/img/img_smile01_mo.png')"></span>
-									<span class="desc">치아에 대한 근거 없는 속설들<br> 아직도 믿고 계시나요?<strong>치아에 대한 정확한 증상과 치료방법을 <br>치과 전문의가 직접 작성 합니다.</strong></span>
-								</div>
-								<div class="info-box">
-									<span class="img" style="background-image:url('../smileCare/img/img_smile02_mo.png')"></span>
-									<span class="desc">부담 없이 무료로 받아보세요.<strong>한 달에 한번<br>고객님의 치아에 대한 관심을<br>기반으로 맞춤 정보 드려요.</strong></span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- 푸짐한 경품 받아가세요 -->
-					<div class="smile-main product"> 
-						<div class="smile-inner">
-							<div class="smile-tit-wrap">
-                <h3 class="smile-tit1">지금 스마일케어 신청하고 <br>푸짐한 경품 받아가세요.</h3>
-                <p class="smile-sub">2020년 12월 9일까지 이벤트 진행 중</p>
-							</div>
-							<div class="product-img">
-								<img class="product" src='./img/img_product_mo.png' alt="">
-								<dl class="hidden">
-									<div>
-										<dt>세라젬의료기</dt>
-										<dd>3명</dd>
-									</div>
-									<div>
-										<dt>아쿠아픽 음파전동칫솔</dt>
-										<dd>100명</dd>
-									</div>
-									<div>
-										<dt>신세계상품권 5천원권</dt>
-										<dd>500명</dd>
-									</div>
-								</dl>
-							</div>
-							<div class="btn-wrap">
-								<button type="button" class="btn-point" onclick="openPopup('ET-010101_mo');"><span>스마일케어 구독하기<i class="ico-arrow"></i></span></button>
-							</div>
+							<p>부담 없이 무료로 받아보세요.<strong>고객님의 스마일을 만들어드립니다.</strong></p>
+							<button type="button" class="btn-round" onclick="openPopup('ET-010101_mo');"><span>구독하기<i class="ico-arrowo-dark">&nbsp;</i></span></button>
 						</div>
 					</div>
 
 					<!-- 구독 해지 -->
-					<div class="smile-main cancel"> 
+					<div class="smile-main main-cancel"> 
 						<div class="smile-inner">
-							<div class="cancel-txt">
+							<p class="cancel-txt">
 								케어 구독 서비스는 고객님께서 관심 있는 분야의 전문&맞춤<br class="br"/> 컨텐츠를 제공해드리는 서비스 입니다.<br class="br"/>
 								현재는 오픈 되어 있는 스마일케어 서비스가 기본적으로<br class="br"/> 제공되오나, 이후 ‘관심 추가’를 통해 오픈 예정인<br class="br"/> 다양한 분야의 케어 구독 서비스까지 이용하실 수 있습니다.
-							</div>
+							</p>
 							<div class="btn-wrap">
 								<a href="javascript:void(0);" class="btn-cancel" onclick="openPopup('ET-010400_mo');"><span>스마일케어 구독 해지를 원하시나요?</span></a>
 							</div>
 						</div>
 					</div>
+
+					<!-- 자주 찾는 키워드 -->
+					<div class="smile-main main-keyword"> 
+						<div class="smile-inner">
+							<h3 class="main-tit">자주 찾는 키워드</h3>
+							<ul class="find-keyword">
+								<!-- 버튼 누를 시 검색결과 팝업 노출 -->
+								<li><button type="button"><span>충치치료</span></button></li>
+								<li><button type="button"><span>크라운</span></button></li>
+								<li><button type="button"><span>임플란트</span></button></li>
+								<li><button type="button"><span>구강문제</span></button></li>
+								<li><button type="button"><span>치아미백</span></button></li>
+								<li><button type="button"><span>어린이치아</span></button></li>
+								<li><button type="button"><span>치아관리</span></button></li>
+								<li><button type="button"><span>레진</span></button></li>
+							</ul>
+						</div>
+					</div>
+
+
+
 
           <script type="text/javascript" src="/js/common/lib/swiper-4.4.1/swiper.min.js"></script> <!-- swiper -->
 					<script type="text/javascript">
@@ -309,24 +358,21 @@
 						var sldPackage = new Swiper('.slide-package', {
 							speed: 700,
 							loop: true,
+							init: false,
 							spaceBetween: 20,
 							roundLengths: true,
-							// autoplay: {
-							// 	delay: 8000,
-							// 	disableOnInteraction: false
-							// },
+							autoplay: {
+								delay: 4000,
+								disableOnInteraction: false
+							},
 							pagination: {
 								el: '.swiper-pagination',
 								type: 'bullets',
 							},
 							breakpoints: {
 								320: {
-									slidesPerView: 1,
-									// spaceBetween: 10
 								},
 								375: {
-									slidesPerView: 1,
-									// spaceBetween: 20
 								},
 							}
 						});
@@ -334,34 +380,71 @@
 
 						;(function($, win, doc, undefined) {
 						$(doc).ready(function(){
-							sldPackage.on('slideChange', function(){
+							
+							// [To.개발] 쿠키 또는 수집 데이터에 구독 로그 정보가 없을 경우 실행
+							openPopup('SID-0101_mo', function(){
+									$(doc).on('scroll', function(){
+										if (!!$('.ui-modal.open').not('#SID-0101_mo').length) {
+											return false;
+										}
+										$plugins.uiModalClose({
+											id: 'SID-0101_mo'
+										})
+									})
+							}, {ps:'bottom'})
+
+
+							// slide : package list
+							sldPackage.on('init', function(){
+								var $slds = $(sldPackage.slides)
+									, $thumbs = $slds.find('.package-thumbs')
+									, $item = $thumbs.find('span');
+
+								$thumbs.find('strong').addClass('on');
+								$thumbs.each(function(idx, item){
+									for (var i = 0; i < $(item).find('span').length; i++){
+										$(item).find('span').eq(i).addClass('d'+(i+1));
+									}
+								})
+							});
+
+							sldPackage.init();
+
+							sldPackage.on('slideChangeTransitionStart', function(){
 								var $slds = $(sldPackage.slides)
 									, $onSld = $slds.eq(sldPackage.activeIndex)
 									, $thumb = $onSld.find('.package-thumbs span')
 									, thumbLeng = $thumb.length
 									
-									, j = 1;
-									var i = thumbLeng - 1;
+									, j = 1 // nth run
+									, i = thumbLeng - 1; // eq index
 
-									$thumb.removeAttr('class');
+								$thumb.addClass('ready');
+								$onSld.find('.package-thumbs strong').removeAttr('class');
 
-									while (i > 0) {
-										(function(i, j){
-											setTimeout(function(){
-												$thumb.eq(i).addClass('d' + j);
-												$thumb.eq(i-1).addClass('d' + (j+1));
-												// while(j > 0){
-												// 	(function(_i, _j){
-												// 		$thumb.eq(__i)
-												// 		console.log(j);
-												// 	})(i, j);
-												// 	j--;
-												// }
-											}, 200*j);
-										})(i, j);
-										j++;
-										i--;
-									}
+								setTimeout(function(){
+									$thumb.removeAttr('class'); // reset
+								}, 100)
+
+								// run !!
+								while (j <= thumbLeng) {
+									(function(i, j){
+										setTimeout(function(){
+											var _i = 1; // depth
+											$thumb.removeAttr('class');
+											while (j > 0) {
+												(function(i, j, _i){
+													$thumb.eq(i).addClass('d' + _i);
+													if (j === thumbLeng) {
+														$onSld.find('.package-thumbs strong').addClass('on');
+													}
+												})(i, j, _i);
+												j--; i++; _i++;
+											}
+										}, 200*j+50);
+									})(i, j);
+									j++; i--;
+								}
 							})
 						});
 						})(jQuery, window, document);

@@ -231,18 +231,22 @@ function autoCompleteEmail(wrap, option) {
 }
 
 // popup load by ajax
-function openPopup(id, callback){
+function openPopup(id, callback, opt){
 	if (!$('#'+id).length) {
 		loadPopup(id);
 	} else {
 		$('#'+id).insertAfter($('.ui-modal').last());
 	}
+	var _opt = $.extend(true, {
+		ps: 'center',
+		full: false
+	}, opt);
 	
 	$plugins.uiModalOpen({
 		id:id,
-		full:false,
+		full: _opt.full,
+		ps: _opt.ps,
 		callback: function(v){
-			console.log('open :', v );
 			!!callback && callback();
 		}
 	});

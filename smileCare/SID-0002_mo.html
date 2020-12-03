@@ -35,156 +35,100 @@
   <div id="wrap">
     <header id="header">
         <a href="javascript:goBackUrl();" class="btn_back">뒤로가기</a>
-        <div class="tit sub short">
-                <h1>손상된 치아신경, 어떻게 회복해야하나요?</h1>
+        <div class="tit sub">
+            <h1><nobr>스마일케어</nobr></h1>
         </div>
-                        <!-- 상품 메뉴 -->
+                <!-- 상품 메뉴 -->
         <div id="prd_menu" class="prd_menu">
-                <div class="inner">
-                        <div id="prdMenuList" class="prd_menu_wrap"></div>
-                        <a href="#none" class="btn_closed_menu">닫기</a>
-                </div>
+            <div class="inner">
+                <div id="prdMenuList" class="prd_menu_wrap"></div>
+                <a href="#none" class="btn_closed_menu">닫기</a>
+            </div>
         </div><!-- // 상품 메뉴 -->
-        <a href="javascript:void(0)" id="gnb" class="btn_gnb_search">검색하기</a>
         <a href="#none" id="gnb" class="btn_gnb_open new">전체메뉴 열기</a>
     </header>
     <section id="container">
 			<!-- contents start 
-            =============================================-->
-            <link type="text/css" rel="stylesheet" href="./css/odh_mo.css" />
-            <script type="text/javascript" src="./js/ui.common.js"></script>
-            <script type="text/javascript" src="./js/smileCare.js"></script>
-            <script type="text/javascript">
-                function pop() {
-                    $('.category-modal').fadeIn(300);
-                };
-                // 팝업 Close 기능
-                function close_pop(flag) {
-                    $('#cate-modal').fadeOut(300);
-                };
-                
-                $(document).on('ready', function() {
-                    $('.more-txt').click(function() {
-                        $('#care-hide').toggleClass('care-show');
-                        $(this).toggleClass('changed');
+			=============================================-->
+            <div class="contents smilecare"> <!-- smilecare 클래스 필요 -->
+                <link type="text/css" rel="stylesheet" href="./css/odh_mo.css" />
+                <link type="text/css" rel="stylesheet" href="./css/smileCare_mo.css" />
+				<script type="text/javascript" src="./js/ui.common.js"></script>
+				<script type="text/javascript" src="./js/smileCare.js"></script>
+        
+				<!-- Start : SID-0002_mo -->
+                <div id="SID-0002_mo" class="ui-modal ui-modal-m">
+                    <div class="ui-modal-wrap">
+                      <div class="ui-modal-head">
+                          <h1>검색</h1>
+                        <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'SID-0002_mo'})"><span class="hidden">닫기</span></button>
+                      </div>
+                      <div class="ui-modal-cont">
 
-                        if($(this).html() == '덜보기') {
-                            $(this).html('더보기');
-                        }
-                        else {
-                            $(this).html('덜보기');
-                        }
-
-                    });
-                });
-
-                // $('h2').toggleClass('changed');
-
-            </script>
-            <!-- Start : SID-0002_mo -->
-            <div class="box-btn">
-                <button type="button" class="layer_btn" onclick="pop()">팝업</button>
-            </div>
-            <!-- // .contents -->
-			<!-- // contents end 
-            =============================================-->
-            
-            <div id="cate-modal" class="category-modal">
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <div class="modal-head">
-                        <span>검색</span>
-                        <button type="button" class="close-btn" onClick="close_pop();">
-                            <span class="close-pop-ico">
-                                 <i>닫기1</i>
-                                 <i>닫기1</i>
-                            </span>
-                        </button>
-                    </div>
-                    <div class="modal-cont">
                         <div class="search-box">
 
                             <!-- 1. 검색 -->
-                            <!-- <div class="search-inp">
+                            <!-- <div class="search-inp wd-full">
+                                <label for="sch-input" class="hidden">아이디</label>
+                                <input type="text" id="sch-input" name="" value="" placeholder="검색어를 입력해주세요.">
+                            </div> -->
+
+                            <!-- 2. 검색 상세 -->
+                            <div class="search-inp">
                                 <label for="sch-input" class="hidden">아이디</label>
                                 <input type="text" id="sch-input" name="" value="" placeholder="검색어를 입력해주세요.">
                             </div>
-                            <button type="button" class="reset-btn">취소</button> -->
-
-                            <!-- 2. 검색_상세 -->
-                            <div class="search-inp wd-full">
-                                <label for="sch-input" class="hidden">아이디</label>
-                                <input type="text" id="sch-input" name="" value="" placeholder="검색어를 입력해주세요.">
-                            </div>
-
-                            <div class="search-cont">
-                                <h2>최근 검색어</h2>
-                                <!-- <h2>최근 인기 TOPIC</h2> -->
-
-                                <!-- 1. 검색 -->
-                                <ul class="cont-list">
-                                    <li>
-                                        <a href="#">
-                                            인공치아매식술
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            치경부마모증
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            임플란트
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            신경치료
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            치석제거
-                                        </a>
-                                    </li>
-                                </ul>
-
-                                <!-- 2. 검색_상세 -->
-                                <!-- <ul class="topic-list">
-                                    <li>
-                                        <a href="#">
-                                            인공치아매식술
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            치경부마모증
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            임플란트
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            신경치료
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            치석제거
-                                        </a>
-                                    </li>
-                                </ul> -->
-                            </div>
+                            <button type="button" class="reset-btn">취소</button>
+        
                         </div>
 
+                        <div class="search-cont">
+
+                            <!-- 1. 검색 -->
+                            <!-- <h1 class="txt-type">최근 인기 TOPIC</h1>
+                            <ul class="topic-list">
+                                <li><a href="#">인공치아매식술</a></li>
+                                <li><a href="#">치경부마모증</a></li>
+                                <li><a href="#">임플란트</a></li>
+                                <li><a href="#">신경치료</a></li>
+                                <li><a href="#">치석제거</a></li>
+                            </ul>
+
+                            <h1 class="txt-type">자주 찾는 키워드</h1>
+                            <div class="detail-box">            
+                                <ul class="keyword-box">
+                                    <li><a href="#">충치치료</a></li>
+                                    <li><a href="#">크라운</a></li>
+                                    <li><a href="#">임플란트</a></li>
+                                    <li><a href="#">구강문제</a></li>
+                                    <li><a href="#">치아미백</a></li>
+                                    <li><a href="#">어린이치아</a></li>
+                                    <li><a href="#">치아관리</a></li>
+                                    <li><a href="#">레진</a></li>
+                                    <li><a href="#">충치치료</a></li>
+                                    <li><a href="#">크라운</a></li>
+                                    <li><a href="#">임플란트</a></li>
+                                    <li><a href="#">구강문제</a></li>
+                                    <li><a href="#">치아미백</a></li>
+                                    <li><a href="#">어린이치아</a></li>
+                                    <li><a href="#">치아관리</a></li>
+                                    <li><a href="#">레진</a></li>
+                                </ul>
+                            </div> -->
+
+                            <!-- 2. 검색 상세 -->
+                            <h2 class="txt-type">최근 검색어</h2>
+                            <ul class="cont-list">
+                                <li><a href="#">인공치아매식술</a></li>
+                                <li><a href="#">치경부마모증</a></li>
+                                <li><a href="#">임플란트</a></li>
+                                <li><a href="#">신경치료</a></li>
+                                <li><a href="#">치석제거</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- 2. 검색 상세 -->
                         <div class="detail-box">
-
-                            <!-- <strong>자주 찾는 키워드</strong> -->
-
                             <p>최근 검색내역이 없네요.</p>
                             <p>요즘 인기있는 검색어를 추천해드려요.</p>
 
@@ -201,18 +145,50 @@
                         </div>
 
                         <div class="sub-close">
-                            <button type="button" class="close-btn" onClick="close_pop();">
+                            <button type="button" class="btn-close close-type" onclick="$plugins.uiModalClose({ id:'SID-0001_mo'})">
                                 <span>닫기</span>
-                                <span class="close-pop-ico">
-                                        <i>닫기1</i>
-                                        <i>닫기1</i>
-                                </span>
                             </button>
                         </div>
-                        
+
+                      </div>
                     </div>
-                </div>
-            </div>
+                  </div>
+                  <!-- // End : SID-0002_mo -->
+				<script type="text/javascript">
+					;(function($, win, doc, undefined) {
+						$(doc).ready(function(){
+							
+							// popup run!!
+							$plugins.uiModalOpen({
+								id:'SID-0002_mo',
+								full:false,
+								callback: function(v){
+									console.log('open :', v );
+								}
+							});
+
+						});
+					})(jQuery, window, document);
+
+                    // 더보기, 덜보기
+                    $(document).on('ready', function() {
+                        $('.more-txt').click(function() {
+                            $('#care-hide').toggleClass('care-show');
+                            $(this).toggleClass('changed');
+
+                            if($(this).html() == '덜보기') {
+                                $(this).html('더보기');
+                            }
+                            else {
+                                $(this).html('덜보기');
+                            }
+
+                        });
+                    });
+				</script>
+      </div> <!-- // .contents -->
+			<!-- // contents end 
+			=============================================-->
     </section>
   </div>
 </body>

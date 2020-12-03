@@ -35,157 +35,109 @@
   <div id="wrap">
     <header id="header">
         <a href="javascript:goBackUrl();" class="btn_back">뒤로가기</a>
-        <div class="tit sub short">
-                <h1>손상된 치아신경, 어떻게 회복해야하나요?</h1>
+        <div class="tit sub">
+            <h1><nobr>스마일케어</nobr></h1>
         </div>
-                        <!-- 상품 메뉴 -->
+                <!-- 상품 메뉴 -->
         <div id="prd_menu" class="prd_menu">
-                <div class="inner">
-                        <div id="prdMenuList" class="prd_menu_wrap"></div>
-                        <a href="#none" class="btn_closed_menu">닫기</a>
-                </div>
+            <div class="inner">
+                <div id="prdMenuList" class="prd_menu_wrap"></div>
+                <a href="#none" class="btn_closed_menu">닫기</a>
+            </div>
         </div><!-- // 상품 메뉴 -->
-        <a href="javascript:void(0)" id="gnb" class="btn_gnb_search">검색하기</a>
         <a href="#none" id="gnb" class="btn_gnb_open new">전체메뉴 열기</a>
     </header>
     <section id="container">
 			<!-- contents start 
-            =============================================-->
-            <link type="text/css" rel="stylesheet" href="./css/odh_mo.css" />
-            <script type="text/javascript" src="./js/ui.common.js"></script>
-            <script type="text/javascript" src="./js/smileCare.js"></script>
-            <script type="text/javascript">
-                function pop() {
-                    $('.category-modal').fadeIn(300);
-                };
-                // 팝업 Close 기능
-                function close_pop(flag) {
-                    $('#cate-modal').fadeOut(300);
-                };
-                
-                $(document).on('ready', function() {
-                    $('.more-txt').click(function() {
-                        $('#care-hide').toggleClass('care-show');
-                        $(this).toggleClass('changed');
-
-                        if($(this).html() == '덜보기') {
-                            $(this).html('더보기');
-                        }
-                        else {
-                            $(this).html('덜보기');
-                        }
-
-                    });
-                });
-
-                // $('h2').toggleClass('changed');
-
-            </script>
-            <!-- Start : SID-0001_mo -->
-            <div class="box-btn">
-                <button type="button" class="layer_btn" onclick="pop()">팝업</button>
-            </div>
-            <!-- // .contents -->
-			<!-- // contents end 
-            =============================================-->
-            
-            <div id="cate-modal" class="category-modal">
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <div class="modal-head">
-                        <span>카테고리</span>
-                        <button type="button" class="close-btn" onClick="close_pop();">
-                            <span class="close-pop-ico">
-                                 <i>닫기1</i>
-                                 <i>닫기1</i>
-                            </span>
-                        </button>
-                    </div>
-                    <div class="modal-cont">
+			=============================================-->
+            <div class="contents smilecare"> <!-- smilecare 클래스 필요 -->
+                <link type="text/css" rel="stylesheet" href="./css/odh_mo.css" />
+                <link type="text/css" rel="stylesheet" href="./css/smileCare_mo.css" />
+				<script type="text/javascript" src="./js/ui.common.js"></script>
+				<script type="text/javascript" src="./js/smileCare.js"></script>
+        
+				<!-- Start : SID-0001_mo -->
+                <div id="SID-0001_mo" class="ui-modal ui-modal-m">
+                    <div class="ui-modal-wrap">
+                      <div class="ui-modal-head">
+                          <h1>카테고리</h1>
+                        <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'SID-0001_mo'})"><span class="hidden">닫기</span></button>
+                      </div>
+                      <div class="ui-modal-cont">
                         <ul class="care-cont">
-                            <li>
-                                <a href="#">
-                                    단단치아케어
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    튼튼 구강케어
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    탄탄 잇몸케어
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    반짝 심미케어
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    쑥쑥아이케어
-                                </a>
-                            </li>
+                            <li><a href="#">단단치아케어</a></li>
+                            <li><a href="#">튼튼 구강케어</a></li>
+                            <li><a href="#">탄탄 잇몸케어</a></li>
+                            <li><a href="#">반짝 심미케어</a></li>
+                            <li><a href="#">쑥쑥아이케어</a></li>
                         </ul>
-                        
+
                         <div class="care">
                             <strong class="care-txt">취향저격 케어 패키지</strong>
                             <ul class="care-package">
-                                <li>
-                                    <a href="#" class="txt-type">
-                                        01 . 긴 연휴 동안 놓치기 쉬운 치아건강 관리 콘텐츠
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="txt-type">
-                                        02 . 입안이 쓰리고 아플 때, 입안 이상증상, 질환은 입안이 쓰리고 아플 때, 입안 이상증상, 질환은 입안이 쓰리고 아플 때, 입안 이상증상, 질환은
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="txt-type">
-                                        03 . 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단
-                                    </a>
-                                </li>
+                                <li><a href="#" class="txt-type">01 . 긴 연휴 동안 놓치기 쉬운 치아건강 관리 콘텐츠</a></li>
+                                <li><a href="#" class="txt-type">02 . 입안이 쓰리고 아플 때, 입안 이상증상, 질환은 입안이 쓰리고 아플 때, 입안 이상증상, 질환은 입안이 쓰리고 아플 때, 입안 이상증상, 질환은</a></li>
+                                <li><a href="#" class="txt-type">03 . 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단</a></li>
                             </ul>
-
+        
                             <div class="more">
-                                <a href="#" class="more-txt changeds">
-                                    더보기
-                                </a>
+                                <a href="#" class="more-txt changeds">더보기</a>
                                 <ul id="care-hide" class="care-show">
-                                    <li>
-                                        <a href="#" class="txt-type">
-                                            04 . 긴 연휴 동안 놓치기 쉬운 치아건강 관리 콘텐츠
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="txt-type">
-                                            05 . 입안이 쓰리고 아플 때, 입안 이상증상, 질환은 입안이 쓰리고 아플 때, 입안 이상증상, 질환은 입안이 쓰리고 아플 때, 입안 이상증상, 질환은
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="txt-type">
-                                            06 . 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단
-                                        </a>
-                                    </li>
+                                    <li><a href="#" class="txt-type">04 . 긴 연휴 동안 놓치기 쉬운 치아건강 관리 콘텐츠</a></li>
+                                    <li><a href="#" class="txt-type">05 . 입안이 쓰리고 아플 때, 입안 이상증상, 질환은 입안이 쓰리고 아플 때, 입안 이상증상, 질환은 입안이 쓰리고 아플 때, 입안 이상증상, 질환은</a></li>
+                                    <li><a href="#" class="txt-type">06 . 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단</a></li>
+                                    <li><a href="#" class="txt-type">07 . 긴 연휴 동안 놓치기 쉬운 치아건강 관리 콘텐츠</a></li>
+                                    <li><a href="#" class="txt-type">08 . 입안이 쓰리고 아플 때, 입안 이상증상, 질환은 입안이 쓰리고 아플 때, 입안 이상증상, 질환은 입안이 쓰리고 아플 때, 입안 이상증상, 질환은</a></li>
+                                    <li><a href="#" class="txt-type">09 . 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단</a></li>
                                 </ul>
                             </div>
                         </div>
 
                         <div class="sub-close">
-                            <button type="button" class="close-btn" onClick="close_pop();">
+                            <button type="button" class="btn-close close-type" onclick="$plugins.uiModalClose({ id:'SID-0001_mo'})">
                                 <span>닫기</span>
-                                <span class="close-pop-ico">
-                                     <i>닫기1</i>
-                                     <i>닫기1</i>
-                                </span>
                             </button>
                         </div>
+
+                      </div>
                     </div>
-                </div>
-            </div>
+                  </div>
+                  <!-- // End : SID-0001_mo -->
+				<script type="text/javascript">
+					;(function($, win, doc, undefined) {
+						$(doc).ready(function(){
+							
+							// popup run!!
+							$plugins.uiModalOpen({
+								id:'SID-0001_mo',
+								full:false,
+								callback: function(v){
+									console.log('open :', v );
+								}
+							});
+
+						});
+					})(jQuery, window, document);
+
+                    // 더보기, 덜보기
+                    $(document).on('ready', function() {
+                        $('.more-txt').click(function() {
+                            $('#care-hide').toggleClass('care-show');
+                            $(this).toggleClass('changed');
+
+                            if($(this).html() == '덜보기') {
+                                $(this).html('더보기');
+                            }
+                            else {
+                                $(this).html('덜보기');
+                            }
+
+                        });
+                    });
+				</script>
+      </div> <!-- // .contents -->
+			<!-- // contents end 
+			=============================================-->
     </section>
   </div>
 </body>

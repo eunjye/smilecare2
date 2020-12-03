@@ -34,18 +34,19 @@
 <body>
   <div id="wrap">
     <header id="header">
-        <a href="javascript:goBackUrl();" class="btn_back">뒤로가기</a>
-        <div class="tit sub">
-            <h1><img src="./img/logo_smilecare_mo.png" width="115" alt="Smile Care"></h1>
-        </div>
-                <!-- 상품 메뉴 -->
-        <div id="prd_menu" class="prd_menu">
-            <div class="inner">
-                <div id="prdMenuList" class="prd_menu_wrap"></div>
-                <a href="#none" class="btn_closed_menu">닫기</a>
-            </div>
-        </div><!-- // 상품 메뉴 -->
-        <a href="#none" id="gnb" class="btn_gnb_open new">전체메뉴 열기</a>
+			<a href="javascript:goBackUrl();" class="btn_back">뒤로가기</a>
+			<div class="tit sub short">
+					<h1>손상된 치아신경, 어떻게 회복해야하나요?</h1>
+			</div>
+							<!-- 상품 메뉴 -->
+			<div id="prd_menu" class="prd_menu">
+					<div class="inner">
+							<div id="prdMenuList" class="prd_menu_wrap"></div>
+							<a href="#none" class="btn_closed_menu">닫기</a>
+					</div>
+			</div><!-- // 상품 메뉴 -->
+			<a href="javascript:void(0)" id="gnb" class="btn_gnb_search">검색하기</a>
+			<a href="#none" id="gnb" class="btn_gnb_open new">전체메뉴 열기</a>
     </header>
     <section id="container">
 			<!-- contents start 
@@ -330,26 +331,6 @@
 					</div>
 
 
-					<!-- [LayerPopup] 무료로 시작하세요 -->
-					<section class="ui-modal type-guide" id="popFreeStart">
-						<div class="ui-modal-wrap">
-							<div class="ui-modal-cont">
-								<div class="with-visual">
-									<img src="./img/bg_start_mo.png" alt="" width="52">
-									<div class="inner">
-										<h2 class="guide-tit">부담 없이, 무료로 시작하세요.</h2>
-										<p class="guide-desc">치과 전문의가 감수한 정보를 알기 쉽게!<br>고객님의 관심을 기반으로 맞춤 정보를 드려요.</p>
-									</div>
-								</div>
-								<div class="btn-wrap tac">
-									<button type="button" class="btn-round" 
-										onclick="openPopup('ET-010101_mo');
-									"><span>스마일케어 구독하기<i class="ico-arrowo-dark">&nbsp;</i></span></button>
-								</div>
-							</div>
-							<button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'popFreeStart'})"><span class="hidden">닫기</span></button>
-						</div>
-					</section>
 
 
           <script type="text/javascript" src="/js/common/lib/swiper-4.4.1/swiper.min.js"></script> <!-- swiper -->
@@ -401,21 +382,16 @@
 						$(doc).ready(function(){
 							
 							// [To.개발] 쿠키 또는 수집 데이터에 구독 로그 정보가 없을 경우 실행
-							$plugins.uiModalOpen({
-								id:'popFreeStart',
-								full:false,
-								ps: 'bottom',
-								callback: function(v){
+							openPopup('SID-0101_mo', function(){
 									$(doc).on('scroll', function(){
-										if (!!$('.ui-modal.open').not('#popFreeStart').length) {
+										if (!!$('.ui-modal.open').not('#SID-0101_mo').length) {
 											return false;
 										}
 										$plugins.uiModalClose({
-											id: 'popFreeStart'
+											id: 'SID-0101_mo'
 										})
 									})
-								}
-							});
+							}, {ps:'bottom'})
 
 
 							// slide : package list

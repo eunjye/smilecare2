@@ -12,13 +12,13 @@
 .ui-modal.ui-modal-type .ui-modal-cont .care-cont li a:hover {text-decoration: none;}
 .ui-modal.ui-modal-type .ui-modal-cont .care {padding-top: 62px; width: 385px; margin: 0 auto;}
 .ui-modal.ui-modal-type .ui-modal-cont .care ul.care-package,
-.ui-modal.ui-modal-type .ui-modal-cont .care .more #care-hide {margin-top: 33px; text-align: center;}
+.ui-modal.ui-modal-type .ui-modal-cont .care #care-hide {margin-top: 33px; text-align: center;}
 .ui-modal.ui-modal-type .ui-modal-cont .care ul.care-package li,
-.ui-modal.ui-modal-type .ui-modal-cont .care .more #care-hide li {margin-top: 20px; display: block;}
+.ui-modal.ui-modal-type .ui-modal-cont .care #care-hide li {margin-top: 20px; display: block;}
 .ui-modal.ui-modal-type .ui-modal-cont .care ul.care-package li:first-child,
-.ui-modal.ui-modal-type .ui-modal-cont .care .more #care-hide li:first-child {margin-top: 0;}
+.ui-modal.ui-modal-type .ui-modal-cont .care #care-hide li:first-child {margin-top: 0;}
 .ui-modal.ui-modal-type .ui-modal-cont .care ul.care-package li a.txt-type,
-.ui-modal.ui-modal-type .ui-modal-cont .care .more #care-hide li a.txt-type {display: block; font-size: 19px; color: #fff; text-decoration: underline; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-underline-position: under;}
+.ui-modal.ui-modal-type .ui-modal-cont .care #care-hide li a.txt-type {display: block; font-size: 19px; color: #fff; text-decoration: underline; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-underline-position: under;}
 .ui-modal.ui-modal-type .ui-modal-cont .care strong.care-txt {display: block; font-size: 21px; color: #8e8e8e; font-weight: 700; text-align: center;}
 .ui-modal.ui-modal-type .ui-modal-cont .care .more {margin-top: 40px;}
 .ui-modal.ui-modal-type .ui-modal-cont .care .more>a {display: block;}
@@ -26,8 +26,8 @@
 .ui-modal.ui-modal-type .ui-modal-cont .care .more .more-txt {cursor: pointer; position: relative; padding-right: 32px; font-size: 19px; color: #636363; border: 0; outline: 0; text-align: center;}
 .ui-modal.ui-modal-type .ui-modal-cont .care .more .more-txt:after {content: ""; position: absolute; top: 10px; right: 151px; width: 19px; height: 11px; background: url('../img/ico_more_down_mo.png') 0 0 no-repeat; background-size: 100%;}
 .ui-modal.ui-modal-type .ui-modal-cont .care .more .more-txt.changed:after {content: ""; position: absolute; top: 10px; right: 151px; width: 19px; height: 11px; background: url('../img/ico_more_up_mo.png') 0 0 no-repeat; background-size: 100%;}
-.ui-modal.ui-modal-type .ui-modal-cont .care .more #care-hide {margin-top: 25px;}
-.ui-modal.ui-modal-type .ui-modal-cont .care .more .care-show {display: none;}
+.ui-modal.ui-modal-type .ui-modal-cont .care #care-hide {margin-top: 25px;}
+.ui-modal.ui-modal-type .ui-modal-cont .care .care-show {display: none;}
 .ui-modal.ui-modal-type .ui-modal-cont .sub-close {margin: 102px 278px 102px 0; text-align: right;}
 .ui-modal.ui-modal-type .ui-modal-cont .sub-close .btn-close.close-type {display: inline-block; width: 93px; height: 35px; font-size: 17px; background-color: #fff; border-radius: 20px;}
 .ui-modal.ui-modal-type .ui-modal-cont .sub-close .btn-close.close-type span {display: block; padding-left: 25px;}

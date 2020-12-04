@@ -1,0 +1,77 @@
+/* 레이어팝업(SID-0001-카테고리) - pc */
+.ui-modal.ui-modal-type.open.type-normal.ps-center .ui-modal-wrap {top: 50%; left: 50%; width: 100%; height: 100%; transform: translate(-50%, -50%) scale(1); background-color: #0c0c0d; opacity: 90%;}
+.ui-modal.ui-modal-type.type-normal .ui-modal-wrap {max-height: 100%;}
+.ui-modal.ui-modal-type .ui-modal-head {padding: 23px 0 0 0; height: 85px; background-color: #0c0c0d; opacity: 90%; border-bottom: 1px solid #59595a; text-align: center; z-index: 2;}
+.ui-modal.ui-modal-type .ui-modal-head h1 {font-size: 25px;}
+.ui-modal.ui-modal-type .ui-modal-head .btn-close {top: 23px; right: 278px;}
+.ui-modal.ui-modal-type .ui-modal-cont {padding: 25px 0;}
+.ui-modal.ui-modal-type .ui-modal-cont .care-cont {padding: 30px 0; border-bottom: 1px solid #59595a; text-align: center;}
+.ui-modal.ui-modal-type .ui-modal-cont .care-cont li {display: inline-block; margin-right: 62px;}
+.ui-modal.ui-modal-type .ui-modal-cont .care-cont li:last-child {margin-right: 0;}
+.ui-modal.ui-modal-type .ui-modal-cont .care-cont li a {display: block; font-size: 27px; font-weight: 700; color: #fff;}
+.ui-modal.ui-modal-type .ui-modal-cont .care-cont li a:hover {text-decoration: none;}
+.ui-modal.ui-modal-type .ui-modal-cont .care {padding-top: 62px; width: 385px; margin: 0 auto;}
+.ui-modal.ui-modal-type .ui-modal-cont .care ul.care-package,
+.ui-modal.ui-modal-type .ui-modal-cont .care .more #care-hide {margin-top: 33px; text-align: center;}
+.ui-modal.ui-modal-type .ui-modal-cont .care ul.care-package li,
+.ui-modal.ui-modal-type .ui-modal-cont .care .more #care-hide li {margin-top: 20px; display: block;}
+.ui-modal.ui-modal-type .ui-modal-cont .care ul.care-package li:first-child,
+.ui-modal.ui-modal-type .ui-modal-cont .care .more #care-hide li:first-child {margin-top: 0;}
+.ui-modal.ui-modal-type .ui-modal-cont .care ul.care-package li a.txt-type,
+.ui-modal.ui-modal-type .ui-modal-cont .care .more #care-hide li a.txt-type {display: block; font-size: 19px; color: #fff; text-decoration: underline; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-underline-position: under;}
+.ui-modal.ui-modal-type .ui-modal-cont .care strong.care-txt {display: block; font-size: 21px; color: #8e8e8e; font-weight: 700; text-align: center;}
+.ui-modal.ui-modal-type .ui-modal-cont .care .more {margin-top: 40px;}
+.ui-modal.ui-modal-type .ui-modal-cont .care .more>a {display: block;}
+.ui-modal.ui-modal-type .ui-modal-cont .care .more>a:hover {text-decoration: none;}
+.ui-modal.ui-modal-type .ui-modal-cont .care .more .more-txt {cursor: pointer; position: relative; padding-right: 32px; font-size: 19px; color: #636363; border: 0; outline: 0; text-align: center;}
+.ui-modal.ui-modal-type .ui-modal-cont .care .more .more-txt:after {content: ""; position: absolute; top: 10px; right: 151px; width: 19px; height: 11px; background: url('../img/ico_more_down_mo.png') 0 0 no-repeat; background-size: 100%;}
+.ui-modal.ui-modal-type .ui-modal-cont .care .more .more-txt.changed:after {content: ""; position: absolute; top: 10px; right: 151px; width: 19px; height: 11px; background: url('../img/ico_more_up_mo.png') 0 0 no-repeat; background-size: 100%;}
+.ui-modal.ui-modal-type .ui-modal-cont .care .more #care-hide {margin-top: 25px;}
+.ui-modal.ui-modal-type .ui-modal-cont .care .more .care-show {display: none;}
+.ui-modal.ui-modal-type .ui-modal-cont .sub-close {margin: 102px 278px 102px 0; text-align: right;}
+.ui-modal.ui-modal-type .ui-modal-cont .sub-close .btn-close.close-type {display: inline-block; width: 93px; height: 35px; font-size: 17px; background-color: #fff; border-radius: 20px;}
+.ui-modal.ui-modal-type .ui-modal-cont .sub-close .btn-close.close-type span {display: block; padding-left: 25px;}
+.ui-modal.ui-modal-type .ui-modal-cont .sub-close .btn-close:before,
+.ui-modal.ui-modal-type .ui-modal-cont .sub-close .btn-close:after {left: 13px; background: #000; width: 20px;}
+
+/* 레이어팝업(SID-0002) - pc */
+/* search-box */
+.ui-modal.ui-modal-type .ui-modal-cont .search-box {position: relative; padding-top: 42px; width: 600px; margin: 0 auto;}
+.ui-modal.ui-modal-type .ui-modal-cont .search-box .search-inp {position: relative;}
+.ui-modal.ui-modal-type .ui-modal-cont .search-box .search-inp:before {content: ""; position: absolute; top: 17px; left: 30px; width: 25px; height: 25px; background: url('../img/ico_search_mo.png') 0 0 no-repeat; background-size: 100%;}
+.ui-modal.ui-modal-type .ui-modal-cont .search-box .search-inp:after {content: ""; position: absolute; top: 16px; right: 70px; width: 28px; height: 28px; background: url('../img/ico_del_mo.png') 0 0 no-repeat; background-size: 100%;}
+.ui-modal.ui-modal-type .ui-modal-cont .search-box .search-inp input {width: 550px; height: 60px; padding-left: 70px; border-radius: 35px; background-color: #fff; font-size: 24px; font-weight: bold;}
+.ui-modal.ui-modal-type .ui-modal-cont .search-box .search-inp input::placeholder {font-size: 24px; padding-bottom: 8px;}
+.ui-modal.ui-modal-type .ui-modal-cont .search-box .search-inp.wd-full input {width: 100%;}
+.ui-modal.ui-modal-type .ui-modal-cont .search-box .search-inp.wd-full::after {display: none;}
+.ui-modal.ui-modal-type .ui-modal-cont .search-box .search-inp .hidden {position: absolute !important; top:auto; left:-9999px; width:1px; height:1px; overflow:hidden;}
+.ui-modal.ui-modal-type .ui-modal-cont .search-box .reset-btn {position: absolute; top: 56px; right: 0; outline: 0; border: 0; color: #707070; font-size: 19px; font-weight: bold; background-color: transparent;}
+.search-cont {position: relative; padding: 0 30px;}
+.search-cont .all-reset {position: absolute; top: 3px; right: 32px; outline: 0; border: 0; color: #707070; font-size: 15px; font-weight: bold; background-color: transparent;}
+.search-cont h2 {margin-top: 40px; font-size: 21px; color: #707070; font-weight: bold;}
+.search-cont .cont-list {margin-top: 15px;}
+.search-cont .cont-list li {position: relative; padding: 16px 0; border-top: 1px solid #343536;}
+.search-cont .cont-list li:last-child {border-bottom: 1px solid #343536;}
+.search-cont .cont-list li a {display: block; font-size: 17px; font-weight: 600; color: #707070;}
+.search-cont .cont-list li:after {content: ""; position: absolute; top: 21px; right: 13px; width: 16px; height: 16px; background: url('../img/ico_listDel_mo.png') 0 0 no-repeat; background-size: 100%;}
+.detail-box {margin: 50px auto; width: 600px;}
+.detail-box p {margin-top: 5px; font-size: 19px; text-align: center; color: #fff;}
+/* 탭 */
+.search-tab-menu {display: flex; flex-direction: row; flex-wrap: nowrap; margin-top: 40px;}
+.search-tab-menu .tab-link {flex: 1; margin-right: 2px; overflow: auto; padding: 10px 0; border: 1px solid #5c5c5c; color: #5c5c5c; font-size: 21px; font-weight: 700; cursor: pointer; text-align: center;}
+.search-tab-menu .tab-link:last-child {margin-right: 0;}
+.search-tab-menu .tab-link.current {color: #fff; border: 1px solid #fff;}
+.tab-content {display: none; margin-top: 40px;}
+.tab-content.current {display: inherit;}
+.topic-list li {margin-top: 20px;}
+.topic-list li:first-child {margin-top: 0;}
+.topic-list li a {display: block; color: #fff; font-size: 19px; text-decoration: underline; text-underline-position: under;}
+.keyword-box {margin-top: 10px; padding: 0 20px;}
+.keyword-box:after {content: ""; display: block; clear: both;}
+.keyword-box li {float: left; padding: 7px 15px; border-radius: 20px; background: #393a3b; margin: 10px 10px 0 0;}
+.keyword-box li:last-child {margin-right: 0;}
+.keyword-box li a {display: block; font-size: 17px; color: #8e8e8e;}
+.keyword-box li a:hover {text-decoration: none;}
+.pd-n {padding: 0;}
+
+

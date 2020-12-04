@@ -94,6 +94,8 @@
 .smilecare-list .list-cont{padding:0 15px}
 .list-cont .type-img li{position:relative;display:table;width:100%;border-bottom:1px solid #e3e4e5;padding:20px 0}
 .list-cont .type-img li>a{display:block}
+.list-cont.bdb-full { border-bottom:1px solid #e3e4e5; }
+.list-cont.bdb-full .type-img li:last-child { border-bottom:0; }
 .list-cont .type-img li.current { pointer-events:none; }
 .list-cont .type-img li.current:after {position:absolute; top:0; left:-15px; right:-15px; display:block; height:100%; background:#E2E2E2; opacity:.5; content:""; }
 .list-cont .type-img li .li-img{display:table-cell;width:120px;vertical-align:middle}

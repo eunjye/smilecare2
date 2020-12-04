@@ -238,12 +238,13 @@ function openPopup(id, callback, opt){
 		$('#'+id).insertAfter($('.ui-modal').last());
 	}
 	var _opt = $.extend(true, {
-		ps: 'center'
+		ps: 'center',
+		full: false
 	}, opt);
 	
 	$plugins.uiModalOpen({
 		id:id,
-		full:false,
+		full: _opt.full,
 		ps: _opt.ps,
 		callback: function(v){
 			!!callback && callback();

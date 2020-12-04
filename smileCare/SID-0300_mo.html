@@ -34,18 +34,19 @@
 <body>
   <div id="wrap">
     <header id="header">
-        <a href="javascript:goBackUrl();" class="btn_back">뒤로가기</a>
-        <div class="tit sub">
-            <h1>손상된 치아신경, 어떻게 회복해야하나요?</h1>
-        </div>
-                <!-- 상품 메뉴 -->
-        <div id="prd_menu" class="prd_menu">
-            <div class="inner">
-                <div id="prdMenuList" class="prd_menu_wrap"></div>
-                <a href="#none" class="btn_closed_menu">닫기</a>
-            </div>
-        </div><!-- // 상품 메뉴 -->
-        <a href="#none" id="gnb" class="btn_gnb_open new">전체메뉴 열기</a>
+			<a href="javascript:goBackUrl();" class="btn_back">뒤로가기</a>
+			<div class="tit sub short">
+					<h1>손상된 치아신경, 어떻게 회복해야하나요?</h1>
+			</div>
+							<!-- 상품 메뉴 -->
+			<div id="prd_menu" class="prd_menu">
+					<div class="inner">
+							<div id="prdMenuList" class="prd_menu_wrap"></div>
+							<a href="#none" class="btn_closed_menu">닫기</a>
+					</div>
+			</div><!-- // 상품 메뉴 -->
+			<a href="javascript:void(0)" id="gnb" class="btn_gnb_search">검색하기</a>
+			<a href="#none" id="gnb" class="btn_gnb_open new">전체메뉴 열기</a>
     </header>
     <section id="container">
 			<!-- contents start 
@@ -105,28 +106,34 @@
 						</div>
 
 						<div class="cont-footer">
-							<a href="#" class="btn-list">목록</a>
+							<strong class="title">이 콘텐츠가 마음에 드시나요?</strong>
 							<div class="utils">
-								<button type="button" class="btn-score" onclick="
-									// 평가하지 않은 시에만 popup open
-									if (!chkScore.flag) {
-										openPopup('popScore', false, {ps:'bottom'}); 
-									} else {
-										alert('이미 평가하셨습니다.') // alert문구 임의 지정함
-									}
-								">평가</button>
 								<button type="button" class="btn-share" 
-									onclick="openPopup('popShare', false, {ps:'bottom'});"
+									onclick="openPopup('SID-0301_mo', false, {ps:'bottom'});"
 								>공유</button>
+							</div>
+							<div class="inner">
+								<div class="rdo-score">
+									<input type="radio" name="rdoGroupScore" id="rdoScore5">
+									<label for="rdoScore5" class="rdo-best">추천할래요</label>
+									<input type="radio" name="rdoGroupScore" id="rdoScore4">
+									<label for="rdoScore4" class="rdo-good">좋아요</label>
+									<input type="radio" name="rdoGroupScore" id="rdoScore3">
+									<label for="rdoScore3" class="rdo-soso">보통이에요</label>
+									<input type="radio" name="rdoGroupScore" id="rdoScore2">
+									<label for="rdoScore2" class="rdo-bad">별로에요</label>
+									<input type="radio" name="rdoGroupScore" id="rdoScore1">
+									<label for="rdoScore1" class="rdo-worst">싫어요</label>
+								</div>
 							</div>
 						</div>
 					</div> 
 					<!-- // E : 콘텐츠 내용 -->
 					
-					<!-- S : 비슷한 콘텐츠 리스트 -->
+					<!-- S : 추천 콘텐츠 리스트 -->
 					<div class="smilecare-list">
-						<div class="list-title">비슷한 케어콘텐츠</div>
-						<div class="list-cont">
+						<div class="list-title">이런 콘텐츠는 어떠세요?</div>
+						<div class="list-cont bdb-full">
 							<ul class="type-img">
 								<li class="current"> <!-- [To.개발] 현재 보고 있는 콘텐츠일 시, .current 클래스 추가 -->
 									<a href="#">
@@ -136,7 +143,10 @@
 												</div>
 										</div>
 										<div class="li-txt">
-											<div class="tag">치수괴사</div>
+											<div class="tag">
+												질환<span class="sub-tag">치경부마모증</span>
+												<span class="sharp-tag">#치아치료</span>
+											</div>
 											<span class="title">닦을수록 치아 망가져? '치경 부마모증' 원인과 악화요인</span>
 											<span class="views">515,239명이 봤어요</span>
 											<p class="desc primary">이를 강하게 닦는 사람</p>
@@ -151,128 +161,30 @@
 												</div>
 										</div>
 										<div class="li-txt">
-											<div class="tag">구취</div>
+											<div class="tag">
+												질환<span class="sub-tag">치경부마모증</span>
+												<span class="sharp-tag">#치아치료</span>
+											</div>
 											<span class="title">닦을수록 치아 망가져? '치경 부마모증' 원인과 악화요인</span>
 											<span class="views">515,239명이 봤어요</span>
 											<p class="desc primary">이를 강하게 닦는 사람</p>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<div class="li-img">
-												<div class="img-item">
-														<img src="img/@temp/img_category03.png" alt="">
-												</div>
-										</div>
-										<div class="li-txt">
-											<div class="tag">치은염</div>
-											<span class="title">임플란트, 정기적 전문의 관리 받아야 성공률 높아져</span>
-											<span class="views">515,239명이 봤어요</span>
-											<p class="desc primary">잇몸 질병을 예방하고 싶은 사람</p>
-										</div>
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="list-title"><strong>“충치치료”</strong> 키워드로 보는 케어콘텐츠</div>
-						<div class="list-cont">
-							<ul class="type-img">
-								<li>
-									<a href="#">
-										<div class="li-img">
-												<div class="img-item">
-														<img src="img/@temp/img_category01.png" alt="">
-												</div>
-										</div>
-										<div class="li-txt">
-											<div class="tag">치수괴사</div>
-											<span class="title">닦을수록 치아 망가져? '치경 부마모증' 원인과 악화요인</span>
-											<span class="views">515,239명이 봤어요</span>
-											<p class="desc primary">이를 강하게 닦는 사람</p>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<div class="li-img">
-												<div class="img-item">
-														<img src="img/@temp/img_category02.png" alt="">
-												</div>
-										</div>
-										<div class="li-txt">
-											<div class="tag">구취</div>
-											<span class="title">닦을수록 치아 망가져? '치경 부마모증' 원인과 악화요인</span>
-											<span class="views">515,239명이 봤어요</span>
-											<p class="desc primary">이를 강하게 닦는 사람</p>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<div class="li-img">
-												<div class="img-item">
-														<img src="img/@temp/img_category03.png" alt="">
-												</div>
-										</div>
-										<div class="li-txt">
-											<div class="tag">치은염</div>
-											<span class="title">임플란트, 정기적 전문의 관리 받아야 성공률 높아져</span>
-											<span class="views">515,239명이 봤어요</span>
-											<p class="desc primary">잇몸 질병을 예방하고 싶은 사람</p>
 										</div>
 									</a>
 								</li>
 							</ul>
 						</div>
 					</div>
-					<!-- // E : 비슷한 콘텐츠 리스트 -->
+					<!-- // E : 추천 콘텐츠 리스트 -->
 
-
-					<!-- [LayerPopup] 평가하기 -->
-					<section class="ui-modal type-guide" id="popScore">
-						<div class="ui-modal-wrap">
-							<div class="ui-modal-cont">
-								<div class="inner">
-									<h2 class="guide-tit">콘텐츠에 만족하셨나요?</h2>
-								</div>
-								<div class="score-area">
-									<div class="rdo-score">
-										<input type="radio" name="rdoGroupScore" id="rdoScore5">
-										<label for="rdoScore5">5점</label>
-										<input type="radio" name="rdoGroupScore" id="rdoScore4">
-										<label for="rdoScore4">4점</label>
-										<input type="radio" name="rdoGroupScore" id="rdoScore3">
-										<label for="rdoScore3">3점</label>
-										<input type="radio" name="rdoGroupScore" id="rdoScore2">
-										<label for="rdoScore2">2점</label>
-										<input type="radio" name="rdoGroupScore" id="rdoScore1">
-										<label for="rdoScore1">1점</label>
-									</div>
-									<button type="button" class="btn-round" onclick="chkScore.fnChk();"><span>확인<i class="ico-arrowo-dark">&nbsp;</i></span></button>
-								</div>
-							</div>
-							<button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'popScore'})"><span class="hidden">닫기</span></button>
+					<!-- S : 구독하기 -->
+					<div class="smile-main main-subscribe2">
+						<div class="smile-inner">
+							<strong class="title">부담없이, 무료로 시작하세요.</strong>
+							<p>치과 전문의가 감수한 정보를 알기 쉽게! <br>고객님의 관심을 기반으로 맞춤 정보를 드려요.</p>
+							<button type="button" class="btn-txt" onclick="openPopup('ET-010101_mo');"><span>스마일케어 구독하기<i class="ico-arrow2-point">&nbsp;</i></span></button>
 						</div>
-					</section>
-
-					<!-- [LayerPopup] 공유하기 -->
-					<section class="ui-modal type-guide" id="popShare">
-						<div class="ui-modal-wrap">
-							<div class="ui-modal-cont">
-								<div class="inner">
-									<h2 class="guide-tit">공유하기</h2>
-								</div>
-								<div class="btn-wrap share-btns">
-									<a href="#" class="btn-share-sp kakao"><span>카카오톡</span></a>
-									<a href="#" class="btn-share-sp facebook"><span>페이스북</span></a>
-									<a href="#" class="btn-share-sp kakaostory"><span>카카오스토리</span></a>
-									<a href="#" class="btn-share-sp linkcopy"><span>링크복사</span></a>
-								</div>
-							</div>
-							<button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'popShare'})"><span class="hidden">닫기</span></button>
-						</div>
-					</section>
+					</div>
+					<!-- // E : 구독하기 -->
 
 
           <script type="text/javascript" src="/js/common/lib/swiper-4.4.1/swiper.min.js"></script> <!-- swiper -->
@@ -354,38 +266,38 @@
 							}
 						});
 
-						var chkScore = {
-							flag: false,
-							fnChk: function() {
-								var $rdos = document.getElementsByName('rdoGroupScore')
-									, _flag = false;
-								for(var i = 0; i < $rdos.length; i++) {
-									_flag = $rdos[i].checked ? true : _flag;
-								}
-								if (_flag) { // 체크 시
-									alert('콘텐츠 만족도 체크에 참여해 주셔서 감사합니다.');
-									$plugins.uiModalClose({ id:'popScore'});
-									chkScore.flag = true;
-								} else { // 미체크 시
-									alert('콘텐츠 만족도를 별점으로 체크해주세요.');
-								}
-							}
-						}
+						// var chkScore = {
+						// 	flag: false,
+						// 	fnChk: function() {
+						// 		var $rdos = document.getElementsByName('rdoGroupScore')
+						// 			, _flag = false;
+						// 		for(var i = 0; i < $rdos.length; i++) {
+						// 			_flag = $rdos[i].checked ? true : _flag;
+						// 		}
+						// 		if (_flag) { // 체크 시
+						// 			alert('콘텐츠 만족도 체크에 참여해 주셔서 감사합니다.');
+						// 			$plugins.uiModalClose({ id:'popScore'});
+						// 			chkScore.flag = true;
+						// 		} else { // 미체크 시
+						// 			alert('콘텐츠 만족도를 별점으로 체크해주세요.');
+						// 		}
+						// 	}
+						// }
 
 						;(function($, win, doc, undefined) {
 						$(doc).ready(function(){
-							scrollCheck(); // [To.개발] 쿠키 또는 수집 데이터에 참여 데이터가 없는 경우 해당 함수 실행
+							// scrollCheck(); // [To.개발] 쿠키 또는 수집 데이터에 참여 데이터가 없는 경우 해당 함수 실행
 
-							function scrollCheck() {
-								$(doc).on('scroll', function(){
-									if (!chkScore.flag) {
-										var $firstItem = $('.smilecare-list li').eq(0);
-										if ($('html').prop('scrollTop') + $(win).outerHeight() >= $firstItem.offset().top + $firstItem.outerHeight()) {
-											openPopup('popScore', false, {ps:'bottom'});
-										}
-									};
-								})
-							}
+							// function scrollCheck() {
+							// 	$(doc).on('scroll', function(){
+							// 		if (!chkScore.flag) {
+							// 			var $firstItem = $('.smilecare-list li').eq(0);
+							// 			if ($('html').prop('scrollTop') + $(win).outerHeight() >= $firstItem.offset().top + $firstItem.outerHeight()) {
+							// 				openPopup('popScore', false, {ps:'bottom'});
+							// 			}
+							// 		};
+							// 	})
+							// }
 						});
 						})(jQuery, window, document);
 					</script>

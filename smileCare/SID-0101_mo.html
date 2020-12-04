@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="ko">
 <head>
@@ -49,145 +48,54 @@
 			<a href="#none" id="gnb" class="btn_gnb_open new">전체메뉴 열기</a>
     </header>
     <section id="container">
-			<!-- contents start 
-			=============================================-->
-			<div class="contents smilecare"> <!-- smilecare 클래스 필요 -->
+      <!-- contents start 
+      =============================================-->
+      <div class="contents smilecare"> <!-- smilecare 클래스 필요 -->
         <link type="text/css" rel="stylesheet" href="./css/smileCare_mo.css" />
-				<script type="text/javascript" src="./js/ui.common.js"></script>
-				<script type="text/javascript" src="./js/smileCare.js"></script>
-        
-        <!-- Start : SID-0200_mo -->
-        <div class="base-body smilecare-wrap">
-					<div class="smilecare-list">
-							<div class="list-head">
-									<div class="top">
-										<a href="javascript:void(0);" onclick="openPopup('SID-0002_mo');">
-											<span>단단치아케어
-												<img src="./img/ico_arrow_down_w.png">
-											</span>
-										</a>
-									</div>
-									<div class="bottom">
-										<!-- 카테고리 일때-->
-										<span>총 <strong>10</strong> 건의 콘텐츠 </span>
-										<!-- 패키지 일때
-										<span>총 <strong>10</strong> 건의 챕터 </span>
-										-->
-										<span class="form-item">
-												<label for="category" class="hidden">정렬선택</label>
-												<select id="category" class="type-ico">
-														<option value="">인기순</option>
-														<option value="1">최신순</option>
-													</select>
-										</span>
+          <script type="text/javascript" src="./js/ui.common.js"></script>
+          <script type="text/javascript" src="./js/smileCare.js"></script>
+  
+          <!-- Start : SID-0101_mo -->
+					<section class="ui-modal type-guide" id="SID-0101_mo">
+						<div class="ui-modal-wrap">
+							<div class="ui-modal-cont">
+								<div class="with-visual">
+									<img src="./img/bg_start_mo.png" alt="" width="52">
+									<div class="inner">
+										<h2 class="guide-tit">부담 없이, 무료로 시작하세요.</h2>
+										<p class="guide-desc">치과 전문의가 감수한 정보를 알기 쉽게!<br>고객님의 관심을 기반으로 맞춤 정보를 드려요.</p>
 									</div>
 								</div>
-								<div class="list-cont">
-									<ul class="type-img">
-										<li class="new">
-											<a href="#">
-												<div class="li-img">
-														<div class="img-item">
-																<img src="img/@temp/img_category01.png" alt="">
-														</div>
-												</div>
-												<div class="li-txt">
-													<div class="tag">
-														<!-- 패키지 일때 <i> 태그 추가 -->
-														<i>1</i>
-														질환<span class="sub-tag">치아우식</span>
-														<span class="sharp-tag">#충치치료</span>
-													</div>
-													<span class="title">치아우식증, 장기간 방치하면 임플란트 시술 받아야 할 필요 있어</span>
-													<p class="desc primary">이가 많이 시린 사람</p>
-												</div>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<div class="li-img">
-														<div class="img-item">
-																<img src="img/@temp/img_category02.png" alt="">
-														</div>
-												</div>
-												<div class="li-txt">
-													<div class="tag">
-														질환<span class="sub-tag">치경부마모증</span>
-														<span class="sharp-tag">#치아치료</span>
-													</div>
-													<span class="title">닦을수록 치아 망가져? '치경
-															부마모증' 원인과 악화요인</span>
-													<p class="desc primary">이를 강하게 닦는 사람</p>
-												</div>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<div class="li-img">
-														<div class="img-item">
-																<img src="img/@temp/img_category03.png" alt="">
-														</div>
-												</div>
-												<div class="li-txt">
-													<div class="tag">
-														치료<span class="sub-tag">임플란트</span>
-														<span class="sharp-tag">#임플란트</span>
-													</div>
-													<span class="title">임플란트, 정기적 전문의 관리 
-															받아야 성공률 높아져</span>
-													<p class="desc primary">이를 강하게 닦는 사람</p>
-												</div>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<div class="li-img">
-														<div class="img-item">
-																<img src="img/@temp/img_category04.png" alt="">
-														</div>
-												</div>
-												<div class="li-txt">
-													<div class="tag">
-														치료<span class="sub-tag">브릿지</span>
-														<span class="sharp-tag">#임플란트</span>
-													</div>
-													<span class="title">발치했다면 브릿지, 임플란트 
-															신중히 선택</span>
-													<p class="desc primary">최근에 발치를 한 사람</p>
-												</div>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<div class="li-img">
-														<div class="img-item">
-																<img src="img/@temp/img_category05.png" alt="">
-														</div>
-												</div>
-												<div class="li-txt">
-													<div class="tag">
-														검사<span class="sub-tag">치아우식활성검사</span>
-														<span class="sharp-tag">#치아관리</span>
-													</div>
-													<span class="title">그 많던 치아는 어디로 갔을까? 
-															고령사회 치아 관리법</span>
-													<p class="desc primary">치근우식이 우려되는 노인 연령층</p>
-												</div>
-											</a>
-										</li>
-									</ul>
+								<div class="btn-wrap tac">
+									<button type="button" class="btn-round" 
+										onclick="openPopup('SID-0101_mo');
+									"><span>스마일케어 구독하기<i class="ico-arrowo-dark">&nbsp;</i></span></button>
 								</div>
-					</div>
-					
-					<script type="text/javascript">
-						
-					</script>
-				</div>
-        <!-- // End : SID-0200_mo -->
+							</div>
+							<button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'SID-0101_mo'})"><span class="hidden">닫기</span></button>
+						</div>
+					</section>
+          <!-- // End : SID-0101_mo -->
+          <script type="text/javascript">
+              ;(function($, win, doc, undefined) {
+                  $(doc).ready(function(){
+                      
+                      // popup run!!
+                      $plugins.uiModalOpen({
+                          id:'SID-0101_mo',
+													full:false,
+													ps: 'bottom',
+                          callback: function(v){
+                              console.log('open :', v );
+                          }
+                      });
 
-      </div> <!-- // .contents -->
-			<!-- // contents end 
-			=============================================-->
+                  });
+              })(jQuery, window, document);
+          </script>
+        </div> <!-- // .contents -->
+        <!-- // contents end 
+        =============================================-->
     </section>
   </div>
 </body>

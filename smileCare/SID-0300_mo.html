@@ -69,7 +69,7 @@
 								</div>
 								<strong class="tag-new">NEW</strong>
 							</div>
-							<h2 class="con-tit">손상된 치아 신경, <br>어떻게 회복해야 할까요?</h2>
+							<h2 class="cont-tit">손상된 치아 신경, <br>어떻게 회복해야 할까요?</h2>
 							<div class="cont-desc">
 								<div class="recommend">
 									<span class="tag-best">이런분께 추천드려요!</span>
@@ -134,12 +134,12 @@
 					<div class="smilecare-list">
 						<div class="list-title">이런 콘텐츠는 어떠세요?</div>
 						<div class="list-cont bdb-full">
-							<ul class="type-img">
+							<ul class="cont-item type-img">
 								<li class="current"> <!-- [To.개발] 현재 보고 있는 콘텐츠일 시, .current 클래스 추가 -->
 									<a href="#">
 										<div class="li-img">
 												<div class="img-item">
-														<img src="img/@temp/img_category01.png" alt="">
+														<img src="img/@temp/@img_category1.jpg" alt="">
 												</div>
 										</div>
 										<div class="li-txt">
@@ -157,7 +157,7 @@
 									<a href="#">
 										<div class="li-img">
 												<div class="img-item">
-														<img src="img/@temp/img_category02.png" alt="">
+														<img src="img/@temp/@img_category2.jpg" alt="">
 												</div>
 										</div>
 										<div class="li-txt">
@@ -212,9 +212,12 @@
 								$wrap.animate({
 									height: fullH,
 								}, 250, function(){
-									$('html, body').animate({
-										scrollTop: $('.cont-body').offset().top
-									},250)
+									// 컨텐츠 위에 있을 때 자동 스크롤
+									if ($(document).scrollTop() < $('.cont-body').offset().top) {
+										$('html, body').animate({
+											scrollTop: $('.cont-body').offset().top
+										},250)
+									}
 								});
 							} else {
 								$wrap.addClass('preview').css('height', fullH);
@@ -225,79 +228,8 @@
 							$ts.toggleClass('preview');
 						}
 
-						/* 스마일케어 메인 컨텐츠
-						============================ */
-						var sldMain = new Swiper('.slide-main', {
-							speed: 700,
-							loop: true,
-							autoplay: {
-								delay: 5000,
-								disableOnInteraction: false
-							},
-							pagination: {
-								el: '.swiper-pagination',
-								type: 'bullets',
-							},
-							effect: 'fade',
-							fadeEffect: {
-								crossFade: true
-							},
-						});
-
-						var sldPackage = new Swiper('.slide-package', {
-							speed: 700,
-							loop: true,
-							init: false,
-							spaceBetween: 20,
-							roundLengths: true,
-							autoplay: {
-								delay: 4000,
-								disableOnInteraction: false
-							},
-							pagination: {
-								el: '.swiper-pagination',
-								type: 'bullets',
-							},
-							breakpoints: {
-								320: {
-								},
-								375: {
-								},
-							}
-						});
-
-						// var chkScore = {
-						// 	flag: false,
-						// 	fnChk: function() {
-						// 		var $rdos = document.getElementsByName('rdoGroupScore')
-						// 			, _flag = false;
-						// 		for(var i = 0; i < $rdos.length; i++) {
-						// 			_flag = $rdos[i].checked ? true : _flag;
-						// 		}
-						// 		if (_flag) { // 체크 시
-						// 			alert('콘텐츠 만족도 체크에 참여해 주셔서 감사합니다.');
-						// 			$plugins.uiModalClose({ id:'popScore'});
-						// 			chkScore.flag = true;
-						// 		} else { // 미체크 시
-						// 			alert('콘텐츠 만족도를 별점으로 체크해주세요.');
-						// 		}
-						// 	}
-						// }
-
 						;(function($, win, doc, undefined) {
 						$(doc).ready(function(){
-							// scrollCheck(); // [To.개발] 쿠키 또는 수집 데이터에 참여 데이터가 없는 경우 해당 함수 실행
-
-							// function scrollCheck() {
-							// 	$(doc).on('scroll', function(){
-							// 		if (!chkScore.flag) {
-							// 			var $firstItem = $('.smilecare-list li').eq(0);
-							// 			if ($('html').prop('scrollTop') + $(win).outerHeight() >= $firstItem.offset().top + $firstItem.outerHeight()) {
-							// 				openPopup('popScore', false, {ps:'bottom'});
-							// 			}
-							// 		};
-							// 	})
-							// }
 						});
 						})(jQuery, window, document);
 					</script>

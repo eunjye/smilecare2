@@ -141,7 +141,10 @@
 .smilecare-list .list-cont .cont-item a:hover{text-decoration: none;}
 .smilecare-list .list-cont .cont-item>li{position:relative;display:inline-block;vertical-align:middle;margin-right:43px;width:338px;height:440px;padding:30px;margin-top:40px;border:1px solid #e8e8e8;box-sizing:border-box;}
 .smilecare-list .list-cont .cont-item>li:nth-child(3n){margin-right:0}
-.smilecare-list .list-cont .cont-item .li-img{display:block;width:168px;height:168px;border:1px solid #dce0e2;border-radius:6px;box-sizing:border-box;}
+.smilecare-list .list-cont .cont-item.col2>li{width:528px;margin-right:44px;}
+.smilecare-list .list-cont .cont-item.col2>li:nth-child(2n){margin-right:0}
+.smilecare-list .list-cont .cont-item>li.current:after {position:absolute; top:0; left:0; right:0; display:block; height:100%; background:#E2E2E2; opacity:.5; content:""; }
+.smilecare-list .list-cont .cont-item .li-img{display:block;width:168px;height:168px;border:1px solid #dce0e2;border-radius:6px;box-sizing:border-box; overflow:hidden;}
 .smilecare-list .list-cont .cont-item .li-img img{display:block;width:100%}
 .smilecare-list .list-cont .cont-item .li-txt{font-size:19px;color:#222;padding-top:25px}
 .smilecare-list .list-cont .cont-item .li-txt .tag{color:#008bec;font-weight:700}
@@ -149,6 +152,7 @@
 .smilecare-list .list-cont .cont-item .li-txt .tag .sharp-tag{color:#999;margin-left:17px;font-weight:400}
 .smilecare-list .list-cont .cont-item .li-txt .title{display:block;font-size:24px;font-weight:700;margin:10px 0 20px}
 .list-cont .cont-item .new .li-txt .title:after{content:"N";display:inline-block;width:20px;height:20px;background:#ff4646;color:#fff;border-radius:50%;font-size:12px;font-weight:400;text-align:center;vertical-align:middle;margin:-3px 0 0 9px}
-.list-cont .cont-item .li-txt .primary{background:url('../img/ico_good02_mo.png') 4px 2px/22px auto no-repeat;padding-left:42px}
+.list-cont .cont-item .li-txt .primary{background:url('../img/ico_good02.png') 4px 2px/22px auto no-repeat;padding-left:42px}
 .list-cont .cont-item i.num{position:absolute;top:30px;right:30px;display:block;width:32px;height:32px;text-align:center;background:#008bec;border-radius:4px;color:#fff;font-size:22px;font-weight:700}
 .list-cont .views { display:block; margin-bottom:3px; background:url('../img/ico_views_mo.png') 0 4px/30px auto no-repeat; padding:0 0 0 42px; color:#999}
+.list-cont .num-top { position:absolute; top:30px; right:20px; }

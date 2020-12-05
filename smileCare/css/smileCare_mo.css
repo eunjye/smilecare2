@@ -419,12 +419,12 @@ select{display:inline-block;position:relative;vertical-align:middle;width:auto;h
 .ui-modal.type-guide .ui-modal-wrap { width:100%; background:#36363A; border-radius:20px 20px 0 0; color:#fff; }
 .ui-modal.type-guide.open.type-normal.ps-bottom .ui-modal-wrap { left:0; transform:none; bottom:0; }
 .ui-modal.type-guide .ui-modal-cont { padding:35px 15px; }
-.ui-modal.type-guide .btn-wrap { margin-top:15px; }
 
 /* 부담없이, 무료로 시작하세요 */
-.with-visual { display:flex; justify-content:space-between; align-items:flex-start; }
+.with-visual .visual-area { display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; }
 .with-visual img { flex:0 0 auto; }
 .with-visual .inner { flex:1 1 auto; padding-left:15px; }
+.with-visual .btn-wrap { flex:0 0 100%; margin-top:15px; }
 .guide-tit { font-size:18px; font-weight:700; }
 .guide-desc { opacity:.8; line-height:1.6em; font-size:14px; font-weight:400; margin-top:7px; }
 
@@ -1089,7 +1089,7 @@ a.btn-link { display:inline-block; height:30px; line-height:27px;  vertical-alig
 /* section : subscribe */
 .main-subscribe { background:#36363A; color:#fff; }
 .main-subscribe .smile-inner { display:flex; justify-content:space-between; align-items:center; }
-.main-subscribe p { flex:1 1 auto; padding-right:10%; font-size:14px; line-height:1.6em; }
+.main-subscribe p { flex:1 1 auto; padding-right:15px; font-size:14px; line-height:1.6em; }
 .main-subscribe p strong { display:block; font-weight:700; }
 .main-subscribe button { flex:0 0 auto; }
 
@@ -1105,11 +1105,11 @@ a.btn-link { display:inline-block; height:30px; line-height:27px;  vertical-alig
 /* Smilecare Detail Page
 ============================ */
 .tag-new { display:inline-block; vertical-align:middle; padding:0 7px; height:17px; line-height:13px; border-radius:2px; letter-spacing:0.025em; background:#FF4646; color:#fff; font-size:10px; font-weight:400; }
-.tag-best { display:inline-block; background:url('../img/tag-best_mo.png') 0 3px/14px auto no-repeat; padding:0 0 0 22px; color:#b0dfff; font-size:12px; }
+.tag-best { display:inline-block; background:url('../img/tag_best_mo.png') 0 3px/14px auto no-repeat; padding:0 0 0 22px; color:#b0dfff; font-size:12px; }
 
 /* content - header */
 .cont-header { padding:18px 15px 20px; background:#008BEC; color:#fff; }
-.con-tit { font-size:26px; }
+.cont-tit { font-size:26px; }
 .tags-area { display:flex; justify-content:space-between; align-items:flex-start; overflow:hidden; margin-bottom:5px; }
 .tags-area .items { margin-left:-10px; }
 .tags-area .items span { display:inline-block; vertical-align:middle; color:#b0dfff; font-size:12px; }
@@ -1161,7 +1161,7 @@ a.btn-list { font-size:14px; color:#222; text-align:left; display:inline-block; 
 .rdo-score { position:relative; display:flex; justify-content:space-between; align-items:flex-start; }
 .rdo-score label { display:inline-block; margin-right:7px; font-size:11px; color:#999; text-align:center; }
 .rdo-score input:checked + label { color:#000; font-weight:500; }
-.rdo-score input:checked + label:before { animation:aniBururu linear .15s 2 both; }
+.rdo-score input:checked + label:before { animation:aniTongTong linear .15s 2 both; }
 .rdo-score label:before { display:block; width:39px; height:39px; margin:0 auto 5px; background:url('../img/sp_score_mo.png') 0 0/39px auto no-repeat; content:""; }
 .rdo-score input { position:absolute; top:0; left:0; opacity:0; width:1px; height:1px; overflow:hidden; }
 .rdo-score .rdo-good:before { background-position-y:-39px; }
@@ -1181,7 +1181,7 @@ a.btn-list { font-size:14px; color:#222; text-align:left; display:inline-block; 
 .main-subscribe2 p { color:#000; }
 .main-subscribe2 .btn-txt { margin-top:17px; }
 
-@keyframes aniBururu {
+@keyframes aniTongTong {
 	0% { transform:translateY(0); }
 	25% { transform:translateY(2px); }
 	50% { transform:translateY(0); }

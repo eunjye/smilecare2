@@ -22,7 +22,7 @@
 <script type="text/javascript" src="/js/lib/jquery-1.11.2.min.js"></script>
 </head>
 <body>
-	<div id="wrap">
+	<div id="wrap" class="only-pub">
 		<div class="skip_nav">
 				<strong class="blind">건너뛰기 링크</strong>
 				<ul>
@@ -766,123 +766,123 @@
 							, sldPackage;
 
 						;(function($, win, doc, undefined) {
-						$(doc).ready(function(){
-							
-							// [To.개발] 쿠키 또는 수집 데이터에 구독 로그 정보가 없을 경우 실행
-							openPopup('SID-0101', function(){
-									$(doc).on('scroll', function(){
-										if (!!$('.ui-modal.open').not('#SID-0101').length) {
-											return false;
-										}
-										$plugins.uiModalClose({
-											id: 'SID-0101'
+							$(doc).ready(function(){
+								
+								// [To.개발] 쿠키 또는 수집 데이터에 구독 로그 정보가 없을 경우 실행
+								openPopup('SID-0101', function(){
+										$(document).on('scroll', function(){
+											if (!!$('.ui-modal.open').not('#SID-0101').length) {
+												return false;
+											}
+											$plugins.uiModalClose({
+												id: 'SID-0101'
+											})
 										})
-									})
-							}, {ps:'bottom'})
+								}, {ps:'bottom'})
 
-							/* set main slider
-							=============================== */
-							sldMain = $('.slide-main .bx-wrapper').bxSlider({
-								speed: 300,
-								pause: 5000,
-								auto: true,
-								infiniteLoop: true,
-								pager:true, 
-								nextText: '다음 슬라이드',
-								prevText: '이전 슬라이드',
-								controls: true,
-								onAfterSlide: function (newIdx, leng, $el){
-									$('.slide-main .bx-slide.on').removeClass('on');
-									$el.addClass('on');
-								},
-							});
-
-							/* set package slider
-							=============================== */
-							sldPackage = {
-								slide: $('.slide-package .slider').bxSlider({
-									slideWidth: 338,
+								/* set main slider
+								=============================== */
+								sldMain = $('.slide-main .bx-wrapper').bxSlider({
 									speed: 300,
 									pause: 5000,
-									auto: false,
-									infiniteLoop: false,
+									auto: true,
+									infiniteLoop: true,
 									pager:true, 
 									nextText: '다음 슬라이드',
 									prevText: '이전 슬라이드',
-									minSlides:3,
-									controls: false,
+									controls: true,
 									onAfterSlide: function (newIdx, leng, $el){
+										$('.slide-main .bx-slide.on').removeClass('on');
+										$el.addClass('on');
 									},
-									onBeforeSlide: function(newIdx, leng, $el) {
-										$('.slide-package .control a').eq(leng-1).hide();
-										$('.slide-package .control a').eq(leng-2).hide();
+								});
 
-										// button setting
-										$('.slide-package .slider-btn3').prop('disabled', false);
-										if (newIdx < 1){
-											$('.slide-package .btn-prev').prop('disabled', true);
-										} else if (newIdx >= leng - 3) {
-											$('.slide-package .btn-next').prop('disabled', true);
-										} 
-										if (newIdx > leng -3) {
-										}
-									},
-								}),
-								timer: {},
-								autoStart: function(){
-									clearInterval(sldPackage.timer);
-									sldPackage.timer = setInterval(function(){
-										if (sldPackage.slide.getCurrentSlide() > sldPackage.slide.getSlideCount() - 4) {
-											sldPackage.slide.goToFirstSlide();
-										} else {
-											sldPackage.slide.goToNextSlide();
-										}
-									}, 6000)
+								/* set package slider
+								=============================== */
+								sldPackage = {
+									slide: $('.slide-package .slider').bxSlider({
+										slideWidth: 338,
+										speed: 300,
+										pause: 5000,
+										auto: false,
+										infiniteLoop: false,
+										pager:true, 
+										nextText: '다음 슬라이드',
+										prevText: '이전 슬라이드',
+										minSlides:3,
+										controls: false,
+										onAfterSlide: function (newIdx, leng, $el){
+										},
+										onBeforeSlide: function(newIdx, leng, $el) {
+											$('.slide-package .control a').eq(leng-1).hide();
+											$('.slide-package .control a').eq(leng-2).hide();
+
+											// button setting
+											$('.slide-package .slider-btn3').prop('disabled', false);
+											if (newIdx < 1){
+												$('.slide-package .btn-prev').prop('disabled', true);
+											} else if (newIdx >= leng - 3) {
+												$('.slide-package .btn-next').prop('disabled', true);
+											} 
+											if (newIdx > leng -3) {
+											}
+										},
+									}),
+									timer: {},
+									autoStart: function(){
+										clearInterval(sldPackage.timer);
+										sldPackage.timer = setInterval(function(){
+											if (sldPackage.slide.getCurrentSlide() > sldPackage.slide.getSlideCount() - 4) {
+												sldPackage.slide.goToFirstSlide();
+											} else {
+												sldPackage.slide.goToNextSlide();
+											}
+										}, 6000)
+									}
 								}
-							}
-							// run!!
-							sldPackage.slide.init;
-							sldPackage.slide.reloadShow();
-							sldPackage.slide.goToSlide(0);
-							sldPackage.autoStart();
-
-
-							// IE Check for thumbnails animations
-							var agt = navigator.userAgent.toLowerCase(); 
-							if ( (navigator.appName == 'Netscape' && agt.indexOf('trident') != -1) || (agt.indexOf("msie") != -1)) {
-								$('.slide-package .package-thumbs').addClass('ie');
-							}
-
-							// slide hover evt run!!
-							$('.slide-package').on({
-								'mouseenter': function(){
-									clearInterval(sldPackage.timer);
-								},
-								'mouseleave': function(){
-									sldPackage.autoStart();
-								}
-							})
-
-							// slide buttons evt run!!
-							$('.slide-package .slider-btn3').off('click.sldPrevNext').on('click.sldPrevNext', function(){
-								var $wrap = $('.slide-package')
-									, $ts = $(this)
-									, isNext = $ts.hasClass('btn-next') ? true : false;
-
-								if ($wrap.hasClass('moving')) return;
-
-								// timer reset
-								clearInterval(sldPackage.timer);
+								// run!!
+								sldPackage.slide.init;
+								sldPackage.slide.reloadShow();
+								sldPackage.slide.goToSlide(0);
 								sldPackage.autoStart();
 
-								if (isNext){
-									sldPackage.slide.goToNextSlide();
-								} else {
-									sldPackage.slide.goToPreviousSlide();
+
+								// IE Check for thumbnails animations
+								var agt = navigator.userAgent.toLowerCase(); 
+								if ( (navigator.appName == 'Netscape' && agt.indexOf('trident') != -1) || (agt.indexOf("msie") != -1)) {
+									$('.slide-package .package-thumbs').addClass('ie');
 								}
-							})
-							
-						});
+
+								// slide hover evt run!!
+								$('.slide-package').on({
+									'mouseenter': function(){
+										clearInterval(sldPackage.timer);
+									},
+									'mouseleave': function(){
+										sldPackage.autoStart();
+									}
+								})
+
+								// slide buttons evt run!!
+								$('.slide-package .slider-btn3').off('click.sldPrevNext').on('click.sldPrevNext', function(){
+									var $wrap = $('.slide-package')
+										, $ts = $(this)
+										, isNext = $ts.hasClass('btn-next') ? true : false;
+
+									if ($wrap.hasClass('moving')) return;
+
+									// timer reset
+									clearInterval(sldPackage.timer);
+									sldPackage.autoStart();
+
+									if (isNext){
+										sldPackage.slide.goToNextSlide();
+									} else {
+										sldPackage.slide.goToPreviousSlide();
+									}
+								})
+								
+							});
 						})(jQuery, window, document);
 					</script>
 				</div>

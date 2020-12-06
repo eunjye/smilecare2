@@ -394,7 +394,7 @@
 			remove ? $modal.remove() : '';
 			!!endfocus ? endfocus.focus()  :'';
 			if ($modal.hasClass('type-dark')) {
-				var _docY = $('body').prop('scrollTop');
+				var _docY = $('html').prop('scrollTop');
 				$('html, body').removeClass('fullmodal-open');
 				$('html').scrollTop(_docY);
 			}

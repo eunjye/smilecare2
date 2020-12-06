@@ -233,7 +233,11 @@ function autoCompleteEmail(wrap, option) {
 // popup load by ajax
 function openPopup(id, callback, opt){
 	if (!$('#'+id).length) {
-		loadPopup(id);
+		if ($('#wrap').hasClass('only-pub')) { // [20201207/jh] only-pub : 퍼블 파일 확인용 함수. 
+			loadPopup2(id);
+		} else {
+			loadPopup(id);
+		}
 	} else {
 		$('#'+id).insertAfter($('.ui-modal').last());
 	}
@@ -277,6 +281,24 @@ function openPopup(id, callback, opt){
 		});
 	}
 */
+	function loadPopup2(id){
+		$.ajax({
+			type: 'GET',
+			url: '/smilecare/'+id+'.html',
+			cache: false,
+			async: false,
+			headers: {
+				"cache-control" : "no-cache",
+				"pragma" : "no-cache"
+			},
+			error: function(request, status, err) {
+				console.log("error");
+			},
+			success: function(v) {
+				$('.smilecare').append($(v).find('#'+id));
+			}
+		});
+	}
 }
 
 function fixedBanner(el) {

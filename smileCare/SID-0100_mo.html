@@ -383,6 +383,7 @@
 							
 							// [To.개발] 쿠키 또는 수집 데이터에 구독 로그 정보가 없을 경우 실행
 							openPopup('SID-0101_mo', function(){
+								setTimeout(function(){
 									$(doc).on('scroll', function(){
 										if (!!$('.ui-modal.open').not('#SID-0101_mo').length) {
 											return false;
@@ -391,6 +392,7 @@
 											id: 'SID-0101_mo'
 										})
 									})
+								}, 1000)
 							}, {ps:'bottom'})
 
 

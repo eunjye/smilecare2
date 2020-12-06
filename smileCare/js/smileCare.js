@@ -232,15 +232,17 @@ function autoCompleteEmail(wrap, option) {
 
 // popup load by ajax
 function openPopup(id, callback, opt){
-	if (!$('#'+id).length) {
-		if ($('#wrap').hasClass('only-pub')) { // [20201207/jh] only-pub : 퍼블 파일 확인용 함수. 
+
+	if ($('#wrap').hasClass('only-pub')) { // [20201207/jh] only-pub : 퍼블 파일 확인용 함수. 
+		
+		if (!$('#'+id).length) {
 			loadPopup2(id);
 		} else {
-			loadPopup(id);
+			$('#'+id).insertAfter($('.ui-modal').last());
 		}
-	} else {
-		$('#'+id).insertAfter($('.ui-modal').last());
 	}
+
+	// [20201207/jh] 옵션 추가
 	var _opt = $.extend(true, {
 		ps: 'center',
 		full: false
@@ -581,7 +583,7 @@ function agreeCheck(ts, v) {
 	typeof(ts) !== 'number' && $ts.addClass('active').siblings().removeClass('active');
 }
 
-/* Package Menu */
+/* [20201207/jh/add] Package Menu */
 var PM = { 
 	originH: 0,
 	previewH: 0,

@@ -21,6 +21,7 @@ caption{visibility:hidden;width:0;height:0;margin:0;padding:0;font-size:0;line-h
 b, strong{font-weight:500}
 i, em{font-weight:400;font-style:normal}
 button{border:0;background-color:transparent}
+input:-webkit-autofill {-webkit-box-shadow: 0 0 0 30px #fff inset !important;}
 /* basic
 ------------------------------------------ */
 /* html, body{width:100%;height:100%} 주석풀지 말아요! */
@@ -159,6 +160,11 @@ input::placeholder{color:#ccc;font-size:19px;font-weight:400}
 .ico-quo2{display:inline-block;width:15px;height:15px;background:url(../img/icon.png) no-repeat -85px -25px / 400px;margin-bottom:5px}
 .ico-hand{position:relative}
 .ico-hand:after{content:"";display:block;position:absolute;top:12px;left:0;width:40px;height:40px;background:url(../img/icon.png) no-repeat -225px 0 / 400px}
+.ico-x { position:relative; display:inline-block; width:12px; height:12px; vertical-align:middle; }
+.ico-x:before,
+.ico-x:after { position:absolute; top:50%; left:50%; width:13px; height:1px; background:#222; display:block; transform:translate(-50%, -50%) rotate(45deg); content:""; }
+.ico-x:after { transform:translate(-50%, -50%) rotate(135deg); }
+.btn-round-s .ico-x { margin:-2px 10px 0 0; }
 
 .btn-wrap{width:100%;text-align:center;margin:23px 0 0}
 .ui-modal-cont .btn-wrap.col2 .btn-base { float:right; width:calc(50% - 5px); height:auto; line-height:1.3em; min-height:40px; padding:9px 10px 9px; }
@@ -173,6 +179,7 @@ a.btn-base { line-height:39px; }
 a.btn-base.small { height:36px; line-height:36px; border-radius:5px; font-size:13px; padding:0 18px; }
 .btn-base2{display:inline-block;font-size:13px;padding:0 10px;font-weight:400;height:40px;line-height:37px;color:#008bec;background:#fff;border:1px solid #008bec;letter-spacing:-0.075em;position:relative;transition:background 0.2s ease-in, color 0.2s ease-in}
 .btn-round{display:inline-block;font-size:14px;padding:0 20px;font-weight:400;height:40px;border-radius:20px;color:#32333a;border:1px solid #32333a; font-weight:700; background:#fff;line-height:33px;letter-spacing:-0.075em;position:relative}
+.btn-round-s{display:inline-block;font-size:13px;padding:0 12px;font-weight:400;height:24px;border-radius:20px;color:#32333a; font-weight:700; background:#fff;line-height:20px;letter-spacing:-0.075em;position:relative}
 .btn-tooltip{vertical-align:middle;display:inline-block;width:20px;height:20px;background:transparent url(../img/icon.png) no-repeat -35px 0 / 400px;border:0}
 .btn-close{display:block;width:30px;height:30px;background:transparent url(../img/btn_close.png) no-repeat 0 0 / 30px}
 .btn-close:before,
@@ -1098,9 +1105,12 @@ a.btn-link { display:inline-block; height:30px; line-height:27px;  vertical-alig
 .main-cancel .cancel-txt { color:#666; }
 
 /* section : keyword */
-.find-keyword { margin:15px -4px 0; }
+.find-keyword { margin:15px -4px 0; text-align:left; }
 .find-keyword li { display:inline-block; margin:6px 4px; vertical-align:middle; }
-.find-keyword button { vertical-align:middle; padding:0 16px; height:30px; border-radius:15px; background:#EBEBEB; color:#32333a; font-size:13px; }
+.find-keyword button,
+.find-keyword a { display:inline-block; vertical-align:middle; padding:0 16px; height:30px; line-height:30px; border-radius:15px; background:#EBEBEB; color:#32333a; font-size:13px; }
+.find-keyword.type-dark button, 
+.find-keyword.type-dark a { background:#393a3b; color:#8e8e8e; }
 
 /* Smilecare Detail Page
 ============================ */
@@ -1128,6 +1138,8 @@ a.btn-link { display:inline-block; height:30px; line-height:27px;  vertical-alig
 .cont-inner.preview:after { opacity:1; transform:translateY(0%); }
 .btn-more-view { z-index:1; display:block; position:relative; width:100%; height:48px; background:#fff; text-align:center; color:#008BEC; font-size:13px; }
 .btn-more-view:after { display:inline-block; width:6px; height:6px; border-top:1px solid #008BEC; border-right:1px solid #008BEC; transform:rotate(135deg); transition:transform linear .25s; vertical-align:middle; margin:-7px 0 0 10px; content:""; }
+.btn-more-view.transparent { background:none; color:#8e8e8e; }
+.btn-more-view.transparent:after { border-color:#fff; }
 .btn-more-view.preview:after { margin-top:0; transform:rotate(-45deg); }
 .btn-more-view.preview .preview { display:inline; }
 .btn-more-view.preview .full { display:none; }
@@ -1180,6 +1192,40 @@ a.btn-list { font-size:14px; color:#222; text-align:left; display:inline-block; 
 .main-subscribe2 .title { display:block; font-size:17px; color:#000; font-weight:700; margin-bottom:10px; }
 .main-subscribe2 p { color:#000; }
 .main-subscribe2 .btn-txt { margin-top:17px; }
+
+/* popup : search */
+.search-area { display:flex; width:100%; justify-content:space-between; align-items:stretch; margin-bottom:30px; }
+.search-area .search-box { flex:1 1 auto; }
+.search-area .utils { flex:0 0 0; transition:flex linear .2s; overflow:hidden;}
+.search-area.focus .utils { flex:0 0 50px; }
+.search-area .btn-txt { display:block; width:100%; height:100%; font-size:14px; color:#8e8e8e; padding-left:10px; white-space:nowrap; }
+.search-box { position:relative; }
+.search-box:after { position:absolute; top:calc(50% - 10px); left:20px; display:block; width:20px; height:22px; background:url('../img/ico_search_mo.png') 0 0/20px auto no-repeat; content:""; }
+.search-box input { width:100%; }
+.search-box .btn-clear { position:absolute; top:calc(50% - 13px); right:15px; }
+.btn-clear { position:relative; display:inline-block; vertical-align:middle; border-radius:50%; background:#bcbcbc; width:24px; height:24px; }
+.btn-clear:before,
+.btn-clear:after { position:absolute; top:calc(50% - 1px); left:calc(50% - 6px); width:12px; height:1px; border-top:1px solid #fff; border-right:1px solid #fff; transform:rotate(45deg); box-sizing:border-box; content:""; }
+.btn-clear:after { transform:rotate(135deg); }
+.inp-base.type-search { height:47px; font-size:16px; padding:0 17px 0 54px; border-radius:24px; background:#fff; font-weight:700; }
+
+.search-tit-area { margin:30px 0 15px; }
+.search-tit-area:after { display:block; clear:both; content:"";}
+.search-tit-area .btn-txt { float:right; margin-top:2px; color:#8e8e8e; }
+.search-tit { float:left; font-size:16px; }
+.no-result { text-align:center; font-size:14px; color:#fff; }
+.no-result p { line-height:1.7em; }
+.result-list { }
+.result-list > li { position:relative; border-bottom:1px solid #343536; padding-right:35px; }
+.result-list > li:first-child { border-top:1px solid #343536; }
+.result-list .result-btn { display:inline-block; font-size:14px; color:#8e8e8e; padding:10px 10px 13px 0; }
+.result-list .ico-x { position:absolute; top:calc(50% - 10px); right:7px; transform:scale(1.5); padding:3px; box-sizing:content-box; }
+.result-list .ico-x:before,
+.result-list .ico-x:after { background:#707070; }
+.result-list > li.no-result { border:0; padding:0; }
+
+.link-list > li { margin-top:8px; }
+.link-list a { padding:2px 5px 3px 0; font-size:14px; color:#fff; text-decoration:underline; }
 
 @keyframes aniTongTong {
 	0% { transform:translateY(0); }

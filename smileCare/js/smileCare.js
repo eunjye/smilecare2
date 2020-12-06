@@ -522,3 +522,58 @@ function agreeCheck(ts, v) {
 	}
 	typeof(ts) !== 'number' && $ts.addClass('active').siblings().removeClass('active');
 }
+
+/* Package Menu */
+var PM = { 
+	originH: 0,
+	previewH: 0,
+	set: function(){
+		var $list = $('.care-package');
+		$list.css('opacity', 0);
+		PM.originH = $list.outerHeight();
+		$list.find('li:gt(3)').hide();
+		PM.previewH = $list.outerHeight();
+		$list.css('opacity', 1);
+	},
+	toggle: function(){
+		var $list = $('.care-package');
+		$list.find('li').show();
+		if (!$list.hasClass('preview')) {
+			$list.css('height', PM.previewH).animate({
+				height: PM.originH
+			}, 200, function(){
+				// 컨텐츠 위에 있을 때 자동 스크롤
+				if (!!$list.closest('#SID-0001_mo').length && $(document).scrollTop() < $list.offset().top) {
+					$('.ui-modal-cont').animate({
+						scrollTop: $list.offset().top
+					},250)
+				}
+			})
+		} else {
+			$list.animate({
+				height: PM.previewH
+			}, 200)
+		}
+		$list.toggleClass('preview');
+		$(event.target).toggleClass('preview');
+	}
+}
+
+/* tab */
+function showTab(id, idx){
+	var $tab = $('#'+id)
+		, $btn = $tab.children('.tab-btns').children('.tab-btn')
+		, $pnl = $tab.children('.tab-pnls').children('.tab-pnl');
+
+		$btn.removeClass('on');
+		$btn.eq(idx).addClass('on');
+		$pnl.hide();
+		$pnl.eq(parseInt(idx)).show();
+}
+
+/* header search button */
+$(document).on('ready', function(){
+	$('.btn_gnb_search').on('click', function(){
+		openPopup('SID-0002_mo', false, {ps:'bottom'});
+	});
+})

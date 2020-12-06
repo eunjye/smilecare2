@@ -34,161 +34,222 @@
 <body>
   <div id="wrap">
     <header id="header">
-        <a href="javascript:goBackUrl();" class="btn_back">뒤로가기</a>
-        <div class="tit sub">
-            <h1><nobr>스마일케어</nobr></h1>
-        </div>
-                <!-- 상품 메뉴 -->
-        <div id="prd_menu" class="prd_menu">
-            <div class="inner">
-                <div id="prdMenuList" class="prd_menu_wrap"></div>
-                <a href="#none" class="btn_closed_menu">닫기</a>
-            </div>
-        </div><!-- // 상품 메뉴 -->
-        <a href="#none" id="gnb" class="btn_gnb_open new">전체메뉴 열기</a>
+			<a href="javascript:goBackUrl();" class="btn_back">뒤로가기</a>
+			<div class="tit sub short">
+				<h1><img src="./img/logo_smilecare_mo.png" width="115" alt="Smile Care"></h1>
+			</div>
+							<!-- 상품 메뉴 -->
+			<div id="prd_menu" class="prd_menu">
+					<div class="inner">
+							<div id="prdMenuList" class="prd_menu_wrap"></div>
+							<a href="#none" class="btn_closed_menu">닫기</a>
+					</div>
+			</div><!-- // 상품 메뉴 -->
+			<a href="javascript:void(0)" id="gnb" class="btn_gnb_search">검색하기</a>
+			<a href="#none" id="gnb" class="btn_gnb_open new">전체메뉴 열기</a>
     </header>
     <section id="container">
-			<!-- contents start 
+        <!-- contents start 
 			=============================================-->
-            <div class="contents smilecare"> <!-- smilecare 클래스 필요 -->
-                <link type="text/css" rel="stylesheet" href="./css/smileCare_mo.css" />
-				<script type="text/javascript" src="./js/ui.common.js"></script>
-				<script type="text/javascript" src="./js/smileCare.js"></script>
-        
-				<!-- Start : SID-0002_mo -->
-                <div id="SID-0002_mo" class="ui-modal ui-modal-m">
-                    <div class="ui-modal-wrap">
-                      <div class="ui-modal-head">
-                          <h1>검색</h1>
-                        <button type="button" class="btn-close" onclick="$plugins.uiModalClose({ id:'SID-0002_mo'})"><span class="hidden">닫기</span></button>
-                      </div>
-                      <div class="ui-modal-cont">
+        <div class="contents smilecare">
+          <!-- smilecare 클래스 필요 -->
+          <link type="text/css" rel="stylesheet" href="./css/smileCare_mo.css"/>
+          <script type="text/javascript" src="./js/ui.common.js"></script>
+          <script type="text/javascript" src="./js/smileCare.js"></script>
 
-                        <div class="search-box">
+          <button type="button" onclick="openPopup('SID-0002_mo', false, {ps:'bottom'});">팝업 열기</button>
 
-                            <!-- 1. 검색 -->
-                            <!-- <div class="search-inp wd-full">
-                                <label for="sch-input" class="hidden">아이디</label>
-                                <input type="text" id="sch-input" name="" value="" placeholder="검색어를 입력해주세요.">
-                            </div> -->
+          <!-- Start : SID-0002_mo -->
+          <div id="SID-0002_mo" class="ui-modal type-dark">
+            <div class="ui-modal-wrap">
+              <div class="ui-modal-head">
+                <h1>검색</h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  onclick="$plugins.uiModalClose({ id:'SID-0002_mo'})"
+                >
+                  <span class="hidden">닫기</span>
+                </button>
+              </div>
+              <div class="ui-modal-cont">
 
-                            <!-- 2. 검색 상세 -->
-                            <div class="search-inp">
-                                <label for="sch-input" class="hidden">아이디</label>
-                                <input type="text" id="sch-input" name="" value="" placeholder="검색어를 입력해주세요.">
-                            </div>
-                            <button type="button" class="reset-btn">취소</button>
-        
-                        </div>
-
-                        <div class="search-cont">
-
-                            <!-- 1. 검색 -->
-                            <!-- <h1 class="txt-type">최근 인기 TOPIC</h1>
-                            <ul class="topic-list">
-                                <li><a href="#">인공치아매식술</a></li>
-                                <li><a href="#">치경부마모증</a></li>
-                                <li><a href="#">임플란트</a></li>
-                                <li><a href="#">신경치료</a></li>
-                                <li><a href="#">치석제거</a></li>
-                            </ul>
-
-                            <h1 class="txt-type">자주 찾는 키워드</h1>
-                            <div class="detail-box">            
-                                <ul class="keyword-box">
-                                    <li><a href="#">충치치료</a></li>
-                                    <li><a href="#">크라운</a></li>
-                                    <li><a href="#">임플란트</a></li>
-                                    <li><a href="#">구강문제</a></li>
-                                    <li><a href="#">치아미백</a></li>
-                                    <li><a href="#">어린이치아</a></li>
-                                    <li><a href="#">치아관리</a></li>
-                                    <li><a href="#">레진</a></li>
-                                    <li><a href="#">충치치료</a></li>
-                                    <li><a href="#">크라운</a></li>
-                                    <li><a href="#">임플란트</a></li>
-                                    <li><a href="#">구강문제</a></li>
-                                    <li><a href="#">치아미백</a></li>
-                                    <li><a href="#">어린이치아</a></li>
-                                    <li><a href="#">치아관리</a></li>
-                                    <li><a href="#">레진</a></li>
-                                </ul>
-                            </div> -->
-
-                            <!-- 2. 검색 상세 -->
-                            <h2 class="txt-type">최근 검색어</h2>
-                            <ul class="cont-list">
-                                <li><a href="#">인공치아매식술</a></li>
-                                <li><a href="#">치경부마모증</a></li>
-                                <li><a href="#">임플란트</a></li>
-                                <li><a href="#">신경치료</a></li>
-                                <li><a href="#">치석제거</a></li>
-                            </ul>
-                        </div>
-
-                        <!-- 2. 검색 상세 -->
-                        <div class="detail-box">
-                            <p>최근 검색내역이 없네요.</p>
-                            <p>요즘 인기있는 검색어를 추천해드려요.</p>
-
-                            <ul class="keyword-box">
-                                <li><a href="#">충치치료</a></li>
-                                <li><a href="#">크라운</a></li>
-                                <li><a href="#">임플란트</a></li>
-                                <li><a href="#">구강문제</a></li>
-                                <li><a href="#">치아미백</a></li>
-                                <li><a href="#">어린이치아</a></li>
-                                <li><a href="#">치아관리</a></li>
-                                <li><a href="#">레진</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="sub-close">
-                            <button type="button" class="btn-close close-type" onclick="$plugins.uiModalClose({ id:'SID-0001_mo'})">
-                                <span>닫기</span>
-                            </button>
-                        </div>
-
-                      </div>
-                    </div>
+                <div class="search-area">
+                  <div class="search-box">
+                    <input type="text" class="inp-base type-search" id="inpSearch" placeholder="검색어를 입력해주세요." title="검색어를 입력해주세요." onfocus="srchPop.viewHistory()" onkeyup="srchPop.checkInput();">
+                    <button type="button" class="btn-clear" onclick="srchPop.clearInput('inpSearch');" style="display:none;"><span class="hidden">삭제</span></button>
                   </div>
-                  <!-- // End : SID-0002_mo -->
-				<script type="text/javascript">
-					;(function($, win, doc, undefined) {
-						$(doc).ready(function(){
-							
-							// popup run!!
-							$plugins.uiModalOpen({
-								id:'SID-0002_mo',
-								full:false,
-								callback: function(v){
-									console.log('open :', v );
-								}
-							});
+                  <div class="utils">
+                    <button type="button" class="btn-txt" onclick="srchPop.hideHistory();srchPop.clearInput('inpSearch');"><span>취소</span></button>
+                  </div>
+                </div>
 
-						});
-					})(jQuery, window, document);
+                <!-- S : input box에 focus 시 노출 -->
+                <div class="result-area" style="display:none;" data-show-default="false">
+									<div class="search-tit-area">
+										<h3 class="search-tit">최근 검색어</h3>
+										<button type="button" class="btn-txt" onclick="srchPop.removeResult('all');"><span>전체내역 삭제</span></button>
+									</div>
+                  <ul class="result-list">
+                    <li>
+                      <a href="javascript:void(0);" class="result-btn">인공치아매식술</a>
+                      <button type="button" class="ico-x" onclick="srchPop.removeResult(this);"><span class="hidden">검색어 삭제</span></button>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);" class="result-btn">치경부마모증</a>
+                      <button type="button" class="ico-x" onclick="srchPop.removeResult(this);"><span class="hidden">검색어 삭제</span></button>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);" class="result-btn">임플란트</a>
+                      <button type="button" class="ico-x" onclick="srchPop.removeResult(this);"><span class="hidden">검색어 삭제</span></button>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);" class="result-btn">신경치료</a>
+                      <button type="button" class="ico-x" onclick="srchPop.removeResult(this);"><span class="hidden">검색어 삭제</span></button>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);" class="result-btn">치석제거</a>
+                      <button type="button" class="ico-x" onclick="srchPop.removeResult(this);"><span class="hidden">검색어 삭제</span></button>
+                    </li>
 
-                    // 더보기, 덜보기
-                    $(document).on('ready', function() {
-                        $('.more-txt').click(function() {
-                            $('#care-hide').toggleClass('care-show');
-                            $(this).toggleClass('changed');
+                    <!-- S : 검색내역 없을 시 -->
+                    <li class="no-result" style="display:none;">
+                      <p>최근 검색내역이 없네요.<br>요즘 인기있는 검색어를 추천해드려요.</p>
+                      <ul class="find-keyword type-dark">
+                        <li><a href="javascript:void(0)"><span>충치치료</span></a></li>
+                        <li><a href="javascript:void(0)"><span>크라운</span></a></li>
+                        <li><a href="javascript:void(0)"><span>임플란트</span></a></li>
+                        <li><a href="javascript:void(0)"><span>구강문제</span></a></li>
+                        <li><a href="javascript:void(0)"><span>치아미백</span></a></li>
+                        <li><a href="javascript:void(0)"><span>어린이치아</span></a></li>
+                        <li><a href="javascript:void(0)"><span>치아관리</span></a></li>
+                        <li><a href="javascript:void(0)"><span>레진</span></a></li>
+                      </ul>
+                    </li>
+                    <!-- // E : 검색내역 없을 시 -->
+                  </ul>
+                </div>
+                <!-- // E : input box에 focus 시 노출 -->
 
-                            if($(this).html() == '덜보기') {
-                                $(this).html('더보기');
-                            }
-                            else {
-                                $(this).html('덜보기');
-                            }
+                <div class="hottopic-area" data-show-default="true">
+                  <div class="search-tit-area">
+                    <h3 class="search-tit">최근 인기 TOPIC</h3>
+                  </div>
+                  <ul class="link-list">
+                    <li><a href="javascript:void(0);">인공치아매식술</a></li>
+                    <li><a href="javascript:void(0);">치경부마모증</a></li>
+                    <li><a href="javascript:void(0);">임플란트</a></li>
+                    <li><a href="javascript:void(0);">신경치료</a></li>
+                    <li><a href="javascript:void(0);">치석제거</a></li>
+                  </ul>
+                </div>
 
-                        });
-                    });
-				</script>
-      </div> <!-- // .contents -->
-			<!-- // contents end 
+                <div class="often-area" data-show-default="true">
+                  <div class="search-tit-area">
+                    <h3 class="search-tit">자주 찾는 키워드</h3>
+                  </div>
+                  <ul class="find-keyword type-dark">
+                    <li><a href="javascript:void(0)"><span>충치치료</span></a></li>
+                    <li><a href="javascript:void(0)"><span>크라운</span></a></li>
+                    <li><a href="javascript:void(0)"><span>임플란트</span></a></li>
+                    <li><a href="javascript:void(0)"><span>구강문제</span></a></li>
+                    <li><a href="javascript:void(0)"><span>치아미백</span></a></li>
+                    <li><a href="javascript:void(0)"><span>어린이치아</span></a></li>
+                    <li><a href="javascript:void(0)"><span>치아관리</span></a></li>
+                    <li><a href="javascript:void(0)"><span>레진</span></a></li>
+                  </ul>
+                </div>
+
+                <div class="modal-footer-btns">
+                  <button type="button" class="btn-round-s" onclick="$plugins.uiModalClose({ id:'SID-0002_mo'})">
+                    <span><i class="ico-x">&nbsp;</i>닫기</span>
+                  </button>
+                </div>
+              </div>
+              <script type="text/javascript">
+                var srchPop = {
+                  reset: function(){
+                    srchPop.hideHistory();
+                    srchPop.clearInput();
+                    $('#SID-0002_mo .ui-modal-cont').scrollTop(0);
+                  },
+                  viewHistory: function(){
+                    $('.search-area').addClass('focus');
+                    $('[data-show-default="true"]').hide();
+                    $('[data-show-default="false"]').show();
+                  },
+                  hideHistory: function(){
+                    $('.search-area').removeClass('focus');
+                    $('[data-show-default="true"]').show();
+                    $('[data-show-default="false"]').hide();
+                  },
+                  removeResult: function(v){
+										if (v === 'all') {
+											$('.result-list > li').not('.no-result').remove();
+											$('.result-list .no-result').show();
+										} else {
+											var $ts = $(v)
+												, $item = $ts.closest('li');
+
+											$item.slideUp(200, function(){
+												$item.remove();
+												if (!$('.result-list > li').not('.no-result').length) { 
+													$('.result-list .no-result').show();
+												} else {
+													$('.result-list .no-result').hide();
+												}
+											})
+										}
+                  },
+                  clearInput: function(id){
+                    var $input = $('#'+id);
+                    $input.prop('value', '');
+                    $('.search-box .btn-clear').hide();
+                  },
+                  checkInput: function(){
+                    if(!$('.search-box input').prop('value')){
+                      $('.search-box .btn-clear').hide();
+                    } else {
+                      $('.search-box .btn-clear').show();
+                    }
+                  }
+                }
+
+                // on modal loaded
+                var isModalLoaded = setInterval(function(){
+                  if (!!$plugins.uiModalLoaded) {
+                    srchPop.reset(); // 열 때마다 reset 해주세요
+                    clearInterval(isModalLoaded)
+                    return;
+                  } 
+                }, 100);
+
+              </script>
+            </div>
+          </div>
+          <!-- // End : SID-0002_mo -->
+          <script type="text/javascript">
+
+            (function ($, win, doc, undefined) {
+
+              $(doc).ready(function () {
+                // popup run!!
+                $plugins.uiModalOpen({
+                  id: "SID-0002_mo",
+                  full: false,
+                  ps: 'bottom',
+                  callback: function (v) {
+                    console.log("open :", v);
+                  },
+                });
+              });
+            })(jQuery, window, document);
+          </script>
+        </div>
+        <!-- // .contents -->
+        <!-- // contents end 
 			=============================================-->
-    </section>
-  </div>
-</body>
+      </section>
+    </div>
+  </body>
 </html>

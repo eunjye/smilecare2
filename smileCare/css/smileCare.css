@@ -23,6 +23,10 @@ caption{visibility:hidden;width:0;height:0;margin:0;padding:0;font-size:0;line-h
 b, strong{font-weight:inherit}
 i, em{font-weight:inherit;font-style:normal}
 button{border:0;background-color:transparent}
+select::-ms-expand {display:none} /* IE */
+select {-moz-appearance:none; /* Firefox */
+	-webkit-appearance:none; /* Safari and Chrome */
+	appearance:none; }
 /* basic
 ------------------------------------------ */
 /* html, body{width:100%;height:100%} 주석풀지 말아요! */
@@ -341,7 +345,7 @@ select{display:inline-block;position:relative;vertical-align:middle;width:auto;h
 
 .ui-modal.type-guide:after{ opacity:0; }
 .ui-modal.type-guide .ui-modal-wrap { background:#36363a; color:#fff; border-radius:30px; }
-.ui-modal.type-guide .ui-modal-cont { margin:0; padding:40px 35px; }
+.ui-modal.type-guide .ui-modal-cont { margin:0; padding:40px 35px; overflow:hidden; }
 .ui-modal.type-guide .btn-close { position:absolute; top:25px; right:25px; }
 .ui-modal.type-guide.open.type-normal.ps-bottom .ui-modal-wrap { bottom:0; }
 .ui-modal.type-guide.type-normal.ps-bottom .ui-modal-cont { padding-right:200px; }
@@ -938,18 +942,22 @@ a.btn-link { display:inline-block; height:40px; line-height:36px;  vertical-alig
 .package-thumbs span.ready { opacity:0; transition:opacity ease-in .1s; }
 
 /* animations */
-.bx-slide:hover .package-thumbs span:nth-child(1){ animation:aniMoveUp linear .2s both; animation-delay:.2s; }
-.bx-slide:hover .package-thumbs span:nth-child(2){ animation:aniMoveToDepth1 linear .6s both; animation-delay:.4s; }
-.bx-slide:hover .package-thumbs span:nth-child(3){ animation:aniMoveToDepth2 linear 1s both; animation-delay:.4s; }
-.bx-slide:hover .package-thumbs span:nth-child(4){ animation:aniMoveToDepth3 linear 1.4s both; animation-delay:.4s; }
-.bx-slide:hover .package-thumbs span:nth-child(5){ animation:aniMoveToDepth4 linear 1.8s both; animation-delay:.4s; }
+.bx-slide:hover .package-thumbs span:nth-child(1){ animation:aniMoveUp linear .2s forwards; animation-delay:.2s; }
+.bx-slide:hover .package-thumbs span:nth-child(2){ animation:aniMoveToDepth1 linear .6s forwards; animation-delay:.4s; }
+.bx-slide:hover .package-thumbs span:nth-child(3){ animation:aniMoveToDepth2 linear 1s forwards; animation-delay:.4s; }
+.bx-slide:hover .package-thumbs span:nth-child(4){ animation:aniMoveToDepth3 linear 1.4s forwards; animation-delay:.4s; }
+.bx-slide:hover .package-thumbs span:nth-child(5){ animation:aniMoveToDepth4 linear 1.8s forwards; animation-delay:.4s; }
 
-.bx-slide:hover .package-thumbs span:nth-child(2):after { animation:aniMoveToDepth1Cover linear .6s both; animation-delay:.4s; }
-.bx-slide:hover .package-thumbs span:nth-child(3):after { animation:aniMoveToDepth2Cover linear 1s both; animation-delay:.4s; }
-.bx-slide:hover .package-thumbs span:nth-child(4):after { animation:aniMoveToDepth3Cover linear 1.4s both; animation-delay:.4s; }
-.bx-slide:hover .package-thumbs span:nth-child(5):after { animation:aniMoveToDepth4Cover linear 1.8s both; animation-delay:.4s; }
+.bx-slide:hover .package-thumbs span:nth-child(2):after { animation:aniMoveToDepth1Cover linear .6s forwards; animation-delay:.4s; }
+.bx-slide:hover .package-thumbs span:nth-child(3):after { animation:aniMoveToDepth2Cover linear 1s forwards; animation-delay:.4s; }
+.bx-slide:hover .package-thumbs span:nth-child(4):after { animation:aniMoveToDepth3Cover linear 1.4s forwards; animation-delay:.4s; }
+.bx-slide:hover .package-thumbs span:nth-child(5):after { animation:aniMoveToDepth4Cover linear 1.8s forwards; animation-delay:.4s; }
 .bx-slide:hover .package-thumbs span:first-child:last-of-type { animation:none !important; opacity:1 !important; }
 .bx-slide:hover .package-thumbs span:last-of-type { opacity:1 !important; }
+
+.bx-slide:hover .package-thumbs.ie span:after,
+.bx-slide:hover .package-thumbs.ie span { animation-fill-mode:none !important; }
+
 
 /* animation : thumbnails */
 @keyframes aniMoveUp {
@@ -990,7 +998,7 @@ a.btn-link { display:inline-block; height:40px; line-height:36px;  vertical-alig
 	66.6% { transform:translateY(0) translateX(25%) scale(.9); }
 	77.7% { transform:translateY(0); opacity:1; }
 	88.8% { transform:translateY(0); opacity:1; }
-	100% { transform:translateY(0); opacity:1; }
+	100% { transform:translateY(0); opacity:0; }
 }
 
 /* animation : cover */

@@ -846,6 +846,13 @@
 							sldPackage.slide.goToSlide(0);
 							sldPackage.autoStart();
 
+
+							// IE Check for thumbnails animations
+							var agt = navigator.userAgent.toLowerCase(); 
+							if ( (navigator.appName == 'Netscape' && agt.indexOf('trident') != -1) || (agt.indexOf("msie") != -1)) {
+								$('.slide-package .package-thumbs').addClass('ie');
+							}
+
 							// slide hover evt run!!
 							$('.slide-package').on({
 								'mouseenter': function(){

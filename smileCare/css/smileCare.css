@@ -804,6 +804,8 @@ padding:4px 25px 4px 10px;height:36px;font-size:14px;float:left;width:100px}
 .ico-pen:before{display:inline-block;vertical-align:middle;width:26px;height:26px;background:url('../img/ico_pen.png') left bottom/auto auto no-repeat;margin:-2px 15px 0 0;content:""}
 .book-open{overflow:hidden !important}
 body.book-open{padding-right:17px !important}
+.fullmodal-open { overflow:hidden !important; }
+body.fullmodal-open { padding-right:17px !important; }
 .layer-wrap{display:none;position:fixed;z-index:120;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);opacity:0;box-sizing:border-box}
 .layer-wrap *{box-sizing:border-box}
 .layer-book{position:absolute;top:50%;left:0;right:0;transform:translateY(-50%);background:#E7F4FC;width:100%;height:650px}

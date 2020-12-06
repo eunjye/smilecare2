@@ -589,11 +589,14 @@ var PM = {
 	previewH: 0,
 	set: function(){
 		var $list = $('.care-package');
-		$list.css('opacity', 0);
+		$list.css({'opacity': 0, 'height': 'auto'});
+		$list.find('li').show();
 		PM.originH = $list.outerHeight();
+		console.log(PM.originH);
 		$list.find('li:gt(3)').hide();
 		PM.previewH = $list.outerHeight();
-		$list.css('opacity', 1);
+		$list.css({'opacity': 1, 'height': PM.previewH}).removeClass('preview');
+		$('.package-menu .btn-more-view').removeClass('preview');
 	},
 	toggle: function(){
 		var $list = $('.care-package');
@@ -615,7 +618,7 @@ var PM = {
 			}, 200)
 		}
 		$list.toggleClass('preview');
-		$(event.target).toggleClass('preview');
+		$('.package-menu .btn-more-view').toggleClass('preview');
 	}
 }
 

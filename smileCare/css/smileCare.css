@@ -1070,6 +1070,7 @@ a.btn-link{display:inline-block;height:40px;line-height:36px; vertical-align:mid
 
 /* popup : search */
 .search-wrap { width:600px; margin:40px auto 0; padding:0 33px; }
+.search-wrap .modal-footer-btns { padding:0; }
 .search-area { display:flex; margin:0 -33px 38px; justify-content:space-between; align-items:stretch; }
 .search-area .search-box { flex:1 1 auto; }
 .search-area .utils { width:0; flex:0 0 0; transition:all linear .2s; overflow:hidden;}

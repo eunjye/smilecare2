@@ -192,4 +192,4 @@ ul.category-menu li a {color: #fff;}
 .package-menu .more .more-txt {cursor: pointer; position: relative; padding-right: 32px; font-size: 13px; color: #636363; border: 0; outline: 0; text-align: center;}
 .package-menu .more .more-txt:after {content: ""; position: absolute; top: 6px; left: 160px; width: 24px; height: 14px; background: url('../img/ico_more_down_mo.png') 0 0 no-repeat; background-size: 50%;}
 .package-menu .more .more-txt.changed:after {content: ""; position: absolute; top: 6px; left: 160px; width: 24px; height: 14px; background: url('../img/ico_more_up_mo.png') 0 0 no-repeat; background-size: 50%;}
-.modal-footer-btns { max-width:1100px; margin:70px auto 0; text-align: right;}
+.modal-footer-btns { max-width:1100px; padding-right:80px; margin:70px auto 0; text-align: right;}

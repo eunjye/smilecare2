@@ -8,6 +8,8 @@
 .apply-items .tit3{margin-top:15px}
 .apply-sub-txt{color:#008bec}
 .apply-sub-txt strong{font-weight:700;}
+.apply-sub-txt2{font-size:15px;color:#111}
+
 .radio.square { display:inline-block; vertical-align:middle; margin-top: -3px;}
 .radio.square label{padding-left:30px;line-height:15px}
 .check_tit_sub{font-size:13px;color:#111;padding-left:30px;margin-top:3px}
@@ -23,7 +25,7 @@
 .btn-radio input:checked+label{color:#008bec;border-color:#008bec;}
 .btn-radio input:checked+label:before{background-position:0 0}
 /*팝업*/
-.cont-top {padding-bottom:30px;border-bottom:1px solid #e5e5e5}
+.cont-top {padding-bottom:25px;border-bottom:1px solid #e5e5e5}
 .cont-top .tit1 + p{margin-top:15px}
 .cont-top p{font-size:14px}
 .cont-top p strong{font-weight:700}
@@ -31,20 +33,23 @@
 .cont-bottom p{font-size:14px;color:#666}
 .cont-bottom .tit3 + p{margin-top:15px;word-break: normal}
 /*공유채널*/
-.share-wrap{margin-top:25px;padding-top:5px;border-top:1px solid #e5e5e5}
-.share-wrap .share-list{display:block;margin:0 auto}
-.share-wrap ul li{display:inline-block;position:relative;margin:20px 20px 0 7px}
-.share-wrap ul li:last-child{margin-right:0}
+.share-wrap{margin-top:25px;padding-top:5px;border-top:1px solid #e5e5e5;text-align:center}
+.share-wrap .share-list{display:block}
+.share-wrap .share-list li{display:inline-block;width:80px;height:90px;margin:20px 8px;position:relative;text-align:center}
 .share-wrap .share-list .share-item input[type='radio']:focus + label{outline:1px dotted #000;outline-style:auto}
 .share-wrap .share-list .share-item input[type='radio']{position: absolute;width: 1px;height: 1px;margin: -1px;border: 0;overflow: hidden;padding: 0;clip: rect(0,0,0,0);-webkit-appearance: none;opacity: 0;}
-.share-wrap .share-list .share-item label{display:block;width:80px;height:80px;background:url('../img/spr_share_mo.png')no-repeat;background-size:80px 480px;}
-.share-wrap .share-list .share-item label span{display:block;font-size:13px;color:#666;text-align:center;padding-top:90px}
+.share-wrap .share-list .share-item label{display:block;position:relative;width:80px;height:80px;background:url('../img/spr_share_mo.png') no-repeat;background-size:80px 480px}
+.share-wrap .share-list .share-item label span{display:block;position:absolute;top:0;left:0;width:80px;height:120px;padding-top:90px;box-sizing:border-box;font-size:13px;color:#666;text-align:center}
 .share-wrap .share-list .share-item.kakao label{background-position:0 0}
 .share-wrap .share-list .share-item.facebook label{background-position:0 -80px}
 .share-wrap .share-list .share-item.kakaostory label{background-position:0 -160px}
 .share-wrap .share-list .share-item.naver label{background-position:0 -240px}
 .share-wrap .share-list .share-item.url label{background-position:0 -320px}
 .share-wrap .share-list .share-item input[type='radio']:checked + label span:before{content:"";position:absolute;top:0;left:0;width:80px;height:80px;border-radius:50%;background:rgba(0,0,0,.8) url('../img/spr_share_mo.png') no-repeat 0 -400px/80px 480px}
+
+.box_url{margin-top:15px;padding:14px 12px;background-color:#f5f5f5;color:#666;font-size:14px;line-height:1.4;text-align:center}
+.box_url p{margin-bottom:5px;color:#111}
+.box_url span{word-break:break-all}
 
 .tit3 span:before{content:"";display:inline-block;width:4px;height:4px;background:#111;vertical-align:middle;margin-right:8px}
 /*약관 상세 미동의/동의 버튼*/
@@ -54,7 +59,7 @@
 .btn-base.agree{height:40px;box-sizing:border-box;width:100%;font-size:14px;line-height:14px;color:#999;border:1px solid #999;background:#fff;padding:10px;color:#111;border-color:#111}
 .btn-base.disagree{height:40px;box-sizing:border-box;width:calc(50% - 11px);font-size:14px;line-height:14px;color:#999;border:1px solid #999;background:#fff;padding:10px;color:#111;border-color:#111}
 .btn-base.agree:focus,
-.btn-base.disagree:focus{outline:1px dotted #000;} 
+.btn-base.disagree:focus{outline:1px dotted #000;}
 .btn-base.agree:active span:before,
 .btn-base.agree.active span:before{background-position:0 0}
 .btn-base.agree:active,
@@ -75,7 +80,9 @@
 .smile-section.cancel .smile-inner .cancel-txt{color:#666;text-align:center}
 .smile-section.cancel .smile-inner .cancel-txt+.btn-wrap{margin-top:20px}
 
+
 @media screen and (max-width:320px){
+	.share-wrap .share-list li{margin:20px 4px}
     .btn-radio label{font-size:13px}
     .step-list > li{font-size:12px!important}
     .step-list > li:before{width:20px!important}
@@ -110,3 +117,34 @@
 .list-cont .type-img .li-txt .primary{background:url('../img/ico_good02_mo.png') left 2px/15px auto no-repeat;padding-left:23px;font-size:12px;color:#222}
 .list-cont .type-img .li-txt .tag i{display:inline-block;width:16px;height:16px;text-align:center;vertical-align:middle;background:#008bec;border-radius:2px;color:#fff;font-size:11px;font-weight:700;margin:0 6px 2px 0}
 .list-cont .views { display:block; margin-bottom:3px; background:url('../img/ico_views_mo.png') 0 4px/16px auto no-repeat; padding:0 0 0 23px; color:#999; font-size:12px; }
+
+
+/* odh_mo.css
+=================================== */
+.ui-modal.type-dark.type-normal.ps-bottom.open .ui-modal-wrap { bottom:0; background:rgba(0,0,0,.9); }
+.ui-modal.type-dark.type-normal .ui-modal-wrap { width: 100%; height: 100%; max-height: 100%;background-color: #0c0c0d;}
+.ui-modal.type-dark .ui-modal-cont { color:#8e8e8e; }
+.ui-modal.type-dark .ui-modal-head {padding: 15px 0 15px 0; background-color: #0c0c0d; opacity: 90%; border-bottom: 1px solid #59595a; text-align: center; z-index: 2;}
+.ui-modal.type-dark .ui-modal-head h1 {font-size: 17px;}
+.ui-modal.type-dark .ui-modal-head .btn-close {position: absolute; top: 13px; right: 15px;}
+.ui-modal.type-dark .ui-modal-head .btn-close:before,
+.ui-modal.type-dark .ui-modal-head .btn-close:after {top: 13px; left: 0; width: 30px; height: 2px;}
+
+ul.category-menu {padding:12px 15px 40px; margin:0 -15px; font-size: 20px; font-weight: 600; text-align: center; border-bottom: 1px solid #59595a;}
+ul.category-menu li {margin-top:17px;}
+ul.category-menu li a {color: #fff;}
+ul.category-menu li:first-child {margin-top: 0;}
+
+.package-menu {padding: 36px 40px 0 36px;}
+.package-menu .btn-wrap { margin-top:15px; }
+.package-menu ul.care-package {margin-top: 25px; text-align: center; overflow:hidden;}
+.package-menu ul.care-package li  {margin-top: 12px; display: block;}
+.package-menu ul.care-package li:first-child {margin-top: 0;}
+.package-menu ul.care-package li a {display: block; font-size: 14px; color: #fff; text-decoration: underline; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.package-menu strong.care-txt {display: block; font-size: 16px; color: #8e8e8e; font-weight: 700; text-align: center;}
+.package-menu .more {margin-top: 30px;}
+.package-menu .more>a {display: block;}
+.package-menu .more .more-txt {cursor: pointer; position: relative; padding-right: 32px; font-size: 13px; color: #636363; border: 0; outline: 0; text-align: center;}
+.package-menu .more .more-txt:after {content: ""; position: absolute; top: 6px; left: 160px; width: 24px; height: 14px; background: url('../img/ico_more_down_mo.png') 0 0 no-repeat; background-size: 50%;}
+.package-menu .more .more-txt.changed:after {content: ""; position: absolute; top: 6px; left: 160px; width: 24px; height: 14px; background: url('../img/ico_more_up_mo.png') 0 0 no-repeat; background-size: 50%;}
+.modal-footer-btns {margin-top:25px; text-align: right;}

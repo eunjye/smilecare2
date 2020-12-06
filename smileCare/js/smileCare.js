@@ -6,19 +6,19 @@ function Bohumnai(id)
 	var y_dt;
 	var m_dt;
 	var d_dt;
-	
+
 	y_dt = now.getFullYear(); // 현재년도
 	m_dt = now.getMonth()+1; // 현재월
 	d_dt = now.getDate(); // 현재일
-	
+
 	b_year = parseInt(id.substring(0,4),10); // 대상자 생년
 	b_month = parseInt(id.substring(4,6),10); // 대상자 생월
 	b_day = parseInt(id.substring(6,8),10); // 대상자 생일
-	
+
 	r_year = y_dt; // 현재년도
 	r_month = m_dt; // 현재월
 	r_day = d_dt; // 현재일
-	
+
 	if (b_day > r_day) // 현재일보다 생일이 클경우
 	{
 	     switch (r_month) // 현재월에서 1을 빼고 현재일에 이전달의 일수를 더함
@@ -27,12 +27,12 @@ function Bohumnai(id)
 	               r_month = r_month - 1;
 	               r_day = r_day + 31;
 	               break;
-	
+
 	          case 2 :
 	               r_month = r_month - 1;
 	               r_day = r_day + 31;
 	               break;
-	
+
 	          case 3 :
 	               r_month = r_month - 1;
 	               if ( ( r_year % 4 ) == 0 )
@@ -40,47 +40,47 @@ function Bohumnai(id)
 	               else
 	                             r_day = r_day + 28;
 	               break;
-	
+
 	          case 4 :
 	               r_month = r_month - 1;
 	               r_day = r_day + 31;
 	               break;
-	
+
 	          case 5 :
 	               r_month = r_month - 1;
 	               r_day = r_day + 30;
 	               break;
-	
+
 	          case 6 :
 	               r_month = r_month - 1;
 	               r_day = r_day + 31;
 	               break;
-	
+
 	          case 7 :
 	               r_month = r_month - 1;
 	               r_day = r_day + 30;
 	               break;
-	
+
 	          case 8 :
 	               r_month = r_month - 1;
 	               r_day = r_day + 31;
 	               break;
-	
+
 	          case 9 :
 	               r_month = r_month - 1;
 	               r_day = r_day + 31;
 	               break;
-	
+
 	          case 10 :
 	               r_month = r_month - 1;
 	               r_day = r_day + 30;
 	               break;
-	
+
 	          case 11 :
 	               r_month = r_month - 1;
 	               r_day = r_day + 31;
 	               break;
-	
+
 	          case 12 :
 	               r_month = r_month - 1;
 	               r_day = r_day + 30;
@@ -89,22 +89,22 @@ function Bohumnai(id)
 	}
 
 	x_day = r_day - b_day; // (계산된)현재일에서 생일을 뺌
-	
+
 	if ( b_month > r_month ) // 현재 월보다 생월이 클 경우
 	{
 		// 현재년도에서 1을 빼고 현재월에 12를 더함
 	     r_month = r_month + 12;
 	     r_year = r_year - 1;
 	}
-	
+
 	x_month = r_month - b_month; // (계산된)현재월에서 생월을 뺌
 	x_year = r_year - b_year; // (계산된)현재년도에서 생년을 뺌
-	
+
 	if ( x_month > 5 ) // 월을 뺀 값이 5보다 큰경우 년도를 뺀 값에 1을 더함
 	     nai = x_year + 1;
 	else
 	     nai = x_year;
-	
+
 	return nai;
 }
 
@@ -113,7 +113,7 @@ function calcBtYYYY(resiNo){
 	var nYear, bYear;
 	var today =  new Date();
 	nYear = today.getFullYear();
-	
+
 	if(parseInt(resiNo.substr(5,1),10)<3){
 		bYear = 1900 + parseInt(resiNo.substring(0,2),10);
 	}else{
@@ -132,7 +132,7 @@ function amtTextVal(amt){
 	}else{
 		AmtVal = amt.replace(/\B(?=(\d{3})+(?!\d))/g,',');
 	}
-	
+
 	amtVal = AmtVal + "원";
 	return amtVal;
 }
@@ -201,7 +201,7 @@ function autoCompleteEmail(wrap, option) {
 										var _text = $(item).find('a').html()
 												, _html = ''
 												, _point = !!mail ? id + '@' + mail : id + '@';
-												
+
 										_html = '<b>' + _point + '</b>';
 										_html += !!mail ? _text.split(mail)[1] : _text;
 										$(item).find('a').html(_html);
@@ -251,14 +251,21 @@ function openPopup(id, callback, opt){
 		}
 	});
 
+/*
+	if (!$('#'+id).length) {
+		loadPopup(id);
+	} else {
+		$('#'+id).insertAfter($('.ui-modal').last());
+	}
+
 	function loadPopup(id){
 		$.ajax({
 			type: 'GET',
-			url: './'+id+'.html',
+			url: '/smilecare/'+id+'.html',
 			cache: false,
 			async: false,
 			headers: {
-				"cache-control" : "no-cache", 
+				"cache-control" : "no-cache",
 				"pragma" : "no-cache"
 			},
 			error: function(request, status, err) {
@@ -269,6 +276,7 @@ function openPopup(id, callback, opt){
 			}
 		});
 	}
+*/
 }
 
 function fixedBanner(el) {
@@ -286,7 +294,7 @@ function fixedBanner(el) {
 	$ts.removeClass('floating');
 	tsH = $ts.outerHeight();
 	$ts.css('height', tsH);
-	
+
 	if ($('html').prop('scrollTop') > tsY + tsH) {
 		$ts.addClass('floating');
 		$inner.css({top:0, opacity:1});
@@ -312,7 +320,7 @@ function fixedBanner(el) {
 			$inner.css({top: '-'+innerH+'px'});
 		}
 	});
-	
+
 }
 
 var slidePage = {
@@ -320,7 +328,7 @@ var slidePage = {
 		var $wrap = $('#'+id)
 			, $panelWrap = $wrap.find('.apply-items')
 			, $panel = $wrap.find('.apply-inner')
-			
+
 			, _w, _h;
 
 		if (!isMobile) {
@@ -331,15 +339,14 @@ var slidePage = {
 		$panelWrap.css({width: _w*$panel.length}); // _w: apply-inner의 width
 		$panel.css({width: _w, height: _h}); // _h: apply-inner의 height
 
-		if (isMobile) {
+		if (!isMobile) {
 			$(window).on('resize', function(){
-				if ($(window).outerHeight() < 580) {
+				if($(window).outerHeight() < 580){
 					$panel.css('height', $(window).outerHeight() - 230);
-					console.log($(window).outerHeight() - 230);
-				} else {
+				} else{
 					$panel.css('height', _h);
 				}
-			}) 
+			});
 		}
 	},
 	goSlidePage: function(v, callback) {
@@ -347,14 +354,14 @@ var slidePage = {
 			, $panel = $wrap.find('.apply-inner')
 			, $panelWrap = $wrap.find('.apply-items')
 			, $onPanel = $('.apply-inner.on')
-			
+
 			, num = v;
 
 		if (!!$panel.eq(num-1).attr('data-title') && !!$wrap.closest('.ui-modal').length) {
 			var $modalHeader = $wrap.closest('.ui-modal').find('.ui-modal-head h1');
 			$modalHeader.text($panel.eq(num-1).attr('data-title'));
 		}
-			
+
 		$panel.eq(num-1).addClass('on');
 		$panelWrap.animate({
 			marginLeft: -$panel.outerWidth()*(num-1)
@@ -392,7 +399,7 @@ function initTermsSlider() {
 
 				$('.inner-terms').removeClass('current');
 				$el.addClass('current');
-				
+
 
 				$modalHeader.text($el.attr('data-title'));
 				$btnAgree.attr('data-step', newIdx+1);
@@ -433,6 +440,8 @@ function initTermsSlider() {
 
 // validation check in terms slider
 var arrTermsMsg;
+var ck001, ck002, ck003, ck004, ck005, ck006;
+
 function agreeCheck(ts, v) {
 	var $ts = typeof(ts) === 'number' ? ts : $(ts)
 		, isTrue = v
@@ -443,43 +452,69 @@ function agreeCheck(ts, v) {
 		{
 			agree: function() {
 				sldTerms.goToNextSlide();
+				ck001 = 1;
 			},
 			disagree: function(){
 				alert('케어 구독서비스 신청을 위해 서비스 이용 약관에 동의해주세요.');
+				ck001 = 0;
 			}
 		},
 		// 두번째 약관
 		{
 			agree: function() {
 				sldTerms.goToNextSlide();
+				ck002 = 1;
 			},
 			disagree: function(){
 				alert('동의는 거부하실 수 있고, 동의를 거부하실 경우 서비스 가입이 제한됩니다.');
+				ck002 = 0;
 			}
 		},
 		// 세번째 약관
 		{
 			agree: function() {
 				sldTerms.goToNextSlide();
+				ck003 = 1;
 			},
 			disagree: function(){
 				alert('동의는 거부하실 수 있고, 동의를 거부하실 경우 서비스 가입이 제한됩니다.');
+				ck003 = 0;
 			}
 		},
 		// 네번째 약관
 		{
 			agree: function() {
 				sldTerms.goToNextSlide();
+				ck004 = 1;
 			},
 			disagree: function(){
 				alert('가입이벤트는 별도의 이벤트 참여신청 없이도 해당 동의에 체크하신 후 자동으로 이벤트에 응모됩니다. 본 동의는 서비스 이용에 필수는 아니고 거부하실 수 있으며, 동의를 거부하실 경우에는 가입 이벤트에 당첨되더라도 경품발송이 제한됩니다.');
 				sldTerms.goToNextSlide();
+				ck004 = 0;
 			}
 		},
 		// 다섯번째 약관
 		{
-			agree: finishSlider,
+			agree: function() {
+				sldTerms.goToNextSlide();
+				ck005 = 1;
+			},
 			disagree: function(){
+				alert('본 동의 서비스 이용에 필수적이지 않으며 동의를 거부할 수 있습니다. 만약 동의 했더라도 원치 않는 정보를 수신한 경우 이를 수신거부 할 수 있습니다.');
+				sldTerms.goToNextSlide();
+				ck005 = 0;
+			},
+		},
+		// 여섯번째 약관
+		{
+			agree: function() {
+				ck006 = 1;
+
+				finishSlider();
+			},
+			disagree: function(){
+				ck006 = 0;
+
 				alert('본 동의 서비스 이용에 필수적이지 않으며 동의를 거부할 수 있습니다. 만약 동의 했더라도 원치 않는 정보를 수신한 경우 이를 수신거부 할 수 있습니다.');
 				finishSlider();
 			},
@@ -489,7 +524,7 @@ function agreeCheck(ts, v) {
 	function finishSlider() {
 		if (!$('#ET-010201_mo').length) { // in PC
 			$plugins.uiModalClose({
-				id:'ET-010201', 
+				id:'ET-010201',
 				callback:function(){setTimeout(function(){
 					slidePage.goSlidePage(2, function(){
 						$('#ET-010101 .btn-base.n1').hide();
@@ -501,7 +536,7 @@ function agreeCheck(ts, v) {
 			});
 		} else { // in Mobile
 			$plugins.uiModalClose({
-				id:'ET-010201_mo', 
+				id:'ET-010201_mo',
 				callback:function(){setTimeout(function(){
 					slidePage.goSlidePage(2, function(){
 						$('#ET-010101_mo .btn-base.n1').hide();
@@ -512,6 +547,7 @@ function agreeCheck(ts, v) {
 				}, 250)}
 			});
 		}
+
 	}
 	if (!!arrTermsMsg[stepIdx]){
 		if (isTrue){

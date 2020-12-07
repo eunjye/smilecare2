@@ -93,7 +93,12 @@
                   <li><a href="#">09 . 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단 우리 아이 치아는 괜찮을까? 어린이 치아 진단</a></li>
                 </ul>
                 <!-- [To.개발] 기획 콘텐츠 4개 초과일 시 .btn-wrap 노출  -->
-                <div class="btn-wrap"><button type="button" class="btn-more-view transparent" onclick="PM.toggle();"><span class="preview">덜보기</span><span class="full">더보기</span></button></div>
+                <div class="btn-wrap">
+                    <button type="button" class="btn-more-view transparent" onclick="PM.toggle();">
+                        <span class="preview">덜보기</span>
+                        <span class="full">더보기</span>
+                    </button>
+                </div>
               </div>
 
               <div class="modal-footer-btns">
@@ -105,7 +110,7 @@
 
             
             <script type="text/javascript">
-						  var isModalLoaded = setInterval(function(){
+			    var isModalLoaded = setInterval(function(){
                 if (!!$plugins.uiModalLoaded) {
                   PM.set();
                   clearInterval(isModalLoaded)

@@ -1,3 +1,24 @@
 @charset "utf-8";
 
 
+.cont-header.care {background:#fff;}
+.cont-header.care .header-inner {position:relative; width:820px; height:400px; margin:0 auto; background:url(../img/img_care_top.png) no-repeat 0 0; background-size:cover;}
+.cont-header.care .header-inner .prd-wrap {padding:215px 30px 0;}
+.cont-header.care .header-inner h2 {font-size:40px; color:#fff; font-weight:400;}
+.cont-header.care .header-inner .prd-wrap .s-txt {font-size:14px; margin-top:50px;}
+.cont-body.care {width:820px; margin:0 auto; padding:0 0 40px;}
+.record-list {margin-top:10px;}
+.record-list span {display:inline-block; font-size:12px;}
+.record-list span:first-child:after {content:''; display:inline-block; width:1px; height:10px; margin:0 5px 0 8px; background:#fff;}
+.cont-footer.care {width:820px;}
+.teeth_info {color:#222;}
+.teeth_info .tit {margin-top:50px; font-size:22px;}
+.teeth_info .tit:first-child {margin-top:10px;}
+.teeth_info .s-tit {margin-top:10px; font-weight:700;}
+.teeth_info .txt {margin-top:8px; font-size:14px;}
+.list-dash1 ul li {position:relative;}
+.list-dash1 ul li:before {content:''; position:absolute; top:9px; left:0; width:4px; height:1px; background:#222;}
+.list-dash1 ul li {padding-left:10px;}
+.list-num ul li {position:relative;}
+.list-num ul li span {display:inline-block;}
+.list-num ul li div {position:absolute; left:20px; top:0;}

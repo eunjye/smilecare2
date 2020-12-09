@@ -16,9 +16,27 @@
 .teeth_info .tit:first-child {margin-top:10px;}
 .teeth_info .s-tit {margin-top:10px; font-weight:700;}
 .teeth_info .txt {margin-top:8px; font-size:14px;}
+.teeth_info .num-tit {margin-top:20px;}
+.teeth_info .writer {color:#666; font-size:12px;}
+.foot-note-box {margin:25px 0 50px 0; padding:14px 0; border-top:1px dotted #ddd; border-bottom:1px dotted #ddd;}
+.tag-wrap a {display:inline-block; margin-left:10px; color:#222;}
+.tag-wrap a:first-child {margin-left:0;}
+.list-dash1 {margin-top:5px;}
+.list-dash1 ul:after {content:''; display:block; clear:both;}
 .list-dash1 ul li {position:relative;}
 .list-dash1 ul li:before {content:''; position:absolute; top:9px; left:0; width:4px; height:1px; background:#222;}
 .list-dash1 ul li {padding-left:10px;}
+.list-num {margin-top:10px;}
+.list-num ul:after {content:''; display:block; clear:both;}
 .list-num ul li {position:relative;}
 .list-num ul li span {display:inline-block;}
 .list-num ul li div {position:absolute; left:20px; top:0;}
+.img-wrap {font-size:0; margin-top:15px;}
+.img-wrap .img-item {display:inline-block; margin-left:15px;}
+.img-wrap .img-item:first-child {margin-left:0;}
+.cont-footer.care {margin-top:70px;}
+.cont-footer.care .title {position:absolute; top:0; left:0; margin-top:-40px;}
+.btn-area {width:820px; margin:20px auto 0; display:flex; justify-content:space-between;}
+.btn-round-s.share {display:block; height:40px; padding:0 16px; border:1px solid #d4d4d4; }
+.btn-round-s.share:before {content:''; display:inline-block; width:15px; height:16px; margin-right:7px; margin-top:-3px; background:url(../img/ico_share_mo.png) no-repeat 0 0; background-size:15px 16px; vertical-align:middle;}
+.btn-go-list {height:40px; line-height:40px; padding:0 28px; color:#fff; border-radius:5px; font-weight:700; text-align:center; background:#008bec;}

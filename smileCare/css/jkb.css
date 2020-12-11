@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .cont-header.care {background:#fff; padding:100px 20px 0;}
-.cont-header.care .header-inner {position:relative; width:820px; height:400px; margin:0 auto; padding:50px 20px 0; background:linear-gradient( to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4) ), url(../img/img_care_top.png) no-repeat 0 0; background-size:cover;}}
+.cont-header.care .header-inner {position:relative; width:820px; height:400px; margin:0 auto; padding:50px 20px 0; background:linear-gradient( to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6) ), url(../img/img_care_top.png) no-repeat 0 0; background-size:cover;}}
 .cont-header.care .header-inner .prd-wrap {padding:50px 30px 0;}
 .cont-header.care .header-inner h2 {font-size:40px; color:#fff; font-weight:400;}
 .cont-header.care .header-inner .prd-wrap .ps-bottom {position:absolute; bottom:20px; left:20px;}

@@ -64,6 +64,6 @@
 .cont-body.care .tit-line-wrap {position:relative;}
 .cont-body.care .tit-line-wrap .ps-right {position:absolute; right:0; top:10px;}
 .cont-body.care .tit-line-wrap .select-area {font-size:0;}
-.cont-body.care .tit-line-wrap .select-area select {width:135px; height:28px; box-sizing:border-box; border-radius:0; border:1px solid #acbdc5; font-size:14px; border-right:none; background:url(../img/ico_select_t.png) no-repeat right center; background-size:29px 28px; margin-right:5px;}
+.cont-body.care .tit-line-wrap .select-area select {width:200px; height:28px; box-sizing:border-box; border-radius:0; border:1px solid #acbdc5; font-size:14px; border-right:none; background:url(../img/ico_select_t.png) no-repeat right center; background-size:29px 28px; margin-right:5px;}
 .cont-body.care .tit-line-wrap .select-area select.small {width:105px; margin-right:0;}
 .tit-line-wrap h2 {font-size:32px; font-weight:700;}
